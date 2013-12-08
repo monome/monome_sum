@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 109.0, 114.0, 757.0, 229.0 ],
+		"rect" : [ 14.0, 44.0, 757.0, 229.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -437,7 +437,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u985000762"
+					"varname" : "u072002392"
 				}
 
 			}
@@ -1872,7 +1872,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 36.0, 180.0, 83.0, 17.0 ],
 					"rounded" : 0.0,
-					"text" : "advanced",
+					"text" : "basic",
 					"texton" : "advanced",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
@@ -6889,7 +6889,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 306.0, 132.0, 47.0, 19.0 ],
-									"text" : "del 500"
+									"text" : "del 100"
 								}
 
 							}

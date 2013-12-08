@@ -1,0 +1,55 @@
+{
+	"pattrstorage" : 	{
+		"name" : "synthitime.json",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"cutoffhz" : [ 987.766602 ],
+					"env-length" : [ 1289.244385 ],
+					"env-shape" : [ -0.559322 ],
+					"env-slope" : [ 0.187288 ],
+					"env2mod" : [ 1 ],
+					"envtofilt" : [ 1 ],
+					"envtopitch" : [ 0 ],
+					"finetune" : [ 0.004082 ],
+					"fm-index" : [ 17 ],
+					"fm-mult" : [ 4 ],
+					"fmtimes" : [ 1.0 ],
+					"gain" : [ 126.145164 ],
+					"svf-filt" : [ 75.681633 ],
+					"svf-morph" : [ 0.146939 ],
+					"transpose" : [ 36 ],
+					"waveshape" : [ 1 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"cutoffhz" : [ 1318.510254 ],
+					"env-length" : [ 478.538879 ],
+					"env-shape" : [ 0.254237 ],
+					"env-slope" : [ 0.461864 ],
+					"env2mod" : [ 1 ],
+					"envtofilt" : [ 0 ],
+					"envtopitch" : [ 0 ],
+					"finetune" : [ 0.004082 ],
+					"fm-index" : [ 39 ],
+					"fm-mult" : [ 7 ],
+					"fmtimes" : [ 8.0 ],
+					"gain" : [ 126.145164 ],
+					"svf-filt" : [ 80.865303 ],
+					"svf-morph" : [ 2.35102 ],
+					"transpose" : [ 60 ],
+					"waveshape" : [ 2 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -366,7 +366,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u853002970"
+					"varname" : "u262013243"
 				}
 
 			}
@@ -1007,7 +1007,7 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"items" : [ "---", ",", "/parc", ",", "/slide_128" ],
+									"items" : "---",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1147,7 +1147,7 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-76",
-									"items" : [ 0, ",", 25535, ",", 28023, ",", 0, ",", 0 ],
+									"items" : [ 0, ",", 0, ",", 0 ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -4693,7 +4693,7 @@
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 					"id" : "obj-7",
-					"items" : [ "---", ",", "/parc", ",", "/slide_128", ",", "<separator>", ",", 0 ],
+					"items" : [ "---", ",", "<separator>", ",", 0 ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -5177,8 +5177,8 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 33.0, 91.0, 83.0, 26.0 ],
 					"rounded" : 0.0,
-					"text" : "auto pre",
-					"texton" : "auto pre",
+					"text" : "no preset",
+					"texton" : "preset",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"varname" : "#1presetload"
@@ -5204,8 +5204,8 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 33.0, 66.0, 83.0, 26.0 ],
 					"rounded" : 0.0,
-					"text" : "auto load",
-					"texton" : "auto load",
+					"text" : "no file",
+					"texton" : "load file",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"varname" : "#1fileload"
