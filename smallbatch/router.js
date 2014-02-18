@@ -1,5 +1,5 @@
 inlets = 2;
-outlets = 4;
+outlets = 6;
 
 var c = 0; //'count' variable - how many are pressed?
 var wait = 0; //true if count is non-zero > wait before changing mode
@@ -8,8 +8,7 @@ var now1 = new Array(16); //stores the state of each button 16x16 (grid2)
 var route = 0; //whether the 15,0 button is pressed
 var routeWait = 0; //if route is pressed
 var routeWaitHistory = 0; //previous routeWait
-// x-size of 1st device is global & broadcast
-var g1y = 8; // should initialise at 0
+// size of 1st device is global & broadcast
 var g2x = 0;
 var g2y = 0;
 var xGrid = 16; // should initialise at 0
@@ -17,12 +16,36 @@ var yGrid = 8; // should initialise at 0
 var joined = 1;
 var selHistory = 0;
 var selCurrent = 0;
+var keyLocation = 1;
+var keyupdown = 0;
+var keyleftright = 1;
+var whichkey = 0;
+var whichrx = 0;
+var whichry = 0;
+var whichdev = -1;
+
+var rWidth = -1;
+var rHeight = -1;
+var rDevice = -1;
+var rQuad = -1;
+var rToggle = 0;
+
+var rWidth0 = 0;
+var rHeight0 = 0;
+var rWidth1 = 0;
+var rHeight1 = 0;
+var rLock = 0;
+var rQuad0 = -1;
+var rQuad1 = -1;
+var mQuad = -1;
+
 
 // Global (Max namespace) variables
 glob = new Global("routinginfo");
 glob.gMeta = 0;
 glob.g1x = 16; // broadcast x-size of 1st device - should initialise at 0 for starters
-
+glob.g1y = 8; // should initialise at 0
+glob.gridtiling = 0;
 
 
 for (var i = 0; i<16; i++) {
@@ -43,7 +66,7 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 
 	if(a=="/serialosc/device") { //from server: s:<device id>,s:<type>,i:<port>
 		if (inlet == 0) { // inlet==0 means the device connected to 1st inlet
-			outlet(0,"/serialosc/device",x,y,z); //mirrored to output 1
+			(0,"/serialosc/device",x,y,z); //mirrored to output 1
 		}
 
 		if (inlet == 1) { // inlet==1 means the device connected to 2nd inlet
@@ -146,7 +169,7 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 	if(a=="/sys/size") { // i:<size x>,i:<size y>
 		if (inlet == 0) {
 			glob.g1x = x; // fill variables (eg. glob.g1x) for connected device size
-			g1y = y;
+			glob.g1y = y;
 		}
 
 		if (inlet == 1) {
@@ -155,12 +178,20 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 		}
 		
 	// then add both grids together to find composite dimensions
-		xGrid = glob.g1x + g2x; // adds devices side by side for max-x
-	// then we find the larger y-value of the 2 devices
-	// is there a way to do this with a simple 'maximum' type command rather than a conditional?
-	// something like: yGrid = maximum(g1y,g2y);
-		if(g1y>g2y) yGrid = g1y
-		else yGrid = g2y
+	// need to account for grid tiling in horizontal or vertical dimension
+		if (glob.gridtiling == 0) { // grids are joined horizontally
+			xGrid = glob.g1x + g2x; // adds devices side by side for max-x
+				// then we find the larger y-value of the 2 devices
+				// is there a way to do this with a simple 'maximum' type command rather than a conditional?
+				// something like: yGrid = maximum(glob.g1y,g2y);
+			if(glob.g1y>g2y) yGrid = glob.g1y
+			else yGrid = g2y
+		}
+		else { // grids are joined vertically
+			yGrid = glob.g1y + g2y;
+			if(glob.g1x>g2x) xGrid = glob.g1x
+			else xGrid = g2x
+		}
 
 	// then check if the devices are joined in the router
 		if(joined==0) { // if devices are independent or 1 device is split
@@ -170,28 +201,34 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 				else outlet(1,"/sys/size",x,y); // send /size to grid2
 			}
 			else { // only 1 device present
-				if(g1y>8) { // and the device is 16y or greater (ie. 256, vertical 128)
-					glob.gMeta = 3;
+				if((gly==8) && (glob.glx == 8)) { // only 8x8 device (ie. 64)
+					glob.gMeta = 0; // 1 device to 1 app
+					outlet(0,"/sys/size",x,y); // echo size to output
+				}
+				if((glob.g1y==8) && (glob.g1x == 16)) { // horizontal 128
+					glob.gMeta = 2; // horizontal split
+					outlet(0,"/sys/size",(x/2),y);
+					outlet(1,"/sys/size",(x/2),y);
+				}
+				if((glob.g1y==16) && (glob.g1x == 16)) { // 256
+					glob.gMeta = (glob.gridtiling + 2); // sets mode for vertical or horizontal split
+					outlet(0,"/sys/size",(x/(-glob.gridtiling+2)),(y/(glob.gridtiling+1)));
+					outlet(1,"/sys/size",(x/(-glob.gridtiling+2)),(y/(glob.gridtiling+1)));
+				}
+				if((glob.g1y==16) && (glob.g1x == 8)) { // vertical 128
+					glob.gMeta = 3; // vertical split
 					outlet(0,"/sys/size",x,(y/2));
 					outlet(1,"/sys/size",x,(y/2));
 				}
-				else { // only 8y
-					if(glob.g1x>8) { // but the device is at least 16 wide (ie. horizontal 128)
-						glob.gMeta = 2;
-						outlet(0,"/sys/size",(x/2),y);
-						outlet(1,"/sys/size",(x/2),y);
-					}
-					else {
-						glob.gMeta = 0;
-						outlet(0,"/sys/size",x,y); // only 8x8 device (ie. 64)
-					}
-				}
 			}
 		}
-		else {
-			glob.gMeta = 0;
+		else { // joined==1, 2 devices are attached to 1 application
+			glob.gMeta = 0; // devices are joined, hence 2 devices to a single application
 			outlet(0,"/sys/size",xGrid,yGrid); // when devices are joined, send a composite size
 		}
+	outlet(5,xGrid,yGrid);
+
+	refreshLocation();
 	}
 
 
@@ -209,37 +246,65 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 		}
 		
 		
-	// this section determines composite device size & chooses top-right key of right most device
+	// this section determines composite device size & chooses customised route key
 	// then accumulates all presses excluding the router key
-		
-		if(g2x == 0) { // if is there only one device attached,
-			if(x == (glob.g1x-1) && y == 0) // route button input
-				isRouter(z); // run the split/spanner
-			else { // all other input
-				c = c + ((z*2)-1);
-				rHandle(x,y,z);
+
+		if(whichkey==0) { // normal useage (not setting route key)
+			if(keyLocation == 0) { // if no route key, don't check conditions, just route to output
+				c = c + ((z*2)-1); // add number to current press count
+				rHandle(x,y,z); // send to output handler
 			}
-		}
-		else { // this case occurs when there are 2 grid devices attached
-			if(inlet==1){ // if the press is the 2nd device...
-				if(x == (g2x-1) && y == 0) // and is the router key..
-					isRouter(z); // run the split/spanner
-				else { // but not route key..
-					c = c + ((z*2)-1); // add number to current press count
-					rHandle(x,y,z);
+			else { // if there is a route key..
+				if(g2x == 0) { // if is there only one device attached,
+					if(keyLocation != 0) { // otherwise any settings will place route-key on the available device
+						if(x == (keyleftright * (glob.g1x-1)) && y == (keyupdown * (glob.g1y-1))) // does it match route key location?
+							isRouter(z); // run the split/spanner
+						else { // all other input
+							c = c + ((z*2)-1);
+							rHandle(x,y,z);
+						}
+					}
+				}
+				else { // there are 2 devices attached & there is a route key
+					if((inlet==(keyLocation-1)) || (keyLocation == 3)){ // and if the press is on the routing device, or both devices are routing
+						if(x == (keyleftright * (glob.g1x-1)) && y == (keyupdown * (glob.g1y-1))) // does it match route key location?
+							isRouter(z); // run the split/spanner
+						else { // but not route key..
+							c = c + ((z*2)-1); // add number to current press count
+							rHandle(x,y,z);
+						}
+					}
+					else { // is not routing device
+						c = c + ((z*2)-1); // add any press to the counter
+						rHandle(x,y,z);
+					}
 				}
 			}
-			else { // is 1st device
-				c = c + ((z*2)-1); // add any press to the counter
-				rHandle(x,y,z);
+		}
+		else { //route-key location setting. 
+		
+			if(z==1) { // responds to presses only - need to add 'none' when re-selecting same
+				rWidth = x;
+				rHeight = y;
+				
+				rDevice = inlet; // set which device is the router
+				
+				rQuad = Math.floor(rWidth/8)+(2*Math.floor(rHeight/8));
+				post(rQuad);
+				
+				
+//				outlet(whichdev,"/manager/grid/led/set",x,y,1); // turn on new 
 			}
 		}
-
-//	post(wait,c,route,routeWait);
-//	post();
-
-
 	}
+
+
+
+
+
+
+
+
 
 
 		// sends tilt messages to appropriate outlet based upon routing setup
@@ -247,22 +312,19 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 		if(routeWait == 0) { // only send tilt info when not in route mode
 			if(glob.gMeta==0) { // only one app addressed
 				if (inlet == 0) { // only send tilt from 1st device
-					outlet(0,"/manager/tilt",b,c,d,e);
+					outlet(0,"/manager/tilt",x,y,z,n);
 				}
 			}
 			if(glob.gMeta==1) { // 2 devices to 2 apps
 				if (inlet == 0) { // 1st device tilt to 1st app tilt
-					outlet(0,"/manager/tilt",b,c,d,e);
+					outlet(0,"/manager/tilt",x,y,z,n);
 				}
 				if (inlet == 1) { // 2nd device tilt to 2nd app tilt
-					outlet(1,"/manager/tilt",b,c,d,e);
+					outlet(1,"/manager/tilt",x,y,z,n);
 				}
 			}
-			if(glob.gMeta==2) { // landscape128 split into 2 apps
-				outlet(0,"/manager/tilt",b,c,d,e); // only send output to 1st outlet (left app)
-			}
-			if(glob.gMeta==2) { // portrait128/256 split into 2 apps top/bottom
-				outlet(0,"/manager/tilt",b,c,d,e); // only send output to 1st outlet (top app)
+			if((glob.gMeta==2) || (glob.gMeta==3)) { // 1 device to 2 apps
+				outlet(0,"/manager/tilt",x,y,z,n); // only send output to 1st outlet (left app)
 			}
 		}
 //		else // add tilt-to-router-app code here if tilt is to be used internally for router selection
@@ -286,29 +348,23 @@ function rHandle(x,y,z) {
 	wait = !c
 
 	// when not in routing mode send the /key presses to the appropriate output
-	// should add the switching / shifting in here for alternate arrangements
 	
 	if(routeWait == 0) {
 		if(glob.gMeta == 0) { // addressing only 1 app, w/ only 1 device, or w/ a composite device
 			if(inlet==0) outlet(0,"/manager/grid/key",x,y,z); //sends 1st device out left outlet
-			if(inlet==1) outlet(0,"/manager/grid/key",(x+glob.g1x),y,z); //sends 2nd device to 1st outlet w/ x-offset of 1st device width
+			else outlet(0,"/manager/grid/key",(x+((-glob.gridtiling+1)*glob.g1x)),(y+(glob.gridtiling*glob.g1y)),z); //sends 2nd device to 1st outlet offset
 		}
 		if(glob.gMeta == 1) { // when 2 devices are assigned to separate apps
 			if(inlet==0) outlet(0,"/manager/grid/key",x,y,z); //sends 1st device out left outlet
-			if(inlet==1) outlet(1,"/manager/grid/key",x,y,z); //sends 2nd device out 2nd to left outlet
+			else outlet(1,"/manager/grid/key",x,y,z); //sends 2nd device out 2nd outlet
 		}
-
-// could dynamically code these so non 8x8 grid shapes could be used
-// eg: if(x<8) would become if(x<(glob.g1x/2))
-// and outlet(1,a,(x-8),y,z) would become outlet(1,a,(x-(glob.g1x/2)),y,z)
-
-		if(glob.gMeta == 2) { // splitting a landscape 128 into 2 apps side by side
+		if(glob.gMeta == 2) { // horizontal tiling
 			if(x<8) {
 				outlet(0,"/manager/grid/key",x,y,z); //sends left half out first outlet
 			}
 			else outlet(1,"/manager/grid/key",(x-8),y,z); //sends right half out 2nd to left outlet
 		}
-		if(glob.gMeta == 3) { // splitting a portrait 128 / 256 into 2 apps above/below each other
+		if(glob.gMeta == 3) { // vertical tiling
 			if(y<8) {
 				outlet(0,"/manager/grid/key",x,y,z); //sends left half out first outlet
 			}
@@ -336,21 +392,146 @@ function rSelect(x,y,z) {
 // it remembers the last 2 pressed columns
 
 
-// here we join both devices to create 1 large selection surface
-	if(z==1) { //if the input is a press
-		// first we shift selCurrent into the selHistory for memory
-		selHistory = selCurrent;
 
-		// then we update selCurrent to the new input
-		if(inlet==0) selCurrent = x;
-		if(inlet==1) selCurrent = (x+glob.g1x);
+/*
+	if((inlet==0 && (x/8)==rWidth0 && (y/8)==rHeight0) || (inlet==1 && (x/8)==rWidth1 && (y/8)==rHeight1)) { // then it is in router quadrant
+		// data in here matches the router
 	}
+	else // data out here does not match the router quadrant
+*/
 
+
+	if(z==1) { //if the input is a press
+
+		// if dynamically routing, shift selCurrent into the selHistory 
+//		if(rLock==0) selHistory = selCurrent; >> being handled inside the 'dynamic routing' ifs only.
+
+		// then we check if the input matches the routing quadrant
+		if((inlet==0 && (Math.floor(x/8))==rWidth0 && (Math.floor(y/8))==rHeight0) || (inlet==1 && (Math.floor(x/8))==rWidth1 && (Math.floor(y/8))==rHeight1)) { // then it is in router quadrant
+
+			// then shift values to correlate to appropriate quadrant (need to send this to led-router as well)
+			if((inlet==0 && glob.g1y==16 && rHeight0==1) || (inlet==1 && g2y==16 && rHeight1==1)) { // lower-quadrant
+				if((inlet==0 && glob.g1x==16 && rWidth0==1) || (inlet==1 && g2x==16 && rWidth1==1)) {
+					if(y>9) {
+						selHistory = selCurrent;
+						selCurrent = (x-8);  // lower-right quadrant NOT lock rows
+
+						rLock = 0;
+					}
+					else {
+						if(y==8) selCurrent = (x-8);
+						else selHistory = (x-8); // y==9
+
+						rLock = 1;
+					}
+				}
+				else {
+					if(y>9) {
+						selHistory = selCurrent;
+						selCurrent = x // lower-left quadrant NOT lock rows
+						
+						rLock = 0;
+					}
+					else {
+						if(y==8) selCurrent = x;
+						else selHistory = x; // y==9
+						
+						rLock = 1;
+					}
+				}
+			}
+			else if((inlet==0 && glob.g1x==16 && rWidth0==1) || (inlet==1 && g2x==16 && rWidth1==1)) {
+				if(y>1) {
+					selHistory = selCurrent;
+					selCurrent = (x-8); // upper-right quadrant
+					
+					rLock = 0;
+				}
+				else {
+					if(y==0) selCurrent = (x-8);
+					else selHistory = (x-8); // y==1
+					
+					rLock = 1;
+				}
+			}
+			else {
+				if(y>1) {
+					selHistory = selCurrent;
+					selCurrent = x; // upper-left quadrant
+					
+					rLock = 0;
+				}
+				else {
+					if(y==0) selCurrent = x;
+					else selHistory = x; // y==1
+					
+					rLock = 1;
+				}
+			}
+		}
+		else rMaster(x,y,z); // data out here does not match the router quadrant
+	}
+	else { // z==0: is a release >> need to check it isn't a route-quadrant input
+		if((inlet==0 && (Math.floor(x/8))==rWidth0 && (Math.floor(y/8))==rHeight0) || (inlet==1 && (Math.floor(x/8))==rWidth1 && (Math.floor(y/8))==rHeight1)) {} // then it is in router quadrant
+		else rMaster(x,y,z); // if not a router quadrant release then send to rMaster out
+	}
+	
 	// then send a list out representing the last 2 selects
 	if(joined==1) outlet(2,selCurrent)
 	else outlet(2,selCurrent,selHistory)
 }
 
+
+function rMaster(x,y,z) {
+	// here send out the non-routing presses for a 'master page' that displays when holding router
+	// trick here is to manage the arrangements of quads elegantly
+	
+	// if 1 8x8 grid, nothing will arrive
+	// if no router, there can be no master page
+	// 
+	// always look for a quad on the same device as the router
+	
+	if(keyLocation==1) { // router is on device0 >> look for a free quad on device0
+		if(glob.g1x>8) { // if there is a free horizontal neighbour
+			if(keyleftright==0) outlet(4,(x-8),y,z) // and router at left, send right quad out starting x=0
+			else outlet(4,x,y,z)
+		}
+		else if(glob.g1y>8) { // if no additional width, look for a vertical 128
+			if(keyupdown==0) outlet(4,x,(y-8),z)
+			else outlet(4,x,y,z)
+		}
+		else if(g2x>0) outlet(4,x,y,z) // device0 is 8x8. allow device1 to control master
+	}
+	else if(keyLocation==2) { // if router is on 2nd device
+		if(g2x>8) { // if there is a free horizontal neighbour
+			if(keyleftright==0) outlet(4,(x-8),y,z) // and router at left, send right quad out starting x=0
+			else outlet(4,x,y,z)
+		}
+		else if(g2y>8) { // if no additional width, look for a vertical 128
+			if(keyupdown==0) outlet(4,x,(y-8),z)
+			else outlet(4,x,y,z)
+		}
+		else outlet(4,x,y,z) // device1 is 8x8. allow device0 to control master
+	}	
+	else { // router is on both grids. look for free grid on device0
+		if(glob.g1x>8) {
+			if(keyleftright==0) outlet(4,(x-8),y,z)
+			else outlet(4,x,y,z)
+		}
+		else if(glob.g1y>8) { // if no additional width, look for a vertical 128
+			if(keyupdown==0) outlet(4,x,(y-8),z)
+			else outlet(4,x,y,z)
+		}
+		if(g2x>8) { // if device0 is 8x8 look for a larger device1
+			if(keyleftright==0) outlet(4,(x-8),y,z) // and router at left, send right quad out starting x=0
+			else outlet(4,x,y,z)
+		}
+		else if(g2y>8) { // if no additional width, look for a vertical 128
+			if(keyupdown==0) outlet(4,x,(y-8),z)
+			else outlet(4,x,y,z)
+		}
+	}
+}
 
 
 
@@ -379,31 +560,34 @@ function isRouter(z) {
 				
 				if(g2x>0) { // if there are 2 devices physically present
 					glob.gMeta = 1; // selHistory to left grid, selCurrent to right grid
-					outlet(0,"/sys/size",glob.g1x,g1y) // send /size to grid1
+					outlet(0,"/sys/size",glob.g1x,glob.g1y) // send /size to grid1
 					outlet(1,"/sys/size",g2x,g2y); // send /size to grid2
 				}
 
 	// this determines how the device splitting will work if only 1 device
 
 				else { // only 1 device present
-					if(g1y>8) { // and the device is 16y or greater (ie. 256, vertical 128)
-						glob.gMeta = 3; // split is through y axis for grids above/below each other
-						outlet(0,"/sys/size",glob.g1x,(g1y/2));
-						outlet(1,"/sys/size",glob.g1x,(g1y/2));
+
+	//glob.gMeta: 0=singleapp, 1=2devices-to-2-apps, 2=h-split, 3=v-split
+
+					if((gly==8) && (glob.glx == 8)) { // only 8x8 device (ie. 64)
+						glob.gMeta = 0; // 1 device to 1 app
+						outlet(0,"/sys/size",x,y); // echo size to output
 					}
-					else { // only 8y
-						if(glob.g1x>8) { // but the device is at least 16 wide (ie. horizontal 128)
-							glob.gMeta = 2; // split is through x axis for grids side by side
-							outlet(0,"/sys/size",(glob.g1x/2),g1y);
-							outlet(1,"/sys/size",(glob.g1x/2),g1y);
-						}
-						else {
-							glob.gMeta = 0; // can't split device, so only selCurrent can be assigned
-							outlet(0,"/sys/size",glob.g1x,g1y); // only 8x8 device (ie. 64)
-						}
-
-	//glob.gMeta: 0=singleapp, 1=2devices-to-2-apps, 2=h128-split, 3=v128-split or 256-split
-
+					if((glob.g1y==8) && (glob.g1x == 16)) { // horizontal 128
+						glob.gMeta = 2; // horizontal split
+						outlet(0,"/sys/size",(x/2),y);
+						outlet(1,"/sys/size",(x/2),y);
+					}
+					if((glob.g1y==16) && (glob.g1x == 16)) { // 256
+						glob.gMeta = (glob.gridtiling + 2); // sets mode for vertical or horizontal split
+						outlet(0,"/sys/size",(x/(-glob.gridtiling+2)),(y/(glob.gridtiling+1)));
+						outlet(1,"/sys/size",(x/(-glob.gridtiling+2)),(y/(glob.gridtiling+1)));
+					}
+					if((glob.g1y==16) && (glob.g1x == 8)) { // vertical 128
+						glob.gMeta = 3; // vertical split
+						outlet(0,"/sys/size",x,(y/2));
+						outlet(1,"/sys/size",x,(y/2));
 					}
 				}
 			}
@@ -429,4 +613,112 @@ function manual(i) { // this function allows an integer index to overwrite the c
 }
 
 
+function locationDevice(i) { // controls whether/where the routing key is located
+		// 0=off, 1=device0, 2=device1, 3=both
+	keyLocation = i;
+	refreshLocation();
+}
+
+function locationVert(i) {
+		// 0=top, 1=bottom
+	keyupdown = i;
+	refreshLocation();
+}
+
+function locationHor(i) {
+		// 0=left, 1=right
+	keyleftright = i;
+	refreshLocation();
+}
+
+function tiling(i) {
+		// 0=horizontal, 1=vertical
+	glob.gridtiling = i;
+	refreshLocation();
+}
+
+function refreshLocation() {
+
+	// deprecate 'rWidth & rHeight with rQuad & rMaster' for absolute locations
+
+	if(keyLocation==0) { // no route key -- match no squares (event shouldn't occur)
+		rWidth0 = -1;
+		rHeight0 = -1;
+		rWidth1 = -1;
+		rHeight1 = -1;
+		
+		rQuad0 = -1;
+		rQuad1 = -1;
+		mQuad = -1;
+	}
+	if(keyLocation==1) { // route key device0 only
+		if(glob.g1x==8 && glob.g1y==8) { // 8x8 device
+			rWidth0 = 0;
+			rHeight0 = 0;
+			rQuad0 = 0; // router on 1st quad of d0
+			mQuad = 4; // master on 1st quad of d1 if it exists
+		}
+		else if(glob.g1x==16 && glob.g1y==8) { // 16x8
+			rWidth0 = keyleftright;
+			rHeight0 = 0;
+			rQuad0 = keyleftright;
+			mQuad = (1-keyleftright); // master on opposite quad of d0
+		}
+		else if(glob.g1x==8 && glob.g1y==16) { // 8x16
+			rWidth0 = 0;
+			rHeight0 = keyupdown;
+			rQuad0 = keyupdown;
+			mQuad = (2-(2*keyupdown)); // master on opposite quad of d0
+		}
+		else { // 16x16
+			rWidth0 = keyleftright;
+			rHeight0 = keyupdown;
+			rQuad0 = keyleftright+(2*keyupdown);
+			mQuad = (1-keyleftright)+(2*keyupdown); // master on horizontally adjacent quad to router
+		}
+		rWidth1 = -1;
+		rHeight1 = -1;
+		rQuad1 = -1;
+	}
+	if(keyLocation==2) { // route key device1 only
+		if(g2x==8 && g2y==8) { // 8x8 device
+			rWidth1 = 0;
+			rHeight1 = 0;
+			rQuad1 = 4; // router on 1st quad of d1
+			mQuad = 0; // master on 1st quad of d0
+		}
+		else if(g2x==16 && g2y==8) { // 16x8
+			rWidth1 = keyleftright;
+			rHeight1 = 0;
+			rQuad1 = (4+keyleftright);
+			mQuad = (5-keyleftright); // master on opposite quad of d1
+		}
+		else if(g2x==8 && g2y==16) { // 8x16
+			rWidth1 = 0;
+			rHeight1 = keyupdown;
+			rQuad1 = (4+keyupdown);
+			mQuad = (6-(2*keyupdown)); // master on opposite quad of d1
+		}
+		else { // 16x16
+			rWidth1 = keyleftright;
+			rHeight1 = keyupdown;
+			rQuad1 = 4+keyleftright+(2*keyupdown);
+			mQuad = 5-keyleftright+(2*keyupdown); // master on horizontally adjacent quad to router
+		}
+		rWidth0 = -1;
+		rHeight0 = -1;
+		rQuad0 = -1;
+	}
+}
+
+
+function setRLoc(x) {
+	if(x==0) { // when releasing, resend the current selection >> should force grid led update
+		if(joined==1) outlet(2,selCurrent)
+		else outlet(2,selCurrent,selHistory)
+	}
+
+//	else() // currently in route-key-mapping mode.
+// need to trigger a redraw of the current map location > probably need to send a message in max to the led-route.js
 	
+}

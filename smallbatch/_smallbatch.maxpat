@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 109.0, 114.0, 757.0, 229.0 ],
+		"rect" : [ 7.0, 44.0, 757.0, 229.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -30,12 +30,1147 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"hint" : "choose whether your devices are next to each other (horiz) or in front of each other (vert)",
+					"id" : "obj-67",
+					"maxclass" : "hint",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 522.0, 126.0, 36.0, 12.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 380.0, 180.0, 83.0, 17.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"border" : 1,
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-8",
+					"maxclass" : "textbutton",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 486.0, 140.0, 72.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 417.0, 180.0, 46.0, 17.0 ],
+					"rounded" : 0.0,
+					"text" : "horiz",
+					"texton" : "vert.",
+					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"varname" : "tile-orientation"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hint" : "set location of 'route key'. dropdown selects which device the key is located on. 2 switches select which corner of device key is located in.",
+					"id" : "obj-65",
+					"maxclass" : "hint",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 450.0, 108.0, 36.0, 12.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 208.0, 180.0, 169.0, 17.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"border" : 1,
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-69",
+					"maxclass" : "textbutton",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 481.0, 84.0, 72.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 353.0, 180.0, 24.0, 17.0 ],
+					"rounded" : 0.0,
+					"text" : "<<",
+					"texton" : ">>",
+					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"varname" : "routehorizontal"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"border" : 1,
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-68",
+					"maxclass" : "textbutton",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 396.0, 84.0, 72.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 330.0, 180.0, 24.0, 17.0 ],
+					"rounded" : 0.0,
+					"text" : "up",
+					"texton" : "dn",
+					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"varname" : "routevert"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"fontname" : "Helvetica Neue",
+					"fontsize" : 11.0,
+					"id" : "obj-64",
+					"maxclass" : "newobj",
+					"numinlets" : 4,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 5,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 104.0, 433.0, 992.0, 529.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Andale Mono",
+						"gridonopen" : 0,
+						"gridsize" : [ 18.0, 6.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"visible" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-16",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 234.0, 72.0, 147.0, 20.0 ],
+									"text" : "prepend locationHor"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-15",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 162.0, 96.0, 155.0, 20.0 ],
+									"text" : "prepend locationVert"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "route key location",
+									"id" : "obj-14",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 234.0, 36.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "route key location",
+									"id" : "obj-12",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 162.0, 36.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 450.0, 120.0, 111.0, 20.0 ],
+									"text" : "prepend tiling"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 54.0, 120.0, 169.0, 20.0 ],
+									"text" : "prepend locationDevice"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.4, 0.8, 1.0, 1.0 ],
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-39",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 54.0, 174.0, 140.0, 20.0 ],
+									"text" : "s [router]settings"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 576.0, 396.0, 133.0, 20.0 ],
+									"text" : "prepend textcolor"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-4",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 720.0, 390.0, 150.0, 47.0 ],
+									"text" : "if only 1 8x8 device attached, grey out text"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-13",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 450.0, 426.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-5",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 54.0, 426.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "tiling arrangement",
+									"id" : "obj-3",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 450.0, 36.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "route key location",
+									"id" : "obj-2",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 54.0, 36.0, 25.0, 25.0 ]
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-16", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-39", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-39", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-39", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-39", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 432.0, 162.0, 86.0, 19.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Andale Mono",
+						"default_fontsize" : 12.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Andale Mono",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p route-options"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"id" : "obj-60",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 5,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Andale Mono",
+						"gridonopen" : 0,
+						"gridsize" : [ 18.0, 6.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-53",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 5,
+											"architecture" : "x86"
+										}
+,
+										"rect" : [ 771.0, 44.0, 414.0, 672.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 1,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Andale Mono",
+										"gridonopen" : 0,
+										"gridsize" : [ 18.0, 6.0 ],
+										"gridsnaponopen" : 0,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"boxanimatetime" : 200,
+										"imprint" : 0,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"boxes" : [ 											{
+												"box" : 												{
+													"fontface" : 1,
+													"fontname" : "Andale Mono",
+													"fontsize" : 16.0,
+													"frgb" : 0.0,
+													"id" : "obj-17",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 35.0, 46.0, 191.0, 24.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 36.0, 48.0, 69.0, 24.0 ],
+													"text" : "about"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 12.0,
+													"frgb" : 0.0,
+													"id" : "obj-16",
+													"linecount" : 10,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 36.0, 48.0, 150.0, 141.0 ],
+													"presentation" : 1,
+													"presentation_linecount" : 4,
+													"presentation_rect" : [ 54.0, 66.0, 324.0, 60.0 ],
+													"text" : "designed as a performance hub to host and navigate multiple applications. use the auto-load functions to create an automated performance manager."
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 11.0,
+													"frgb" : 0.0,
+													"id" : "obj-13",
+													"linecount" : 4,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 53.0, 532.0, 200.0, 56.0 ],
+													"presentation" : 1,
+													"presentation_linecount" : 3,
+													"presentation_rect" : [ 54.0, 588.0, 324.0, 44.0 ],
+													"text" : "overwrite the 'sbatch.json' file in the smallbatch folder to auto-load your settings when the patch opens."
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 1,
+													"fontname" : "Andale Mono",
+													"fontsize" : 16.0,
+													"frgb" : 0.0,
+													"id" : "obj-14",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 35.0, 514.0, 191.0, 24.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 36.0, 570.0, 198.0, 24.0 ],
+													"text" : "tip!",
+													"textcolor" : [ 1.0, 0.4, 0.4, 1.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 11.0,
+													"frgb" : 0.0,
+													"id" : "obj-11",
+													"linecount" : 8,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 56.0, 416.0, 198.0, 105.0 ],
+													"presentation" : 1,
+													"presentation_linecount" : 5,
+													"presentation_rect" : [ 54.0, 492.0, 324.0, 68.0 ],
+													"text" : "there is provision for a 'master' patch to be loaded in a similar way to the relevant patch for each cell. monome's 'batch' is an example that loads a number of client patches to connect."
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 1,
+													"fontname" : "Andale Mono",
+													"fontsize" : 16.0,
+													"frgb" : 0.0,
+													"id" : "obj-12",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 38.0, 398.0, 191.0, 24.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 36.0, 474.0, 198.0, 24.0 ],
+													"text" : "advanced: batch"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 11.0,
+													"frgb" : 0.0,
+													"id" : "obj-8",
+													"linecount" : 12,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 55.0, 264.0, 198.0, 155.0 ],
+													"presentation" : 1,
+													"presentation_linecount" : 8,
+													"presentation_rect" : [ 54.0, 360.0, 324.0, 105.0 ],
+													"text" : "- create a custom scene by entering 'advanced' mode. you can then configure the order of patches, click 'no file' to point to that slot's application file and it will boot when loading your smallbatch save file.\n- for updated apps that send a '/loaded' flag, you can auto-load a preset file to that app as well."
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 1,
+													"fontname" : "Andale Mono",
+													"fontsize" : 16.0,
+													"frgb" : 0.0,
+													"id" : "obj-10",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 37.0, 246.0, 191.0, 24.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 36.0, 342.0, 198.0, 24.0 ],
+													"text" : "advanced: scene"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 11.0,
+													"frgb" : 0.0,
+													"id" : "obj-6",
+													"linecount" : 10,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 36.0, 172.0, 198.0, 130.0 ],
+													"presentation" : 1,
+													"presentation_linecount" : 6,
+													"presentation_rect" : [ 54.0, 252.0, 324.0, 81.0 ],
+													"text" : "- select 2 apps at once by holding top-right button, press&hold 2 rows (in order), release top-right, then release 2 rows.\n- if you connect 2 devices, they will join to one large grid if selecting a single app, or split the apps to each device if selecting 2."
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 1,
+													"fontname" : "Andale Mono",
+													"fontsize" : 16.0,
+													"frgb" : 0.0,
+													"id" : "obj-4",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 15.0, 155.0, 191.0, 24.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 36.0, 234.0, 162.0, 24.0 ],
+													"text" : "features"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontface" : 1,
+													"fontname" : "Andale Mono",
+													"fontsize" : 16.0,
+													"frgb" : 0.0,
+													"id" : "obj-1",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 17.0, 60.0, 191.0, 24.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 36.0, 138.0, 69.0, 24.0 ],
+													"text" : "how to"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 12.0,
+													"frgb" : 0.0,
+													"id" : "obj-5",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 180.0, 18.0, 150.0, 20.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 162.0, 21.0, 54.0, 20.0 ],
+													"text" : "help"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 24.0,
+													"frgb" : 0.0,
+													"id" : "obj-18",
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 57.0, 34.0, 167.0, 33.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 18.0, 6.0, 198.0, 33.0 ],
+													"text" : "smallbatch"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 11.0,
+													"frgb" : 0.0,
+													"id" : "obj-3",
+													"linecount" : 9,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 1006.0, 137.0, 198.0, 118.0 ],
+													"presentation" : 1,
+													"presentation_linecount" : 5,
+													"presentation_rect" : [ 54.0, 156.0, 324.0, 68.0 ],
+													"text" : "1. open at least 2 apps\n2. connect to your physical monome devices\n3. choose your apps in the dropdowns\n4. press the top-right button on your device\n5. click a button in a row to select the app"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"maxclass" : "inlet",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 72.0, 54.0, 25.0, 25.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"bgcolor" : [ 1.0, 0.8, 0.4, 0.2 ],
+													"id" : "obj-7",
+													"maxclass" : "panel",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 537.0, 189.0, 53.0, 34.0 ],
+													"presentation" : 1,
+													"presentation_rect" : [ 18.0, 30.0, 378.0, 624.0 ]
+												}
+
+											}
+ ],
+										"lines" : [  ]
+									}
+,
+									"patching_rect" : [ 50.0, 148.0, 41.0, 19.0 ],
+									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Andale Mono",
+										"default_fontsize" : 12.0,
+										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
+										"fontname" : "Andale Mono",
+										"fontsize" : 12.0,
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p help"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-52",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "open" ],
+									"patching_rect" : [ 50.0, 100.0, 42.0, 19.0 ],
+									"text" : "t open"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-51",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 124.0, 51.0, 19.0 ],
+									"text" : "pcontrol"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-56",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-53", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-51", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-51", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-52", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-52", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-56", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 684.0, 132.0, 63.0, 19.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Andale Mono",
+						"default_fontsize" : 12.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Andale Mono",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p helper"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"id" : "obj-54",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 5,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Andale Mono",
+						"gridonopen" : 0,
+						"gridsize" : [ 18.0, 6.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"frgb" : 0.0,
+									"id" : "obj-15",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 86.0, 100.0, 126.0, 71.0 ],
+									"text" : "this is just a general 'load this patch when opening' option. useful for single apps w/ multiple prefixes"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "bang", "" ],
+									"patching_rect" : [ 50.0, 100.0, 34.0, 19.0 ],
+									"text" : "sel 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 50.0, 172.0, 85.0, 19.0 ],
+									"text" : "∆batch.maxpat",
+									"varname" : "∆batch"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-9",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "open" ],
+									"patching_rect" : [ 50.0, 124.0, 42.0, 19.0 ],
+									"text" : "t open"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 148.0, 51.0, 19.0 ],
+									"text" : "pcontrol"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-50",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-50", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-10", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-9", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 594.0, 132.0, 90.0, 19.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Andale Mono",
+						"default_fontsize" : 12.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Andale Mono",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p batch-load",
+					"varname" : "batch-load"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-30",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 396.0, 144.0, 54.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 380.0, 180.0, 45.0, 19.0 ],
+					"text" : "tile:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"border" : 1,
+					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"id" : "obj-49",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 396.0, 60.0, 34.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 380.0, 180.0, 83.0, 17.0 ],
+					"rounded" : 0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-29",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 360.0, 120.0, 90.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 208.0, 180.0, 91.0, 19.0 ],
+					"text" : "route key:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"align" : 2,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"framecolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
+					"id" : "obj-26",
+					"items" : [ "off", ",", "d-1", ",", "d-2", ",", "both" ],
+					"maxclass" : "umenu",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 432.0, 120.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 275.0, 179.0, 62.0, 20.0 ],
+					"rounded" : 0,
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"varname" : "whichkey"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"border" : 1,
+					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"id" : "obj-27",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 432.0, 60.0, 36.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 208.0, 180.0, 169.0, 17.0 ],
+					"rounded" : 0
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"hint" : "learn more!",
 					"id" : "obj-48",
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 666.0, 12.0, 36.0, 12.0 ],
+					"patching_rect" : [ 684.0, 96.0, 36.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 638.0, 180.0, 83.0, 17.0 ]
 				}
@@ -48,9 +1183,7 @@
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 576.0, 6.0, 36.0, 12.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 466.0, 180.0, 83.0, 17.0 ]
+					"patching_rect" : [ 612.0, 96.0, 36.0, 12.0 ]
 				}
 
 			}
@@ -61,7 +1194,7 @@
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 432.0, 78.0, 36.0, 12.0 ],
+					"patching_rect" : [ 594.0, 6.0, 36.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 36.0, 180.0, 83.0, 17.0 ]
 				}
@@ -74,7 +1207,7 @@
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 270.0, 78.0, 36.0, 12.0 ],
+					"patching_rect" : [ 270.0, 120.0, 36.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 122.0, 180.0, 83.0, 17.0 ]
 				}
@@ -87,7 +1220,7 @@
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 234.0, 78.0, 36.0, 12.0 ],
+					"patching_rect" : [ 234.0, 120.0, 36.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 595.0, 180.0, 40.0, 17.0 ]
 				}
@@ -100,7 +1233,7 @@
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 198.0, 78.0, 36.0, 12.0 ],
+					"patching_rect" : [ 198.0, 120.0, 36.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 552.0, 180.0, 40.0, 17.0 ]
 				}
@@ -254,7 +1387,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 270.0, 42.0, 111.0, 20.0 ],
+					"patching_rect" : [ 216.0, 90.0, 111.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Andale Mono",
@@ -284,11 +1417,11 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 270.0, 90.0, 36.0, 18.0 ],
+					"patching_rect" : [ 270.0, 132.0, 72.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 122.0, 180.0, 83.0, 17.0 ],
 					"rounded" : 0.0,
-					"text" : "reload",
+					"text" : "load apps",
 					"texton" : "Basic",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ]
@@ -304,80 +1437,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 360.0, 186.0, 66.0, 19.0 ],
+					"patching_rect" : [ 306.0, 180.0, 66.0, 19.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"frgb" : 0.0,
-					"id" : "obj-15",
-					"linecount" : 5,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 558.0, 36.0, 126.0, 71.0 ],
-					"text" : "this is just a general 'load this patch when opening' option. useful for single apps w/ multiple prefixes"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"id" : "obj-11",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 522.0, 36.0, 34.0, 19.0 ],
-					"text" : "sel 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 522.0, 108.0, 85.0, 19.0 ],
-					"text" : "∆batch.maxpat"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "open" ],
-					"patching_rect" : [ 522.0, 60.0, 42.0, 19.0 ],
-					"text" : "t open"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 522.0, 84.0, 51.0, 19.0 ],
-					"text" : "pcontrol"
 				}
 
 			}
@@ -395,7 +1457,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 522.0, 12.0, 54.0, 18.0 ],
+					"patching_rect" : [ 594.0, 108.0, 54.0, 18.0 ],
 					"rounded" : 0.0,
 					"text" : "batch",
 					"texton" : "batch",
@@ -430,14 +1492,18 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 666.0, 114.0, 59.5, 19.0 ],
+					"patching_rect" : [ 486.0, 204.0, 59.5, 19.0 ],
 					"restore" : 					{
 						"advanced" : [ 1 ],
-						"batch" : [ 0 ]
+						"batch" : [ 0 ],
+						"routehorizontal" : [ 1 ],
+						"routevert" : [ 0 ],
+						"tile-orientation" : [ 0 ],
+						"whichkey" : [ 1 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u985000762"
+					"varname" : "u949005511"
 				}
 
 			}
@@ -1320,7 +2386,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 198.0, 126.0, 90.0, 19.0 ],
+					"patching_rect" : [ 198.0, 156.0, 90.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Andale Mono",
@@ -1348,9 +2414,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 198.0, 156.0, 107.0, 19.0 ],
+					"patching_rect" : [ 198.0, 180.0, 107.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 518, 73, 1167, 926 ],
+						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
 						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
@@ -1388,361 +2454,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"id" : "obj-53",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patcher" : 					{
-						"fileversion" : 1,
-						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 5,
-							"architecture" : "x86"
-						}
-,
-						"rect" : [ 771.0, 44.0, 414.0, 672.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 1,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Andale Mono",
-						"gridonopen" : 0,
-						"gridsize" : [ 18.0, 6.0 ],
-						"gridsnaponopen" : 0,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"boxanimatetime" : 200,
-						"imprint" : 0,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"boxes" : [ 							{
-								"box" : 								{
-									"fontface" : 1,
-									"fontname" : "Andale Mono",
-									"fontsize" : 16.0,
-									"frgb" : 0.0,
-									"id" : "obj-17",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 35.0, 46.0, 191.0, 24.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 36.0, 48.0, 69.0, 24.0 ],
-									"text" : "about"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-16",
-									"linecount" : 10,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 36.0, 48.0, 150.0, 141.0 ],
-									"presentation" : 1,
-									"presentation_linecount" : 4,
-									"presentation_rect" : [ 54.0, 66.0, 324.0, 60.0 ],
-									"text" : "designed as a performance hub to host and navigate multiple applications. use the auto-load functions to create an automated performance manager."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 11.0,
-									"frgb" : 0.0,
-									"id" : "obj-13",
-									"linecount" : 4,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 53.0, 532.0, 200.0, 56.0 ],
-									"presentation" : 1,
-									"presentation_linecount" : 3,
-									"presentation_rect" : [ 54.0, 588.0, 324.0, 44.0 ],
-									"text" : "overwrite the 'sbatch.json' file in the smallbatch folder to auto-load your settings when the patch opens."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontface" : 1,
-									"fontname" : "Andale Mono",
-									"fontsize" : 16.0,
-									"frgb" : 0.0,
-									"id" : "obj-14",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 35.0, 514.0, 191.0, 24.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 36.0, 570.0, 198.0, 24.0 ],
-									"text" : "tip!",
-									"textcolor" : [ 1.0, 0.4, 0.4, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 11.0,
-									"frgb" : 0.0,
-									"id" : "obj-11",
-									"linecount" : 8,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 56.0, 416.0, 198.0, 105.0 ],
-									"presentation" : 1,
-									"presentation_linecount" : 5,
-									"presentation_rect" : [ 54.0, 492.0, 324.0, 68.0 ],
-									"text" : "there is provision for a 'master' patch to be loaded in a similar way to the relevant patch for each cell. monome's 'batch' is an example that loads a number of client patches to connect."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontface" : 1,
-									"fontname" : "Andale Mono",
-									"fontsize" : 16.0,
-									"frgb" : 0.0,
-									"id" : "obj-12",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 38.0, 398.0, 191.0, 24.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 36.0, 474.0, 198.0, 24.0 ],
-									"text" : "advanced: batch"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 11.0,
-									"frgb" : 0.0,
-									"id" : "obj-8",
-									"linecount" : 12,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 55.0, 264.0, 198.0, 155.0 ],
-									"presentation" : 1,
-									"presentation_linecount" : 8,
-									"presentation_rect" : [ 54.0, 360.0, 324.0, 105.0 ],
-									"text" : "- create a custom scene by entering 'advanced' mode. you can then configure the order of patches, click 'no file' to point to that slot's application file and it will boot when loading your smallbatch save file.\n- for updated apps that send a '/loaded' flag, you can auto-load a preset file to that app as well."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontface" : 1,
-									"fontname" : "Andale Mono",
-									"fontsize" : 16.0,
-									"frgb" : 0.0,
-									"id" : "obj-10",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 37.0, 246.0, 191.0, 24.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 36.0, 342.0, 198.0, 24.0 ],
-									"text" : "advanced: scene"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 11.0,
-									"frgb" : 0.0,
-									"id" : "obj-6",
-									"linecount" : 10,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 36.0, 172.0, 198.0, 130.0 ],
-									"presentation" : 1,
-									"presentation_linecount" : 6,
-									"presentation_rect" : [ 54.0, 252.0, 324.0, 81.0 ],
-									"text" : "- select 2 apps at once by holding top-right button, press&hold 2 rows (in order), release top-right, then release 2 rows.\n- if you connect 2 devices, they will join to one large grid if selecting a single app, or split the apps to each device if selecting 2."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontface" : 1,
-									"fontname" : "Andale Mono",
-									"fontsize" : 16.0,
-									"frgb" : 0.0,
-									"id" : "obj-4",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 15.0, 155.0, 191.0, 24.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 36.0, 234.0, 162.0, 24.0 ],
-									"text" : "features"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontface" : 1,
-									"fontname" : "Andale Mono",
-									"fontsize" : 16.0,
-									"frgb" : 0.0,
-									"id" : "obj-1",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 17.0, 60.0, 191.0, 24.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 36.0, 138.0, 69.0, 24.0 ],
-									"text" : "how to"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 12.0,
-									"frgb" : 0.0,
-									"id" : "obj-5",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 180.0, 18.0, 150.0, 20.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 162.0, 21.0, 54.0, 20.0 ],
-									"text" : "help"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 24.0,
-									"frgb" : 0.0,
-									"id" : "obj-18",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 57.0, 34.0, 167.0, 33.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 18.0, 6.0, 198.0, 33.0 ],
-									"text" : "smallbatch"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 11.0,
-									"frgb" : 0.0,
-									"id" : "obj-3",
-									"linecount" : 9,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 1006.0, 137.0, 198.0, 118.0 ],
-									"presentation" : 1,
-									"presentation_linecount" : 5,
-									"presentation_rect" : [ 54.0, 156.0, 324.0, 68.0 ],
-									"text" : "1. open at least 2 apps\n2. connect to your physical monome devices\n3. choose your apps in the dropdowns\n4. press the top-right button on your device\n5. click a button in a row to select the app"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"comment" : "",
-									"id" : "obj-2",
-									"maxclass" : "inlet",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 72.0, 54.0, 25.0, 25.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bgcolor" : [ 1.0, 0.8, 0.4, 0.2 ],
-									"id" : "obj-7",
-									"maxclass" : "panel",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 537.0, 189.0, 53.0, 34.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 18.0, 30.0, 378.0, 624.0 ]
-								}
-
-							}
- ],
-						"lines" : [  ]
-					}
-,
-					"patching_rect" : [ 684.0, 90.0, 41.0, 19.0 ],
-					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Andale Mono",
-						"default_fontsize" : 12.0,
-						"description" : "",
-						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Andale Mono",
-						"fontsize" : 12.0,
-						"globalpatchername" : "",
-						"tags" : ""
-					}
-,
-					"text" : "p help"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"id" : "obj-52",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "open" ],
-					"patching_rect" : [ 684.0, 42.0, 42.0, 19.0 ],
-					"text" : "t open"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"id" : "obj-51",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 684.0, 66.0, 51.0, 19.0 ],
-					"text" : "pcontrol"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
@@ -1753,7 +2464,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 234.0, 90.0, 36.0, 18.0 ],
+					"patching_rect" : [ 234.0, 132.0, 36.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 595.0, 180.0, 40.0, 17.0 ],
 					"rounded" : 0.0,
@@ -1776,7 +2487,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 198.0, 90.0, 36.0, 18.0 ],
+					"patching_rect" : [ 198.0, 132.0, 36.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 552.0, 180.0, 40.0, 17.0 ],
 					"rounded" : 0.0,
@@ -1796,7 +2507,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 432.0, 114.0, 53.0, 19.0 ],
+					"patching_rect" : [ 594.0, 42.0, 53.0, 19.0 ],
 					"text" : "deferlow"
 				}
 
@@ -1810,7 +2521,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 432.0, 138.0, 147.0, 20.0 ],
+					"patching_rect" : [ 594.0, 66.0, 147.0, 20.0 ],
 					"text" : "s [manager]advanced"
 				}
 
@@ -1843,7 +2554,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 684.0, 12.0, 55.0, 26.0 ],
+					"patching_rect" : [ 684.0, 108.0, 36.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 638.0, 180.0, 83.0, 17.0 ],
 					"rounded" : 0.0,
@@ -1868,7 +2579,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 432.0, 90.0, 71.0, 16.0 ],
+					"patching_rect" : [ 594.0, 18.0, 71.0, 16.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 36.0, 180.0, 83.0, 17.0 ],
 					"rounded" : 0.0,
@@ -1889,7 +2600,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -33.0, -34.0 ],
-					"patching_rect" : [ 702.0, 186.0, 35.0, 22.0 ],
+					"patching_rect" : [ 702.0, 198.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 638.0, 84.0, 83.0, 83.0 ],
 					"varname" : "7route-cell"
@@ -1905,7 +2616,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -33.0, -34.0 ],
-					"patching_rect" : [ 666.0, 186.0, 35.0, 22.0 ],
+					"patching_rect" : [ 666.0, 198.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 552.0, 84.0, 83.0, 83.0 ],
 					"varname" : "6route-cell"
@@ -1921,7 +2632,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -33.0, -34.0 ],
-					"patching_rect" : [ 630.0, 186.0, 35.0, 22.0 ],
+					"patching_rect" : [ 630.0, 198.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 466.0, 84.0, 83.0, 83.0 ],
 					"varname" : "5route-cell"
@@ -1937,7 +2648,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -33.0, -34.0 ],
-					"patching_rect" : [ 594.0, 186.0, 35.0, 22.0 ],
+					"patching_rect" : [ 594.0, 198.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 380.0, 84.0, 83.0, 83.0 ],
 					"varname" : "4route-cell"
@@ -1953,7 +2664,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -33.0, -34.0 ],
-					"patching_rect" : [ 684.0, 162.0, 35.0, 22.0 ],
+					"patching_rect" : [ 684.0, 174.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 294.0, 84.0, 83.0, 83.0 ],
 					"varname" : "3route-cell"
@@ -1969,7 +2680,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -33.0, -34.0 ],
-					"patching_rect" : [ 648.0, 162.0, 35.0, 22.0 ],
+					"patching_rect" : [ 648.0, 174.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 208.0, 84.0, 83.0, 83.0 ],
 					"varname" : "2route-cell"
@@ -1985,7 +2696,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -33.0, -34.0 ],
-					"patching_rect" : [ 612.0, 162.0, 35.0, 22.0 ],
+					"patching_rect" : [ 612.0, 174.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 122.0, 84.0, 83.0, 83.0 ],
 					"varname" : "1route-cell"
@@ -2001,7 +2712,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -33.0, -34.0 ],
-					"patching_rect" : [ 576.0, 162.0, 35.0, 22.0 ],
+					"patching_rect" : [ 576.0, 174.0, 35.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 36.0, 84.0, 83.0, 83.0 ],
 					"varname" : "0route-cell"
@@ -2017,7 +2728,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 593.0, 142.0, 125.0, 19.0 ],
+					"patching_rect" : [ 593.0, 154.0, 125.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 629.0, 210.0, 109.0, 19.0 ],
 					"text" : "monome.org 2013"
@@ -2043,7 +2754,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 91.0, 44.0, 825.0, 447.0 ],
+						"rect" : [ 855.0, 44.0, 825.0, 447.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2853,7 +3564,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 352.0, 481.0, 906.0, 468.0 ],
+						"rect" : [ 85.0, 265.0, 906.0, 468.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2872,7 +3583,77 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-36",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 198.0, 108.0, 20.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-34",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 234.0, 126.0, 83.0, 18.0 ],
+									"text" : "setRLoc $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.4, 0.8, 1.0, 1.0 ],
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-32",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 630.0, 174.0, 133.0, 20.0 ],
+									"text" : "s [batch]maxgsize"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.25098, 0.709804, 0.8, 1.0 ],
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-27",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 666.0, 126.0, 108.0, 19.0 ],
+									"text" : "s [router]master-key"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.8, 0.4, 1.0, 1.0 ],
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-39",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 180.0, 66.0, 140.0, 20.0 ],
+									"text" : "r [router]settings"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -2881,7 +3662,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 540.0, 120.0, 47.0, 20.0 ],
+									"patching_rect" : [ 522.0, 120.0, 47.0, 20.0 ],
 									"text" : "sel 1"
 								}
 
@@ -2893,7 +3674,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "int" ],
 									"patching_rect" : [ 630.0, 30.0, 25.0, 25.0 ]
 								}
 
@@ -2905,7 +3686,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "int" ],
 									"patching_rect" : [ 360.0, 30.0, 25.0, 25.0 ]
 								}
 
@@ -2957,7 +3738,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 915.0, 448.0, 381.0, 415.0 ],
+										"rect" : [ 1134.0, 581.0, 381.0, 415.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -3713,7 +4494,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 126.0, 42.0, 150.0, 109.0 ],
+									"patching_rect" : [ 18.0, 42.0, 150.0, 109.0 ],
 									"text" : "router.js:\ninlet1: from sOSC grid 1\ninlet2: from sOSC grid 2\n\noutlet1: to app grid1\noutlet2: to app grid2\noutlet3: app-select list(app1,app2)"
 								}
 
@@ -3754,8 +4535,8 @@
 									"id" : "obj-54",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
+									"numoutlets" : 6,
+									"outlettype" : [ "", "", "", "", "", "" ],
 									"patching_rect" : [ 324.0, 96.0, 288.0, 19.0 ],
 									"saved_object_attributes" : 									{
 										"filename" : "router.js",
@@ -3958,6 +4739,33 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-54", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-34", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-34", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-36", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-54", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-39", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-28", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -3989,6 +4797,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-54", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-32", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-54", 5 ]
 								}
 
 							}
@@ -5355,7 +6172,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"offset" : [ -81.0, -63.0 ],
-					"outlettype" : [ "", "", "", "" ],
+					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 108.0, 90.0, 72.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 409.0, 48.0, 312.0, 27.0 ],
@@ -8719,7 +9536,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"offset" : [ -81.0, -63.0 ],
-					"outlettype" : [ "", "", "", "" ],
+					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 18.0, 90.0, 72.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 36.0, 48.0, 312.0, 27.0 ],
@@ -8734,7 +9551,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 522.0, 174.0, 53.0, 34.0 ],
+					"patching_rect" : [ 540.0, 174.0, 36.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 18.0, 30.0, 720.0, 180.0 ]
 				}
@@ -8749,7 +9566,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 198.0, 186.0, 155.0, 20.0 ],
+					"patching_rect" : [ 198.0, 204.0, 155.0, 20.0 ],
 					"text" : "s [manager]ps-output"
 				}
 
@@ -8761,24 +9578,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-10", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -8821,6 +9620,42 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 0 ]
@@ -8874,6 +9709,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -8883,7 +9727,61 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-52", 0 ],
+					"destination" : [ "obj-65", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-68", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-60", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-31", 0 ]
@@ -8964,24 +9862,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-53", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-51", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-51", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-52", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-66", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -9000,7 +9880,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
+					"destination" : [ "obj-54", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-6", 0 ]
@@ -9027,6 +9907,42 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-64", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-69", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 3 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -9040,15 +9956,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-85", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-9", 0 ]
 				}
 
 			}
