@@ -3,6 +3,8 @@ outlets = 2;
 
 var lAll = 0;
 var rGate = 1; // the status of the router gate, triggered 
+var apps = 0; // bitmask of loaded apps
+
 
 // Global (Max namespace) variables
 glob = new Global("routinginfo");
@@ -10,6 +12,14 @@ glob.gMeta = 0;
 glob.g1x = 0; // this is the x-dimension of the 1st attached device
 glob.g1y = 0; // this is the y-dimension of the 1st attached device
 glob.gridtiling = 0;
+glob.rLock = 0; // whether the route page has locked values
+glob.selHistory = 0;
+glob.selCurrent = 0;
+glob.rDevice = -1;
+glob.rQuad = -1;
+glob.joined = 1;
+
+
 
 // need to have sOSC() args go to 't' to deal with /led/map command which takes address&10args
 function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
@@ -260,10 +270,36 @@ function clearDisplay() { // this function simply sends a /led/all message to al
 
 
 function drawRouter() { // draw the led display for route mode, and accept updates to 
-	// use the 3rd outlet of router.js to send a list of current selection of leds to draw from
+		 // clear relevant quad
+	outlet(glob.rDevice,"/manager/grid/led/map",glob.rQuad,0,0,0,0,0,0,0,0);
+
+	if(glob.rLock == 1 && glob.joined == 1) { // if locked && both devices joined
+		// only display a single top led
+		outlet(glob.rDevice,"/manager/grid/led/set",glob.selCurrent+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),1);
+	}
+	else if(glob.rLock == 1 && glob.joined == 0) { // if locked && devices separate
+		// display 2 leds up top
+		outlet(glob.rDevice,"/manager/grid/led/set",glob.selCurrent+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),1);
+		outlet(glob.rDevice,"/manager/grid/led/set",glob.selHistory+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2))+1,1);
+	}
+	else if(glob.rLock == 0 && glob.joined == 1) { // if unlocked && both devices joined
+		// display full bar
+		outlet(glob.rDevice,"/manager/grid/led/col",glob.selCurrent+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),255);
+	}
+	else if(glob.rLock == 0 && glob.joined == 0) { // if unlocked && devices separate
+		// display 2 half bars
+		outlet(glob.rDevice,"/manager/grid/led/col",glob.selCurrent+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),15);
+		outlet(glob.rDevice,"/manager/grid/led/col",glob.selHistory+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),240);
+	}
+	
+		// then draw a full row displaying which cells are currently mappable to destinations
+	outlet(glob.rDevice,"/manager/grid/led/row",8*(glob.rQuad%2),7+8*(Math.floor(glob.rQuad/2)),apps);
 }
 
 
+function hasApp(x, b) { // receives the index of any cell with a currently stored app
+	// receives [app index] [bool] from each app when it changes
+	if(b) apps = apps | 1<<x; // set the bit
+	else apps = apps & ~(1<<x); // clear the bit
+}
 
-
-////////////////////////////////END CODE//////////////////////////////////////////////////
