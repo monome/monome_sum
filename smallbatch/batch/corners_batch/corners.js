@@ -84,10 +84,13 @@ function bang() {
 		dy = dy + (ty / g);
     } }
     
+
     dx = dx * f;
     dy = dy * f;
 
+		// these 4 outlets shoot bangs on hitting walls
     x = x + dx;
+
     if(x>bx) { 
         if(r[0]==1) { dx = -dx; x = bx; }
         else { x = x - bx; }
@@ -111,8 +114,8 @@ function bang() {
         outlet(4,1);
     }
 
-    outlet(0,x);
-    outlet(1,y);
+    outlet(0,x,y);
+//    outlet(1,y);
     outlet(2,dx);
     outlet(3,dy);
 	outlet(5,keys);
