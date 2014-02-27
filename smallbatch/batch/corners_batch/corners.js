@@ -21,7 +21,6 @@ r[3] = 1;
 
 var p = new Array(256);
 
-
 function describe_it(num)
 {
     if(num==0) assist("x");
@@ -54,15 +53,17 @@ function fric(val) {
 
 function point(kx, ky, state) {
     if(state==1) {
-        p[kx+ky*16] = 1;
+        p[kx+ky*bx] = 1;
     } else {
-        p[kx+ky*16] = 0;
+        p[kx+ky*bx] = 0;
     }
 }
 
 function bounds(xb, yb) {
     bx = xb - 0.5;
     by = yb - 0.5;
+
+	r.length = bx * by;
 }
 
 function tilt(tiltx, tilty) {
@@ -73,9 +74,9 @@ function tilt(tiltx, tilty) {
 function bang() {
  //   dx = dy = 0;
 	keys = 0;
-    for(i1=0;i1<16;i1++) {
-    for(i2=0;i2<16;i2++) {
-        if(p[i1+i2*16]) {
+    for(i1=0;i1<bx;i1++) { //x
+    for(i2=0;i2<by;i2++) { //y
+        if(p[i1+i2*bx]) {
             dx = dx + (i1 - x + 0.5) / g;
             dy = dy + (i2 - y + 0.5) / g;
 			keys++;

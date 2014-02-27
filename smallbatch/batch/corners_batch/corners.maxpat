@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 5,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 946.0, 423.0 ],
+		"rect" : [ 481.0, 313.0, 946.0, 423.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -27,6 +28,35 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-82",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "float" ],
+					"patching_rect" : [ 192.0, 144.0, 83.0, 20.0 ],
+					"text" : "unpack f f"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-48",
+					"linecount" : 4,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 120.0, 152.0, 50.0, 58.0 ],
+					"text" : "8.658381 6.813719"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -160,7 +190,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 154.0, 652.0, 50.0, 18.0 ],
-					"text" : "64 20"
+					"text" : "68 20"
 				}
 
 			}
@@ -215,7 +245,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 37.0, 315.0, 407.0, 47.0 ],
+					"patching_rect" : [ 40.0, 312.0, 407.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 56.0, 36.0, 407.0, 47.0 ],
 					"text" : "corners"
@@ -264,7 +294,7 @@
 					"presentation_rect" : [ 342.5, 235.0, 100.0, 53.0 ],
 					"preset_data" : [ 						{
 							"number" : 1,
-							"data" : [ 5, "obj-4", "flonum", "float", 1.506081, 5, "obj-6", "flonum", "float", 4.471158, 5, "obj-25", "toggle", "int", 1, 5, "obj-49", "number", "int", 1, 5, "obj-50", "number", "int", 4, 5, "obj-61", "flonum", "float", 0.740157, 5, "obj-62", "flonum", "float", 0.322835, 5, "obj-63", "slider", "float", 94.0, 5, "obj-64", "slider", "float", 41.0, 5, "obj-27", "number", "int", 16, 5, "obj-31", "number", "int", 8, 6, "obj-17", "pictslider", "list", 11, 70, 5, "obj-5", "flonum", "float", 0.0, 5, "obj-2", "flonum", "float", -0.0, 5, "obj-9", "slider", "float", 63.0, 5, "obj-16", "slider", "float", 63.0, 5, "obj-71", "toggle", "int", 1, 5, "obj-72", "toggle", "int", 1, 5, "obj-75", "toggle", "int", 1, 5, "obj-77", "toggle", "int", 1, 5, "obj-106", "number", "int", 43, 5, "obj-116", "number", "int", 50, 5, "obj-118", "number", "int", 53, 5, "obj-120", "number", "int", 62, 5, "obj-131", "number", "int", 74, 5, "obj-129", "number", "int", 82, 5, "obj-127", "number", "int", 98, 5, "obj-122", "number", "int", 103, 5, "obj-138", "number", "int", 23, 5, "obj-141", "number", "int", 63, 5, "obj-150", "number", "int", 22, 5, "obj-148", "number", "int", 63, 5, "obj-155", "number", "int", 20, 5, "obj-153", "number", "int", 11, 5, "obj-160", "number", "int", 21, 5, "obj-158", "number", "int", 70, 5, "obj-178", "umenu", "int", 6, 5, "obj-182", "umenu", "int", 6, 5, "obj-187", "umenu", "int", 6 ]
+							"data" : [ 5, "obj-4", "flonum", "float", 1.506081, 5, "obj-6", "flonum", "float", 4.471158, 5, "obj-25", "toggle", "int", 1, 5, "obj-49", "number", "int", 1, 5, "obj-50", "number", "int", 4, 5, "obj-61", "flonum", "float", 0.740157, 5, "obj-62", "flonum", "float", 0.322835, 5, "obj-63", "slider", "float", 94.0, 5, "obj-64", "slider", "float", 41.0, 5, "obj-27", "number", "int", 16, 5, "obj-31", "number", "int", 8, 6, "<invalid>", "pictslider", "list", 11, 70, 5, "obj-5", "flonum", "float", 0.0, 5, "obj-2", "flonum", "float", -0.0, 5, "obj-9", "slider", "float", 63.0, 5, "obj-16", "slider", "float", 63.0, 5, "obj-71", "toggle", "int", 1, 5, "obj-72", "toggle", "int", 1, 5, "obj-75", "toggle", "int", 1, 5, "obj-77", "toggle", "int", 1, 5, "obj-106", "number", "int", 43, 5, "obj-116", "number", "int", 50, 5, "obj-118", "number", "int", 53, 5, "obj-120", "number", "int", 62, 5, "obj-131", "number", "int", 74, 5, "obj-129", "number", "int", 82, 5, "obj-127", "number", "int", 98, 5, "obj-122", "number", "int", 103, 5, "obj-138", "number", "int", 23, 5, "obj-141", "number", "int", 63, 5, "obj-150", "number", "int", 22, 5, "obj-148", "number", "int", 63, 5, "obj-155", "number", "int", 20, 5, "obj-153", "number", "int", 11, 5, "obj-160", "number", "int", 21, 5, "obj-158", "number", "int", 70, 5, "obj-178", "umenu", "int", 6, 5, "obj-182", "umenu", "int", 6, 5, "obj-187", "umenu", "int", 6 ]
 						}
  ]
 				}
@@ -1756,21 +1786,6 @@
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"border" : 2,
 					"bordercolor" : [ 0.694118, 0.694118, 0.694118, 1.0 ],
-					"id" : "obj-110",
-					"maxclass" : "panel",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 16.0, 256.0, 37.0, 37.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 48.5, 187.515778, 422.0, 194.146042 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"border" : 2,
-					"bordercolor" : [ 0.694118, 0.694118, 0.694118, 1.0 ],
 					"id" : "obj-109",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -1778,23 +1793,6 @@
 					"patching_rect" : [ 16.0, 208.0, 37.0, 37.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 48.5, 90.951324, 422.0, 79.83947 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bottomvalue" : 127,
-					"id" : "obj-17",
-					"ignoreclick" : 1,
-					"maxclass" : "pictslider",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 160.0, 272.0, 100.0, 100.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 64.5, 235.0, 100.0, 100.0 ],
-					"topvalue" : 0
 				}
 
 			}
@@ -2381,7 +2379,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-48", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-10", 0 ]
@@ -2399,10 +2397,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-82", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-10", 1 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -2804,24 +2802,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-152", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-157", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-17", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-176", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2849,7 +2829,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
+					"destination" : [ "obj-152", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
@@ -2948,7 +2928,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 1 ],
+					"destination" : [ "obj-157", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-20", 0 ]
@@ -3605,6 +3585,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-82", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-82", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3687,15 +3685,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max6/patches",
-				"patcherrelativepath" : "../../../../../../Applications/Max6/patches",
+				"bootpath" : "/Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "corners.js",
-				"bootpath" : "/Users/trentgill/Desktop/updated for serialosc/old/corners120531",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch/batch/corners_batch",
+				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
