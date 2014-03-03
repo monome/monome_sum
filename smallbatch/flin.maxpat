@@ -29,6 +29,34 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 435.0, 120.0, 96.0, 20.0 ],
+					"text" : "GlobalTransport"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-6",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 150.0, 120.0, 44.0, 31.0 ],
+					"text" : "4 0 3 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 0.4, 0.8, 1.0, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -110,7 +138,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 45.0, 210.0, 238.0, 36.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 105.0, 30.0, 60.0, 15.0 ],
+					"presentation_rect" : [ 105.0, 30.0, 315.0, 30.0 ],
 					"varname" : "serialosc"
 				}
 
@@ -1249,6 +1277,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-104", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-100", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1430,6 +1467,13 @@
 				"name" : "serialosc.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches",
 				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "GlobalTransport.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/extras",
+				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches/extras",
 				"type" : "JSON",
 				"implicit" : 1
 			}
