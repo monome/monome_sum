@@ -22,10 +22,9 @@ glob.rWidth = -1;
 glob.rHeight = -1;
 
 
-
-
 // need to have sOSC() args go to 't' to deal with /led/map command which takes address&10args
-function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
+function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq) { // a=osc address, b-t = data
+
 
   // this entire function is enclosed inside of a if statement: if(rGate==1)
   if(rGate==1) { // only process the sOSC commands if in application mode
@@ -38,8 +37,8 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
 			if(x<glob.g1x && y<glob.g1y) { // the press is within the range of the left most device
 				outlet(0,"/manager/grid/led/set",x,y,z);
 			}
-			else if(glob.gridtiling==0) outlet(1,"/manager/grid/led/set",(x-glob.g1x),y,z);
-			else outlet(1,"/manager/grid/led/set",x,(y-glob.g1y),z);
+			else if(glob.gridtiling==0 && x>(glob.g1x-1)) outlet(1,"/manager/grid/led/set",(x-glob.g1x),y,z); // horizontal & outside 1st device range
+			else if(glob.gridtiling==1 && y>(glob.g1y-1)) outlet(1,"/manager/grid/led/set",x,(y-glob.g1y),z); // vertical
 		  }
 		}
 		if(glob.gMeta==1) { // 2 apps & 2 devices
@@ -107,8 +106,8 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
 		if(glob.gMeta==0) { // only one application so will be inlet==0 only
 		  if(inlet==0) { // need to ignore 2nd application
 			if((x<glob.g1x) && (y<glob.g1y)) outlet(0,"/manager/grid/led/map",x,y,z,n,o,p,q,r,s,t); // in range of 1st device then echo out
-			else if(glob.gridtiling==0) outlet(1,"/manager/grid/led/map",(x-glob.g1x),y,z,n,o,p,q,r,s,t); // remove offset
-			else outlet(1,"/manager/grid/led/map",x,(y-glob.g1y),z,n,o,p,q,r,s,t); // remove offset
+			else if(glob.gridtiling==0 && x>(glob.g1x-1)) outlet(1,"/manager/grid/led/map",(x-glob.g1x),y,z,n,o,p,q,r,s,t); // remove offset
+			else if(glob.gridtiling==1 && y>(glob.g1y-1)) outlet(1,"/manager/grid/led/map",x,(y-glob.g1y),z,n,o,p,q,r,s,t); // remove offset
 		  }
 		}
 		if(glob.gMeta==1) { // 2 apps & 2 devices
@@ -127,6 +126,16 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
 				else outlet(0,"/manager/grid/led/map",x,8,z,n,o,p,q,r,s,t); // shift to bottom
 			}
 		}
+	}
+
+
+	if(a=="/manager/grid/led/level/map") { // ridiculous. sorry. please help me make this more elegant & faster?!?!
+		if(glob.gMeta==0 && inlet==0) { // only one application so will be inlet==0 only
+			if(glob.g1x==8) {
+				
+			
+			
+			outlet(0,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq);
 	}
 
 
