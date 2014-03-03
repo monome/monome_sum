@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 39.0, 44.0, 890.0, 960.0 ],
+		"rect" : [ 111.0, 177.0, 890.0, 960.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,20 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-17",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1035.0, 492.0, 50.0, 18.0 ],
+					"text" : "3 63"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -826,7 +840,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 64.0, 19.0 ],
 									"text" : "autopattr",
-									"varname" : "u288002332"
+									"varname" : "u302015690"
 								}
 
 							}
@@ -2390,7 +2404,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 919.0, 438.0, 50.0, 18.0 ],
-					"text" : "37"
+					"text" : "39"
 				}
 
 			}
@@ -2891,7 +2905,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 833.666687, 472.0, 68.0, 20.0 ],
+					"patching_rect" : [ 833.666687, 470.0, 68.0, 20.0 ],
 					"text" : "pack 0 0"
 				}
 
@@ -4288,7 +4302,7 @@
 					"numoutlets" : 4,
 					"offset" : [ -100.0, -70.0 ],
 					"outlettype" : [ "", "int", "", "" ],
-					"patching_rect" : [ 821.0, 226.0, 321.0, 36.0 ],
+					"patching_rect" : [ 821.0, 234.0, 321.0, 36.0 ],
 					"varname" : "serialosc[4]"
 				}
 
@@ -5387,6 +5401,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-17", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-39", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-53", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -5819,6 +5842,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "GlobalTransport.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches/extras",
+				"patcherrelativepath" : "../../../../../Applications/Max 6.1/patches/extras",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "step.maxpat",
 				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
@@ -5830,13 +5860,6 @@
 				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "GlobalTransport.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/extras",
-				"patcherrelativepath" : "../../../../../Applications/Max 6.1/patches/extras",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
