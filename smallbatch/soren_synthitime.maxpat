@@ -990,13 +990,12 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u398002802"
+					"varname" : "u483007905"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"autorestore" : "synthitime.json",
 					"fontname" : "Helvetica Neue",
 					"fontsize" : 11.0,
 					"id" : "obj-12",
@@ -1203,21 +1202,8 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
-								"box" : 								{
-									"fontname" : "Helvetica Neue",
-									"fontsize" : 11.0,
-									"id" : "obj-3",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 15.0, 362.0, 50.0, 17.0 ],
-									"text" : "3"
-								}
-
-							}
-, 							{
 								"box" : 								{
 									"fontname" : "Helvetica Neue",
 									"fontsize" : 11.0,
@@ -1458,7 +1444,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u550002538"
+									"varname" : "u732007849"
 								}
 
 							}
@@ -1478,7 +1464,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u710002540"
+									"varname" : "u558007851"
 								}
 
 							}
@@ -1498,7 +1484,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u961002542"
+									"varname" : "u735007853"
 								}
 
 							}
@@ -1518,7 +1504,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u079002544"
+									"varname" : "u428007855"
 								}
 
 							}
@@ -1538,7 +1524,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u752002546"
+									"varname" : "u460007857"
 								}
 
 							}
@@ -1558,7 +1544,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u924002548"
+									"varname" : "u045007859"
 								}
 
 							}
@@ -1578,7 +1564,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u328002550"
+									"varname" : "u983007861"
 								}
 
 							}
@@ -1598,7 +1584,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u514002552"
+									"varname" : "u648007863"
 								}
 
 							}
@@ -1618,7 +1604,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u505002554"
+									"varname" : "u774007865"
 								}
 
 							}
@@ -1638,7 +1624,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::transpose @invisible 1",
-									"varname" : "u002002556"
+									"varname" : "u483007867"
 								}
 
 							}
@@ -1920,15 +1906,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-7", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-36", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2003,8 +1980,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 270.0, 938.0, 170.0, 19.0 ],
-					"text" : "poly~ poly.synthitime~.maxpat 8"
+					"patching_rect" : [ 486.0, 956.0, 203.0, 19.0 ],
+					"text" : "poly~ soren_poly.synthitime~.maxpat 8"
 				}
 
 			}
@@ -3356,15 +3333,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-153", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-141", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3405,15 +3373,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-153", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-141", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-157", 1 ]
 				}
 
 			}
@@ -3950,15 +3909,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "poly.synthitime~.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll-sorenEdit/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "synthitime.json",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll-sorenEdit/smallbatch",
+				"name" : "soren_poly.synthitime~.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
