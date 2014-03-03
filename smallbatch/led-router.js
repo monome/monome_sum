@@ -136,6 +136,8 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 			
 			
 			outlet(0,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq);
+			}
+		}
 	}
 
 
