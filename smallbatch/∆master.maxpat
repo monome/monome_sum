@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 111.0, 177.0, 890.0, 960.0 ],
+		"rect" : [ 217.0, 126.0, 890.0, 960.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,17 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 538.0, 1259.0, 80.0, 13.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-17",
@@ -37,7 +48,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1035.0, 492.0, 50.0, 18.0 ],
-					"text" : "3 63"
+					"text" : "0 60"
 				}
 
 			}
@@ -840,7 +851,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 64.0, 19.0 ],
 									"text" : "autopattr",
-									"varname" : "u302015690"
+									"varname" : "u819003053"
 								}
 
 							}
@@ -2404,7 +2415,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 919.0, 438.0, 50.0, 18.0 ],
-					"text" : "39"
+					"text" : "36"
 				}
 
 			}
@@ -3979,6 +3990,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.5, 0.0, 0.5, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-91",
@@ -3993,6 +4005,7 @@
 			}
 , 			{
 				"box" : 				{
+					"color" : [ 0.5, 0.0, 0.5, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-89",
@@ -5500,6 +5513,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-65", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-32", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -5838,13 +5860,6 @@
 				"name" : "_flin_sub.maxpat",
 				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "GlobalTransport.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/extras",
-				"patcherrelativepath" : "../../../../../Applications/Max 6.1/patches/extras",
 				"type" : "JSON",
 				"implicit" : 1
 			}
