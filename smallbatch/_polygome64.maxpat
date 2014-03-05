@@ -36,9 +36,11 @@
 					"name" : "serialosc.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 4,
-					"offset" : [ -100.0, -70.0 ],
+					"offset" : [ -250.0, -70.0 ],
 					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 1086.5, 514.0, 321.0, 36.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 5.0, 5.0, 16.0, 13.0 ],
 					"varname" : "serialosc[2]"
 				}
 
@@ -109,7 +111,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 798.0, -31.0, 50.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 30.0, 50.0, 18.0 ],
+					"presentation_rect" : [ 34.0, 5.0, 50.0, 18.0 ],
 					"text" : "43"
 				}
 
@@ -15497,8 +15499,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 747.0, -75.0, 57.0, 17.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 15.0, 5.0, 57.0, 17.0 ],
 					"text" : "r g_output"
 				}
 
@@ -27187,6 +27187,84 @@
 					"source" : [ "obj-99", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "step.png",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "clock.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "length8.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "length7.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "playback.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pitch_setup.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mode.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "transops.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "arbitrary_pitch_map.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "ap.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "serialosc.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../Applications/Max 6.1/patches",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ]
 	}
