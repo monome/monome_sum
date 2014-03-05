@@ -94,8 +94,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 690.5, 22.0, 144.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 76.0, 139.0, 144.0, 20.0 ],
 					"text" : "s [batch]polygomeOutput"
 				}
 
@@ -112,7 +110,7 @@
 					"patching_rect" : [ 798.0, -31.0, 50.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 30.0, 50.0, 18.0 ],
-					"text" : "58"
+					"text" : "43"
 				}
 
 			}
@@ -7449,7 +7447,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ -6.0, -93.0 ],
-					"patching_rect" : [ 15.0, 56.0, 326.0, 67.0 ]
+					"patching_rect" : [ 116.0, 45.0, 326.0, 67.0 ]
 				}
 
 			}
