@@ -49,7 +49,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 130.0, 7.0, 72.0, 20.0 ],
-					"text" : "loadmess 0"
+					"text" : "loadmess 1"
 				}
 
 			}
@@ -637,6 +637,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "swing value",
@@ -879,8 +880,8 @@
 									"numinlets" : 4,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 76.0, 149.0, 53.0, 17.0 ],
-									"text" : "tempo"
+									"patching_rect" : [ 76.0, 149.0, 59.5, 17.0 ],
+									"text" : "tempo 8n"
 								}
 
 							}
