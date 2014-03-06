@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 546.0, 92.0, 757.0, 229.0 ],
+		"rect" : [ 64.0, 205.0, 762.0, 447.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,48 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"id" : "obj-25",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 364.0, 283.0, 136.0, 17.0 ],
+					"text" : "load ∆master.maxpat"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 364.0, 314.0, 68.0, 20.0 ],
+					"text" : "pcontrol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.4, 0.8, 1.0, 1.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 126.0, 314.0, 183.0, 20.0 ],
+					"text" : "s [batch]master_pcontrol"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"hint" : "set location of 'route key'. press 'map' then the grid key you wish to activate the router. press 'map' again to set.",
 					"id" : "obj-65",
@@ -759,6 +801,20 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 111.0, 66.0, 68.0, 20.0 ],
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Helvetica Neue",
 									"fontsize" : 11.0,
 									"frgb" : 0.0,
@@ -767,7 +823,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 86.0, 100.0, 126.0, 71.0 ],
+									"patching_rect" : [ 111.0, 100.0, 126.0, 71.0 ],
 									"text" : "this is just a general 'load this patch when opening' option. useful for single apps w/ multiple prefixes"
 								}
 
@@ -795,7 +851,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 172.0, 85.0, 19.0 ],
+									"patching_rect" : [ 50.0, 178.0, 85.0, 19.0 ],
 									"text" : "∆batch.maxpat",
 									"varname" : "∆batch"
 								}
@@ -843,6 +899,15 @@
 							}
  ],
 						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
 									"disabled" : 0,
@@ -1302,7 +1367,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u969012269"
+					"varname" : "u044003514"
 				}
 
 			}
@@ -7170,7 +7235,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 544.0, 50.0, 1136.0, 484.0 ],
+						"rect" : [ 294.0, 133.0, 1136.0, 484.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -7190,6 +7255,34 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-6",
+									"linecount" : 3,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 453.0, 106.0, 50.0, 43.0 ],
+									"text" : "/parc/tilt 0 127 129 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 247.0, 192.0, 104.0, 19.0 ],
+									"text" : "print routemanager"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Helvetica Neue",
 									"fontsize" : 11.0,
@@ -8641,6 +8734,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-6", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-121", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-31", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -8717,6 +8819,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-38", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-4", 1 ]
 								}
 
 							}
@@ -9013,6 +9124,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-60", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -9252,13 +9372,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "GlobalTransport.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/extras",
-				"patcherrelativepath" : "../../../../../Applications/Max 6.1/patches/extras",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "step.maxpat",
 				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
@@ -9315,13 +9428,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "midi_output.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "pitch_setup.maxpat",
 				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
@@ -9329,21 +9435,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tilt.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "mode.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pedal.maxpat",
 				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

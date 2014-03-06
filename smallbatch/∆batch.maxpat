@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 13.0, 340.0, 758.0, 376.0 ],
+		"rect" : [ 17.0, 343.0, 758.0, 376.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 594.0, 282.0, 90.0, 19.0 ],
-					"text" : "∆master.maxpat"
+					"text" : "∆master.maxpat",
+					"varname" : "∆master"
 				}
 
 			}
@@ -92,7 +93,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 540.0, 102.0, 150.0, 20.0 ],
+					"patching_rect" : [ 540.0, 102.0, 150.0, 21.0 ],
 					"text" : "global section:\n"
 				}
 
@@ -107,7 +108,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.0, 84.0, 357.0, 209.0 ],
+					"patching_rect" : [ 36.0, 84.0, 357.0, 210.0 ],
 					"text" : "1. step sequencer (w/ probability) (drums/bass)\n2. tml/lpr (audio input sampler) accepts sequence + mlr slicing (w/ samp loading)\n3. polygome w/ additional arp. controls (notes)\n4. parc / xor / muon (tehn apps)\n5. maze thing brian built (modulations)\n6. 2d lfo / corners (cc gen)\n7. flin (notes)\n\n8. globals (synth, mixer, tempo, swing?, \n\ngridmesh style input/record/resequencer ???\ncould this be a universal input recorder & sequencer? gesture based recording (rather than event based)"
 				}
 
@@ -122,7 +123,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 396.0, 6.0, 342.0, 74.0 ],
+					"patching_rect" : [ 396.0, 6.0, 342.0, 75.0 ],
 					"text" : "synthesizer\nglobal (mixer / tempo)\npattern recorders\naudio resamplers\n\n"
 				}
 
@@ -195,14 +196,6 @@
 					"source" : [ "obj-3", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "∆master.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}
