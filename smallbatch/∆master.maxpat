@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 304.0, 129.0, 651.0, 673.0 ],
+		"rect" : [ 84.0, 106.0, 651.0, 472.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -36,23 +36,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 267.0, 15.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"color" : [ 0.8, 0.4, 1.0, 1.0 ],
-					"fontname" : "Andale Mono",
-					"fontsize" : 12.0,
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 500.0, 33.0, 162.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 360.5, 5.0, 162.0, 20.0 ],
-					"text" : "r [batch]toPoly_Pitch"
 				}
 
 			}
@@ -814,7 +797,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 64.0, 19.0 ],
 									"text" : "autopattr",
-									"varname" : "u617003513"
+									"varname" : "u576010894"
 								}
 
 							}

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 547.0, 306.0, 842.0, 698.0 ],
+		"rect" : [ 378.0, 240.0, 842.0, 698.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -67,7 +67,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 255.0, 49.0, 90.0, 17.0 ],
+					"patching_rect" : [ 248.0, 28.0, 90.0, 17.0 ],
 					"text" : "r gome_key_shift"
 				}
 
@@ -333,7 +333,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 224.0, 241.0, 63.0, 17.0 ],
+					"patching_rect" : [ 199.5, 221.0, 63.0, 17.0 ],
 					"text" : "s gome_key"
 				}
 

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 448.0, 147.0, 983.0, 760.0 ],
+		"rect" : [ -169.0, 167.0, 983.0, 760.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -454,8 +454,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 848.0, 534.0, 183.0, 20.0 ],
-					"text" : "s [batch]corners_noteout"
+					"patching_rect" : [ 848.0, 535.0, 162.0, 20.0 ],
+					"text" : "s [batch]toPoly_Pitch"
 				}
 
 			}

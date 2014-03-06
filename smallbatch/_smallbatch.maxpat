@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 64.0, 205.0, 762.0, 447.0 ],
+		"rect" : [ 748.0, 78.0, 769.0, 240.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -1367,7 +1367,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u044003514"
+					"varname" : "u832010895"
 				}
 
 			}
@@ -7259,13 +7259,13 @@
 									"fontname" : "Helvetica Neue",
 									"fontsize" : 11.0,
 									"id" : "obj-6",
-									"linecount" : 3,
+									"linecount" : 5,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 453.0, 106.0, 50.0, 43.0 ],
-									"text" : "/parc/tilt 0 127 129 0"
+									"text" : "/newapp /manager 26390"
 								}
 
 							}
