@@ -400,46 +400,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 9.0,
-					"frgb" : 0.0,
-					"id" : "obj-24",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 97.0, 113.0, 17.0 ],
-					"text" : "pitch setup",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.290196, 0.082353, 0.309804, 1.0 ],
-					"id" : "obj-25",
-					"maxclass" : "panel",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 94.0, 377.0, 20.0 ],
-					"rounded" : 0
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.905882, 0.905882, 0.905882, 1.0 ],
-					"border" : 1,
-					"id" : "obj-26",
-					"maxclass" : "panel",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 102.0, 374.0, 90.0 ],
-					"rounded" : 0
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
