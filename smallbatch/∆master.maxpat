@@ -8,7 +8,11 @@
 			"architecture" : "x86"
 		}
 ,
+<<<<<<< HEAD
 		"rect" : [ 0.0, 44.0, 1680.0, 956.0 ],
+=======
+		"rect" : [ 320.0, 118.0, 743.0, 725.0 ],
+>>>>>>> FETCH_HEAD
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,6 +32,20 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-13",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 297.0, 16.0, 150.0, 20.0 ],
+					"text" : "input, for pcontrol"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-12",
@@ -797,7 +815,11 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 64.0, 19.0 ],
 									"text" : "autopattr",
+<<<<<<< HEAD
 									"varname" : "u895003242"
+=======
+									"varname" : "u852004206"
+>>>>>>> FETCH_HEAD
 								}
 
 							}
