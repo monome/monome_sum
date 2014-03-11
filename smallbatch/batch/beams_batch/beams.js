@@ -25,7 +25,7 @@ var themish = new Array(64); // temporary buffer for /led/level/map displays
 var index = new Array(cols);
 var b = 0;
 var direction = 1;
-var vb = 0;
+var vb = 1;
 
 
 for(i=0;i<16;i++) pointk[i] = 0; // initialise pointk to 0.
@@ -89,7 +89,7 @@ function varibright(vari) {
 function mytask() {
     // the timed function which occurs repeatedly
 
-    for(i=0;i<16;i++) {
+    for(i=0;i<cols;i++) {
         // increment any timer for a currently held column
         if(ton[i]==1) {
             tramp[i] = tramp[i] + 1; // add 1 to current ramp time
@@ -103,10 +103,14 @@ function mytask() {
         x[i] = x[i] + dx[i];
         // force range [0, steps]
         if(x[i]>steps) x[i] = steps;
-        if(x[i]<0) x[i] = 0;
+        else if(x[i]<0) x[i] = 0;
 
     }
     
+    if(cols==8) {
+        for(i=0;i<8;i++) x[i+8] = x[i];
+    }
+
     outlet(0,x); // sends the full array of current slider levels
     if(vb) aa_draw(); // if variable brightness, use aa_draw for antialiasing
     else draw(); // if non-vb just send out raw led/map messages.
@@ -114,7 +118,8 @@ function mytask() {
 
 function draw() { // draw with /grid/led/map without aa
     for(i=0;i<cols;i++) {
-        outlet(2, i, 0, 255-((1<<(steps-index))-1)); // output bitmask for non-vb -- need to add direction option
+        //outlet(2, i, 0, 255-((1<<(steps-index[i]))-1)); // output bitmask for non-vb -- need to add direction option
+        outlet(2, i, 0, Math.floor(1<<(steps-x[i])+0.5)); // output bitmask for non-vb -- need to add direction option
     }
 }
 

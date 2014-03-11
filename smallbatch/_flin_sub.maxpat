@@ -287,7 +287,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 450.0, 315.0, 34.0, 20.0 ],
-									"text" : "/ 32."
+									"text" : "/ 16."
 								}
 
 							}
@@ -2574,8 +2574,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 90.0, 240.0, 83.0, 20.0 ],
-									"text" : "pack 100 100"
+									"patching_rect" : [ 90.0, 240.0, 73.0, 20.0 ],
+									"text" : "pack 100 1."
 								}
 
 							}

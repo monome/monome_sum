@@ -138,28 +138,28 @@ function redrawMap() {
 			else ledRow2 = ledRow2 + (bits[(nx+32*ny)%1024]<<(j-8))
 		}
 	// format for /led/row and bang out straight to serialosc
-		outlet(0,"/tiltrap/grid/led/row",0,i,ledRow,ledRow2);
+		outlet(0,"/b_step/grid/led/row",0,i,ledRow,ledRow2);
 	//reset counters for next row
 		ledRow = 0;
 		ledRow2 = 0;
 	}
 	
 		// then we overlay the step counter on top
-	outlet(0,"/tiltrap/grid/led/row",0,0,stepRow1,stepRow2);
+	outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2);
 
 
 }
 
 function ledSet(x,y,s) {
-	outlet(0,"/tiltrap/grid/led/set",x,y,s);
+	outlet(0,"/b_step/grid/led/set",x,y,s);
 }
 
 function flashStep() {
 	if((currentStep %16)<8) { // if step is in 1st quadrant
-		outlet(0,"/tiltrap/grid/led/row",0,0,stepRow1-(1<<currentStep),stepRow2);
+		outlet(0,"/b_step/grid/led/row",0,0,stepRow1-(1<<currentStep),stepRow2);
 	}
 	else { // if step is in 2nd quadrant
-		outlet(0,"/tiltrap/grid/led/row",0,0,stepRow1,stepRow2-(1<<(currentStep-8)));
+		outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2-(1<<(currentStep-8)));
 	}
 	
 	outlet(1,"flash");
@@ -167,5 +167,5 @@ function flashStep() {
 }
 
 function flash() {
-	outlet(0,"/tiltrap/grid/led/row",0,0,stepRow1,stepRow2);
+	outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2);
 }

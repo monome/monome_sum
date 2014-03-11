@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 775.0, 110.0, 426.0, 306.0 ],
+		"rect" : [ 775.0, 110.0, 888.0, 615.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,49 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-19",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 104.0, 144.0, 219.0, 20.0 ],
+					"text" : "prepend /b_beams/grid/led/col"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-14",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 216.0, 88.0, 97.0, 18.0 ],
+					"presentation_rect" : [ 215.0, 89.0, 0.0, 0.0 ],
+					"text" : "varibright 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 216.0, 112.0, 97.0, 18.0 ],
+					"text" : "varibright 1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
@@ -179,7 +222,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 72.0, 224.0, 90.0, 20.0 ],
+					"patching_rect" : [ 72.0, 248.0, 90.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Andale Mono",
@@ -438,7 +481,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 168.0, 224.0, 90.0, 20.0 ],
+					"patching_rect" : [ 168.0, 248.0, 90.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Andale Mono",
@@ -493,7 +536,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 72.0, 144.0, 263.0, 20.0 ],
+					"patching_rect" : [ 72.0, 168.0, 263.0, 20.0 ],
 					"text" : "prepend /b_beams/grid/led/level/map"
 				}
 
@@ -521,9 +564,9 @@
 					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 40.0, 104.0, 96.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "beams.js",
@@ -544,7 +587,7 @@
 					"numoutlets" : 4,
 					"offset" : [ -80.0, -64.0 ],
 					"outlettype" : [ "", "int", "", "" ],
-					"patching_rect" : [ 72.0, 176.0, 321.0, 36.0 ],
+					"patching_rect" : [ 72.0, 200.0, 321.0, 36.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 584.5, 45.0, 316.0, 29.0 ],
 					"varname" : "serialosc"
@@ -568,6 +611,15 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -580,7 +632,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 177.5, 259.0, 22.0, 259.0, 22.0, 94.0 ],
+					"midpoints" : [ 177.5, 283.0, 22.0, 283.0, 22.0, 118.0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -590,7 +642,7 @@
 					"destination" : [ "obj-38", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 248.5, 280.0, 56.0, 280.0, 56.0, 162.0 ],
+					"midpoints" : [ 248.5, 304.0, 56.0, 304.0, 56.0, 186.0 ],
 					"source" : [ "obj-13", 1 ]
 				}
 
@@ -600,8 +652,26 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 81.5, 256.0, 26.0, 256.0, 26.0, 98.0 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 81.5, 280.0, 26.0, 280.0, 26.0, 122.0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -656,6 +726,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
