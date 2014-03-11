@@ -11,6 +11,7 @@ var bx =  16;
 var f = 0.995;
 var dx = new Array(16); // change since last output
 var x = new Array(16); // current output
+var xN = new Array(16); // current output normalised 0 to 1.
 var pointk = new Array(16); // the slider destination
 var bcols = new Array(16); // key count for each column
 var tramp = new Array(16); // timer for each column
@@ -31,7 +32,8 @@ var vb = 1;
 for(i=0;i<16;i++) pointk[i] = 0; // initialise pointk to 0.
 for(i=0;i<16;i++) bcols[i] = 0; // initialise bcols to 0.
 for(i=0;i<16;i++) dx[i] = 0; // initialise pointk to 0.
-for(i=0;i<16;i++) x[i] = 0; // initialise bcols to 0.
+for(i=0;i<16;i++) x[i] = 1; // initialise bcols to 0.
+for(i=0;i<16;i++) xN[i] = 0; // initialise bcols to 0.
 for(i=0;i<16;i++) ton[i] = 0; // initialise triggers to off
 for(i=0;i<16;i++) frics[i] = 0.8; // initialise friction to 0.8 for nice initial level
 
@@ -106,12 +108,20 @@ function mytask() {
         else if(x[i]<0) x[i] = 0;
 
     }
-    
+
+
+    for(i=0;i<cols;i++) {
+        xN[i] = (x[i]-1)/15;
+    }
+
+
     if(cols==8) {
         for(i=0;i<8;i++) x[i+8] = x[i];
     }
 
-    outlet(0,x); // sends the full array of current slider levels
+    
+    outlet(0,xN); // sends the full array of current slider levels normalised 0 to 1.
+
     if(vb) aa_draw(); // if variable brightness, use aa_draw for antialiasing
     else draw(); // if non-vb just send out raw led/map messages.
 }
