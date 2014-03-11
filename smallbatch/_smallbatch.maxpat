@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 748.0, 78.0, 769.0, 240.0 ],
+		"rect" : [ 231.0, 172.0, 769.0, 240.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,361 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"id" : "obj-68",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 5,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 340.0, 403.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Andale Mono",
+						"gridonopen" : 0,
+						"gridsize" : [ 18.0, 6.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-7",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 180.0, 210.0, 299.0, 18.0 ],
+									"text" : "script sendbox serialosc-right hidden $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-5",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 180.0, 252.0, 25.0, 25.0 ],
+									"presentation_rect" : [ 179.0, 249.0, 0.0, 0.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-4",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 90.0, 210.0, 25.0, 25.0 ],
+									"presentation_rect" : [ 77.0, 207.0, 0.0, 0.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "int" ],
+									"patching_rect" : [ 108.0, 72.0, 47.0, 20.0 ],
+									"text" : "t 0 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 108.0, 48.0, 20.0, 20.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 11.0,
+									"id" : "obj-52",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 54.0, 168.0, 103.0, 19.0 ],
+									"text" : "prepend hidden"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 11.0,
+									"id" : "obj-51",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 108.0, 132.0, 103.0, 19.0 ],
+									"text" : "prepend hidden"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 11.0,
+									"id" : "obj-50",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "int" ],
+									"patching_rect" : [ 54.0, 102.0, 44.0, 19.0 ],
+									"text" : "t 0 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-53",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 54.0, 48.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-56",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 54.0, 210.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-63",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 126.0, 210.0, 25.0, 25.0 ]
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-51", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-52", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-50", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-51", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-50", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-52", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-50", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-50", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-63", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-51", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-56", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-52", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-50", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-53", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 243.0, 72.0, 77.0, 19.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Andale Mono",
+						"default_fontsize" : 12.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Andale Mono",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p 2nd-grid"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-36",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 305.0, 56.0, 143.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 557.0, 52.0, 145.0, 19.0 ],
+					"text" : "connect second grid:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"border" : 1,
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-15",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 288.0, 36.0, 72.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 694.0, 48.0, 27.0, 27.0 ],
+					"rounded" : 0.0,
+					"text" : "+",
+					"texton" : "Basic",
+					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
@@ -72,12 +427,13 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "set location of 'route key'. press 'map' then the grid key you wish to activate the router. press 'map' again to set.",
 					"id" : "obj-65",
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 414.0, 132.0, 36.0, 12.0 ],
+					"patching_rect" : [ 432.0, 180.0, 36.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 208.0, 180.0, 169.0, 17.0 ]
 				}
@@ -90,6 +446,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-9",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -97,7 +454,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 360.0, 132.0, 54.0, 12.0 ],
+					"patching_rect" : [ 378.0, 180.0, 54.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 294.0, 180.0, 83.0, 17.0 ],
 					"rounded" : 0.0,
@@ -111,12 +468,13 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "choose whether your devices are next to each other (horiz) or in front of each other (vert)",
 					"id" : "obj-67",
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 522.0, 132.0, 36.0, 12.0 ],
+					"patching_rect" : [ 446.0, 138.0, 36.0, 12.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 380.0, 180.0, 169.0, 17.0 ]
 				}
@@ -129,6 +487,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-8",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -136,7 +495,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 468.0, 132.0, 54.0, 10.0 ],
+					"patching_rect" : [ 392.0, 138.0, 54.0, 10.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 466.0, 180.0, 83.0, 17.0 ],
 					"rounded" : 0.0,
@@ -162,7 +521,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -291,7 +650,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 378.0, 156.0, 86.0, 19.0 ],
+					"patching_rect" : [ 378.0, 204.0, 86.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Andale Mono",
@@ -323,7 +682,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -360,7 +719,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -776,7 +1135,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -970,11 +1329,12 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-30",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 454.0, 114.0, 86.0, 19.0 ],
+					"patching_rect" : [ 378.0, 120.0, 86.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 386.0, 180.0, 83.0, 19.0 ],
 					"text" : "grid tile:"
@@ -986,11 +1346,12 @@
 					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-49",
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 342.0, 132.0, 16.0, 13.0 ],
+					"patching_rect" : [ 360.0, 180.0, 16.0, 13.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 380.0, 180.0, 169.0, 17.0 ],
 					"rounded" : 0
@@ -1002,11 +1363,12 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-29",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 342.0, 114.0, 90.0, 19.0 ],
+					"patching_rect" : [ 360.0, 162.0, 90.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 214.0, 180.0, 91.0, 19.0 ],
 					"text" : "route key:"
@@ -1018,11 +1380,12 @@
 					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-27",
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 450.0, 132.0, 18.0, 13.0 ],
+					"patching_rect" : [ 374.0, 138.0, 18.0, 13.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 208.0, 180.0, 169.0, 17.0 ],
 					"rounded" : 0
@@ -1068,6 +1431,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "click to force all 'autoload' patches to reboot their patches if they cannot find a client with the correct prefix",
 					"id" : "obj-42",
 					"maxclass" : "hint",
@@ -1081,6 +1445,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "save your smallbatch file here. TIP! overwrite 'sbatch.json' to have your settings auto-load when you open smallbatch.",
 					"id" : "obj-41",
 					"maxclass" : "hint",
@@ -1094,6 +1459,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "load your smallbatch savefile here to reload your settings",
 					"id" : "obj-38",
 					"maxclass" : "hint",
@@ -1107,6 +1473,7 @@
 			}
 , 			{
 				"box" : 				{
+					"enabled" : 0,
 					"hint" : "select your right most device here",
 					"id" : "obj-37",
 					"maxclass" : "hint",
@@ -1146,7 +1513,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -1253,7 +1620,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 306.0, 48.0, 111.0, 20.0 ],
+					"patching_rect" : [ 468.0, 66.0, 111.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Andale Mono",
@@ -1277,6 +1644,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-19",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -1303,7 +1671,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 306.0, 180.0, 66.0, 19.0 ],
+					"patching_rect" : [ 288.0, 156.0, 66.0, 19.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -1316,6 +1684,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-6",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -1358,16 +1727,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 486.0, 204.0, 59.5, 19.0 ],
+					"patching_rect" : [ 684.0, 18.0, 59.5, 19.0 ],
 					"restore" : 					{
-						"advanced" : [ 1 ],
+						"advanced" : [ 0 ],
 						"batch" : [ 0 ],
 						"routehorizontal[1]" : [ 0 ],
 						"tile-orientation" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u832010895"
+					"varname" : "u216003557"
 				}
 
 			}
@@ -1386,7 +1755,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -2322,6 +2691,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-46",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -2345,6 +2715,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-44",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -2614,7 +2985,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -3486,7 +3857,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -3686,7 +4057,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -4675,7 +5046,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -4726,7 +5097,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -5917,6 +6288,7 @@
 				"box" : 				{
 					"bgtransparent" : 1,
 					"border" : 0,
+					"hidden" : 1,
 					"id" : "obj-34",
 					"idle" : 1,
 					"local" : 0,
@@ -5933,6 +6305,7 @@
 , 			{
 				"box" : 				{
 					"args" : [ "/manager" ],
+					"hidden" : 1,
 					"id" : "obj-40",
 					"maxclass" : "bpatcher",
 					"name" : "serialosc.maxpat",
@@ -5962,7 +6335,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -6013,7 +6386,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -7231,7 +7604,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -7265,7 +7638,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 453.0, 106.0, 50.0, 43.0 ],
-									"text" : "/newapp /manager 26390"
+									"text" : "/newapp /manager 20578"
 								}
 
 							}
@@ -7325,7 +7698,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -7563,7 +7936,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -8078,7 +8451,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -8953,6 +9326,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-68", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-61", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -9259,6 +9641,60 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-68", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-68", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-68", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-37", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-68", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-64", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -9297,181 +9733,181 @@
 		"dependency_cache" : [ 			{
 				"name" : "serialosc.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "router.js",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "led-router.js",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "route-cell.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sbatch.json",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "∆batch.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "∆master.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soren_synthitime.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soren_poly.synthitime~.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "flin.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "_flin_sub.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "step.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tiltrap.js",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "_polygome64.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "step.png",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "clock.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "length8.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "length7.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "playback.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pitch_setup.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mode.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "transops.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "arbitrary_pitch_map.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "ap.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "corners.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "corners.js",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/smallbatch",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
