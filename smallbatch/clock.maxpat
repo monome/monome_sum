@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -100,7 +100,7 @@
 					"framecolor" : [ 0.015686, 0.015686, 0.015686, 1.0 ],
 					"hltcolor" : [ 0.905882, 0.905882, 0.905882, 1.0 ],
 					"id" : "obj-3",
-					"items" : [ "AU DLS Synth 1", ",", "IAC-driver Bus 1", ",", "IAC-driver IAC-bus 2", ",", "IAC-driver IAC-bus 3", ",", "IAC-driver totalmix", ",", "IAC-driver Pages SYNC", ",", "IAC-driver Pages - MidiFaders", ",", "IAC-driver Pages - MidiSequencer", ",", "IAC-driver Pages - ClipLauncher", ",", "IAC-driver Pages - MidiTriggers", ",", "IAC-driver Pages - MidiGenerator", ",", "IAC-driver Pages - MidiFaders2", ",", "IAC-driver Pages - PageChanger", ",", "IAC-driver LiveControl Out", ",", "IAC-driver TouchOSC Out", ",", "IAC-driver TouchOSC In", ",", "IAC-driver LiveControl Clock", ",", "IAC-driver LiveControl", ",", "IAC-driver LiveControl", ",", "IAC-driver LiveControl In", ",", "IAC-driver LiveControl Input", ",", "IAC-driver LiveControl Output", ",", "IAC-driver Pages Sync2", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "IAC Driver fda", ",", "from Max 1", ",", "from Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -123,7 +123,7 @@
 					"framecolor" : [ 0.015686, 0.015686, 0.015686, 1.0 ],
 					"hltcolor" : [ 0.905882, 0.905882, 0.905882, 1.0 ],
 					"id" : "obj-4",
-					"items" : [ "IAC-driver Bus 1", ",", "IAC-driver IAC-bus 2", ",", "IAC-driver IAC-bus 3", ",", "IAC-driver totalmix", ",", "IAC-driver Pages SYNC", ",", "IAC-driver Pages - MidiFaders", ",", "IAC-driver Pages - MidiSequencer", ",", "IAC-driver Pages - ClipLauncher", ",", "IAC-driver Pages - MidiTriggers", ",", "IAC-driver Pages - MidiGenerator", ",", "IAC-driver Pages - MidiFaders2", ",", "IAC-driver Pages - PageChanger", ",", "IAC-driver LiveControl Out", ",", "IAC-driver TouchOSC Out", ",", "IAC-driver TouchOSC In", ",", "IAC-driver LiveControl Clock", ",", "IAC-driver LiveControl", ",", "IAC-driver LiveControl", ",", "IAC-driver LiveControl In", ",", "IAC-driver LiveControl Input", ",", "IAC-driver LiveControl Output", ",", "IAC-driver Pages Sync2", ",", "to Max 1", ",", "to Max 2" ],
+					"items" : [ "IAC Driver fda", ",", "to Max 1", ",", "to Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -201,7 +201,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -614,7 +614,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -637,7 +637,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "swing value",
@@ -784,8 +783,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 355.0, 356.0, 104.0, 17.0 ],
-									"text" : "expr (60000/$i1)/4"
+									"patching_rect" : [ 355.0, 356.0, 63.0, 17.0 ],
+									"text" : "expr 62.5/$f1"
 								}
 
 							}

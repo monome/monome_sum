@@ -641,15 +641,15 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "/corners" ],
+					"args" : [ "/b_corners" ],
 					"id" : "obj-12",
 					"maxclass" : "bpatcher",
 					"name" : "serialosc.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 4,
-					"offset" : [ -300.0, -70.0 ],
+					"offset" : [ -79.0, -63.0 ],
 					"outlettype" : [ "", "int", "", "" ],
-					"patching_rect" : [ 112.0, 408.0, 120.0, 32.0 ],
+					"patching_rect" : [ 104.0, 432.0, 319.0, 29.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 4.5, 6.5, 15.0, 15.0 ],
 					"varname" : "serialosc"
@@ -751,8 +751,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 392.0, 576.0, 116.0, 17.0 ],
-					"text" : "/corners/grid/led/all 0"
+					"patching_rect" : [ 392.0, 576.0, 128.0, 17.0 ],
+					"text" : "/b_corners/grid/led/all 0"
 				}
 
 			}
@@ -1280,8 +1280,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 336.0, 192.0, 104.0, 20.0 ],
-					"text" : "r [corners]sy"
+					"patching_rect" : [ 336.0, 192.0, 119.0, 20.0 ],
+					"text" : "r [b_corners]sy"
 				}
 
 			}
@@ -1294,8 +1294,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 192.0, 192.0, 104.0, 20.0 ],
-					"text" : "r [corners]sx"
+					"patching_rect" : [ 192.0, 192.0, 119.0, 20.0 ],
+					"text" : "r [b_corners]sx"
 				}
 
 			}
@@ -1334,8 +1334,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1072.0, 200.0, 104.0, 20.0 ],
-					"text" : "s [corners]js"
+					"patching_rect" : [ 1072.0, 200.0, 119.0, 20.0 ],
+					"text" : "s [b_corners]js"
 				}
 
 			}
@@ -1347,8 +1347,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 584.0, 104.0, 20.0 ],
-					"text" : "s [corners]js"
+					"patching_rect" : [ 0.0, 584.0, 119.0, 20.0 ],
+					"text" : "s [b_corners]js"
 				}
 
 			}
@@ -1361,8 +1361,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 80.0, 104.0, 20.0 ],
-					"text" : "r [corners]js"
+					"patching_rect" : [ 240.0, 80.0, 119.0, 20.0 ],
+					"text" : "r [b_corners]js"
 				}
 
 			}
@@ -1388,8 +1388,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 176.0, 648.0, 104.0, 20.0 ],
-					"text" : "s [corners]sy"
+					"patching_rect" : [ 176.0, 648.0, 119.0, 20.0 ],
+					"text" : "s [b_corners]sy"
 				}
 
 			}
@@ -1401,8 +1401,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 128.0, 672.0, 104.0, 20.0 ],
-					"text" : "s [corners]sx"
+					"patching_rect" : [ 128.0, 672.0, 119.0, 20.0 ],
+					"text" : "s [b_corners]sx"
 				}
 
 			}
@@ -1453,13 +1453,12 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-54",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 248.0, 392.0, 219.0, 31.0 ],
-					"text" : "/corners/grid/led/all 0, /corners/grid/led/set $1 $2 1"
+					"patching_rect" : [ 248.0, 392.0, 428.0, 18.0 ],
+					"text" : "/b_corners/grid/led/all 0, /b_corners/grid/led/set $1 $2 1"
 				}
 
 			}
@@ -1500,8 +1499,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ -16.0, 520.0, 248.0, 20.0 ],
-					"text" : "route /corners/grid/key /sys/size"
+					"patching_rect" : [ -16.0, 520.0, 263.0, 20.0 ],
+					"text" : "route /b_corners/grid/key /sys/size"
 				}
 
 			}
