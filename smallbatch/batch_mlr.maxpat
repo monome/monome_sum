@@ -814,8 +814,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 180.0, 306.0, 104.0, 20.0 ],
-									"text" : "prepend pLed1"
+									"patching_rect" : [ 180.0, 306.0, 111.0, 20.0 ],
+									"text" : "prepend pLed 1"
 								}
 
 							}

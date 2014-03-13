@@ -43,6 +43,7 @@ var boundY = 8;
 var tempo = 100;
 var tempoms = 600;
 var lastch = 0;
+var outBM = 0;
 
 // ARRAYS // 
 var count = new Array(15);
@@ -53,6 +54,8 @@ var fLength = new Array(2);
 var rGate = new Array(2);
 var rpGate = new Array(2);
 var pLength = new Array(2);
+var loopMode = new Array(2);
+var playL = new Array(2);
 
 // INIT ALL ARRAYS TO 0/1 //
 for(i=0;i<2;i++) {
@@ -63,6 +66,8 @@ for(i=0;i<2;i++) {
 	pLength[i] = 8;
 	playR[i] = 0;
 	playS[i] = 0;
+	playL[i] = 0;
+	loopMode[i] = 0;
 }
 for(i=0;i<15;i++) {
 	count[i] = 0;
@@ -121,7 +126,13 @@ function speedCalc() {
 	// recalculates playback speed for all rows
 	for(i=0;i<2;i++) { // calculate every row whenever the function is called
 		sSpeed[i] = tempo/(60000/((fLength[i] / boundX)));
-		// add a 'while' loop here to multiply by 0.5 or 2 if the resultant speed is outside of 0.67 to 1.5
+		
+		if(sSpeed[i]) { // multiply by 0.5 or 2 if the resultant speed is outside of 0.7 to 1.41
+			while(sSpeed[i]<0.70) sSpeed[i] = sSpeed[i]*2;
+			while(sSpeed[i]>1.41) sSpeed[i] = sSpeed[i]/2;
+		}
+
+		outlet(i, "speed", sSpeed[i]);
 	}
 	
 	// then calculate timer for pattern recorders
@@ -133,14 +144,28 @@ function stoprow(ch) {
 	// called whenever pressing top row button
 	outlet(ch, "stop");
 	outlet(4,"/b_mlr/grid/led/set", ch, 0, 0);
+
+	if(ch==0) {
+		for(i=0;i<3;i++) outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+	}
+	else { // ch ==1
+		for(i=3;i<7;i++) outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+	}
 }
 
 function pattern(index) {
 	// presses into the pattern recorder
 	outlet(index+2, "erase"); // send 'erase' message to seq
-	rGate[index] = !rGate[index]; // invert state of the gate (for prec buttons)
-	if(rGate[index]==0) rpGate[index] = 0; // if the pattern has been turned off via the grid, then turn off press recording too
-
+	if(rGate[index]==0 && rpGate[index]==0) {
+		rGate[index] = 1; // arm the recording
+	}
+	else { // recording is armed / in progress / playing back
+		if(index==0) tsk0.cancel(); // cancel relevant timer
+		else tsk1.cancel();
+		rGate[index] = 0; // disarm recorder
+		rpGate[index] = 0; // turn off press input
+	}
+	
 	outlet(4,"/b_mlr/grid/led/set", index+4, 0, rGate[index]);
 }
 
@@ -158,16 +183,18 @@ function pLength(index,length) {
 function sTrig(row, step) { // sample trigger. called when physically pressing a key
 	if(row<3) {
 		// top 3 rows - outlet0
-		outlet(0, "play", (step/boundX)*fLength[0], sSpeed[0], 0, fLength[0], row)
+		outlet(0, "play", (step/boundX)*fLength[0], sSpeed[0], 0, fLength[0], row);
 		playR[0] = row;
 		playS[0] = step;
+		loopMode[0] = 0;
 		lastch = 0; // set flag for second group
 	}
 	else {
 		// top 3 rows - outlet0
-		outlet(1, "play", (step/boundX)*fLength[1], sSpeed[1], 0, fLength[1], row)
+		outlet(1, "play", (step/boundX)*fLength[1], sSpeed[1], 0, fLength[1], row);
 		playR[1] = row;
 		playS[1] = step;
+		loopMode[1] = 0;
 		lastch = 1; // set the flag for 2nd group
 	}
 		
@@ -178,29 +205,45 @@ function sTrig(row, step) { // sample trigger. called when physically pressing a
 			rGate[i] = 0;
 			if(i==0) tsk0.repeat(2); // set timer to run once
 			else tsk1.repeat(2); // as above for 2nd timer
-			rpGate[i] = 2;
+			rpGate[i] = 3;
 		}
-		if(rpGate[i]>0) {
+		if(rpGate[i]>1) {
 			// the recording gate is open, so send input to the pattern recorder
 			outlet(i+2, "press", row, step);
 		}
 	}
-
 		// lastly send led commands for stop buttons
 	outlet(4,"/b_mlr/grid/led/set", lastch, 0, 1);
 }
 
 function sLoop(row, step) {
-	if(row<3) outlet(0, "play", -1, sSpeed[0], (playS[0]/boundX)*fLength[0], (step/boundX)*fLength[0], row);
-	else outlet(1, "play", -1, sSpeed[1], (playS[1]/boundX)*fLength[1], (step/boundX)*fLength[1], row);
+	if(row<3) {
+		outlet(0, "play", -1, sSpeed[0], (playS[0]/boundX)*fLength[0], (step/boundX)*fLength[0], row);
+		playL[0] = step;
+		loopMode[0] = 1;
+	}
+	else {
+		outlet(1, "play", -1, sSpeed[1], (playS[1]/boundX)*fLength[1], (step/boundX)*fLength[1], row);
+		playL[1] = step;
+		loopMode[1] = 1;
+	}
 }
-
+	// note: rpGate[] has 3 states:
+	// 0: recording is stopped, no loop placback
+	// 1: recording is complete, loop is playing
+	// 2/3: recording has begun, counter waits for interval then moves to mode1
 function pRec0() rpGate[0]--;  // called when pRec0 has finished recording -> no more presses allowed
 function pRec1() rpGate[1]--; // called when pRec1 has finished recording
 
 function rTrig(row, step) { // sample trigger. called by a pattern recorder.
-	if(row<3) outlet(0, "play", (step/boundX)*fLength[0], sSpeed[0], 0, fLength[0], row); // top 3 rows
-	else outlet(1, "play", (step/boundX)*fLength[1], sSpeed[1], 0, fLength[1], row); // anything below top3
+	if(row<3) {
+		outlet(0, "play", (step/boundX)*fLength[0], sSpeed[0], 0, fLength[0], row); // top 3 rows
+		outlet(4,"/b_mlr/grid/led/set", 0, 0, 1); // led command for stop button
+	}
+	else {
+		outlet(1, "play", (step/boundX)*fLength[1], sSpeed[1], 0, fLength[1], row); // anything below top3
+		outlet(4,"/b_mlr/grid/led/set", 1, 0, 1); // led command for stop button
+	}
 }
 
 function bpm(bpm) {
@@ -212,5 +255,27 @@ function bpm(bpm) {
 function pPos(group, row, pos) {
 	// updates the current playback position of each group
 	// use to draw led response
-	outlet(4,"/b_mlr/grid/led/set", Math.floor(pos*boundX+.01), row+1, 1);	
+	
+	if(loopMode[group]==0) { // normal press
+		outBM = Math.floor(1<<(pos*boundX)); // make a bitmask of the currently playing step
+	}
+	else { // is inner looping
+		outBM = Math.floor(1<<(playS[group]+pos*(playL[group]-playS[group]))); // make a bitmask of the currently playing step
+	}
+
+	outlet(4,"/b_mlr/grid/led/row", 0, row+1, 255&outBM, (65280&outBM)>>8); // light the just updated row
+	if(group==0) {
+		for(i=0;i<3;i++) {
+			if(i!=row) {
+				outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+			}
+		}
+	}
+	else { // group ==1
+		for(i=3;i<7;i++) { // iterate through 4 rows
+			if(i!=row) {
+				outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+			}
+		}
+	}
 }
