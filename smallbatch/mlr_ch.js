@@ -208,3 +208,9 @@ function bpm(bpm) {
 	tempoms = 60000/tempo;
 	speedCalc(); // call a new speed calculation
 }
+
+function pPos(group, row, pos) {
+	// updates the current playback position of each group
+	// use to draw led response
+	outlet(4,"/b_mlr/grid/led/set", Math.floor(pos*boundX+.01), row+1, 1);	
+}
