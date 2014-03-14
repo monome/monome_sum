@@ -4,11 +4,12 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 912.0, 44.0, 745.0, 749.0 ],
+		"rect" : [ 774.0, 44.0, 745.0, 749.0 ],
+		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -86,7 +87,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 234.0, 582.0, 94.0, 19.0 ],
-					"presentation_rect" : [ 250.0, 565.0, 0.0, 0.0 ],
 					"text" : "sprintf set %f dB"
 				}
 
@@ -104,7 +104,7 @@
 					"patching_rect" : [ 306.0, 534.0, 54.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.0, 84.0, 72.0, 19.0 ],
-					"text" : "0.13 dB"
+					"text" : "7.55 dB"
 				}
 
 			}
@@ -132,7 +132,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 252.0, 510.0, 47.0, 20.0 ],
-					"presentation_rect" : [ 257.0, 511.0, 0.0, 0.0 ],
 					"text" : "dbtoa"
 				}
 
@@ -147,7 +146,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 198.0, 522.0, 47.0, 20.0 ],
-					"presentation_rect" : [ 196.0, 523.0, 0.0, 0.0 ],
 					"text" : "*~ 1."
 				}
 
@@ -162,7 +160,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 90.0, 522.0, 47.0, 20.0 ],
-					"presentation_rect" : [ 82.0, 522.0, 0.0, 0.0 ],
 					"text" : "*~ 1."
 				}
 
@@ -177,7 +174,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 180.0, 624.0, 47.0, 20.0 ],
-					"presentation_rect" : [ 174.0, 621.0, 0.0, 0.0 ],
 					"text" : "*~ 1."
 				}
 
@@ -231,7 +227,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 180.0, 654.0, 108.0, 20.0 ],
+					"patching_rect" : [ 180.0, 704.0, 108.0, 20.0 ],
 					"text" : "send~ [batch]outR"
 				}
 
@@ -245,7 +241,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 54.0, 654.0, 106.0, 20.0 ],
+					"patching_rect" : [ 54.0, 704.0, 106.0, 20.0 ],
 					"text" : "send~ [batch]outL"
 				}
 
@@ -469,7 +465,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -575,7 +571,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -967,7 +963,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1087,7 +1083,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -2136,28 +2132,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mlr_ch.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "batch_mlr_play.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}
