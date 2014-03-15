@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -30,30 +30,24 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-<<<<<<< HEAD
 					"fontname" : "Helvetica Neue",
 					"fontsize" : 11.0,
-					"id" : "obj-84",
-=======
-					"color" : [ 0.4, 0.8, 1.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-33",
-					"maxclass" : "newobj",
+					"maxclass" : "number",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 369.0, 996.0, 108.0, 20.0 ],
-					"text" : "send~ [batch]outR"
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 378.0, 336.0, 50.0, 19.0 ],
+					"varname" : "fmtimes"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.4, 0.8, 1.0, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-45",
->>>>>>> FETCH_HEAD
+					"fontname" : "Helvetica Neue",
+					"fontsize" : 11.0,
+					"id" : "obj-84",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
@@ -105,7 +99,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 259.0, 81.0, 60.0, 19.0 ],
+					"patching_rect" : [ 306.0, 420.0, 60.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 228.0, 134.0, 74.0, 19.0 ],
 					"text" : "Q"
@@ -785,13 +779,13 @@
 					"orientation" : 0,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 242.0, 81.0, 90.0, 24.0 ],
+					"patching_rect" : [ 270.0, 414.0, 90.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 242.0, 134.0, 59.0, 18.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
 					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
-					"varname" : "noise[1]"
+					"varname" : "resonance"
 				}
 
 			}
@@ -858,7 +852,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -1099,7 +1093,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -1521,8 +1515,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 258.0, 996.0, 106.0, 20.0 ],
-					"text" : "send~ [batch]outL"
+					"patching_rect" : [ 270.0, 948.0, 100.0, 20.0 ],
+					"text" : "send~ [batch]out"
 				}
 
 			}
@@ -1555,7 +1549,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -2164,20 +2158,17 @@
 						"finetune" : [ 0.004082 ],
 						"fm-index" : [ 0 ],
 						"fm-mult" : [ 0 ],
+						"fmtimes" : [ 0 ],
 						"gain" : [ 124.870964 ],
 						"noise" : [ 0.338983 ],
-						"noise[1]" : [ 0.0 ],
+						"resonance" : [ 0.0 ],
 						"svf-filt" : [ 70.497963 ],
 						"svf-morph" : [ 0.489796 ],
 						"waveshape" : [ 1.910204 ]
 					}
 ,
 					"text" : "autopattr",
-<<<<<<< HEAD
-					"varname" : "u339001913"
-=======
-					"varname" : "u841009012"
->>>>>>> FETCH_HEAD
+					"varname" : "u326001774"
 				}
 
 			}
@@ -2192,7 +2183,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 18.0, 318.0, 147.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 622, 962 ],
+						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
 						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
@@ -2269,7 +2260,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -2292,6 +2283,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Helvetica Neue",
@@ -2308,7 +2300,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u506001970"
+									"varname" : "u498000062"
 								}
 
 							}
@@ -2327,7 +2319,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -2641,7 +2633,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -2896,7 +2888,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -3080,7 +3072,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 6,
+															"revision" : 5,
 															"architecture" : "x86"
 														}
 ,
@@ -3842,17 +3834,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 468.0, 246.0, 224.0, 19.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 0.016949 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u940000230"
-=======
-									"varname" : "u850006634"
->>>>>>> FETCH_HEAD
+									"varname" : "u044000092"
 								}
 
 							}
@@ -3872,11 +3860,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u506000232"
-=======
-									"varname" : "u389006636"
->>>>>>> FETCH_HEAD
+									"varname" : "u461000094"
 								}
 
 							}
@@ -3890,17 +3874,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 432.0, 198.0, 229.0, 19.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 0.016949 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u337000234"
-=======
-									"varname" : "u623006638"
->>>>>>> FETCH_HEAD
+									"varname" : "u460000096"
 								}
 
 							}
@@ -3920,11 +3900,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u943000236"
-=======
-									"varname" : "u496006640"
->>>>>>> FETCH_HEAD
+									"varname" : "u642000098"
 								}
 
 							}
@@ -3944,11 +3920,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u643000238"
-=======
-									"varname" : "u888006642"
->>>>>>> FETCH_HEAD
+									"varname" : "u125000100"
 								}
 
 							}
@@ -3968,11 +3940,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u916000240"
-=======
-									"varname" : "u452006644"
->>>>>>> FETCH_HEAD
+									"varname" : "u201000102"
 								}
 
 							}
@@ -3992,11 +3960,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u960000242"
-=======
-									"varname" : "u698006646"
->>>>>>> FETCH_HEAD
+									"varname" : "u998000104"
 								}
 
 							}
@@ -4016,11 +3980,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u983000244"
-=======
-									"varname" : "u510006648"
->>>>>>> FETCH_HEAD
+									"varname" : "u173000106"
 								}
 
 							}
@@ -4040,11 +4000,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u101000246"
-=======
-									"varname" : "u953006650"
->>>>>>> FETCH_HEAD
+									"varname" : "u199000108"
 								}
 
 							}
@@ -4064,11 +4020,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-<<<<<<< HEAD
-									"varname" : "u025000248"
-=======
-									"varname" : "u254006652"
->>>>>>> FETCH_HEAD
+									"varname" : "u894000110"
 								}
 
 							}
@@ -5110,13 +5062,8 @@
 			}
 , 			{
 				"box" : 				{
-<<<<<<< HEAD
-					"addpoints_with_curve" : [ 0.0, 0.0, 0, 0.0, 313.559326, 1.4, 0, -0.38983, 2000.0, 0.0, 0, -0.38983 ],
+					"addpoints_with_curve" : [ 0.0, 0.0, 0, 0.0, 313.559998, 1.4, 0, -0.38983, 2000.0, 0.0, 0, -0.38983 ],
 					"bgcolor" : [ 0.901961, 0.901961, 0.901961, 0.0 ],
-=======
-					"addpoints_with_curve" : [ 0.0, 0.0, 0, 0.0, 362.965302, 1.4, 0, 0.377778, 756.177795, 0.0, 0, 0.377778 ],
-					"bgcolor" : [ 0.901961, 0.901961, 0.901961, 1.0 ],
->>>>>>> FETCH_HEAD
 					"bordercolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 					"clickadd" : 0,
 					"clickmove" : 0,
@@ -5449,15 +5396,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-33", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-141", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-45", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -5579,6 +5517,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-33", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-30", 0 ]
 				}
 
 			}
@@ -5761,6 +5708,14 @@
 					"source" : [ "obj-92", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "soren_poly.synthitime~.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ]
 	}

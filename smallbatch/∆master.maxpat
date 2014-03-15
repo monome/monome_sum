@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 44.0, 1140.0, 861.0 ],
+		"rect" : [ 0.0, 44.0, 1680.0, 956.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,42 +28,6 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontname" : "Andale Mono",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-55",
-					"linecount" : 11,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 774.0, 318.0, 150.0, 155.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 8,
-					"presentation_rect" : [ 702.0, 324.0, 213.0, 114.0 ],
-					"text" : "should change musical mode setting to:\nmajor / minor / #minor / Mblues / mblues\nmodes are arbitrary as only a single application let's you specify the note you're playing"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Andale Mono",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-33",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 324.0, 684.0, 150.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 324.0, 684.0, 150.0, 33.0 ],
-					"text" : "old bg colour 20% cantaloupe"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"color" : [ 0.8, 0.4, 1.0, 1.0 ],
 					"fontname" : "Arial",
@@ -122,7 +86,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 306.0, 25.0, 25.0 ]
+									"patching_rect" : [ 108.0, 306.0, 25.0, 25.0 ],
+									"presentation_rect" : [ 103.0, 305.0, 0.0, 0.0 ]
 								}
 
 							}
@@ -1933,7 +1898,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 64.0, 19.0 ],
 									"text" : "autopattr",
-									"varname" : "u692007758"
+									"varname" : "u736015546"
 								}
 
 							}
@@ -4790,11 +4755,11 @@
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
 					"name" : "soren_synthitime.maxpat",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1116.0, 534.0, 622.0, 239.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 18.0, 444.0, 605.0, 202.0 ],
+					"presentation_rect" : [ 18.0, 443.5, 605.0, 202.0 ],
 					"varname" : "_synthitime"
 				}
 
@@ -4998,7 +4963,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 50.5, 59.0, 53.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 18.0, 30.0, 612.0, 624.0 ]
+					"presentation_rect" : [ 18.0, 31.0, 612.0, 624.0 ]
 				}
 
 			}
@@ -5590,6 +5555,20 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "soren_synthitime.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "soren_poly.synthitime~.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "batch_mlr.maxpat",
 				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
