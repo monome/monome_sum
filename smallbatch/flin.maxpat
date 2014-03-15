@@ -75,7 +75,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 54.0, 366.0, 255.0, 20.0 ],
-									"presentation_rect" : [ 57.0, 367.0, 0.0, 0.0 ],
 									"text" : "expr (pow(10.\\,(-90*(1-$f1))*0.05))"
 								}
 
@@ -407,11 +406,11 @@
 									"fontsize" : 12.0,
 									"id" : "obj-21",
 									"maxclass" : "newobj",
-									"numinlets" : 7,
+									"numinlets" : 8,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 126.0, 438.0, 129.0, 20.0 ],
-									"text" : "pack 0. 0. 0. 1. 0. 1. 1."
+									"patching_rect" : [ 126.0, 438.0, 143.0, 20.0 ],
+									"text" : "pack 0. 0. 0. 1. 0. 1. 1. 1."
 								}
 
 							}
