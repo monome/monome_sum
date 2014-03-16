@@ -30,6 +30,20 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.4, 0.8, 1.0, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 288.0, 978.0, 108.0, 20.0 ],
+					"text" : "send~ [batch]outR"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Helvetica Neue",
 					"fontsize" : 11.0,
 					"id" : "obj-33",
@@ -1515,8 +1529,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 270.0, 948.0, 100.0, 20.0 ],
-					"text" : "send~ [batch]out"
+					"patching_rect" : [ 270.0, 996.0, 106.0, 20.0 ],
+					"text" : "send~ [batch]outL"
 				}
 
 			}
@@ -2158,7 +2172,7 @@
 						"finetune" : [ 0.004082 ],
 						"fm-index" : [ 0 ],
 						"fm-mult" : [ 0 ],
-						"fmtimes" : [ 0 ],
+						"fmtimes" : [ 16 ],
 						"gain" : [ 124.870964 ],
 						"noise" : [ 0.338983 ],
 						"resonance" : [ 0.0 ],
@@ -2168,7 +2182,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u326001774"
+					"varname" : "u569001777"
 				}
 
 			}
@@ -2283,7 +2297,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Helvetica Neue",
@@ -2294,13 +2307,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 486.0, 270.0, 229.0, 19.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 0.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u498000062"
+									"varname" : "u832000063"
 								}
 
 							}
@@ -3840,7 +3853,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u044000092"
+									"varname" : "u671000093"
 								}
 
 							}
@@ -3860,7 +3873,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u461000094"
+									"varname" : "u474000095"
 								}
 
 							}
@@ -3880,7 +3893,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u460000096"
+									"varname" : "u059000097"
 								}
 
 							}
@@ -3900,7 +3913,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u642000098"
+									"varname" : "u138000099"
 								}
 
 							}
@@ -3914,13 +3927,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 396.0, 150.0, 217.0, 19.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 16 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u125000100"
+									"varname" : "u922000101"
 								}
 
 							}
@@ -3940,7 +3953,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u201000102"
+									"varname" : "u682000103"
 								}
 
 							}
@@ -3960,7 +3973,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u998000104"
+									"varname" : "u409000105"
 								}
 
 							}
@@ -3980,7 +3993,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u173000106"
+									"varname" : "u581000107"
 								}
 
 							}
@@ -4000,7 +4013,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u199000108"
+									"varname" : "u321000109"
 								}
 
 							}
@@ -4020,7 +4033,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u894000110"
+									"varname" : "u184000111"
 								}
 
 							}
@@ -5382,6 +5395,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-141", 0 ]
 				}
 
 			}

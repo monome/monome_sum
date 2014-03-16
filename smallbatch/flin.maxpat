@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 73.0, 122.0, 1323.0, 606.0 ],
+		"rect" : [ 342.0, 230.0, 232.0, 125.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -996,6 +996,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Andale Mono",
@@ -1043,24 +1044,24 @@
 									"coll_data" : 									{
 										"count" : 7,
 										"data" : [ 											{
-												"key" : [ "ionian", 0 ],
+												"key" : [ "major", 0 ],
 												"value" : [ 0, 2, 4, 5, 7, 9, 11, 12 ]
 											}
 , 											{
-												"key" : [ "dorian", 1 ],
-												"value" : [ 0, 2, 3, 5, 7, 9, 10, 12 ]
+												"key" : [ "minor", 1 ],
+												"value" : [ 0, 2, 3, 5, 7, 8, 11, 12 ]
 											}
 , 											{
-												"key" : [ "phrygian", 2 ],
-												"value" : [ 0, 1, 3, 5, 7, 8, 10, 12 ]
+												"key" : [ "mminor", 2 ],
+												"value" : [ 0, 2, 3, 5, 7, 9, 11, 12 ]
 											}
 , 											{
-												"key" : [ "lydian", 3 ],
-												"value" : [ 0, 2, 4, 6, 7, 9, 11, 12 ]
+												"key" : [ "Mblues", 3 ],
+												"value" : [ 0, 2, 4, 5, 6, 7, 10, 12 ]
 											}
 , 											{
-												"key" : [ "mixolydian", 4 ],
-												"value" : [ 0, 2, 4, 5, 7, 9, 10, 12 ]
+												"key" : [ "mblues", 4 ],
+												"value" : [ 0, 3, 5, 6, 7, 10, 11, 12 ]
 											}
 , 											{
 												"key" : [ "aeolian", 5 ],
@@ -2324,21 +2325,6 @@
 					"source" : [ "obj-93", 1 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "_flin_sub.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}

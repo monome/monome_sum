@@ -75,7 +75,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 234.0, 660.0, 150.0, 20.0 ],
-									"presentation_rect" : [ 242.0, 659.0, 0.0, 0.0 ],
 									"text" : "noise"
 								}
 
@@ -90,7 +89,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 90.0, 516.0, 176.0, 20.0 ],
-									"presentation_rect" : [ 81.0, 517.0, 0.0, 0.0 ],
 									"text" : "scale 1. 0. 0.25 4. 25."
 								}
 
@@ -105,7 +103,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 360.0, 90.0, 47.0, 20.0 ],
-									"presentation_rect" : [ 360.0, 92.0, 0.0, 0.0 ],
 									"text" : "* -1."
 								}
 
@@ -120,7 +117,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 360.0, 66.0, 176.0, 20.0 ],
-									"presentation_rect" : [ 361.0, 67.0, 0.0, 0.0 ],
 									"text" : "scale 1. 0. 0.25 4. 25."
 								}
 
@@ -135,7 +131,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 360.0, 42.0, 270.0, 20.0 ],
-									"presentation_rect" : [ 354.0, 44.0, 0.0, 0.0 ],
 									"text" : "expr 1+(pow(10.\\,(-90*(1-$f1))*0.05))"
 								}
 
@@ -150,7 +145,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 360.0, 18.0, 255.0, 20.0 ],
-									"presentation_rect" : [ 362.0, 17.0, 0.0, 0.0 ],
 									"text" : "expr (pow(10.\\,(-90*(1-$f1))*0.05))"
 								}
 
@@ -468,7 +462,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 684.0, 48.0, 58.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 50.0, 148.0, 58.0, 20.0 ],
+					"presentation_rect" : [ 18.0, 48.0, 58.0, 20.0 ],
 					"text" : "t0"
 				}
 
@@ -484,7 +478,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 720.0, 102.0, 58.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 50.0, 176.0, 58.0, 20.0 ],
+					"presentation_rect" : [ 18.0, 76.0, 58.0, 20.0 ],
 					"text" : "t1"
 				}
 
@@ -502,7 +496,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 684.0, 66.0, 108.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 48.0, 144.0, 108.0, 24.0 ],
+					"presentation_rect" : [ 16.0, 44.0, 108.0, 24.0 ],
 					"setminmax" : [ 0.0, 1.0 ]
 				}
 
@@ -520,7 +514,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 720.0, 120.0, 108.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 48.0, 174.0, 108.0, 24.0 ],
+					"presentation_rect" : [ 16.0, 74.0, 108.0, 24.0 ],
 					"setminmax" : [ 0.0, 1.0 ]
 				}
 
@@ -537,7 +531,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 306.0, 54.0, 310.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 7.0, 19.0, 18.0 ],
+					"presentation_rect" : [ 5.0, 7.0, 193.0, 35.0 ],
 					"varname" : "serialosc"
 				}
 
