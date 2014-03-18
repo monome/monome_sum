@@ -115,5 +115,7 @@ function bang() {
     outlet(1,y);
     outlet(2,dx);
     outlet(3,dy);
+//	outlet(4,x/bx,1-(y/by),dx/bx,dy/by);
+	outlet(4,Math.pow(16,(x/bx))/4,Math.pow(16,(1-(y/by)))/4,Math.pow(16,(dx/bx))/4,Math.pow(16,(dy/by))/4);
 	outlet(5,keys);
 }

@@ -117,7 +117,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u651005582"
+					"varname" : "u407015037"
 				}
 
 			}
@@ -2606,7 +2606,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 64.0, 19.0 ],
 									"text" : "autopattr",
-									"varname" : "u254005588"
+									"varname" : "u435015033"
 								}
 
 							}
@@ -4575,7 +4575,7 @@
 					"outlettype" : [ "float", "float", "", "" ],
 					"patching_rect" : [ 36.0, 168.0, 265.5, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 147.0, 257.0, 31.0 ],
+					"presentation_rect" : [ 7.0, 29.0, 257.0, 107.0 ],
 					"varname" : "corners"
 				}
 
