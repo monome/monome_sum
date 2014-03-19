@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 206.0, 97.0, 1441.0, 838.0 ],
+		"rect" : [ 108.0, 126.0, 1441.0, 838.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -63,8 +63,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-98",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -97,7 +97,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 242.0, 134.0, 59.0, 18.0 ],
 					"signed" : 1,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "envtofilt"
 				}
@@ -170,7 +170,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 162.0, 774.0, 41.0, 30.0 ],
-					"text" : "open 1"
+					"text" : "open 17"
 				}
 
 			}
@@ -318,8 +318,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-81",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -337,8 +337,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-80",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -356,8 +356,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-79",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -375,8 +375,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-77",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -394,8 +394,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-76",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -413,8 +413,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-75",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -554,7 +554,7 @@
 					"patching_rect" : [ 234.0, 240.0, 102.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 56.0, 38.0, 102.0, 19.0 ],
-					"text" : "-0.37 s.t."
+					"text" : "0.00 s.t."
 				}
 
 			}
@@ -724,8 +724,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-74",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -743,8 +743,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-73",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -762,8 +762,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-72",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -781,8 +781,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-71",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -800,8 +800,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-70",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -819,8 +819,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-69",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -890,7 +890,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 242.0, 16.0, 59.0, 18.0 ],
 					"signed" : 1,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "envtopitch"
 				}
@@ -916,7 +916,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 497.0, 16.0, 59.0, 18.0 ],
 					"signed" : 1,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "env2mod"
 				}
@@ -942,7 +942,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 179.0, 134.0, 59.0, 18.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "resonance"
 				}
@@ -1231,7 +1231,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 56.0, 98.0, 245.0, 18.0 ],
 					"setminmax" : [ 0.0, 4.0 ],
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "waveshape"
 				}
@@ -1881,25 +1881,25 @@
 					"restore" : 					{
 						"cutoffhz" : [ 739.988831 ],
 						"env-length" : [ 2000.0 ],
-						"env-shape" : [ -0.691441 ],
+						"env-shape" : [ -0.777778 ],
 						"env-slope" : [ 0.05 ],
 						"env2mod" : [ 0.016949 ],
 						"envtofilt" : [ 0.016949 ],
 						"envtopitch" : [ 0.016949 ],
-						"finetune" : [ -0.371429 ],
+						"finetune" : [ 0.004082 ],
 						"fm-index" : [ 0 ],
 						"fm-mult" : [ 0 ],
 						"fmtimes" : [ 16 ],
 						"gain" : [ 124.870964 ],
 						"noise" : [ 0.338983 ],
-						"resonance" : [ 0.220339 ],
+						"resonance" : [ 0.0 ],
 						"svf-filt" : [ 70.497963 ],
 						"svf-morph" : [ 0.489796 ],
 						"waveshape" : [ 1.910204 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u022020107"
+					"varname" : "u478020376"
 				}
 
 			}
@@ -2026,13 +2026,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 630.0, 342.0, 229.0, 19.0 ],
-									"restore" : [ -0.691441 ],
+									"restore" : [ -0.777778 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::env-shape @invisible 1",
-									"varname" : "u591002239"
+									"varname" : "u642016390"
 								}
 
 							}
@@ -2052,7 +2052,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-slope @invisible 1",
-									"varname" : "u702002237"
+									"varname" : "u766016392"
 								}
 
 							}
@@ -2072,7 +2072,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-length @invisible 1",
-									"varname" : "u742002235"
+									"varname" : "u397016394"
 								}
 
 							}
@@ -2139,13 +2139,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 540.0, 258.0, 229.0, 19.0 ],
-									"restore" : [ 0.220339 ],
+									"restore" : [ 0.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u870002232"
+									"varname" : "u732016397"
 								}
 
 							}
@@ -3421,7 +3421,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u886002453"
+									"varname" : "u515016420"
 								}
 
 							}
@@ -3441,7 +3441,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u568002451"
+									"varname" : "u234016422"
 								}
 
 							}
@@ -3461,7 +3461,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u185002449"
+									"varname" : "u893016424"
 								}
 
 							}
@@ -3481,7 +3481,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u825002447"
+									"varname" : "u299016426"
 								}
 
 							}
@@ -3501,7 +3501,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u941002445"
+									"varname" : "u318016428"
 								}
 
 							}
@@ -3521,7 +3521,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u556002443"
+									"varname" : "u467016430"
 								}
 
 							}
@@ -3541,7 +3541,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u506002433"
+									"varname" : "u403016432"
 								}
 
 							}
@@ -3561,7 +3561,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u096002439"
+									"varname" : "u002016434"
 								}
 
 							}
@@ -3575,13 +3575,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 378.0, 42.0, 217.0, 19.0 ],
-									"restore" : [ -0.371429 ],
+									"restore" : [ 0.004082 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u459002437"
+									"varname" : "u855016436"
 								}
 
 							}
@@ -3601,7 +3601,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u697002435"
+									"varname" : "u511016438"
 								}
 
 							}
@@ -4290,7 +4290,7 @@
 					"presentation_rect" : [ 311.0, 60.0, 245.0, 18.0 ],
 					"setminmax" : [ 0.0, 100.0 ],
 					"settype" : 0,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "fm-index"
 				}
@@ -4316,7 +4316,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 311.0, 178.0, 245.0, 18.0 ],
 					"setminmax" : [ 1.0, 2000.0 ],
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "env-length"
 				}
@@ -4342,7 +4342,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 434.0, 92.0, 59.0, 18.0 ],
 					"setminmax" : [ -0.995, 0.995 ],
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "env-shape"
 				}
@@ -4483,7 +4483,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 56.0, 156.0, 245.0, 18.0 ],
 					"setminmax" : [ 0.0, 4.0 ],
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "svf-morph"
 				}
@@ -4511,7 +4511,7 @@
 					"setminmax" : [ -4.0, 4.0 ],
 					"settype" : 0,
 					"signed" : 1,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "fm-mult"
 				}
@@ -4699,7 +4699,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 56.0, 38.0, 245.0, 18.0 ],
 					"signed" : 1,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "finetune"
 				}
@@ -4725,7 +4725,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 497.0, 92.0, 59.0, 18.0 ],
 					"setminmax" : [ 0.05, 0.95 ],
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "env-slope"
 				}
@@ -4733,7 +4733,7 @@
 			}
 , 			{
 				"box" : 				{
-					"addpoints_with_curve" : [ 0.0, 0.0, 0, 0.0, 100.0, 1.4, 0, -0.691441, 2000.0, 0.0, 0, -0.691441 ],
+					"addpoints_with_curve" : [ 0.0, 0.0, 0, 0.0, 100.0, 1.4, 0, -0.777778, 2000.0, 0.0, 0, -0.777778 ],
 					"bgcolor" : [ 0.901961, 0.901961, 0.901961, 0.0 ],
 					"bordercolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 					"clickadd" : 0,
@@ -4805,7 +4805,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 242.0, 76.0, 59.0, 18.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "noise"
 				}
@@ -4816,8 +4816,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-68",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -4850,7 +4850,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 56.0, 178.0, 245.0, 18.0 ],
 					"setminmax" : [ 0.0, 127.0 ],
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "svf-filt"
 				}
@@ -4861,8 +4861,8 @@
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
 					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.35 ],
 					"id" : "obj-82",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -4890,19 +4890,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 311.0, 114.0, 245.0, 60.0 ],
 					"rounded" : 0
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.498039, 0.498039, 0.498039, 0.32 ],
-					"id" : "obj-15",
-					"maxclass" : "panel",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 126.0, 414.0, 128.0, 128.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 6.0, 540.0, 210.0 ]
 				}
 
 			}
