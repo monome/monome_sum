@@ -117,7 +117,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u407015037"
+					"varname" : "u454012710"
 				}
 
 			}
@@ -2606,7 +2606,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 64.0, 19.0 ],
 									"text" : "autopattr",
-									"varname" : "u435015033"
+									"varname" : "u470012706"
 								}
 
 							}
@@ -4664,7 +4664,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 918.0, 156.0, 90.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 180.0, 198.0, 144.0, 84.0 ],
+					"presentation_rect" : [ 180.0, 198.0, 180.0, 120.0 ],
 					"varname" : "_polygome64"
 				}
 
@@ -5692,70 +5692,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "step.png",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "clock.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "length8.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "length7.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "playback.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pitch_setup.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mode.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "transops.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "arbitrary_pitch_map.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "ap.maxpat",
 				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
