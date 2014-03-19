@@ -26,7 +26,7 @@ var themish = new Array(64); // temporary buffer for /led/level/map displays
 var index = new Array(cols);
 var b = 0;
 var direction = 1;
-var vb = 1;
+var vb = 0;
 
 
 for(i=0;i<16;i++) pointk[i] = 0; // initialise pointk to 0.
