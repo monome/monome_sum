@@ -111,7 +111,7 @@ function mytask() {
 
 
     for(i=0;i<cols;i++) {
-        xN[i] = Math.pow(16,((x[i]-1)/(steps-1)))/4;
+        xN[i] = (x[i]-(steps/2))/((steps-1)/2)-1/(steps-1);
     }
 
 

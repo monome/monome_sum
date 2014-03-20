@@ -20,6 +20,11 @@ var stepRow1 = 255;
 var stepRow2 = 255;
 var loopModulo = 0;
 var stepOut = new Array(7);
+var flashL = 0; // memory bit for flasher
+
+var tflash = new Task(flasher, this); // task to run the flash for current playback step
+
+tflash.interval = 75; // set flash time for step indicator to 75ms
 
 for(i=0;i<1024;i++) bits[i] = 0 // sets whole array to 0 on load
 pos[0] = 0; // empty 'current' position floats
@@ -162,10 +167,16 @@ function flashStep() {
 		outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2-(1<<(currentStep-8)));
 	}
 	
-	outlet(1,"flash");
+	//outlet(1,"flash");
+	flashL = 1; // reset counter
+	tflash.repeat(); //start the timer
 
 }
 
-function flash() {
-	outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2);
+function flasher() {
+	if(flashL > 0) flashL--; // decrease count
+	else {
+		outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2);
+		tflash.cancel(); // stop timer
+	}
 }
