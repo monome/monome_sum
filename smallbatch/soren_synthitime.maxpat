@@ -30,6 +30,21 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Helvetica Neue",
+					"fontsize" : 11.0,
+					"id" : "obj-43",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 378.0, 336.0, 50.0, 19.0 ],
+					"varname" : "fmtimes"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 0.4, 0.8, 1.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -185,21 +200,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 324.0, 846.0, 108.0, 20.0 ],
 					"text" : "send~ [batch]outR"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Helvetica Neue",
-					"fontsize" : 11.0,
-					"id" : "obj-33",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 378.0, 336.0, 50.0, 19.0 ],
-					"varname" : "fmtimes"
 				}
 
 			}
@@ -941,7 +941,7 @@
 					"patching_rect" : [ 270.0, 414.0, 90.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 179.0, 134.0, 59.0, 18.0 ],
-					"setminmax" : [ 0.0, 1.0 ],
+					"setminmax" : [ 0.0, 0.99 ],
 					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
 					"thickness" : 1,
 					"varname" : "resonance"
@@ -1889,7 +1889,7 @@
 						"finetune" : [ -0.371429 ],
 						"fm-index" : [ 0 ],
 						"fm-mult" : [ 0 ],
-						"fmtimes" : [ 16 ],
+						"fmtimes" : [ 1.0 ],
 						"gain" : [ 124.870964 ],
 						"noise" : [ 0.338983 ],
 						"resonance" : [ 0.220339 ],
@@ -1899,7 +1899,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u022020107"
+					"varname" : "u149003643"
 				}
 
 			}
@@ -2032,7 +2032,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-shape @invisible 1",
-									"varname" : "u591002239"
+									"varname" : "u704001820"
 								}
 
 							}
@@ -2052,7 +2052,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-slope @invisible 1",
-									"varname" : "u702002237"
+									"varname" : "u412001896"
 								}
 
 							}
@@ -2072,7 +2072,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-length @invisible 1",
-									"varname" : "u742002235"
+									"varname" : "u293001907"
 								}
 
 							}
@@ -2145,7 +2145,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u870002232"
+									"varname" : "u728001911"
 								}
 
 							}
@@ -2307,8 +2307,8 @@
 													"numinlets" : 1,
 													"numoutlets" : 4,
 													"outlettype" : [ "int", "int", "int", "int" ],
-													"patching_rect" : [ 90.0, 60.0, 144.0, 19.0 ],
-													"text" : "t i 2 i 0"
+													"patching_rect" : [ 90.0, 60.0, 162.0, 19.0 ],
+													"text" : "t i 3 i 0"
 												}
 
 											}
@@ -2604,7 +2604,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 72.0, 216.0, 25.0, 25.0 ]
+													"patching_rect" : [ 72.0, 204.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -2694,10 +2694,10 @@
 													"id" : "obj-4",
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "int" ],
-													"patching_rect" : [ 234.0, 54.0, 47.0, 20.0 ],
-													"text" : "t l 0"
+													"numoutlets" : 3,
+													"outlettype" : [ "", "int", "int" ],
+													"patching_rect" : [ 234.0, 54.0, 61.0, 20.0 ],
+													"text" : "t l 0 1"
 												}
 
 											}
@@ -2708,10 +2708,10 @@
 													"id" : "obj-3",
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "", "int" ],
-													"patching_rect" : [ 162.0, 54.0, 47.0, 20.0 ],
-													"text" : "t l 0"
+													"numoutlets" : 3,
+													"outlettype" : [ "", "int", "int" ],
+													"patching_rect" : [ 162.0, 54.0, 61.0, 20.0 ],
+													"text" : "t l 0 2"
 												}
 
 											}
@@ -3091,15 +3091,6 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-2", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-1", 1 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
 													"destination" : [ "obj-67", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
@@ -3145,6 +3136,15 @@
 											}
 , 											{
 												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-3", 2 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
 													"destination" : [ "obj-20", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
@@ -3167,6 +3167,15 @@
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-4", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-4", 2 ]
 												}
 
 											}
@@ -3421,7 +3430,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u886002453"
+									"varname" : "u552002123"
 								}
 
 							}
@@ -3441,7 +3450,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u568002451"
+									"varname" : "u029002090"
 								}
 
 							}
@@ -3461,7 +3470,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u185002449"
+									"varname" : "u366002097"
 								}
 
 							}
@@ -3481,7 +3490,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u825002447"
+									"varname" : "u675002084"
 								}
 
 							}
@@ -3495,13 +3504,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 450.0, 138.0, 217.0, 19.0 ],
-									"restore" : [ 16 ],
+									"restore" : [ 1.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u941002445"
+									"varname" : "u853002086"
 								}
 
 							}
@@ -3521,7 +3530,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u556002443"
+									"varname" : "u238002089"
 								}
 
 							}
@@ -3541,7 +3550,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u506002433"
+									"varname" : "u479002087"
 								}
 
 							}
@@ -3561,7 +3570,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u096002439"
+									"varname" : "u162002094"
 								}
 
 							}
@@ -3581,7 +3590,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u459002437"
+									"varname" : "u121002083"
 								}
 
 							}
@@ -3601,7 +3610,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u697002435"
+									"varname" : "u320002081"
 								}
 
 							}
@@ -5206,15 +5215,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-33", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-30", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-41", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -5297,6 +5297,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-38", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-41", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-43", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-41", 0 ]
