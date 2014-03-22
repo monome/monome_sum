@@ -3,7 +3,8 @@ outlets = 3; // current value, col states, ramp flag, led out
 
 // define global variables and set defaults
 var tsk = new Task(mytask, this); // our main task
-var tgrain = 33; // set time grain for calculations at 33ms
+var tgrain = 50; // set time grain for calculations at 33ms
+var focus = 0; // is the monome device in focus
 
 var tx = 0;
 var g = 35; // 35 is perfect level for slider interpolation!
@@ -17,6 +18,7 @@ var bcols = new Array(16); // key count for each column
 var tramp = new Array(16); // timer for each column
 var ton = new Array(16);
 var frics = new Array(16); // individual friction for each slider
+
 
 
 var steps = 16;
@@ -39,14 +41,16 @@ for(i=0;i<16;i++) frics[i] = 0.8; // initialise friction to 0.8 for nice initial
 
 
 tsk.interval = tgrain; // initialise interval to timegrain
-//tsk.repeat(); // starts the task and repeats indefinitely
+tsk.repeat(); // starts the task and repeats indefinitely
 
 function stop() {
-    tsk.cancel(); // allow a 'stop' message to stop the timer
+    //tsk.cancel(); // allow a 'stop' message to stop the timer
+    focus = 0;
 }
 
 function start() {
-    tsk.repeat(); // allows a 'start' message to restart the timer
+    //tsk.repeat(); // allows a 'start' message to restart the timer
+    focus = 1;
 }
 
 function grr(val) { // gravity 0-1. , g=35 is best for sliders
@@ -122,8 +126,10 @@ function mytask() {
     
     outlet(0,xN); // sends the full array of current slider levels normalised 0 to 1.
 
-    if(vb) aa_draw(); // if variable brightness, use aa_draw for antialiasing
-    else draw(); // if non-vb just send out raw led/map messages.
+    if(focus) {
+        if(vb) aa_draw(); // if variable brightness, use aa_draw for antialiasing
+        else draw(); // if non-vb just send out raw led/map messages.
+    }
 }
 
 function draw() { // draw with /grid/led/map without aa
