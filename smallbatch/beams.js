@@ -223,3 +223,11 @@ function aa_draw() { // draws the x array in the monome /grid/led/level/map form
 function bcolor(x) { // allows background colour of monome slider to be changed
     b = x;
 }
+
+function uiSet(x,ta,tb) {
+    // receives input from the UI when a timbre slider is changed directly
+    // set pointk[x] to the destination from bx to 0
+    pointk[x*2] = (steps/2)*(ta+1); // 1 to 8??
+    pointk[x*2+1] = (steps/2)*(tb+1); // 1 to 8??
+}
+
