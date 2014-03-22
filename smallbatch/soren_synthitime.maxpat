@@ -146,7 +146,7 @@
 											}
 , 											{
 												"key" : 1,
-												"value" : [ 49, 0.0, 0.020408, 3.7, 2793.825928, 0.816327, 0.25, 32.0, 1, 0, 0, 100, 1.0, 1.0 ]
+												"value" : [ 50, 0.9, 1.0, 2.1, 2000.0, 0.6, 0.0, 0.0, 0.4, 0.11, 0.0, 1.0, 0.4, 3, 1.0, 337.0, 0.05, -0.73 ]
 											}
 , 											{
 												"key" : 2,
@@ -1504,7 +1504,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u369010538"
+					"varname" : "u245015002"
 				}
 
 			}
@@ -1963,7 +1963,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-shape @invisible 1",
-									"varname" : "u074009883"
+									"varname" : "u011009833"
 								}
 
 							}
@@ -1983,7 +1983,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-slope @invisible 1",
-									"varname" : "u317009763"
+									"varname" : "u871009945"
 								}
 
 							}
@@ -2003,7 +2003,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-length @invisible 1",
-									"varname" : "u682009856"
+									"varname" : "u061009677"
 								}
 
 							}
@@ -2048,7 +2048,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u597007359"
+									"varname" : "u317009617"
 								}
 
 							}
@@ -2120,7 +2120,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u304005650"
+									"varname" : "u770010016"
 								}
 
 							}
@@ -2140,7 +2140,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u567007507"
+									"varname" : "u313009012"
 								}
 
 							}
@@ -2160,7 +2160,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u176007646"
+									"varname" : "u062009767"
 								}
 
 							}
@@ -2180,7 +2180,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u730007596"
+									"varname" : "u229009388"
 								}
 
 							}
@@ -2200,7 +2200,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u499007737"
+									"varname" : "u773009029"
 								}
 
 							}
@@ -2220,7 +2220,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u320007559"
+									"varname" : "u661009964"
 								}
 
 							}
@@ -2240,7 +2240,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u293007196"
+									"varname" : "u682009639"
 								}
 
 							}
@@ -2260,7 +2260,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u809007586"
+									"varname" : "u127009420"
 								}
 
 							}
@@ -2280,7 +2280,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u911007358"
+									"varname" : "u497009110"
 								}
 
 							}
@@ -2300,7 +2300,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u823007557"
+									"varname" : "u733009813"
 								}
 
 							}
