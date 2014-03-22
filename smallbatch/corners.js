@@ -4,7 +4,7 @@ outlets = 6;
 var dx = 0;
 var dy = 0;
 var x = 0;
-var y = 0;
+var y = 7;
 var i1, i2;
 var tx = 0;
 var ty = 0;
