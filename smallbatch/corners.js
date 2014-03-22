@@ -4,7 +4,7 @@ outlets = 6;
 var dx = 0;
 var dy = 0;
 var x = 0;
-var y = 0;
+var y = 7;
 var i1, i2;
 var tx = 0;
 var ty = 0;
@@ -112,7 +112,7 @@ function bang() {
     }
 
     outlet(0,x);
-    outlet(1,y);
+ 	outlet(1,y);
     outlet(2,dx);
     outlet(3,dy);
 //	outlet(4,x/bx,1-(y/by),dx/bx,dy/by);
