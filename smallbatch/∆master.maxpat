@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 280.0, 77.0, 784.0, 756.0 ],
+		"rect" : [ 0.0, 44.0, 1680.0, 956.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -117,11 +117,7 @@
 					}
 ,
 					"text" : "autopattr",
-<<<<<<< HEAD
 					"varname" : "u843014036"
-=======
-					"varname" : "u143014087"
->>>>>>> FETCH_HEAD
 				}
 
 			}
@@ -137,7 +133,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 504.0, 888.0, 141.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 622, 962 ],
+						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
 						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
@@ -197,11 +193,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 25.0, 69.0, 634.0, 613.0 ],
+						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -249,7 +245,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -310,39 +306,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "signal" ],
 													"patching_rect" : [ 72.0, 114.0, 61.0, 20.0 ],
-<<<<<<< HEAD
 													"text" : "*~ 0.48"
-=======
-													"text" : "*~ 0.43"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Andale Mono",
-													"fontsize" : 12.0,
-													"id" : "obj-12",
-													"maxclass" : "newobj",
-													"numinlets" : 3,
-													"numoutlets" : 1,
-													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 270.0, 348.0, 119.0, 20.0 ],
-													"text" : "lores~ 4000. 0."
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Andale Mono",
-													"fontsize" : 12.0,
-													"id" : "obj-11",
-													"maxclass" : "newobj",
-													"numinlets" : 3,
-													"numoutlets" : 1,
-													"outlettype" : [ "signal" ],
-													"patching_rect" : [ 144.0, 324.0, 119.0, 20.0 ],
-													"text" : "lores~ 4000. 0."
->>>>>>> FETCH_HEAD
 												}
 
 											}
@@ -699,7 +663,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -910,7 +874,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -1578,7 +1542,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -1802,7 +1766,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -2026,7 +1990,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -2575,7 +2539,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -2708,7 +2672,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 6,
+											"revision" : 5,
 											"architecture" : "x86"
 										}
 ,
@@ -3008,11 +2972,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 50.0, 100.0, 64.0, 19.0 ],
 									"text" : "autopattr",
-<<<<<<< HEAD
 									"varname" : "u650014040"
-=======
-									"varname" : "u319014090"
->>>>>>> FETCH_HEAD
 								}
 
 							}
@@ -4084,7 +4044,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -4309,7 +4269,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -4534,7 +4494,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -4759,7 +4719,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -6009,6 +5969,133 @@
 					"source" : [ "obj-96", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "soren_synthitime.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "soren_poly.synthitime~.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "batch_mlr.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "serialosc.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mlr_ch.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "batch_mlr_play.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "flin.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "_flin_sub.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "step.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tiltrap.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "_polygome64.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "playback.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "corners.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "corners.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "beams.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "beams.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "yafr2.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "master-p.json",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ]
 	}
