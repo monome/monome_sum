@@ -1432,7 +1432,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u491003017"
+					"varname" : "u034009697"
 				}
 
 			}
@@ -9617,7 +9617,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 10.0, 59.0, 1045.0, 368.0 ],
+						"rect" : [ 571.0, 218.0, 1045.0, 368.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
