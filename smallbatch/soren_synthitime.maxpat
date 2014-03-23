@@ -468,8 +468,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
-					"patching_rect" : [ 1134.0, 372.0, 265.0, 19.0 ],
-					"text" : "poly~ soren_poly.synthitime~.maxpat 16 @parallel 1"
+					"patching_rect" : [ 1134.0, 372.0, 259.0, 19.0 ],
+					"text" : "poly~ soren_poly.synthitime~.maxpat 7 @parallel 1"
 				}
 
 			}
@@ -483,8 +483,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
-					"patching_rect" : [ 918.0, 396.0, 265.0, 19.0 ],
-					"text" : "poly~ soren_poly.synthitime~.maxpat 16 @parallel 1"
+					"patching_rect" : [ 918.0, 396.0, 259.0, 19.0 ],
+					"text" : "poly~ soren_poly.synthitime~.maxpat 6 @parallel 1"
 				}
 
 			}
@@ -1504,7 +1504,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u245015002"
+					"varname" : "u431013208"
 				}
 
 			}
@@ -1963,7 +1963,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-shape @invisible 1",
-									"varname" : "u011009833"
+									"varname" : "u119011291"
 								}
 
 							}
@@ -1983,7 +1983,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-slope @invisible 1",
-									"varname" : "u871009945"
+									"varname" : "u020011293"
 								}
 
 							}
@@ -2003,7 +2003,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-length @invisible 1",
-									"varname" : "u061009677"
+									"varname" : "u450011295"
 								}
 
 							}
@@ -2048,7 +2048,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u317009617"
+									"varname" : "u225011298"
 								}
 
 							}
@@ -2120,7 +2120,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u770010016"
+									"varname" : "u958011302"
 								}
 
 							}
@@ -2140,7 +2140,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u313009012"
+									"varname" : "u774011304"
 								}
 
 							}
@@ -2160,7 +2160,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u062009767"
+									"varname" : "u569011306"
 								}
 
 							}
@@ -2180,7 +2180,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u229009388"
+									"varname" : "u520011308"
 								}
 
 							}
@@ -2200,7 +2200,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u773009029"
+									"varname" : "u150011310"
 								}
 
 							}
@@ -2220,7 +2220,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u661009964"
+									"varname" : "u097011312"
 								}
 
 							}
@@ -2240,7 +2240,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u682009639"
+									"varname" : "u920011314"
 								}
 
 							}
@@ -2260,7 +2260,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u127009420"
+									"varname" : "u375011316"
 								}
 
 							}
@@ -2280,7 +2280,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u497009110"
+									"varname" : "u283011318"
 								}
 
 							}
@@ -2300,7 +2300,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u733009813"
+									"varname" : "u371011320"
 								}
 
 							}
@@ -2992,8 +2992,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
-					"patching_rect" : [ 702.0, 414.0, 265.0, 19.0 ],
-					"text" : "poly~ soren_poly.synthitime~.maxpat 16 @parallel 1"
+					"patching_rect" : [ 702.0, 420.0, 259.0, 19.0 ],
+					"text" : "poly~ soren_poly.synthitime~.maxpat 6 @parallel 1"
 				}
 
 			}
