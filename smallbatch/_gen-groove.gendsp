@@ -37,8 +37,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 75.0, 615.0, 109.0, 20.0 ],
-					"text" : "buffer dummy 0file"
+					"patching_rect" : [ 75.0, 615.0, 84.0, 20.0 ],
+					"text" : "buffer dummy"
 				}
 
 			}
