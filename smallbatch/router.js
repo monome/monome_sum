@@ -17,6 +17,7 @@ var whichkey = 0;
 var whichrx = 0;
 var whichry = 0;
 var whichdev = -1;
+var mWait = 0;
 
 var rMaster = -1;
 var rToggle = 0;
@@ -279,6 +280,14 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 				outlet(4,2); // calls route-key location display in led-router.js
 			}
 		}
+
+		if(mWait==1 && c==0) { // if the manual waitFlag is raised and the count has hit zero, execute the app change
+			// execute the manual routing
+			newSelection();
+			outlet(0,"/sys/size",xGrid,yGrid); // update size to full grid
+			routeWaitHistory = 0; // clean-up > let memory bit know it's in app-mode too
+			mWait = 0;
+		}
 	}
 
 
@@ -484,10 +493,15 @@ function manual(i,j) { // this function allows an integer index to overwrite the
 
 	glob.joined = 1; // force devices to be joined as can only select 1 app via mouse
 	glob.gMeta = 0; // only one application attached to full meta grid
-	glob.selCurrent = i;
-	newSelection();
-	outlet(0,"/sys/size",xGrid,yGrid); // update size to full grid
-	routeWaitHistory = 0; // clean-up > let memory bit know it's in app-mode too
+	glob.selCurrent = i; // set the current app selection
+
+	if(c==0) {
+		newSelection();
+		outlet(0,"/sys/size",xGrid,yGrid); // update size to full grid
+		routeWaitHistory = 0; // clean-up > let memory bit know it's in app-mode too
+	}
+	else mWait = 1; // set the wait flag for a manual change
+
 }
 
 
