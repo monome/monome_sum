@@ -39,11 +39,13 @@ tilt[1] = 0;
 
 	// send a 'step' message anytime you want to move to trigger notes (tempo)
 function step() {
-	outlet(1,(currentStep%16),loopStart,loopLength); // output the current step (testing only)
+	outlet(1,(currentStep%localx),loopStart,loopLength); // output the current step (testing only)
 	for(i=0;i<7;i++) stepOut[i] = bits[(xpos[0]+(currentStep%16)+(32*(ypos[0]+1+i))+1024)%1024]
 	outlet(2,stepOut); // send to the rhythm generator
 	flashStep();
 	currentStep = ((currentStep + 1 - loopStart)%loopLength)+loopStart; // increment the step by 1
+	if(currentStep >= localx) currentStep = currentStep%localx;
+
 }
 
 function key(x,y,s) {
@@ -56,7 +58,7 @@ function key(x,y,s) {
 			loopLength = localx; // set the loop length to the full width
 			stepRow1 = 255;
 			stepRow2 = 255;
-			redrawMap();
+			outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2); // redraw top row only
 		}
 
 		else if(c>1 && s==1) { // interpret double-press & loop
@@ -68,7 +70,7 @@ function key(x,y,s) {
 				if(((i+loopStart)%16) < 8) stepRow1 = stepRow1 + (1<<((i+loopStart)%16))
 				else stepRow2 = stepRow2 + (1<<((i+loopStart-8)%16));
 			}
-			redrawMap();
+			outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2); // redraw top row only
 		}
 		
 		// if we are started and the count hits zero, then revert to !started
@@ -131,6 +133,7 @@ function localsize(x,y) {
 	// update the internally accessed size (specifically for creating led output)
 }
 
+
 function redrawMap() {	
 	for(i=1;i<localy;i++) { // iterate through the physically focussed cells (skip first row)
 		for(j=0;j<localx;j++) {
@@ -151,8 +154,6 @@ function redrawMap() {
 	
 		// then we overlay the step counter on top
 	outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2);
-
-
 }
 
 function ledSet(x,y,s) {
@@ -160,11 +161,11 @@ function ledSet(x,y,s) {
 }
 
 function flashStep() {
-	if((currentStep %16)<8) { // if step is in 1st quadrant
-		outlet(0,"/b_step/grid/led/row",0,0,stepRow1-(1<<currentStep),stepRow2);
+	if((currentStep %localx)<8) { // if step is in 1st quadrant
+		outlet(0,"/b_step/grid/led/row",0,0,stepRow1-(1<<(currentStep%16)),stepRow2);
 	}
-	else { // if step is in 2nd quadrant
-		outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2-(1<<(currentStep-8)));
+	else if(localx > 8) { // if step is in 2nd quadrant
+		outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2-(1<<((currentStep-8)%16)));
 	}
 	
 	//outlet(1,"flash");

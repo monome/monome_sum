@@ -88,7 +88,8 @@ function bang() {
     dy = dy * f;
 
     x = x + dx;
-    if(x>bx) { 
+
+/*    if(x>bx) { 
         if(r[0]==1) { dx = -dx; x = bx; }
         else { x = x - bx; }
         outlet(4,0);
@@ -110,7 +111,7 @@ function bang() {
         else { y = y + by; }
         outlet(4,1);
     }
-
+*/
     outlet(0,x);
     outlet(1,y);
     outlet(2,dx);
