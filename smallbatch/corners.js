@@ -89,29 +89,30 @@ function bang() {
 
     x = x + dx;
 
-/*    if(x>bx) { 
+    if(x>bx) { 
         if(r[0]==1) { dx = -dx; x = bx; }
         else { x = x - bx; }
-        outlet(4,0);
+        //outlet(4,0);
     }
     if(x<0) { 
         if(r[2]==1) { dx = -dx; x = 0; }
         else { x = x + bx; }
-        outlet(4,2);
+        //outlet(4,2);
     }
-    
+
     y = y + dy;
+
     if(y>by) { 
         if(r[3]==1) { dy = -dy; y = by; }
         else { y = y - by;}
-        outlet(4,3);
+        //outlet(4,3);
     }
     if(y<0) { 
         if(r[1]==1) { dy = -dy; y = 0; }
         else { y = y + by; }
-        outlet(4,1);
+        //outlet(4,1);
     }
-*/
+
     outlet(0,x);
     outlet(1,y);
     outlet(2,dx);
