@@ -29,6 +29,71 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 1.0, 0.4, 0.4, 1.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 468.0, 528.0, 306.0, 20.0 ],
+					"restore" : [ 0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"text" : "pattr #1prefixpath @thru 0 @autorestore 0",
+					"varname" : "#1prefixpath"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-19",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 630.0, 396.0, 163.0, 87.0 ],
+					"text" : "CREATE A METHOD TO SEND THE PRESET TO THE APPROPRIATE PORT & PREFIX AFTER 'LOADED' FLAG RECEIVED"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Helvetica Neue",
+					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-16",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 486.0, 576.0, 148.0, 71.0 ],
+					"text" : "filepath of the preset as saved by the router. received after the client has sent a '/loaded' message to the manager"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Helvetica Neue",
+					"fontsize" : 11.0,
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 468.0, 558.0, 136.0, 19.0 ],
+					"text" : "prepend /manager/preset"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-28",
@@ -366,7 +431,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u183005189"
+					"varname" : "u889006972"
 				}
 
 			}
@@ -1049,7 +1114,7 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"items" : [ "---", ",", "/parc", ",", "/slide_128" ],
+									"items" : [ "---", ",", "/b_beams", ",", "/b_gome", ",", "/b_corners", ",", "/b_step", ",", "/b_flin", ",", "/b_mlr" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1189,7 +1254,7 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-76",
-									"items" : [ 0, ",", 25535, ",", 28023, ",", 0, ",", 0 ],
+									"items" : [ 0, ",", 26508, ",", 26506, ",", 23636, ",", 23992, ",", 12857, ",", 12521, ",", 0, ",", 0 ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -4762,7 +4827,7 @@
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 					"id" : "obj-7",
-					"items" : [ "---", ",", "/parc", ",", "/slide_128", ",", "<separator>", ",", 0 ],
+					"items" : [ "---", ",", "/b_beams", ",", "/b_gome", ",", "/b_corners", ",", "/b_step", ",", "/b_flin", ",", "/b_mlr", ",", "<separator>", ",", 0 ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -5342,6 +5407,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}
