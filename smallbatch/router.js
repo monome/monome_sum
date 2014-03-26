@@ -245,13 +245,13 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 			}
 			else { // if there is a route key..
 				if(inlet==glob.rDevice && x==glob.rWidth && y==glob.rHeight) { // it is the router key
-					isRouter(z); // run the split/spanner
-					if(c==0) {
+						if(c==0) {
 						routeWait = z;
 						if(z==1) outlet(4,1);
 						else newSelection();
 						routeWaitHistory = routeWait;
 					}
+					isRouter(z); // run the split/spanner
 				}
 				else { // all other input
 					c = c + ((z*2)-1); // add number to current press count
