@@ -11,7 +11,7 @@ var routeWaitHistory = 0; //previous routeWait
 // size of 1st device is global & broadcast
 var g2x = 0;
 var g2y = 0;
-var xGrid = 16; // should initialise at 0
+var xGrid = 8; // should initialise at 0
 var yGrid = 8; // should initialise at 0
 var whichkey = 0;
 var whichrx = 0;
@@ -26,7 +26,7 @@ var keyLocation = 0;
 // Global (Max namespace) variables
 glob = new Global("routinginfo");
 glob.gMeta = 0;
-glob.g1x = 16; // broadcast x-size of 1st device - should initialise at 0 for starters
+glob.g1x = 8; // broadcast x-size of 1st device - should initialise at 0 for starters
 glob.g1y = 8; // should initialise at 0
 glob.gridtiling = 0;
 glob.rLock = 0;
@@ -460,24 +460,24 @@ function isRouter(z) {
 				// this determines how the device splitting will work if only 1 device
 			else {
 					//glob.gMeta: 0=singleapp, 1=2devices-to-2-apps, 2=h-split, 3=v-split
-				if((glob.gly==8) && (glob.glx == 8)) { // only 8x8 device (ie. 64)
+				if((glob.g1y==8) && (glob.glx == 8)) { // only 8x8 device (ie. 64)
 					glob.gMeta = 0; // 1 device to 1 app
-					outlet(0,"/sys/size",glob.g1x,glob.gly); // echo size to output
+					outlet(0,"/sys/size",glob.g1x,glob.g1y); // echo size to output
 				}
 				if((glob.g1y==8) && (glob.g1x == 16)) { // horizontal 128
 					glob.gMeta = 2; // horizontal split
-					outlet(0,"/sys/size",(glob.g1x/2),glob.gly);
-					outlet(1,"/sys/size",(glob.g1x/2),glob.gly);
+					outlet(0,"/sys/size",(glob.g1x/2),glob.g1y);
+					outlet(1,"/sys/size",(glob.g1x/2),glob.g1y);
 				}
 				if((glob.g1y==16) && (glob.g1x == 16)) { // 256
 					glob.gMeta = (glob.gridtiling + 2); // sets mode for vertical or horizontal split
-					outlet(0,"/sys/size",(glob.g1x/(-glob.gridtiling+2)),(glob.gly/(glob.gridtiling+1)));
-					outlet(1,"/sys/size",(glob.g1x/(-glob.gridtiling+2)),(glob.gly/(glob.gridtiling+1)));
+					outlet(0,"/sys/size",(glob.g1x/(-glob.gridtiling+2)),(glob.g1y/(glob.gridtiling+1)));
+					outlet(1,"/sys/size",(glob.g1x/(-glob.gridtiling+2)),(glob.g1y/(glob.gridtiling+1)));
 				}
 				if((glob.g1y==16) && (glob.g1x == 8)) { // vertical 128
 					glob.gMeta = 3; // vertical split
-					outlet(0,"/sys/size",glob.g1x,(glob.gly/2));
-					outlet(1,"/sys/size",glob.g1x,(glob.gly/2));
+					outlet(0,"/sys/size",glob.g1x,(glob.g1y/2));
+					outlet(1,"/sys/size",glob.g1x,(glob.g1y/2));
 				}
 			}
 		}
