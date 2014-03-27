@@ -81,6 +81,16 @@ function point(kx,ky,state) { // all /grid/key input
 }
 
 function bounds(xb, yb) { // /sys/size message, (x,y)
+    
+    /* note that this if/for loop is not currently functioning. values are still being truncated when switching */
+
+    if(yb!=steps) { // when changing y-size must scale the stored values to avoid edge case issues
+        for(i=0;i<xb;i++) {
+            pointk[i] = pointk[i] * (yb/steps);
+            x[i] = x[i] * (yb/steps);
+        }
+    }
+
     bx = yb; // try without subtracting rounding error
     steps = yb;
     cols = xb;
