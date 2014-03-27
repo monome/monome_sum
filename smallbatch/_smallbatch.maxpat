@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 802.0, 194.0, 769.0, 240.0 ],
+		"rect" : [ 790.0, 166.0, 769.0, 240.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -1904,7 +1904,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u537015888"
+					"varname" : "u648015948"
 				}
 
 			}
@@ -3193,7 +3193,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 3.0, 131.0, 825.0, 447.0 ],
+						"rect" : [ 644.0, 428.0, 825.0, 447.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4065,7 +4065,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 545.0, 432.0, 906.0, 468.0 ],
+						"rect" : [ 499.0, 44.0, 906.0, 468.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4084,7 +4084,272 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-44",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "/broadcast/disconnect" ],
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 5,
+											"architecture" : "x86"
+										}
+,
+										"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Andale Mono",
+										"gridonopen" : 0,
+										"gridsize" : [ 18.0, 6.0 ],
+										"gridsnaponopen" : 0,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"boxanimatetime" : 200,
+										"imprint" : 0,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"boxes" : [ 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"maxclass" : "outlet",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 87.0, 237.0, 25.0, 25.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 12.0,
+													"id" : "obj-42",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "/broadcast/disconnect" ],
+													"patching_rect" : [ 50.0, 130.0, 176.0, 20.0 ],
+													"text" : "t /broadcast/disconnect"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.654902, 0.411765, 0.929412, 1.0 ],
+													"fontname" : "Helvetica Neue",
+													"fontsize" : 11.0,
+													"id" : "obj-40",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 50.0, 100.0, 106.0, 19.0 ],
+													"text" : "r [router]app-disc-2"
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-42", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-40", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-42", 0 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 702.0, 378.0, 75.0, 20.0 ],
+									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Andale Mono",
+										"default_fontsize" : 12.0,
+										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
+										"fontname" : "Andale Mono",
+										"fontsize" : 12.0,
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p unfocus"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-43",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "/broadcast/disconnect" ],
+									"patcher" : 									{
+										"fileversion" : 1,
+										"appversion" : 										{
+											"major" : 6,
+											"minor" : 1,
+											"revision" : 5,
+											"architecture" : "x86"
+										}
+,
+										"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+										"bglocked" : 0,
+										"openinpresentation" : 0,
+										"default_fontsize" : 12.0,
+										"default_fontface" : 0,
+										"default_fontname" : "Andale Mono",
+										"gridonopen" : 0,
+										"gridsize" : [ 18.0, 6.0 ],
+										"gridsnaponopen" : 0,
+										"statusbarvisible" : 2,
+										"toolbarvisible" : 1,
+										"boxanimatetime" : 200,
+										"imprint" : 0,
+										"enablehscroll" : 1,
+										"enablevscroll" : 1,
+										"devicewidth" : 0.0,
+										"description" : "",
+										"digest" : "",
+										"tags" : "",
+										"boxes" : [ 											{
+												"box" : 												{
+													"comment" : "",
+													"id" : "obj-2",
+													"maxclass" : "outlet",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 72.0, 222.0, 25.0, 25.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 12.0,
+													"id" : "obj-41",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "/broadcast/disconnect" ],
+													"patching_rect" : [ 50.0, 130.0, 176.0, 20.0 ],
+													"text" : "t /broadcast/disconnect"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.654902, 0.411765, 0.929412, 1.0 ],
+													"fontname" : "Helvetica Neue",
+													"fontsize" : 11.0,
+													"id" : "obj-38",
+													"maxclass" : "newobj",
+													"numinlets" : 0,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 50.0, 100.0, 106.0, 19.0 ],
+													"text" : "r [router]app-disc-1"
+												}
+
+											}
+ ],
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-41", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-38", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-41", 0 ]
+												}
+
+											}
+ ]
+									}
+,
+									"patching_rect" : [ 306.0, 378.0, 75.0, 20.0 ],
+									"saved_object_attributes" : 									{
+										"default_fontface" : 0,
+										"default_fontname" : "Andale Mono",
+										"default_fontsize" : 12.0,
+										"description" : "",
+										"digest" : "",
+										"fontface" : 0,
+										"fontname" : "Andale Mono",
+										"fontsize" : 12.0,
+										"globalpatchername" : "",
+										"tags" : ""
+									}
+,
+									"text" : "p unfocus"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-35",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 558.0, 300.0, 57.0, 19.0 ],
+									"text" : "append 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"id" : "obj-27",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 162.0, 300.0, 57.0, 19.0 ],
+									"text" : "append 1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -4226,7 +4491,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 393.0, 223.0, 381.0, 415.0 ],
+										"rect" : [ 102.0, 216.0, 381.0, 415.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -4246,6 +4511,34 @@
 										"digest" : "",
 										"tags" : "",
 										"boxes" : [ 											{
+												"box" : 												{
+													"color" : [ 0.25098, 0.709804, 0.8, 1.0 ],
+													"fontname" : "Helvetica Neue",
+													"fontsize" : 11.0,
+													"id" : "obj-4",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 126.0, 312.0, 108.0, 19.0 ],
+													"text" : "s [router]app-disc-1"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"color" : [ 0.25098, 0.709804, 0.8, 1.0 ],
+													"fontname" : "Helvetica Neue",
+													"fontsize" : 11.0,
+													"id" : "obj-3",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 162.0, 198.0, 108.0, 19.0 ],
+													"text" : "s [router]app-disc-2"
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"color" : [ 0.8, 0.4, 1.0, 1.0 ],
 													"fontname" : "Andale Mono",
@@ -4281,7 +4574,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 108.0, 210.0, 95.0, 19.0 ],
+													"patching_rect" : [ 108.0, 246.0, 95.0, 19.0 ],
 													"text" : "s [router]b-port-2"
 												}
 
@@ -4293,10 +4586,10 @@
 													"id" : "obj-52",
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "bang", "int" ],
-													"patching_rect" : [ 108.0, 156.0, 32.5, 19.0 ],
-													"text" : "t b i"
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "int", "bang" ],
+													"patching_rect" : [ 108.0, 156.0, 46.0, 19.0 ],
+													"text" : "t b i b"
 												}
 
 											}
@@ -4309,7 +4602,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 144.0, 186.0, 116.0, 19.0 ],
+													"patching_rect" : [ 144.0, 222.0, 116.0, 19.0 ],
 													"text" : "s [router]app-select-2"
 												}
 
@@ -4323,7 +4616,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 72.0, 294.0, 95.0, 19.0 ],
+													"patching_rect" : [ 72.0, 366.0, 95.0, 19.0 ],
 													"text" : "s [router]b-port-1"
 												}
 
@@ -4349,10 +4642,10 @@
 													"id" : "obj-49",
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 2,
-													"outlettype" : [ "bang", "int" ],
-													"patching_rect" : [ 72.0, 240.0, 32.5, 19.0 ],
-													"text" : "t b i"
+													"numoutlets" : 3,
+													"outlettype" : [ "bang", "int", "bang" ],
+													"patching_rect" : [ 72.0, 270.0, 46.0, 19.0 ],
+													"text" : "t b i b"
 												}
 
 											}
@@ -4365,7 +4658,7 @@
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 108.0, 270.0, 116.0, 19.0 ],
+													"patching_rect" : [ 108.0, 342.0, 116.0, 19.0 ],
 													"text" : "s [router]app-select-1"
 												}
 
@@ -4413,6 +4706,24 @@
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-49", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-4", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-49", 2 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-3", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-52", 2 ]
 												}
 
 											}
@@ -4497,7 +4808,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 558.0, 216.0, 150.0, 19.0 ],
+									"patching_rect" : [ 558.0, 192.0, 150.0, 19.0 ],
 									"text" : "Right Grid - 2ndary App"
 								}
 
@@ -4511,7 +4822,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 162.0, 210.0, 150.0, 19.0 ],
+									"patching_rect" : [ 162.0, 186.0, 150.0, 19.0 ],
 									"text" : "Left Grid - Primary App"
 								}
 
@@ -4541,7 +4852,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 558.0, 240.0, 93.0, 19.0 ],
+									"patching_rect" : [ 558.0, 216.0, 93.0, 19.0 ],
 									"text" : "r [router]b-port-2"
 								}
 
@@ -4584,7 +4895,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 558.0, 270.0, 32.5, 19.0 ],
+									"patching_rect" : [ 558.0, 246.0, 32.5, 19.0 ],
 									"text" : "i"
 								}
 
@@ -4598,7 +4909,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 558.0, 300.0, 131.0, 19.0 ],
+									"patching_rect" : [ 558.0, 276.0, 131.0, 19.0 ],
 									"text" : "prepend /broadcast/port"
 								}
 
@@ -4670,7 +4981,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 162.0, 234.0, 93.0, 19.0 ],
+									"patching_rect" : [ 162.0, 210.0, 93.0, 19.0 ],
 									"text" : "r [router]b-port-1"
 								}
 
@@ -4727,7 +5038,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 162.0, 264.0, 32.5, 19.0 ],
+									"patching_rect" : [ 162.0, 240.0, 32.5, 19.0 ],
 									"text" : "i"
 								}
 
@@ -4741,7 +5052,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 162.0, 294.0, 131.0, 19.0 ],
+									"patching_rect" : [ 162.0, 270.0, 131.0, 19.0 ],
 									"text" : "prepend /broadcast/port"
 								}
 
@@ -4931,7 +5242,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
+									"destination" : [ "obj-35", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-18", 0 ]
@@ -5024,6 +5335,15 @@
 									"destination" : [ "obj-28", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-28", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
 									"source" : [ "obj-29", 0 ]
 								}
 
@@ -5057,6 +5377,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-35", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-54", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -5067,6 +5396,24 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-28", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-43", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-44", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-27", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-45", 0 ]
