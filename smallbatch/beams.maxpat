@@ -31,6 +31,19 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 360.0, 288.0, 90.0, 20.0 ],
+					"text" : "print beams"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -418,7 +431,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
 									"patching_rect" : [ 198.0, 186.0, 47.0, 20.0 ],
-									"presentation_rect" : [ 197.0, 188.0, 0.0, 0.0 ],
 									"text" : "sel 0"
 								}
 
@@ -768,8 +780,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 146.0, 156.0, 232.0, 17.0 ],
-									"text" : "/b_beams/grid/led/all 0, /b_beams/tilt/set 0 1"
+									"patching_rect" : [ 146.0, 156.0, 124.0, 17.0 ],
+									"text" : "/b_beams/grid/led/all 0"
 								}
 
 							}
@@ -1125,6 +1137,24 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-38", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-38", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-38", 0 ]

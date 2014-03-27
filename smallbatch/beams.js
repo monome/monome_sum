@@ -23,9 +23,9 @@ var frics = new Array(16); // individual friction for each slider
 
 var steps = 16;
 var cols = 16;
-var them = new Array(steps*cols);
+var them = new Array(128);
 var themish = new Array(64); // temporary buffer for /led/level/map displays
-var index = new Array(cols);
+var index = new Array(16);
 var b = 0;
 var direction = 1;
 var vb = 0;

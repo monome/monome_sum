@@ -50,8 +50,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 702.0, 780.0, 104.0, 20.0 ],
-					"text" : "s [beams]flin"
+					"patching_rect" : [ 702.0, 780.0, 97.0, 20.0 ],
+					"text" : "s [beams]mlr"
 				}
 
 			}
@@ -2888,6 +2888,10 @@
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "xplay~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
