@@ -1904,7 +1904,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u648015948"
+					"varname" : "u624006641"
 				}
 
 			}
@@ -4084,7 +4084,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"color" : [ 1.0, 0.8, 0.4, 1.0 ],
