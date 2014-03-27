@@ -21,7 +21,7 @@ var frics = new Array(16); // individual friction for each slider
 
 
 
-var steps = 16;
+var steps = 8;
 var cols = 16;
 var them = new Array(128);
 var themish = new Array(64); // temporary buffer for /led/level/map displays
@@ -37,7 +37,7 @@ for(i=0;i<16;i++) dx[i] = 0; // initialise pointk to 0.
 for(i=0;i<16;i++) x[i] = 1; // initialise bcols to 0.
 for(i=0;i<16;i++) xN[i] = 0; // initialise bcols to 0.
 for(i=0;i<16;i++) ton[i] = 0; // initialise triggers to off
-for(i=0;i<16;i++) frics[i] = 0.8; // initialise friction to 0.8 for nice initial level
+for(i=0;i<16;i++) frics[i] = 0.85; // initialise friction to 0.8 for nice initial level
 
 
 tsk.interval = tgrain; // initialise interval to timegrain
@@ -82,7 +82,7 @@ function point(kx,ky,state) { // all /grid/key input
 
 function bounds(xb, yb) { // /sys/size message, (x,y)
     bx = yb; // try without subtracting rounding error
-    steps = bx;
+    steps = yb;
     cols = xb;
 
     them.length = cols*steps; // update size of output array for full size
@@ -99,8 +99,8 @@ function mytask() {
         // increment any timer for a currently held column
         if(ton[i]==1) {
             tramp[i] = tramp[i] + 1; // add 1 to current ramp time
-            if(tramp[i]>25) tramp[i] = 25; // limit to 25
-            frics[i] = (tramp[i] + 124.5) / 150; // limit overall friction to 149.5/150
+            if(tramp[i]>15) tramp[i] = 15; // limit to 15
+            frics[i] = (tramp[i] + 85) / 100; // limit overall friction to 1. for infinite slide
         }
 
         dx[i] = dx[i] + (pointk[i] - x[i]) / g; // dx is the previous dx + (input - currentOut) / gravity
