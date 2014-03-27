@@ -18,6 +18,7 @@ var bcols = new Array(16); // key count for each column
 var tramp = new Array(16); // timer for each column
 var ton = new Array(16);
 var frics = new Array(16); // individual friction for each slider
+var outBM = 0; // bitmask memory for led/col out
 
 
 
@@ -144,8 +145,8 @@ function mytask() {
 
 function draw() { // draw with /grid/led/map without aa
     for(i=0;i<cols;i++) {
-        //outlet(2, i, 0, 255-((1<<(steps-index[i]))-1)); // output bitmask for non-vb -- need to add direction option
-        outlet(2, i, 0, Math.floor(1<<(steps-x[i])+0.5)); // output bitmask for non-vb -- need to add direction option
+        outBM = Math.floor(1<<(steps-x[i])+0.5);
+        outlet(2, i, 0, 255&outBM, (65280&outBM)>>8); // output bitmask for non-vb -- need to add direction option
     }
 }
 
