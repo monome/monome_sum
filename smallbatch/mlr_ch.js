@@ -56,6 +56,9 @@ var rpGate = new Array(2);
 var pLength = new Array(2);
 var loopMode = new Array(2);
 var playL = new Array(2);
+var playG = new Array(2);
+var sampleR = new Array(2);
+var sampleP = new Array(2);
 
 // INIT ALL ARRAYS TO 0/1 //
 for(i=0;i<2;i++) {
@@ -67,7 +70,10 @@ for(i=0;i<2;i++) {
 	playR[i] = 0;
 	playS[i] = 0;
 	playL[i] = 0;
+	playG[i] = 0;
 	loopMode[i] = 0;
+	sampleR[i] = 0;
+	sampleP[i] = 0;
 }
 for(i=0;i<15;i++) {
 	count[i] = 0;
@@ -145,6 +151,8 @@ function stoprow(ch) {
 	outlet(ch, "stop");
 	outlet(4,"/b_mlr/grid/led/set", ch, 0, 0);
 
+	playG[ch] = 0; // mark the channel as off to gate leds & redraw
+
 	if(ch==0) {
 		for(i=0;i<3;i++) outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
 	}
@@ -188,14 +196,16 @@ function sTrig(row, step) { // sample trigger. called when physically pressing a
 		playS[0] = step;
 		loopMode[0] = 0;
 		lastch = 0; // set flag for second group
+		playG[0] = 1;
 	}
 	else {
-		// top 3 rows - outlet0
+		// bottom 4 rows - outlet1
 		outlet(1, "play", step/boundX, sSpeed[1], 0, 1, row);
 		playR[1] = row;
 		playS[1] = step;
 		loopMode[1] = 0;
 		lastch = 1; // set the flag for 2nd group
+		playG[1] = 1;
 	}
 		
 		// below is data sent to pattern recorders
@@ -239,10 +249,12 @@ function rTrig(row, step) { // sample trigger. called by a pattern recorder.
 	if(row<3) {
 		outlet(0, "play", step/boundX, sSpeed[0], 0, 1, row); // top 3 rows
 		outlet(4,"/b_mlr/grid/led/set", 0, 0, 1); // led command for stop button
+		playG[0] = 1;
 	}
 	else {
 		outlet(1, "play", step/boundX, sSpeed[1], 0, 1, row); // anything below top3
 		outlet(4,"/b_mlr/grid/led/set", 1, 0, 1); // led command for stop button
+		playG[1] = 1;
 	}
 }
 
@@ -256,32 +268,46 @@ function pPos(group, row, pos) {
 	// updates the current playback position of each group
 	// use to draw led response
 	
+	if(playG[group]==1) { // only allow output if the group is active (protects against timing edge case)
 
-
-	outBM = Math.floor(1<<(pos*boundX)); // make a bitmask of the currently playing step
-/*	if(loopMode[group]==0) { // normal press
 		outBM = Math.floor(1<<(pos*boundX)); // make a bitmask of the currently playing step
-	}
-	else { // is inner looping
-		outBM = Math.floor(1<<(playS[group]+pos*(playL[group]-playS[group]))); // make a bitmask of the currently playing step
-	}
-*/
-
-
-
-	outlet(4,"/b_mlr/grid/led/row", 0, row+1, 255&outBM, (65280&outBM)>>8); // light the just updated row
-	if(group==0) {
-		for(i=0;i<3;i++) {
-			if(i!=row) {
-				outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+	
+		outlet(4,"/b_mlr/grid/led/row", 0, row+1, 255&outBM, (65280&outBM)>>8); // light the just updated row
+		if(group==0) {
+			for(i=0;i<3;i++) {
+				if(i!=row) {
+					outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+				}
 			}
+			sampleR[0] = row;
+			sampleP[0] = pos;
+		}
+		else { // group ==1
+			for(i=3;i<7;i++) { // iterate through 4 rows
+				if(i!=row) {
+					outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+				}
+			}
+			sampleR[1] = row;
+			sampleP[1] = pos;
 		}
 	}
-	else { // group ==1
-		for(i=3;i<7;i++) { // iterate through 4 rows
-			if(i!=row) {
-				outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
-			}
+}
+
+function redraw() {
+	// redraw the current led state
+	
+	// stop channel buttons
+	for(i=0;i<2;i++) {
+		if(playG[i]==1) {
+			outlet(4,"/b_mlr/grid/led/set", i, 0, 1);
+			outBM = Math.floor(1<<(sampleP[i]*boundX)); // make a bitmask of the currently playing step
+			outlet(4,"/b_mlr/grid/led/row", 0, sampleR[i]+1, 255&outBM, (65280&outBM)>>8); // light the sample playback led
 		}
+	}
+
+	// pattern recorders
+	for(i=0;i<2;i++) {
+		if(rpGate[i] > 0) outlet(4,"/b_mlr/grid/led/set",i+4, 0, 1);
 	}
 }
