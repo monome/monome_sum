@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -815843186,
+	"modificationdate" : -815838714,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -14,6 +14,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"audio_settings.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 ,
 			"serialosc.maxpat" : 			{
@@ -48,16 +53,6 @@
 			"batch_mlr_play.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
-			}
-,
-			"xsample.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "/Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)",
-					"projectrelativepath" : "../../../../../../Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)"
-				}
-
 			}
 ,
 			"flin.maxpat" : 			{

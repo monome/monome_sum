@@ -18,7 +18,7 @@
 		"gridonopen" : 0,
 		"gridsize" : [ 18.0, 6.0 ],
 		"gridsnaponopen" : 0,
-		"statusbarvisible" : 2,
+		"statusbarvisible" : 0,
 		"toolbarvisible" : 1,
 		"boxanimatetime" : 200,
 		"imprint" : 0,
@@ -2437,7 +2437,7 @@
 					"patching_rect" : [ 270.0, 414.0, 90.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 179.0, 134.0, 59.0, 18.0 ],
-					"setminmax" : [ 0.0, 0.99 ],
+					"setminmax" : [ 0.05, 0.99 ],
 					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
 					"thickness" : 1,
 					"varname" : "resonance"
@@ -2551,14 +2551,14 @@
 						"fm-mult" : [ 0 ],
 						"fmtimes" : [ 1.0 ],
 						"noise" : [ 0.0 ],
-						"resonance" : [ 0.0 ],
+						"resonance" : [ 0.05 ],
 						"svf-filt" : [ 127.0 ],
 						"svf-morph" : [ 0.0 ],
 						"waveshape" : [ 0.0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u997005886"
+					"varname" : "u921009641"
 				}
 
 			}
@@ -2996,7 +2996,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-shape @invisible 1",
-									"varname" : "u681004318"
+									"varname" : "u701008886"
 								}
 
 							}
@@ -3016,7 +3016,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-slope @invisible 1",
-									"varname" : "u562004320"
+									"varname" : "u210008888"
 								}
 
 							}
@@ -3036,7 +3036,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-length @invisible 1",
-									"varname" : "u905004322"
+									"varname" : "u456008890"
 								}
 
 							}
@@ -3075,13 +3075,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 774.0, 366.0, 229.0, 19.0 ],
-									"restore" : [ 0.0 ],
+									"restore" : [ 0.05 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u512004325"
+									"varname" : "u991008893"
 								}
 
 							}
@@ -3153,7 +3153,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u069004329"
+									"varname" : "u004008897"
 								}
 
 							}
@@ -3173,7 +3173,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u462004331"
+									"varname" : "u117008899"
 								}
 
 							}
@@ -3193,7 +3193,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u451004333"
+									"varname" : "u102008901"
 								}
 
 							}
@@ -3213,7 +3213,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u035004335"
+									"varname" : "u545008903"
 								}
 
 							}
@@ -3233,7 +3233,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u688004337"
+									"varname" : "u147008905"
 								}
 
 							}
@@ -3253,7 +3253,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u130004339"
+									"varname" : "u775008907"
 								}
 
 							}
@@ -3273,7 +3273,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u496004341"
+									"varname" : "u691008909"
 								}
 
 							}
@@ -3293,7 +3293,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u738004343"
+									"varname" : "u808008911"
 								}
 
 							}
@@ -3313,7 +3313,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u684004345"
+									"varname" : "u529008913"
 								}
 
 							}
@@ -3333,7 +3333,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u116004347"
+									"varname" : "u573008915"
 								}
 
 							}
@@ -5194,6 +5194,14 @@
 					"source" : [ "obj-95", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "soren_poly.synthitime~.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ]
 	}

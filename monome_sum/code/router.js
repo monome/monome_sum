@@ -373,7 +373,7 @@ function rSelect(x,y,z) {
 		x = x-(8*(Math.floor(glob.rWidth/8)));
 		y = y-(8*(Math.floor(glob.rHeight/8)));
 		
-
+/*
 		if(y==0 && z==1) { // if top row lock left grid to the x value
 			glob.selCurrent = x;
 
@@ -402,7 +402,7 @@ function rSelect(x,y,z) {
 
 
 		}
-		else if(y>1) { // lower row press meaning absolute selection / multi-press double selection
+		else if(y>1) */{ // lower row press meaning absolute selection / multi-press double selection
 				// update history to old current, but avoid history & current being the same
 			if(z==1 && glob.selCurrent != x) glob.selHistory = glob.selCurrent;
 //			glob.selHistory = glob.selCurrent;
@@ -415,7 +415,7 @@ function rSelect(x,y,z) {
 				glob.selCurrent = x;
 			}
 			else if(z==1 && rc>1) { // if more than one press, set the newest press to selCurrent
-				glob.joined = 0;
+				if(xGrid>8 || yGrid>8) glob.joined = 0;
 				glob.selCurrent = x;
 			}
 			glob.rLock = 0;
