@@ -622,6 +622,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "set location of 'route key'. press 'map' then the grid key you wish to activate the router. press 'map' again to set.",
 					"id" : "obj-65",
 					"maxclass" : "hint",
@@ -640,6 +641,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-9",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -661,6 +663,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "choose whether your devices are next to each other (horiz) or in front of each other (vert)",
 					"id" : "obj-67",
 					"maxclass" : "hint",
@@ -679,6 +682,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-8",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -1474,6 +1478,7 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-30",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1490,6 +1495,7 @@
 					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-49",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -1506,6 +1512,7 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-29",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1522,6 +1529,7 @@
 					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-27",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -1561,6 +1569,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "click to force all 'autoload' patches to reboot their patches if they cannot find a client with the correct prefix",
 					"id" : "obj-42",
 					"maxclass" : "hint",
@@ -1574,6 +1583,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "save your smallbatch file here. TIP! overwrite 'sbatch.json' to have your settings auto-load when you open smallbatch.",
 					"id" : "obj-41",
 					"maxclass" : "hint",
@@ -1587,6 +1597,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "load your smallbatch savefile here to reload your settings",
 					"id" : "obj-38",
 					"maxclass" : "hint",
@@ -1771,6 +1782,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-19",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -1830,13 +1842,13 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 684.0, 18.0, 59.5, 19.0 ],
 					"restore" : 					{
-						"advanced" : [ 1 ],
+						"advanced" : [ 0 ],
 						"routehorizontal[1]" : [ 0 ],
 						"tile-orientation" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u322009406"
+					"varname" : "u748016126"
 				}
 
 			}
@@ -2829,6 +2841,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-46",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -2852,6 +2865,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-44",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -4421,7 +4435,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 102.0, 216.0, 381.0, 415.0 ],
+										"rect" : [ 680.0, 387.0, 381.0, 415.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -11363,6 +11377,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "xsample.maxpat",
+				"bootpath" : "/Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)",
+				"patcherrelativepath" : "../../../../../../../Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "flin.maxpat",
 				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
@@ -11445,10 +11466,6 @@
 				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "xplay~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

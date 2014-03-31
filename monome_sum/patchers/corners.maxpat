@@ -30,6 +30,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 1.0, 0.4, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-9",
@@ -373,7 +374,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u585013158"
+					"varname" : "u493008661"
 				}
 
 			}
@@ -920,8 +921,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 234.0, 234.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 229.0, 234.0, 0.0, 0.0 ]
+									"patching_rect" : [ 234.0, 234.0, 25.0, 25.0 ]
 								}
 
 							}

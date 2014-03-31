@@ -30,6 +30,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 1.0, 0.4, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-7",
@@ -368,13 +369,13 @@
 					"patching_rect" : [ 396.0, 498.0, 75.0, 20.0 ],
 					"restore" : 					{
 						"pitch" : [ 12.0 ],
-						"space" : [ 0.0 ],
-						"tone" : [ 0.0 ],
+						"space" : [ -0.142857 ],
+						"tone" : [ -0.142857 ],
 						"width" : [ 1.5 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u837010313"
+					"varname" : "u203009485"
 				}
 
 			}

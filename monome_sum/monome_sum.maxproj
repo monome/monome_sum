@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -815847347,
+	"modificationdate" : -815843186,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -50,6 +50,16 @@
 				"local" : 1
 			}
 ,
+			"xsample.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "/Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)",
+					"projectrelativepath" : "../../../../../../Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)"
+				}
+
+			}
+,
 			"flin.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -88,16 +98,6 @@
 			"yafr2.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
-			}
-,
-			"xsample.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "/Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)",
-					"projectrelativepath" : "../../../../../../Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)"
-				}
-
 			}
 
 		}
@@ -145,10 +145,6 @@
 				"kind" : "json",
 				"local" : 1
 			}
-
-		}
-,
-		"other" : 		{
 
 		}
 
