@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 463.0, 44.0, 974.0, 710.0 ],
+		"rect" : [ 36.0, 176.0, 558.0, 42.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -45,7 +45,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u544021244"
+					"varname" : "u210005906"
 				}
 
 			}
@@ -1787,21 +1787,6 @@
 					"source" : [ "obj-79", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "corners.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}

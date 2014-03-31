@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 64.0, 44.0, 1616.0, 881.0 ],
+		"rect" : [ 72.0, 482.0, 522.0, 202.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -2558,7 +2558,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u818004417"
+					"varname" : "u997005886"
 				}
 
 			}
@@ -2996,7 +2996,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-shape @invisible 1",
-									"varname" : "u003015867"
+									"varname" : "u681004318"
 								}
 
 							}
@@ -3016,7 +3016,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-slope @invisible 1",
-									"varname" : "u973015869"
+									"varname" : "u562004320"
 								}
 
 							}
@@ -3036,7 +3036,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-length @invisible 1",
-									"varname" : "u966015871"
+									"varname" : "u905004322"
 								}
 
 							}
@@ -3081,7 +3081,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u569015872"
+									"varname" : "u512004325"
 								}
 
 							}
@@ -3153,7 +3153,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u639015886"
+									"varname" : "u069004329"
 								}
 
 							}
@@ -3173,7 +3173,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u995015855"
+									"varname" : "u462004331"
 								}
 
 							}
@@ -3193,7 +3193,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u430015880"
+									"varname" : "u451004333"
 								}
 
 							}
@@ -3213,7 +3213,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u066015882"
+									"varname" : "u035004335"
 								}
 
 							}
@@ -3233,7 +3233,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u755015878"
+									"varname" : "u688004337"
 								}
 
 							}
@@ -3253,7 +3253,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u858015923"
+									"varname" : "u130004339"
 								}
 
 							}
@@ -3273,7 +3273,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u949015883"
+									"varname" : "u496004341"
 								}
 
 							}
@@ -3293,7 +3293,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u301015893"
+									"varname" : "u738004343"
 								}
 
 							}
@@ -3313,7 +3313,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u295015892"
+									"varname" : "u684004345"
 								}
 
 							}
@@ -3333,7 +3333,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u872015896"
+									"varname" : "u116004347"
 								}
 
 							}
@@ -5194,14 +5194,6 @@
 					"source" : [ "obj-95", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "soren_poly.synthitime~.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}

@@ -3,6 +3,8 @@ outlets = 2;
 
 var lAll = 0;
 var rGate = 1; // the status of the router gate, triggered 
+var apps = 0; // bitmask of loaded apps
+
 
 // Global (Max namespace) variables
 glob = new Global("routinginfo");
@@ -10,16 +12,24 @@ glob.gMeta = 0;
 glob.g1x = 0; // this is the x-dimension of the 1st attached device
 glob.g1y = 0; // this is the y-dimension of the 1st attached device
 glob.gridtiling = 0;
+glob.rLock = 0; // whether the route page has locked values
+glob.selHistory = 0;
+glob.selCurrent = 0;
+glob.rDevice = -1;
+glob.rQuad = -1;
+glob.joined = 1;
+glob.rWidth = -1;
+glob.rHeight = -1;
+
 
 // need to have sOSC() args go to 't' to deal with /led/map command which takes address&10args
-function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
+function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq) { // a=osc address, b-t = data
+
 
   // this entire function is enclosed inside of a if statement: if(rGate==1)
   if(rGate==1) { // only process the sOSC commands if in application mode
 
   // should create a call for /sys/info for apps that request it in case they don't respond to initialisation
-	
-	// again these are hard-coded to 8x8 divisions, and could be expanded for variable size if required
 	
 	if(a=="/manager/grid/led/set") { // i:<x>, i:<y>, i:<state>
 		if(glob.gMeta==0) { // only one application so will be inlet==0 only
@@ -27,8 +37,8 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
 			if(x<glob.g1x && y<glob.g1y) { // the press is within the range of the left most device
 				outlet(0,"/manager/grid/led/set",x,y,z);
 			}
-			else if(glob.gridtiling==0) outlet(1,"/manager/grid/led/set",(x-glob.g1x),y,z);
-			else outlet(1,"/manager/grid/led/set",x,(y-glob.g1y),z);
+			else if(glob.gridtiling==0 && x>(glob.g1x-1)) outlet(1,"/manager/grid/led/set",(x-glob.g1x),y,z); // horizontal & outside 1st device range
+			else if(glob.gridtiling==1 && y>(glob.g1y-1)) outlet(1,"/manager/grid/led/set",x,(y-glob.g1y),z); // vertical
 		  }
 		}
 		if(glob.gMeta==1) { // 2 apps & 2 devices
@@ -96,8 +106,8 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
 		if(glob.gMeta==0) { // only one application so will be inlet==0 only
 		  if(inlet==0) { // need to ignore 2nd application
 			if((x<glob.g1x) && (y<glob.g1y)) outlet(0,"/manager/grid/led/map",x,y,z,n,o,p,q,r,s,t); // in range of 1st device then echo out
-			else if(glob.gridtiling==0) outlet(1,"/manager/grid/led/map",(x-glob.g1x),y,z,n,o,p,q,r,s,t); // remove offset
-			else outlet(1,"/manager/grid/led/map",x,(y-glob.g1y),z,n,o,p,q,r,s,t); // remove offset
+			else if(glob.gridtiling==0 && x>(glob.g1x-1)) outlet(1,"/manager/grid/led/map",(x-glob.g1x),y,z,n,o,p,q,r,s,t); // remove offset
+			else if(glob.gridtiling==1 && y>(glob.g1y-1)) outlet(1,"/manager/grid/led/map",x,(y-glob.g1y),z,n,o,p,q,r,s,t); // remove offset
 		  }
 		}
 		if(glob.gMeta==1) { // 2 apps & 2 devices
@@ -119,28 +129,60 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
 	}
 
 
+	if(a=="/manager/grid/led/level/map") { // ridiculous. sorry. please help me make this more elegant & faster?!?!
+		if(glob.gMeta==0 && inlet==0) { // only one application so will be inlet==0 only
+			if(glob.g1x==8) {
+				
+			
+			
+			outlet(0,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq);
+			}
+		}
+	}
+
+
 	if(a=="/manager/grid/led/row") { // i:<x-offset>, i:<y-row>, i:<bitmask>, i:<bitmask2>
 		if(glob.gMeta==0) { // only one application so use inlet==0 only
 		  if(inlet==0) { // ignore second app
 			if(glob.g1x==8) { // if the 1st device attached is 8wide
 				if(x<8) { // and the /led/row message applies to that grid
-					outlet(0,"/manager/grid/led/row",x,y,z); // send 1st bitmask to left grid
-					outlet(1,"/manager/grid/led/row",x,y,n); // send 2nd bitmask to right grid
+					if(glob.gridtiling == 0) { // horizontal
+						outlet(0,"/manager/grid/led/row",x,y,z); // send 1st bitmask to left grid
+						outlet(1,"/manager/grid/led/row",x,y,n); // send 2nd bitmask to right grid
+					}
+					else { // vertical
+						if(y < glob.g1y) outlet(0,"/manager/grid/led/row",x,y,z); // send 1st bitmask to left grid
+						else outlet(1,"/manager/grid/led/row",x,y-glob.g1y,z,n);
+					}
 				}
-				else { // there is an offset added to the message
+				else if(glob.gridtiling == 0) { // there is an offset added to the message & horizontal
 					outlet(1,"/manager/grid/led/row",(x-8),y,z,n); // send double-bitmask to right grid
+				}
+				else if(glob.gridtiling == 1 && y > glob.g1y) { // x-offset & vertical & below 1st device
+					outlet(1,"/manager/grid/led/row",x,y-glob.g1y,z); // send double-bitmask to right grid
 				}
 			}
 			if(glob.g1x==16) { // if the 1st device attached is 16 wide
-				if(x==0) { // and the /led/row applies to the left quad
-					outlet(0,"/manager/grid/led/row",0,y,z,n); // send double bitmask to left grid
+				if(y<glob.g1y) { // to deal with vertical mode, check if the y-offset pushes it to 2nd device
+					if(x==0) { // and the /led/row applies to the left quad
+						outlet(0,"/manager/grid/led/row",0,y,z,n); // send double bitmask to left grid
+					}
+					else if(x==8) { // and the /led/row applies to the right quad
+						outlet(0,"/manager/grid/led/row",8,y,z); // send 1st bitmask to left grid
+						if(glob.gridtiling == 0) outlet(1,"/manager/grid/led/row",0,y,n); // send 2nd bitmask to right grid
+					}
+					else if(x>8 && glob.gridtiling == 0) { // and the /led/row applies to the right grid
+						outlet(1,"/manager/grid/led/row",(x-16),y,z,n); // send double bitmask to right grid
+					}
 				}
-				else if(x==8) { // and the /led/row applies to the right quad
-					outlet(0,"/manager/grid/led/row",8,y,z); // send 1st bitmask to left grid
-					outlet(1,"/manager/grid/led/row",0,y,n); // send 2nd bitmask to right grid
-				}
-				else if(x>8) { // and the /led/row applies to the right grid
-					outlet(1,"/manager/grid/led/row",(x-16),y,z,n); // send double bitmask to right grid
+				else { // y offset is out of range of device 1, so send to device 2 minus offset
+					if(x==0 && glob.gridtiling == 1) { // and the /led/row applies to the left quad
+						outlet(1,"/manager/grid/led/row",0,y-glob.g1y,z,n); // send double bitmask to 2nd grid
+					}
+					else if(x==8 && glob.gridtiling == 1) { // and the /led/row applies to the right quad
+						outlet(1,"/manager/grid/led/row",8,y-glob.g1y,z); // send 1st bitmask only
+					}
+					
 				}
 			}
 		  }
@@ -169,21 +211,40 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
 	if(a=="/manager/grid/led/col") { // i:<x-col>, i:<y-offset>, i:<bitmask>, i:<bitmask2>
 		if(glob.gMeta==0) { // only one application so will be inlet==0 only
 		  if(inlet==0) { // ignore 2nd app
-			if(glob.g1y==8) {
-				if(y<8) {
+			if(glob.g1y==8) { // d0 is 8 high
+				if(y==0 && glob.gridtiling == 0) { // no offset & horizontal
+					if(x<glob.g1x) outlet(0,"/manager/grid/led/col",x,y,z);
+					else outlet(1,"/manager/grid/led/col",x-glob.g1x,y,z);
+				}
+				else if(y==0 && glob.gridtiling == 0) { // no offset & vertical
 					outlet(0,"/manager/grid/led/col",x,y,z);
 					outlet(1,"/manager/grid/led/col",x,y,n);
 				}
-				else outlet(1,"/manager/grid/led/col",x,(y-8),z,n)
+				else if(y==8 && glob.gridtiling == 0 && x>glob.g1x) outlet(1,"/manager/grid/led/col",x-glob.g1x,y,z);
+				else if(y==8 && glob.gridtiling == 1) outlet(1,"/manager/grid/led/col",x,(y-8),z,n);
 			}
-			if(glob.g1y==16) {
-				if(y==0) outlet(0,"/manager/grid/led/col",x,0,z,n);
-				else if(y==8) {
-					outlet(0,"/manager/grid/led/col",x,8,z);
-					outlet(1,"/manager/grid/led/col",x,0,n);
+			if(glob.g1y==16) { // device is 16 high
+				if(y==0) { // from the top
+ 					if(glob.gridtiling == 0) { // horizontal (vertical is out of range here)
+ 						if(x<glob.g1x) outlet(0,"/manager/grid/led/col",x,0,z,n); // in d0 range
+						else outlet(1,"/manager/grid/led/col",x-glob.g1x,0,z,n); // in d1 range
+					}
 				}
-				else if(y>8) {
-					outlet(1,"/manager/grid/led/col",x,(y-16),z,n);
+				else if(y==8) {
+					if(glob.gridtiling == 0) { // horizontal
+						if(x<glob.g1x) outlet(0,"/manager/grid/led/col",x,8,z);
+						else outlet(1,"/manager/grid/led/col",x,8,z);
+					}
+					else { // vertical
+						if(x<glob.g1x) {
+							outlet(0,"/manager/grid/led/col",x,8,z);
+							outlet(1,"/manager/grid/led/col",x,0,n);
+						}
+						else outlet(1,"/manager/grid/led/col",x,0,n);
+					}
+				}
+				else if(y>8) { // bigger than 16 >> always on 2nd device
+					if(glob.gridtiling == 1) outlet(1,"/manager/grid/led/col",x,(y-16),z,n);
 				}
 			}
 		  }
@@ -231,18 +292,21 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t) { // a=osc address, b-t = data
 }
 
 
-
-
 function route(i) { // this function is called when the router changes modes
 	if(i==0) { // if switching TO application mode
 		clearDisplay();
 		rGate = 1;
 	}
-	else { // switching TO the router
+	else if(i==1){ // switching TO the router
 		rGate = 0;
 		clearDisplay();
 		drawRouter();
 	}
+	else if(i==2){ // setting the route-key location
+		rGate = 0;
+		clearDisplay();
+		drawLocation();
+	}	
 }
 
 
@@ -253,10 +317,43 @@ function clearDisplay() { // this function simply sends a /led/all message to al
 
 
 function drawRouter() { // draw the led display for route mode, and accept updates to 
-	// use the 3rd outlet of router.js to send a list of current selection of leds to draw from
+		 // clear relevant quad -> unnecessary due to clearDisplay() being run first
+//	outlet(glob.rDevice,"/manager/grid/led/map",glob.rQuad,0,0,0,0,0,0,0,0);
+
+	if(glob.rLock == 1 && glob.joined == 1) { // if locked && both devices joined
+		// only display a single top led
+		outlet(glob.rDevice,"/manager/grid/led/set",glob.selCurrent+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),1);
+	}
+	else if(glob.rLock == 1 && glob.joined == 0) { // if locked && devices separate
+		// display 2 leds up top
+		outlet(glob.rDevice,"/manager/grid/led/set",glob.selCurrent+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),1);
+		outlet(glob.rDevice,"/manager/grid/led/set",glob.selHistory+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2))+1,1);
+	}
+	else if(glob.rLock == 0 && glob.joined == 1) { // if unlocked && both devices joined
+		// display full bar
+		outlet(glob.rDevice,"/manager/grid/led/col",glob.selCurrent+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),255);
+	}
+	else if(glob.rLock == 0 && glob.joined == 0) { // if unlocked && devices separate
+		// display 2 half bars
+		outlet(glob.rDevice,"/manager/grid/led/col",glob.selCurrent+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),15);
+		outlet(glob.rDevice,"/manager/grid/led/col",glob.selHistory+8*(glob.rQuad%2),8*(Math.floor(glob.rQuad/2)),240);
+	}
+	
+		// then draw a full row displaying which cells are currently mappable to destinations
+	outlet(glob.rDevice,"/manager/grid/led/row",8*(glob.rQuad%2),7+8*(Math.floor(glob.rQuad/2)),apps);
 }
 
 
+function drawLocation() {
+		// check to make sure there is a route-key
+		// then draw an led to show location
+	if(glob.rDevice > -1) outlet(glob.rDevice,"/manager/grid/led/set",glob.rWidth,glob.rHeight,1);
+}
 
 
-////////////////////////////////END CODE//////////////////////////////////////////////////
+function hasApp(x, b) { // receives the index of any cell with a currently stored app
+	// receives [app index] [bool] from each app when it changes
+	if(b) apps = apps | 1<<x; // set the bit
+	else apps = apps & ~(1<<x); // clear the bit
+}
+

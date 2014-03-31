@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 402.0, 247.0, 1216.0, 645.0 ],
+		"rect" : [ 36.0, 104.0, 558.0, 66.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -40,13 +40,13 @@
 					"patching_rect" : [ 396.0, 498.0, 75.0, 20.0 ],
 					"restore" : 					{
 						"pitch" : [ 12.0 ],
-						"space" : [ 0.0 ],
-						"tone" : [ 0.0 ],
+						"space" : [ -0.142857 ],
+						"tone" : [ -0.142857 ],
 						"width" : [ 1.5 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u513010884"
+					"varname" : "u641005894"
 				}
 
 			}
@@ -3904,21 +3904,6 @@
 					"source" : [ "obj-93", 1 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "flin_sub.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}

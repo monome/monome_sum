@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 317.0, 432.0, 1046.0, 391.0 ],
+		"rect" : [ 36.0, 224.0, 558.0, 42.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -39,12 +39,12 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 414.0, 300.0, 75.0, 20.0 ],
 					"restore" : 					{
-						"space" : [ 0.0 ],
-						"tone" : [ 0.0 ]
+						"space" : [ -0.142857 ],
+						"tone" : [ -0.142857 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u048020793"
+					"varname" : "u294005898"
 				}
 
 			}
@@ -2459,21 +2459,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "tiltrap.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/smallbatch",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}
