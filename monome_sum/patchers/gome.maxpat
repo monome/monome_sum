@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 36.0, 272.0, 558.0, 42.0 ],
+		"rect" : [ 36.0, 272.0, 687.0, 506.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -1566,12 +1566,12 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 144.0, 642.0, 59.5, 20.0 ],
 					"restore" : 					{
-						"space" : [ -0.142857 ],
-						"tone" : [ -0.142857 ]
+						"space" : [ 0.0 ],
+						"tone" : [ 0.0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u603005902"
+					"varname" : "u128011515"
 				}
 
 			}
@@ -2280,7 +2280,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
 									"patching_rect" : [ 75.0, 285.0, 73.0, 20.0 ],
-									"text" : "counter 0"
+									"text" : "counter 1"
 								}
 
 							}
@@ -11156,6 +11156,21 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "playback.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "serialosc.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ]
 	}
