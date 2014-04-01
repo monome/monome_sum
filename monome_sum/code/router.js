@@ -191,7 +191,7 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 				else outlet(1,"/sys/size",x,y); // send /size to grid2
 			}
 			else { // only 1 device present
-				if((gly==8) && (glob.glx == 8)) { // only 8x8 device (ie. 64)
+				if((glob.g1y==8) && (glob.glx == 8)) { // only 8x8 device (ie. 64)
 					glob.gMeta = 0; // 1 device to 1 app
 					outlet(0,"/sys/size",x,y); // echo size to output
 				}
@@ -268,12 +268,14 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 					glob.rHeight = -1;
 					glob.rDevice = -1; 
 					glob.rQuad = -1;
+					outlet(3,-1);
 				}
 				else { // if it's a new key, update the router to the new key
 					glob.rWidth = x;
 					glob.rHeight = y;
 					glob.rDevice = inlet; // set which device is the router
 					glob.rQuad = Math.floor(glob.rWidth/8)+(2*Math.floor(glob.rHeight/8));
+					outlet(3,x,y,inlet);
 				}
 				
 				// then call an update to the display

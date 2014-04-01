@@ -1836,7 +1836,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u035001638"
+					"varname" : "u010005979"
 				}
 
 			}
@@ -2787,9 +2787,9 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 198.0, 180.0, 107.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 358, 172 ],
+						"client_rect" : [ 4, 44, 556, 651 ],
 						"parameter_enable" : 0,
-						"storage_rect" : [ 766, 44, 1220, 302 ]
+						"storage_rect" : [ 766, 44, 1471, 1046 ]
 					}
 ,
 					"text" : "pattrstorage sbatch",
@@ -3101,8 +3101,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 593.0, 154.0, 125.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 629.0, 210.0, 109.0, 19.0 ],
-					"text" : "monome.org 2013"
+					"presentation_rect" : [ 630.0, 210.0, 109.0, 19.0 ],
+					"text" : "monome.org 2014"
 				}
 
 			}
@@ -4015,6 +4015,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"color" : [ 1.0, 0.8, 0.4, 1.0 ],
@@ -11252,13 +11253,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "xsample.maxpat",
-				"bootpath" : "/Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)",
-				"patcherrelativepath" : "../../../../../../../Volumes/SolidGold/Users/trentgill/Dropbox/mlrv/mlrv2.3004/xsample/xsample(win)",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "flin.maxpat",
 				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
@@ -11341,6 +11335,10 @@
 				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "xplay~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

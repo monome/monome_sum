@@ -44,6 +44,7 @@ var tempo = 100;
 var tempoms = 600;
 var lastch = 0;
 var outBM = 0;
+var vb = 0;
 
 // ARRAYS // 
 var count = new Array(15);
@@ -59,6 +60,11 @@ var playL = new Array(2);
 var playG = new Array(2);
 var sampleR = new Array(2);
 var sampleP = new Array(2);
+var inner0 = new Array(16);
+var inner1 = new Array(16);
+
+pLength[0] = 8;
+pLength[1] = 16;
 
 // INIT ALL ARRAYS TO 0/1 //
 for(i=0;i<2;i++) {
@@ -66,7 +72,6 @@ for(i=0;i<2;i++) {
 	fLength[i] = 0;
 	rGate[i] = 0;
 	rpGate[i] = 0;
-	pLength[i] = 8;
 	playR[i] = 0;
 	playS[i] = 0;
 	playL[i] = 0;
@@ -77,6 +82,8 @@ for(i=0;i<2;i++) {
 }
 for(i=0;i<15;i++) {
 	count[i] = 0;
+	inner0[i] = 0;
+	inner1[i] = 0;
 }
 
 // TIMERS FOR PATTERN RECS //
@@ -149,7 +156,8 @@ function speedCalc() {
 function stoprow(ch) {
 	// called whenever pressing top row button
 	outlet(ch, "stop");
-	outlet(4,"/b_mlr/grid/led/set", ch, 0, 0);
+	if(vb==0) outlet(4,"/b_mlr/grid/led/set", ch, 0, 0);
+	else outlet(4,"/b_mlr/grid/led/level/set", ch, 0, 5);
 
 	playG[ch] = 0; // mark the channel as off to gate leds & redraw
 
@@ -174,12 +182,14 @@ function pattern(index) {
 		rpGate[index] = 0; // turn off press input
 	}
 	
-	outlet(4,"/b_mlr/grid/led/set", index+4, 0, rGate[index]);
+	if(vb==0) outlet(4,"/b_mlr/grid/led/set", index+4, 0, rGate[index]);
+	else outlet(4,"/b_mlr/grid/led/level/set", index+4, 0, rGate[index]*10+5);
 }
 
 function pLed(index, state) {
 	// led feedback for pattern recorders
-	outlet(4,"/b_mlr/grid/led/set", index+4, 0, state);	
+	if(vb==0) outlet(4,"/b_mlr/grid/led/set", index+4, 0, state);	
+	else outlet(4,"/b_mlr/grid/led/level/set", index+4, 0, state*10+5);
 } 
 
 function pLength(index,length) {
@@ -223,7 +233,8 @@ function sTrig(row, step) { // sample trigger. called when physically pressing a
 		}
 	}
 		// lastly send led commands for stop buttons
-	outlet(4,"/b_mlr/grid/led/set", lastch, 0, 1);
+	if(vb==0) outlet(4,"/b_mlr/grid/led/set", lastch, 0, 1);
+	else outlet(4,"/b_mlr/grid/led/level/set", lastch, 0, 15);
 }
 
 function sLoop(row, step) {
@@ -248,12 +259,14 @@ function pRec1() rpGate[1]--; // called when pRec1 has finished recording
 function rTrig(row, step) { // sample trigger. called by a pattern recorder.
 	if(row<3) {
 		outlet(0, "play", step/boundX, sSpeed[0], 0, 1, row); // top 3 rows
-		outlet(4,"/b_mlr/grid/led/set", 0, 0, 1); // led command for stop button
+		if(vb==0) outlet(4,"/b_mlr/grid/led/set", 0, 0, 1); // led command for stop button
+		else outlet(4,"/b_mlr/grid/led/level/set", 0, 0, 15); // led command for stop button (vb)
 		playG[0] = 1;
 	}
 	else {
 		outlet(1, "play", step/boundX, sSpeed[1], 0, 1, row); // anything below top3
-		outlet(4,"/b_mlr/grid/led/set", 1, 0, 1); // led command for stop button
+		if(vb==0) outlet(4,"/b_mlr/grid/led/set", 1, 0, 1); // led command for stop button
+		else outlet(4,"/b_mlr/grid/led/level/set", 1, 0, 15); // led command for stop button
 		playG[1] = 1;
 	}
 }
@@ -270,44 +283,134 @@ function pPos(group, row, pos) {
 	
 	if(playG[group]==1) { // only allow output if the group is active (protects against timing edge case)
 
-		outBM = Math.floor(1<<(pos*boundX)); // make a bitmask of the currently playing step
-	
-		outlet(4,"/b_mlr/grid/led/row", 0, row+1, 255&outBM, (65280&outBM)>>8); // light the just updated row
-		if(group==0) {
-			for(i=0;i<3;i++) {
-				if(i!=row) {
-					outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+		if(vb==0) {
+			outBM = Math.floor(1<<(pos*boundX)); // make a bitmask of the currently playing step
+		
+			outlet(4,"/b_mlr/grid/led/row", 0, row+1, 255&outBM, (65280&outBM)>>8); // light the just updated row
+			if(group==0) {
+				for(i=0;i<3;i++) {
+					if(i!=row) {
+						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+					}
 				}
+				sampleR[0] = row;
+				sampleP[0] = pos;
 			}
-			sampleR[0] = row;
-			sampleP[0] = pos;
+			else { // group ==1
+				for(i=3;i<7;i++) { // iterate through 4 rows
+					if(i!=row) {
+						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+					}
+				}
+				sampleR[1] = row;
+				sampleP[1] = pos;
+			}
 		}
-		else { // group ==1
-			for(i=3;i<7;i++) { // iterate through 4 rows
-				if(i!=row) {
-					outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+		else { // varibright
+			if(group==0) {
+				for(i=0;i<16;i++) inner0[i] = 0; // set array to all zeroes
+				inner0.length = boundX; // resize array
+				if(loopMode[0] == 1) { // if there's an inner loop draw a low bright brace
+					for(i=playS[0];i<(playL[0]);i++) inner0[i] = 5;
 				}
+				inner0[Math.floor(pos*boundX)] = 15;
+				outlet(4,"/b_mlr/grid/led/level/row",0,row+1,inner0);
+				for(i=0;i<3;i++) { // clean up other rows
+					if(i!=row) {
+						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+					}
+				}
+				sampleR[0] = row;
+				sampleP[0] = pos;				
 			}
-			sampleR[1] = row;
-			sampleP[1] = pos;
+			else { // group = 1
+				for(i=0;i<16;i++) inner1[i] = 0; // set array to all zeroes
+				inner1.length = boundX; // resize array
+				if(loopMode[1] == 1) { // if there's an inner loop draw a low bright brace
+					for(i=playS[1];i<(playL[1]);i++) inner1[i] = 5;
+				}
+				inner1[Math.floor(pos*boundX)] = 15;
+				outlet(4,"/b_mlr/grid/led/level/row",0,row+1,inner1);
+				for(i=3;i<7;i++) { // clean up other rows
+					if(i!=row) {
+						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+					}
+				}
+				sampleR[1] = row;
+				sampleP[1] = pos;				
+			}
 		}
 	}
 }
 
 function redraw() {
 	// redraw the current led state
+	if(vb==0) { // mono led draw (non vb)
+		// stop channel buttons
+		for(i=0;i<2;i++) {
+			if(playG[i]==1) {
+				outlet(4,"/b_mlr/grid/led/set", i, 0, 1);
+				outBM = Math.floor(1<<(sampleP[i]*boundX)); // make a bitmask of the currently playing step
+				outlet(4,"/b_mlr/grid/led/row", 0, sampleR[i]+1, 255&outBM, (65280&outBM)>>8); // light the sample playback led
+			}
+		}
 	
-	// stop channel buttons
-	for(i=0;i<2;i++) {
-		if(playG[i]==1) {
-			outlet(4,"/b_mlr/grid/led/set", i, 0, 1);
-			outBM = Math.floor(1<<(sampleP[i]*boundX)); // make a bitmask of the currently playing step
-			outlet(4,"/b_mlr/grid/led/row", 0, sampleR[i]+1, 255&outBM, (65280&outBM)>>8); // light the sample playback led
+		// pattern recorders
+		for(i=0;i<2;i++) {
+			if(rpGate[i] > 0) outlet(4,"/b_mlr/grid/led/set",i+4, 0, 1);
 		}
 	}
+	else { // variable brightness redraw
 
-	// pattern recorders
-	for(i=0;i<2;i++) {
-		if(rpGate[i] > 0) outlet(4,"/b_mlr/grid/led/set",i+4, 0, 1);
+		// stop channel buttons
+		for(i=0;i<2;i++) {
+			if(playG[i]==1) {
+				outlet(4,"/b_mlr/grid/led/level/set", i, 0, 15); // group is playing
+				outBM = Math.floor(1<<(sampleP[i]*boundX)); // make a bitmask of the currently playing step
+				outlet(4,"/b_mlr/grid/led/row", 0, sampleR[i]+1, 255&outBM, (65280&outBM)>>8); // light the sample playback led
+
+				if(i==0) { // redraw the 1st group
+					for(i=0;i<16;i++) inner0[i] = 0; // set array to all zeroes
+					inner0.length = boundX; // resize array
+					if(loopMode[0] == 1) { // if there's an inner loop draw a low bright brace
+						for(i=playS[0];i<(playL[0]);i++) inner0[i] = 5;
+					}
+					inner0[Math.floor(sampleP[0]*boundX)] = 15;
+					outlet(4,"/b_mlr/grid/led/level/row",0,sampleR[0]+1,inner0);
+					for(i=0;i<3;i++) { // clean up other rows
+						if(i!=sampleR[0]) {
+							outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+						}
+					}
+				}
+				else { // group = 1
+					for(i=0;i<16;i++) inner1[i] = 0; // set array to all zeroes
+					inner1.length = boundX; // resize array
+					if(loopMode[1] == 1) { // if there's an inner loop draw a low bright brace
+						for(i=playS[1];i<(playL[1]);i++) inner1[i] = 5;
+					}
+					inner1[Math.floor(sampleP[1]*boundX)] = 15;
+					outlet(4,"/b_mlr/grid/led/level/row",0,sampleR[1]+1,inner1);
+					for(i=3;i<7;i++) { // clean up other rows
+						if(i!=sampleR[1]) {
+							outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+						}
+					}
+				}
+			}
+			else outlet(4,"/b_mlr/grid/led/level/set", i, 0, 5); // groups are off
+		}
+
+		// pattern recorders
+		for(i=0;i<2;i++) {
+			if(rpGate[i] > 0) outlet(4,"/b_mlr/grid/led/level/set",i+4, 0, 15); // pattern on
+			else outlet(4,"/b_mlr/grid/led/level/set",i+4, 0, 5); // pattern off (draw low bright)
+		}
 	}
+}
+
+function varib(x){
+ 	vb=x; // grab variable brightness state
+	post(vb);
+	post();
 }
