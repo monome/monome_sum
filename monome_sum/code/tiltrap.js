@@ -37,17 +37,6 @@ tilt[0] = 0; // initialise tilt at zero (only needed while tilt not hooked up)
 tilt[1] = 0;
 
 
-	// send a 'step' message anytime you want to move to trigger notes (tempo)
-function step() {
-	outlet(1,(currentStep%localx),loopStart,loopLength); // output the current step (testing only)
-	for(i=0;i<7;i++) stepOut[i] = bits[(xpos[0]+(currentStep%16)+(32*(ypos[0]+1+i))+1024)%1024]
-	outlet(2,stepOut); // send to the rhythm generator
-	flashStep();
-	currentStep = ((currentStep + 1 - loopStart)%loopLength)+loopStart; // increment the step by 1
-	if(currentStep >= localx) currentStep = currentStep%localx;
-
-}
-
 function key(x,y,s) {
 	if (y==0) { // if top row, treat separately
 		c = c + ((s*2)-1); // count number of presses
@@ -58,6 +47,7 @@ function key(x,y,s) {
 			loopLength = localx; // set the loop length to the full width
 			stepRow1 = 255;
 			stepRow2 = 255;
+			outlet(1, currentStep, loopStart, loopLength-1, localx); // send new playhead details
 			outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2); // redraw top row only
 		}
 
@@ -66,10 +56,11 @@ function key(x,y,s) {
 			else loopLength = (x+16) - loopStart;
 			stepRow1 = 0;
 			stepRow2 = 0;
-			for(i=0;i<loopLength;i++) { // iterate through all active steps
-				if(((i+loopStart)%16) < 8) stepRow1 = stepRow1 + (1<<((i+loopStart)%16))
-				else stepRow2 = stepRow2 + (1<<((i+loopStart-8)%16));
+			for(i=loopStart;i<loopLength+loopStart;i++) { // iterate through all active steps
+				if((i%16) < 8) stepRow1 = stepRow1 + (1<<(i%16))
+				else stepRow2 = stepRow2 + (1<<((i-8)%16));
 			}
+			outlet(1, currentStep, loopStart, loopLength-1, localx); // send new playhead details
 			outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2); // redraw top row only
 		}
 		
@@ -84,6 +75,8 @@ function key(x,y,s) {
 		ny = (32+y+ypos[0])%32; //
 
 		bits[(nx+(32*ny))%1024] = (1+bits[(nx+(32*ny))%1024])%2 // adds 1 then wraps to 1
+		
+		outlet(2,"nsub",nx+1,ny,bits[(nx+(32*ny))%1024]);
 
 		ledSet(x,y,bits[(nx+32*ny)%1024]); // explicitly lights the led before tilt changes
 	}
@@ -160,7 +153,9 @@ function ledSet(x,y,s) {
 	outlet(0,"/b_step/grid/led/set",x,y,s);
 }
 
-function flashStep() {
+function flashStep(x) {
+	currentStep = x; //grab new step
+	
 	if((currentStep %localx)<8) { // if step is in 1st quadrant
 		outlet(0,"/b_step/grid/led/row",0,0,stepRow1-(1<<(currentStep%16)),stepRow2);
 	}
