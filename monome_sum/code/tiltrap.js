@@ -21,6 +21,7 @@ var stepRow2 = 255;
 var loopModulo = 0;
 var stepOut = new Array(7);
 var flashL = 0; // memory bit for flasher
+var vb = 0; // variable brightness defaults to off
 
 var tflash = new Task(flasher, this); // task to run the flash for current playback step
 
@@ -176,3 +177,21 @@ function flasher() {
 		tflash.cancel(); // stop timer
 	}
 }
+
+
+function varbright(x) {
+	vb = x;
+}
+
+function drawSteps() {
+	// draw the top row with a list of all steps
+	
+}
+
+function drawPlayback() {
+	// draw the currently playing step w/ a variable slider behind
+	
+}
+
+function drawMap() {
+	// draw the full map of 
