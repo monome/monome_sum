@@ -296,6 +296,138 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 			}
 		}	
 	}
+
+
+	else if(a=="/manager/grid/led/level/row") { // i:<x-offset>, i:<y-row>, i:<bitmask>, i:<bitmask2>
+		if(glob.gMeta==0) { // only one application so use inlet==0 only
+		  if(inlet==0) { // ignore second app
+			if(glob.g1x==8) { // if the 1st device attached is 8wide
+				if(x<8) { // and the /led/row message applies to that grid
+					if(glob.gridtiling == 0) { // horizontal
+						outlet(0,"/manager/grid/led/level/row",x,y,z,n,o,p,q,r,s,t); // send 1st bitmask to left grid
+						outlet(1,"/manager/grid/led/level/row",x,y,z,u,v,w,aa,bb,cc,dd,ee); // send 2nd bitmask to right grid
+					}
+					else { // vertical
+						if(y < glob.g1y) outlet(0,"/manager/grid/led/level/row",x,y,z,n,o,p,q,r,s,t); // send 1st bitmask to left grid
+						else outlet(1,"/manager/grid/led/level/row",x,y-glob.g1y,u,v,w,aa,bb,cc,dd,ee);
+					}
+				}
+				else if(glob.gridtiling == 0) { // there is an offset added to the message & horizontal
+					outlet(1,"/manager/grid/led/level/row",(x-8),y,z,n,o,p,q,r,s,t,n); // send double-bitmask to right grid
+				}
+				else if(glob.gridtiling == 1 && y > glob.g1y) { // x-offset & vertical & below 1st device
+					outlet(1,"/manager/grid/led/level/row",x,y-glob.g1y,z,n,o,p,q,r,s,t); // send double-bitmask to right grid
+				}
+			}
+			if(glob.g1x==16) { // if the 1st device attached is 16 wide
+				if(y<glob.g1y) { // to deal with vertical mode, check if the y-offset pushes it to 2nd device
+					if(x==0) { // and the /led/level/row applies to the left quad
+						outlet(0,"/manager/grid/led/level/row",0,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // send double bitmask to left grid
+					}
+					else if(x==8) { // and the /led/level/row applies to the right quad
+						outlet(0,"/manager/grid/led/level/row",8,y,z,n,o,p,q,r,s,t); // send 1st bitmask to left grid
+						if(glob.gridtiling == 0) outlet(1,"/manager/grid/led/level/row",0,y,u,v,w,aa,bb,cc,dd,ee); // send 2nd bitmask to right grid
+					}
+					else if(x>8 && glob.gridtiling == 0) { // and the /led/level/row applies to the right grid
+						outlet(1,"/manager/grid/led/level/row",(x-16),y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // send double bitmask to right grid
+					}
+				}
+				else { // y offset is out of range of device 1, so send to device 2 minus offset
+					if(x==0 && glob.gridtiling == 1) { // and the /led/level/row applies to the left quad
+						outlet(1,"/manager/grid/led/level/row",0,y-glob.g1y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // send double bitmask to 2nd grid
+					}
+					else if(x==8 && glob.gridtiling == 1) { // and the /led/level/row applies to the right quad
+						outlet(1,"/manager/grid/led/level/row",8,y-glob.g1y,z,n,o,p,q,r,s,t); // send 1st bitmask only
+					}
+					
+				}
+			}
+		  }
+		}
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
+			if(inlet==0) outlet(0,"/manager/grid/led/level/row",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
+			else outlet(1,"/manager/grid/led/level/row",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
+		}
+		else if(glob.gMeta==2) { // horizontal split
+			if(x==0) { //any x-offset would push grid out of range
+				if(inlet==0) outlet(0,"/manager/grid/led/level/row",0,y,z,n,o,p,q,r,s,t); // trim second half to stop overflow
+				else outlet(0,"/manager/grid/led/level/row",8,y,z,n,o,p,q,r,s,t);
+			}
+		}
+		else if(glob.gMeta == 3) { // vertical split
+			if(inlet==0) {
+				if(y<8) { // make sure to stop overflow into bottom grid
+					outlet(0,"/manager/grid/led/level/row",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // can be double bitmask for full width
+				}
+			}
+			else outlet(0,"/manager/grid/led/level/row",x,(y+8),z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // can be double bitmask for full width
+		}
+	}
+
+
+	else if(a=="/manager/grid/led/level/col") { // i:<x-col>, i:<y-offset>, i:<bitmask>, i:<bitmask2>
+		if(glob.gMeta==0) { // only one application so will be inlet==0 only
+		  if(inlet==0) { // ignore 2nd app
+			if(glob.g1y==8) { // d0 is 8 high
+				if(y==0 && glob.gridtiling == 0) { // no offset & horizontal
+					if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
+					else outlet(1,"/manager/grid/led/level/col",x-glob.g1x,y,z,n,o,p,q,r,s,t);
+				}
+				else if(y==0 && glob.gridtiling == 0) { // no offset & vertical
+					outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
+					outlet(1,"/manager/grid/led/level/col",x,y,u,v,w,aa,bb,cc,dd,ee);
+				}
+				else if(y==8 && glob.gridtiling == 0 && x>glob.g1x) outlet(1,"/manager/grid/led/level/col",x-glob.g1x,y,z,n,o,p,q,r,s,t);
+				else if(y==8 && glob.gridtiling == 1) outlet(1,"/manager/grid/led/level/col",x,(y-8),z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
+			}
+			if(glob.g1y==16) { // device is 16 high
+				if(y==0) { // from the top
+ 					if(glob.gridtiling == 0) { // horizontal (vertical is out of range here)
+ 						if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,0,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // in d0 range
+						else outlet(1,"/manager/grid/led/level/col",x-glob.g1x,0,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // in d1 range
+					}
+				}
+				else if(y==8) {
+					if(glob.gridtiling == 0) { // horizontal
+						if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
+						else outlet(1,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
+					}
+					else { // vertical
+						if(x<glob.g1x) {
+							outlet(0,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
+							outlet(1,"/manager/grid/led/level/col",x,0,u,v,w,aa,bb,cc,dd,ee);
+						}
+						else outlet(1,"/manager/grid/led/level/col",x,0,u,v,w,aa,bb,cc,dd,ee);
+					}
+				}
+				else if(y>8) { // bigger than 16 >> always on 2nd device
+					if(glob.gridtiling == 1) outlet(1,"/manager/grid/led/level/col",x,(y-16),z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
+				}
+			}
+		  }
+		}
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
+			if(inlet==0) outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
+			else outlet(1,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
+		}
+		else if(glob.gMeta==2) { // landcape128 from 2 apps
+			if(inlet==0) {
+				if(x<8) outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // stop 2nd half overflow
+			}
+			else outlet(0,"/manager/grid/led/level/col",(x+8),y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); //move 2nd app 8 to the right
+		}
+		else if(glob.gMeta == 3) { // portrait128/256 from 2 apps
+			if(y==0) { // only allowed if no y-offset (as it would be out of range)
+				if(inlet==0) outlet(0,"/manager/grid/led/level/col",x,0,z,n,o,p,q,r,s,t); // second bitmask is trimmed
+				else outlet(0,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
+			}
+		}	
+	}
+
+
+
+
+
 	
 
 	else if(a=="/manager/grid/led/intensity") { // i:<intensity>
