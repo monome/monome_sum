@@ -41,17 +41,17 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 			else if(glob.gridtiling==1 && y>(glob.g1y-1)) outlet(1,"/manager/grid/led/set",x,(y-glob.g1y),z); // vertical
 		  }
 		}
-		if(glob.gMeta==1) { // 2 apps & 2 devices
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
 			if(inlet==0) outlet(0,"/manager/grid/led/set",x,y,z); // inlet0=outlet0
 			else outlet(1,"/manager/grid/led/set",x,y,z); // inlet0=outlet0
 		}
-		if(glob.gMeta==2) { // 1 device split horizontally
+		else if(glob.gMeta==2) { // 1 device split horizontally
 			if(inlet==0) {
 				if(x<8) outlet(0,"/manager/grid/led/set",x,y,z); // stops overflow into 2nd quad
 			}
 			else outlet(0,"/manager/grid/led/set",(x+8),y,z);
 		}
-		if(glob.gMeta==3) { // 1 device split vertically
+		else if(glob.gMeta==3) { // 1 device split vertically
 			if(inlet==0) {
 				if(y<8) outlet(0,"/manager/grid/led/set",x,y,z); // stops overflow into bottom quads
 			}
@@ -60,22 +60,21 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 	}
 	
 	
-	if(a=="/manager/grid/led/all") { // i:<all state>
+	else if(a=="/manager/grid/led/all") { // i:<all state>
+		if(x==0) lAll = 0;
+		else lAll = 255;
+
 		if(glob.gMeta==0) { // only one application so will be inlet==0 only
 		  if(inlet==0) { // ignore messages from 2nd application
 			outlet(0,"/manager/grid/led/all",x); // send to both outlets (even if only one attached)
 			outlet(1,"/manager/grid/led/all",x);
 		  }
 		}
-		if(glob.gMeta==1) { // 2 apps & 2 devices
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
 			if(inlet==0) outlet(0,"/manager/grid/led/all",x); // inlet0=outlet0
 			else outlet(1,"/manager/grid/led/all",x);
 		}
-
-		if(x==0) lAll = 0;
-		else lAll = 255;
-		
-		if(glob.gMeta==2) { // landcape128 from 2 apps
+		else if(glob.gMeta==2) { // landcape128 from 2 apps
 			if(inlet==0) { // left half of physical grid
 				// send a /led/map of 1st quad, set to 0 or 255 for on/off
 				outlet(0,"/manager/grid/led/map",0,0,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
@@ -87,7 +86,7 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 				outlet(0,"/manager/grid/led/map",8,8,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
 			}
 		}
-		if(glob.gMeta == 3) { // portrait128/256 from 2 apps
+		else if(glob.gMeta == 3) { // portrait128/256 from 2 apps
 			if(inlet==0) { // top half of physical grid
 				// send a /led/map to 1/2 quad, set to 0 or 255 for on/off
 				outlet(0,"/manager/grid/led/map",0,0,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
@@ -102,7 +101,7 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 	}
 	
 	
-	if(a=="/manager/grid/led/map") { // i:<x-offset>, i:<y-offset>, i:[8 led/rows]
+	else if(a=="/manager/grid/led/map") { // i:<x-offset>, i:<y-offset>, i:[8 led/rows]
 		if(glob.gMeta==0) { // only one application so will be inlet==0 only
 		  if(inlet==0) { // need to ignore 2nd application
 			if((x<glob.g1x) && (y<glob.g1y)) outlet(0,"/manager/grid/led/map",x,y,z,n,o,p,q,r,s,t); // in range of 1st device then echo out
@@ -110,17 +109,17 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 			else if(glob.gridtiling==1 && y>(glob.g1y-1)) outlet(1,"/manager/grid/led/map",x,(y-glob.g1y),z,n,o,p,q,r,s,t); // remove offset
 		  }
 		}
-		if(glob.gMeta==1) { // 2 apps & 2 devices
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
 			if(inlet==0) outlet(0,"/manager/grid/led/map",x,y,z,n,o,p,q,r,s,t); // echo out
 			else outlet(1,"/manager/grid/led/map",x,y,z,n,o,p,q,r,s,t);
 		}
-		if(glob.gMeta==2) { // 2 apps split horizontally
+		else if(glob.gMeta==2) { // 2 apps split horizontally
 			if(x==0) { // only accept left-side maps
 				if(inlet==0) outlet(0,"/manager/grid/led/map",0,y,z,n,o,p,q,r,s,t);
 				else outlet(0,"/manager/grid/led/map",8,y,z,n,o,p,q,r,s,t); // shift to right
 			}
 		}
-		if(glob.gMeta == 3) { // horizontal mode
+		else if(glob.gMeta == 3) { // horizontal mode
 			if(y==0) { // only accept top-side maps
 				if(inlet==0) outlet(0,"/manager/grid/led/map",x,0,z,n,o,p,q,r,s,t);
 				else outlet(0,"/manager/grid/led/map",x,8,z,n,o,p,q,r,s,t); // shift to bottom
@@ -128,12 +127,43 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 		}
 	}
 
+	///////// VARBRIGHTS
 
-	if(a=="/manager/grid/led/level/map") { // ridiculous. sorry. please help me make this more elegant & faster?!?!
+
+	if(a=="/manager/grid/led/level/set") { // i:<x>, i:<y>, i:<level>
+		if(glob.gMeta==0) { // only one application so will be inlet==0 only
+		  if(inlet==0) { // ignore messages from 2nd app
+			if(x<glob.g1x && y<glob.g1y) { // the press is within the range of the left most device
+				outlet(0,"/manager/grid/led/level/set",x,y,z);
+			}
+			else if(glob.gridtiling==0 && x>(glob.g1x-1)) outlet(1,"/manager/grid/led/level/set",(x-glob.g1x),y,z); // horizontal & outside 1st device range
+			else if(glob.gridtiling==1 && y>(glob.g1y-1)) outlet(1,"/manager/grid/led/level/set",x,(y-glob.g1y),z); // vertical
+		  }
+		}
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
+			if(inlet==0) outlet(0,"/manager/grid/led/level/set",x,y,z); // inlet0=outlet0
+			else outlet(1,"/manager/grid/led/level/set",x,y,z); // inlet0=outlet0
+		}
+		else if(glob.gMeta==2) { // 1 device split horizontally
+			if(inlet==0) {
+				if(x<8) outlet(0,"/manager/grid/led/level/set",x,y,z); // stops overflow into 2nd quad
+			}
+			else outlet(0,"/manager/grid/led/level/set",(x+8),y,z);
+		}
+		else if(glob.gMeta==3) { // 1 device split vertically
+			if(inlet==0) {
+				if(y<8) outlet(0,"/manager/grid/led/level/set",x,y,z); // stops overflow into bottom quads
+			}
+			else outlet(0,"/manager/grid/led/level/set",x,(y+8),z);
+		}
+	}
+
+
+
+
+	else if(a=="/manager/grid/led/level/map") { // ridiculous. sorry. please help me make this more elegant & faster?!?!
 		if(glob.gMeta==0 && inlet==0) { // only one application so will be inlet==0 only
 			if(glob.g1x==8) {
-				
-			
 			
 			outlet(0,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq);
 			}
@@ -141,7 +171,7 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 	}
 
 
-	if(a=="/manager/grid/led/row") { // i:<x-offset>, i:<y-row>, i:<bitmask>, i:<bitmask2>
+	else if(a=="/manager/grid/led/row") { // i:<x-offset>, i:<y-row>, i:<bitmask>, i:<bitmask2>
 		if(glob.gMeta==0) { // only one application so use inlet==0 only
 		  if(inlet==0) { // ignore second app
 			if(glob.g1x==8) { // if the 1st device attached is 8wide
@@ -187,17 +217,17 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 			}
 		  }
 		}
-		if(glob.gMeta==1) { // 2 apps & 2 devices
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
 			if(inlet==0) outlet(0,"/manager/grid/led/row",x,y,z,n);
 			else outlet(1,"/manager/grid/led/row",x,y,z,n);
 		}
-		if(glob.gMeta==2) { // horizontal split
+		else if(glob.gMeta==2) { // horizontal split
 			if(x==0) { //any x-offset would push grid out of range
 				if(inlet==0) outlet(0,"/manager/grid/led/row",0,y,z); // trim second half to stop overflow
 				else outlet(0,"/manager/grid/led/row",8,y,z);
 			}
 		}
-		if(glob.gMeta == 3) { // vertical split
+		else if(glob.gMeta == 3) { // vertical split
 			if(inlet==0) {
 				if(y<8) { // make sure to stop overflow into bottom grid
 					outlet(0,"/manager/grid/led/row",x,y,z,n); // can be double bitmask for full width
@@ -208,7 +238,7 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 	}
 
 
-	if(a=="/manager/grid/led/col") { // i:<x-col>, i:<y-offset>, i:<bitmask>, i:<bitmask2>
+	else if(a=="/manager/grid/led/col") { // i:<x-col>, i:<y-offset>, i:<bitmask>, i:<bitmask2>
 		if(glob.gMeta==0) { // only one application so will be inlet==0 only
 		  if(inlet==0) { // ignore 2nd app
 			if(glob.g1y==8) { // d0 is 8 high
@@ -249,17 +279,17 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 			}
 		  }
 		}
-		if(glob.gMeta==1) { // 2 apps & 2 devices
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
 			if(inlet==0) outlet(0,"/manager/grid/led/col",x,y,z,n);
 			else outlet(1,"/manager/grid/led/col",x,y,z,n);
 		}
-		if(glob.gMeta==2) { // landcape128 from 2 apps
+		else if(glob.gMeta==2) { // landcape128 from 2 apps
 			if(inlet==0) {
 				if(x<8) outlet(0,"/manager/grid/led/col",x,y,z,n); // stop 2nd half overflow
 			}
 			else outlet(0,"/manager/grid/led/col",(x+8),y,z,n); //move 2nd app 8 to the right
 		}
-		if(glob.gMeta == 3) { // portrait128/256 from 2 apps
+		else if(glob.gMeta == 3) { // portrait128/256 from 2 apps
 			if(y==0) { // only allowed if no y-offset (as it would be out of range)
 				if(inlet==0) outlet(0,"/manager/grid/led/col",x,0,z); // second bitmask is trimmed
 				else outlet(0,"/manager/grid/led/col",x,8,z);
@@ -268,7 +298,7 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 	}
 	
 
-	if(a=="/manager/grid/led/intensity") { // i:<intensity>
+	else if(a=="/manager/grid/led/intensity") { // i:<intensity>
 		if(glob.gMeta==1) {
 			if(inlet==0) outlet(0,"/manager/grid/led/intensity",x);
 			else outlet(1,"/manager/grid/led/intensity",x);
@@ -279,7 +309,7 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 	}
 
 
-	if(a=="/manager/tilt/set") { // i:<n-sensor>, i:<state>
+	else if(a=="/manager/tilt/set") { // i:<n-sensor>, i:<state>
 		if(glob.gMeta==1) {
 			if(inlet==0) outlet(0,"/manager/tilt/set",x,y);
 			else outlet(1,"/manager/tilt/set",x,y);

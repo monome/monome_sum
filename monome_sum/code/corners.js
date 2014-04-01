@@ -1,5 +1,5 @@
 inlets = 1;
-outlets = 6;
+outlets = 7;
 
 var dx = 0;
 var dy = 0;
@@ -18,6 +18,13 @@ r[0] = 1;
 r[1] = 1;
 r[2] = 1;
 r[3] = 1;
+
+var oldx = new Array(4);
+var oldy = new Array(4);
+
+oldx[0] = oldx[1] = oldx[2] = oldx[3] = 0;
+oldy[0] = oldy[1] = oldy[2] = oldy[3] = 0;
+
 
 var p = new Array(256);
 
@@ -72,6 +79,17 @@ function tilt(tiltx, tilty) {
 
 function bang() {
  //   dx = dy = 0;
+
+    oldx[3] = oldx[2];
+    oldx[2] = oldx[1];
+    oldx[1] = oldx[0];
+    oldx[0] = x;
+
+    oldy[3] = oldy[2];
+    oldy[2] = oldy[1];
+    oldy[1] = oldy[0];
+    oldy[0] = y;
+
 	keys = 0;
     for(i1=0;i1<16;i1++) {
     for(i2=0;i2<16;i2++) {
@@ -120,4 +138,5 @@ function bang() {
 //	outlet(4,x/bx,1-(y/by),dx/bx,dy/by);
 	outlet(4,Math.pow(16,(x/bx))/4,Math.pow(16,(1-(y/by)))/4,Math.pow(16,(dx/bx))/4,Math.pow(16,(dy/by))/4);
 	outlet(5,keys);
+    outlet(6,oldx[3],oldy[3],oldx[2],oldy[2],oldx[1],oldy[1],oldx[0],oldy[0],x,y);
 }
