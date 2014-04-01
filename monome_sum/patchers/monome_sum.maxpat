@@ -32,6 +32,20 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 144.0, 198.0, 96.0, 17.0 ],
+					"text" : "storagewindow"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -622,6 +636,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "set location of 'route key'. press 'map' then the grid key you wish to activate the router. press 'map' again to set.",
 					"id" : "obj-65",
 					"maxclass" : "hint",
@@ -640,6 +655,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-9",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -661,6 +677,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "choose whether your devices are next to each other (horiz) or in front of each other (vert)",
 					"id" : "obj-67",
 					"maxclass" : "hint",
@@ -679,6 +696,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-8",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -1474,6 +1492,7 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-30",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1490,6 +1509,7 @@
 					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-49",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -1506,6 +1526,7 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
 					"frgb" : 0.0,
+					"hidden" : 1,
 					"id" : "obj-29",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1522,6 +1543,7 @@
 					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-27",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -1561,6 +1583,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "click to force all 'autoload' patches to reboot their patches if they cannot find a client with the correct prefix",
 					"id" : "obj-42",
 					"maxclass" : "hint",
@@ -1574,6 +1597,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "save your smallbatch file here. TIP! overwrite 'sbatch.json' to have your settings auto-load when you open smallbatch.",
 					"id" : "obj-41",
 					"maxclass" : "hint",
@@ -1587,6 +1611,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "load your smallbatch savefile here to reload your settings",
 					"id" : "obj-38",
 					"maxclass" : "hint",
@@ -1771,6 +1796,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-19",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -1830,7 +1856,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 684.0, 18.0, 59.5, 19.0 ],
 					"restore" : 					{
-						"advanced" : [ 1 ],
+						"advanced" : [ 0 ],
 						"routehorizontal[1]" : [ 0 ],
 						"tile-orientation" : [ 0 ]
 					}
@@ -1849,7 +1875,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 2,
-					"outlettype" : [ "write", "front" ],
+					"outlettype" : [ "", "front" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -1879,6 +1905,20 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-41",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 36.0, 330.0, 47.0, 18.0 ],
+									"text" : "write"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"color" : [ 0.4, 0.8, 1.0, 1.0 ],
 									"fontname" : "Andale Mono",
@@ -2683,6 +2723,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-41", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-44", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2787,9 +2836,9 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 198.0, 180.0, 107.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 556, 651 ],
+						"client_rect" : [ 1563, 542, 2238, 876 ],
 						"parameter_enable" : 0,
-						"storage_rect" : [ 766, 44, 1471, 1046 ]
+						"storage_rect" : [ 409, 44, 1655, 1046 ]
 					}
 ,
 					"text" : "pattrstorage sbatch",
@@ -2829,6 +2878,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-46",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -2852,6 +2902,7 @@
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-44",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -4015,8 +4066,42 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-37",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 378.0, 210.0, 140.0, 20.0 ],
+									"text" : "prepend setMapping"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 1.0, 0.4, 0.4, 1.0 ],
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-36",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 378.0, 186.0, 169.0, 20.0 ],
+									"restore" : [ 0 ],
+									"saved_object_attributes" : 									{
+										"parameter_enable" : 0
+									}
+,
+									"text" : "pattr rMapping @thru 0",
+									"varname" : "rMapping"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"color" : [ 1.0, 0.8, 0.4, 1.0 ],
 									"fontname" : "Andale Mono",
@@ -5317,6 +5402,24 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-37", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-36", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-54", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-37", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-54", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -5398,6 +5501,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-36", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-54", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -5467,7 +5579,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p route-to-UDP"
+					"text" : "p route-to-UDP",
+					"varname" : "route-to-UDP"
 				}
 
 			}
@@ -10766,6 +10879,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-58", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}

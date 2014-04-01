@@ -5,21 +5,19 @@
 			"1" : 			{
 				"id" : 1,
 				"data" : 				{
-					"advanced" : [ 1 ],
+					"advanced" : [ 0 ],
 					"routehorizontal[1]" : [ 0 ],
 					"tile-orientation" : [ 0 ],
-					"serialosc-left::u844005895" : [  ],
 					"serialosc-left::deviceid" : [ "m0000536" ],
-					"serialosc-right::u501005897" : [  ],
 					"serialosc-right::deviceid" : [ 0 ],
 					"0route-cell::0fileload" : [ 0 ],
 					"0route-cell::0presetload" : [ 0 ],
-					"0route-cell::0filepath" : [ "Stripped:/Users/Trent/Documents/Monome2013/_2013 monome website +patches +jsons/updated for serialosc/parc_0.2.1/parc.maxpat" ],
+					"0route-cell::0filepath" : [  ],
 					"0route-cell::0prefixselect" : [ "/b_flin" ],
 					"0route-cell::0prefixpath" : [ 0 ],
 					"1route-cell::1fileload" : [ 0 ],
 					"1route-cell::1presetload" : [ 0 ],
-					"1route-cell::1filepath" : [ "Stripped:/Users/Trent/Documents/Monome2013/_monome-suite/_midi_slide_128.maxpat" ],
+					"1route-cell::1filepath" : [  ],
 					"1route-cell::1prefixselect" : [ "/b_corners" ],
 					"1route-cell::1prefixpath" : [ 0 ],
 					"2route-cell::2fileload" : [ 0 ],
@@ -52,7 +50,8 @@
 					"7route-cell::7filepath" : [ 0 ],
 					"7route-cell::7prefixselect" : [ "---" ],
 					"7route-cell::7prefixpath" : [ 0 ],
-					"batch-load::∆batch::master-p.json" : [ -1 ]
+					"batch-load::∆batch::master-p.json" : [ -1 ],
+					"route-to-UDP::rMapping" : [  ]
 				}
 
 			}

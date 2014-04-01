@@ -268,14 +268,14 @@ function sOSC(a,x,y,z,n) { // a=osc address, b,c,d,e = data
 					glob.rHeight = -1;
 					glob.rDevice = -1; 
 					glob.rQuad = -1;
-					outlet(3,-1);
+					outlet(3,-1,-1,-1,-1);
 				}
 				else { // if it's a new key, update the router to the new key
 					glob.rWidth = x;
 					glob.rHeight = y;
 					glob.rDevice = inlet; // set which device is the router
 					glob.rQuad = Math.floor(glob.rWidth/8)+(2*Math.floor(glob.rHeight/8));
-					outlet(3,x,y,inlet);
+					outlet(3,x,y,inlet,glob.rQuad);
 				}
 				
 				// then call an update to the display
@@ -543,4 +543,14 @@ function mapping(x) {
 	
 	routeWait = 0;
 	routeWaitHistory = 0;
+}
+
+function setMapping(x,y,z,n) {
+	// here we set a mapping key from a preset
+	if(glob.g1x<x && glob.rDevice==0) glob.rWidth = x-8;
+	else if(g2x<x && glob.rDevice==1) glob.rWidth = x-8;
+	else glob.rWidth = x;
+	glob.rHeight = y;
+	glob.rDevice = z; // set which device is the router
+	glob.rQuad = n;
 }
