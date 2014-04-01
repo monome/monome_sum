@@ -178,10 +178,6 @@ function flashStep(x) {
 		outlet(0,"/b_step/grid/led/level/col",currentStep,0,5,ccol);
 		outlet(0,"/b_step/grid/led/level/col",(currentStep+15)%localx,0,5,oldcol);
 		
-		post(0,"/b_step/grid/led/level/col",currentStep,0,5,ccol);
-		post(0,"/b_step/grid/led/level/col",(currentStep+15)%localx,0,5,oldcol);
-		post();
-
 		drawSteps(); // overlay top row
 	}
 	else { // non-varibright flashes top led instead
