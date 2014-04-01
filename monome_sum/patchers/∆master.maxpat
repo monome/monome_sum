@@ -396,7 +396,7 @@
 					"patching_rect" : [ 414.0, 594.0, 54.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 342.0, 696.0, 72.0, 19.0 ],
-					"text" : "-31 dB"
+					"text" : "-5 dB"
 				}
 
 			}
@@ -531,12 +531,12 @@
 					"restore" : 					{
 						"m-key" : [ 1 ],
 						"m-scale" : [ 1 ],
-						"m-tempo" : [ 147.265305 ],
-						"m-volume" : [ -31.200001 ]
+						"m-tempo" : [ 139.918365 ],
+						"m-volume" : [ -5.926531 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u316005932"
+					"varname" : "u132005949"
 				}
 
 			}
@@ -3281,7 +3281,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.6, 1.0, 1.0, 0.8 ],
+					"bgcolor" : [ 0.8, 0.8, 0.8, 0.8 ],
 					"id" : "obj-35",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -3294,7 +3294,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.8, 0.8, 0.8, 0.8 ],
+					"bgcolor" : [ 0.6, 1.0, 1.0, 0.8 ],
 					"id" : "obj-34",
 					"maxclass" : "panel",
 					"numinlets" : 1,
