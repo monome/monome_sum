@@ -16,12 +16,15 @@ var start = 0;
 var loopStart = 0;
 var loopLength = 16;
 var currentStep = 0;
+var previousStep = 0;
 var stepRow1 = 255;
 var stepRow2 = 255;
 var loopModulo = 0;
 var stepOut = new Array(7);
 var flashL = 0; // memory bit for flasher
 var vb = 0; // variable brightness defaults to off
+var ccol = new Array(15); // list of brightness levels for current step
+var oldcol = new Array(15); // list of brightness levels for current step
 
 var tflash = new Task(flasher, this); // task to run the flash for current playback step
 
@@ -49,7 +52,7 @@ function key(x,y,s) {
 			stepRow1 = 255;
 			stepRow2 = 255;
 			outlet(1, currentStep, loopStart, loopLength-1, localx); // send new playhead details
-			outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2); // redraw top row only
+			drawSteps();
 		}
 
 		else if(c>1 && s==1) { // interpret double-press & loop
@@ -62,7 +65,7 @@ function key(x,y,s) {
 				else stepRow2 = stepRow2 + (1<<((i-8)%16));
 			}
 			outlet(1, currentStep, loopStart, loopLength-1, localx); // send new playhead details
-			outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2); // redraw top row only
+			drawSteps();
 		}
 		
 		// if we are started and the count hits zero, then revert to !started
@@ -129,6 +132,8 @@ function localsize(x,y) {
 
 
 function redrawMap() {	
+	// could add an option to redraw with the current playhead (for vb) but not high priority
+
 	for(i=1;i<localy;i++) { // iterate through the physically focussed cells (skip first row)
 		for(j=0;j<localx;j++) {
 			nx = (32+j+xpos[0])%32;
@@ -147,7 +152,7 @@ function redrawMap() {
 	}
 	
 		// then we overlay the step counter on top
-	outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2);
+	drawSteps();
 }
 
 function ledSet(x,y,s) {
@@ -155,16 +160,40 @@ function ledSet(x,y,s) {
 }
 
 function flashStep(x) {
+	previousStep = currentStep; // remember last step
 	currentStep = x; //grab new step
 	
-	if((currentStep %localx)<8) { // if step is in 1st quadrant
-		outlet(0,"/b_step/grid/led/row",0,0,stepRow1-(1<<(currentStep%16)),stepRow2);
+	// draw
+	if(vb==1) {
+		// draw the variable brightness step
+		ccol.length = localy-1;
+		oldcol.length = localy-1;		
+
+		for(i=0;i<localy-1;i++) {
+			//ccol[i] = 5; // makes whole current step at brightness 5
+			ccol[i] = bits[((i*32)+currentStep+1056)%1024]*10+5; // sets on to 15, off to 5
+			oldcol[i] = bits[((i*32)+previousStep+1056)%1024]*15; // reverts to 0/15
+		}
+		
+		outlet(0,"/b_step/grid/led/level/col",currentStep,0,5,ccol);
+		outlet(0,"/b_step/grid/led/level/col",(currentStep+15)%localx,0,5,oldcol);
+		
+		post(0,"/b_step/grid/led/level/col",currentStep,0,5,ccol);
+		post(0,"/b_step/grid/led/level/col",(currentStep+15)%localx,0,5,oldcol);
+		post();
+
+		drawSteps(); // overlay top row
 	}
-	else if(localx > 8) { // if step is in 2nd quadrant
-		outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2-(1<<((currentStep-8)%16)));
+	else { // non-varibright flashes top led instead
+		// turn off the led of the current step
+		if((currentStep %localx)<8) { // if step is in 1st quadrant
+			outlet(0,"/b_step/grid/led/row",0,0,stepRow1-(1<<(currentStep%16)),stepRow2);
+		}
+		else if(localx > 8) { // if step is in 2nd quadrant
+			outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2-(1<<((currentStep-8)%16)));
+		}
 	}
 	
-	//outlet(1,"flash");
 	flashL = 1; // reset counter
 	tflash.repeat(); //start the timer
 
@@ -173,11 +202,10 @@ function flashStep(x) {
 function flasher() {
 	if(flashL > 0) flashL--; // decrease count
 	else {
-		outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2);
+		drawSteps(); // redraw normal top row
 		tflash.cancel(); // stop timer
 	}
 }
-
 
 function varbright(x) {
 	vb = x;
@@ -185,13 +213,5 @@ function varbright(x) {
 
 function drawSteps() {
 	// draw the top row with a list of all steps
-	
+	outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2); // non-vb
 }
-
-function drawPlayback() {
-	// draw the currently playing step w/ a variable slider behind
-	
-}
-
-function drawMap() {
-	// draw the full map of 
