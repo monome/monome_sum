@@ -29,33 +29,6 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Andale Mono",
-					"fontsize" : 12.0,
-					"id" : "obj-24",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 457.0, 317.0, 419.0, 18.0 ],
-					"text" : "0. 7. 0. 7. 0. 7. 0. 7. 0. 7."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Andale Mono",
-					"fontsize" : 12.0,
-					"id" : "obj-12",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 809.0, 231.0, 47.0, 20.0 ],
-					"text" : "print"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"color" : [ 1.0, 0.4, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -400,7 +373,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u121001840"
+					"varname" : "u892016485"
 				}
 
 			}
@@ -1553,13 +1526,13 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-54",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 344.0, 352.0, 846.0, 45.0 ],
-					"text" : "/b_corners/grid/led/all 0, /b_corners/grid/led/level/set $1 $2 1, /b_corners/grid/led/level/set $3 $4 4, /b_corners/grid/led/level/set $5 $6 8, /b_corners/grid/led/level/set $7 $8 11, /b_corners/grid/led/level/set $9 $10 15, /b_corners/grid/led/set $9 $10 1"
+					"patching_rect" : [ 344.0, 352.0, 810.0, 31.0 ],
+					"text" : "/b_corners/grid/led/all 0, /b_corners/grid/led/level/set $1 $2 1, /b_corners/grid/led/level/set $3 $4 5, /b_corners/grid/led/level/set $5 $6 10, /b_corners/grid/led/level/set $7 $8 15, /b_corners/grid/led/set $7 $8 1"
 				}
 
 			}
@@ -1693,15 +1666,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-10", 3 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-10", 6 ]
 				}
 
 			}
