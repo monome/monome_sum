@@ -159,15 +159,17 @@ function aa_draw() { // draws the x array in the monome /grid/led/level/map form
     for(j=0;j<cols;j++) { // iterate for each column (j)
 
         index[j] = steps-Math.floor(x[j]); //index is x (current location) rounded down to int
+		if(index[j]>steps) index[j]=steps; // clamp column bottom
+		else if(index[j]<0) index[j]=0; // clamp column top
 
         for(i=0;i<index[j];i++) them[j+(i*steps)] = b-direction*b; // shades from 0 to level with 'b' colour
 
         if(direction==0) {
             them[index[j]*steps+j] = 15-Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
-            them[index[j]*steps+j-steps] = Math.max(15-them[index[j]*steps+j],b); // as above but wraps to width
+            them[index[j]*steps+j-cols] = Math.max(15-them[index[j]*steps+j],b); // as above but wraps to width
         }
         else {
-            them[index[j]*steps+j-steps] = Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
+            them[index[j]*steps+j-cols] = Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
             them[index[j]*steps+j] = Math.max(15-them[index[j]*steps+j-steps],b); // as above but wraps to width
         }
     }
