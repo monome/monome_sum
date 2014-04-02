@@ -366,8 +366,6 @@ function redraw() {
 		for(i=0;i<2;i++) {
 			if(playG[i]==1) {
 				outlet(4,"/b_mlr/grid/led/level/set", i, 0, 15); // group is playing
-				outBM = Math.floor(1<<(sampleP[i]*boundX)); // make a bitmask of the currently playing step
-				outlet(4,"/b_mlr/grid/led/row", 0, sampleR[i]+1, 255&outBM, (65280&outBM)>>8); // light the sample playback led
 
 				if(i==0) { // redraw the 1st group
 					for(i=0;i<16;i++) inner0[i] = 0; // set array to all zeroes

@@ -23,7 +23,7 @@ glob.rHeight = -1;
 
 
 // need to have sOSC() args go to 't' to deal with /led/map command which takes address&10args
-function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq) { // a=osc address, b-t = data
+function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa) { // a=osc address, b-t = data
 
 
   // this entire function is enclosed inside of a if statement: if(rGate==1)
@@ -78,24 +78,61 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 			if(inlet==0) { // left half of physical grid
 				// send a /led/map of 1st quad, set to 0 or 255 for on/off
 				outlet(0,"/manager/grid/led/map",0,0,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
-				outlet(0,"/manager/grid/led/map",0,8,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
+				if(glob.g1y>8) outlet(0,"/manager/grid/led/map",0,8,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
 			}
 			else { // right half of physical grid
 				// send a /led/map of 2nd quad, set to 0 or 255 for on/off
 				outlet(0,"/manager/grid/led/map",8,0,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
-				outlet(0,"/manager/grid/led/map",8,8,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
+				if(glob.g1y>8) outlet(0,"/manager/grid/led/map",8,8,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
 			}
 		}
 		else if(glob.gMeta == 3) { // portrait128/256 from 2 apps
 			if(inlet==0) { // top half of physical grid
 				// send a /led/map to 1/2 quad, set to 0 or 255 for on/off
 				outlet(0,"/manager/grid/led/map",0,0,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
-				outlet(0,"/manager/grid/led/map",8,0,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
+				if(glob.g1x>8) outlet(0,"/manager/grid/led/map",8,0,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
 			}
 			else { // bottom half of physical grid
 				// send a /led/map of 3/4 quad, set to 0 or 255 for on/off
 				outlet(0,"/manager/grid/led/map",0,8,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
-				outlet(0,"/manager/grid/led/map",8,8,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
+				if(glob.g1y>8) outlet(0,"/manager/grid/led/map",8,8,lAll,lAll,lAll,lAll,lAll,lAll,lAll,lAll);
+			}
+		}
+	}
+	
+	else if(a=="/manager/grid/led/level/all") { // i:<all state>
+		if(glob.gMeta==0) { // only one application so will be inlet==0 only
+			if(inlet==0) { // ignore messages from 2nd application
+				outlet(0,"/manager/grid/led/level/all",x); // send to both outlets (even if only one attached)
+				outlet(1,"/manager/grid/led/level/all",x);
+			}
+		}
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
+			if(inlet==0) outlet(0,"/manager/grid/led/level/all",x); // inlet0=outlet0
+			else outlet(1,"/manager/grid/led/level/all",x);
+		}
+		else if(glob.gMeta==2) { // landcape128 from 2 apps
+			if(inlet==0) { // left half of physical grid
+				// send a /led/map of 1st quad, set to 0 or 255 for on/off
+				outlet(0,"/manager/grid/led/level/map",0,0,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x);
+				if(glob.g1y>8) outlet(0,"/manager/grid/led/level/map",0,8,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x);
+			}
+			else { // right half of physical grid
+				// send a /led/map of 2nd quad, set to 0 or 255 for on/off
+				outlet(0,"/manager/grid/led/level/map",8,0,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x);
+				if(glob.g1y>8) outlet(0,"/manager/grid/led/level/map",8,8,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x);
+			}
+		}
+		else if(glob.gMeta == 3) { // portrait128/256 from 2 apps
+			if(inlet==0) { // top half of physical grid
+				// send a /led/map to 1/2 quad, set to 0 or 255 for on/off
+				outlet(0,"/manager/grid/led/level/map",0,0,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x);
+				if(glob.g1x>8) outlet(0,"/manager/grid/led/level/map",8,0,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x);
+			}
+			else { // bottom half of physical grid
+				// send a /led/map of 3/4 quad, set to 0 or 255 for on/off
+				outlet(0,"/manager/grid/led/level/map",0,8,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x);
+				if(glob.g1x>8) outlet(0,"/manager/grid/led/level/map",8,8,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x);
 			}
 		}
 	}
@@ -163,9 +200,24 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 
 	else if(a=="/manager/grid/led/level/map") { // ridiculous. sorry. please help me make this more elegant & faster?!?!
 		if(glob.gMeta==0 && inlet==0) { // only one application so will be inlet==0 only
-			if(glob.g1x==8) {
-			
-			outlet(0,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq);
+			if(x<glob.g1x && y<glob.g1y) outlet(0,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
+			else if(glob.gridtiling==0 && x>(glob.g1x-1)) outlet(1,"/manager/grid/led/level/map",x-glob.g1x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
+			else if(glob.gridtiling==1 && y>(glob.g1y-1)) outlet(1,"/manager/grid/led/level/map",x,y-glob.g1y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
+		}
+		else if(glob.gMeta==1) { // 2 apps & 2 devices
+			if(inlet==0) outlet(0,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
+			else outlet(1,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
+		}
+		else if(glob.gMeta==2) { // horizontal split
+			if(x==0) { //any x-offset would push grid out of range
+				if(inlet==0) outlet(0,"/manager/grid/led/level/map",0,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
+				else outlet(0,"/manager/grid/led/level/map",8,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
+			}
+		}
+		else if(glob.gMeta == 3) { // vertical split
+			if(y==0) { //any x-offset would push grid out of range
+				if(inlet==0) outlet(0,"/manager/grid/led/level/map",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
+				else outlet(0,"/manager/grid/led/level/map",x,8,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq,rr,ss,tt,uu,vv,ww,xx,yy,zz,aaa,bbb,ccc,ddd,eee,fff,ggg,hhh,iii,jjj,kkk,lll,mmm,nnn,ooo,ppp,qqq,rrr,sss,ttt,uuu,vvv,www,xxx,yyy,zzz,aaaa);
 			}
 		}
 	}
@@ -192,7 +244,7 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 					outlet(1,"/manager/grid/led/row",x,y-glob.g1y,z); // send double-bitmask to right grid
 				}
 			}
-			if(glob.g1x==16) { // if the 1st device attached is 16 wide
+			else if(glob.g1x==16) { // if the 1st device attached is 16 wide
 				if(y<glob.g1y) { // to deal with vertical mode, check if the y-offset pushes it to 2nd device
 					if(x==0) { // and the /led/row applies to the left quad
 						outlet(0,"/manager/grid/led/row",0,y,z,n); // send double bitmask to left grid
