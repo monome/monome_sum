@@ -113,8 +113,8 @@ function mytask() {
         // increment any timer for a currently held column
         if(ton[i]==1) {
             tramp[i] = tramp[i] + 1; // add 1 to current ramp time
-            if(tramp[i]>15) tramp[i] = 15; // limit to 15
-            frics[i] = (tramp[i] + 85) / 100; // limit overall friction to 1. for infinite slide
+            if(tramp[i]>8) tramp[i] = 8; // limit to 15
+            frics[i] = (tramp[i] + 42) / 50; // limit overall friction to 1. for infinite slide
         }
 
         dx[i] = dx[i] + (pointk[i] - x[i]) / g; // dx is the previous dx + (input - currentOut) / gravity

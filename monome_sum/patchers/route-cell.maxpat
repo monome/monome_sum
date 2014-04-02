@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 826.0, 250.0, 83.0, 83.0 ],
+		"rect" : [ 344.0, 123.0, 898.0, 722.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -350,7 +350,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 130.0, 39.0, 20.0 ],
 									"text" : "t #1"
 								}
@@ -427,12 +427,12 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 18.0, 24.0, 75.0, 20.0 ],
 					"restore" : 					{
-						"0fileload" : [ 0 ],
-						"0presetload" : [ 0 ]
+						"#1fileload" : [ 0 ],
+						"#1presetload" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u856005841"
+					"varname" : "u886008419"
 				}
 
 			}
@@ -3465,8 +3465,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 486.0, 294.0, 104.0, 18.0 ],
-									"text" : "0.8 1. 0.4 1."
+									"patching_rect" : [ 486.0, 294.0, 97.0, 18.0 ],
+									"text" : "1. 1. 0.6 1."
 								}
 
 							}
@@ -3479,8 +3479,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 486.0, 264.0, 104.0, 18.0 ],
-									"text" : "1. 0.8 0.4 1."
+									"patching_rect" : [ 486.0, 264.0, 97.0, 18.0 ],
+									"text" : "0.6 1. 1. 1."
 								}
 
 							}
@@ -5604,8 +5604,8 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
-					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
+					"bgoveroncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -5631,8 +5631,8 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
-					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
+					"bgoveroncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -5657,8 +5657,8 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
-					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
+					"bgoveroncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -6071,7 +6071,8 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ]
 	}
 
 }

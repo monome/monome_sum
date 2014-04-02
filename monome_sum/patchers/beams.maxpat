@@ -762,7 +762,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 126.0, 312.0, 111.0, 20.0 ],
-									"text" : "pack f f f 0.8"
+									"text" : "pack f f f 0.6"
 								}
 
 							}
@@ -1021,7 +1021,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.901961, 0.901961, 0.901961, 1.0 ],
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.75 ],
 					"border_bottom" : 0,
 					"border_left" : 0,
 					"border_right" : 0,
@@ -1039,7 +1039,7 @@
 					"presentation_rect" : [ 72.0, 96.0, 496.0, 18.0 ],
 					"signed" : 1,
 					"size" : 16,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"spacing" : 1,
 					"thickness" : 1
 				}

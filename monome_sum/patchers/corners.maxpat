@@ -134,7 +134,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 126.0, 312.0, 111.0, 20.0 ],
-									"text" : "pack f f f 0.8"
+									"text" : "pack f f f 0.6"
 								}
 
 							}
@@ -369,23 +369,23 @@
 					"patching_rect" : [ 396.0, 594.0, 75.0, 20.0 ],
 					"restore" : 					{
 						"friction" : [ 0.1 ],
-						"gravity" : [ 0.95 ],
-						"reflections" : [ 1 ]
+						"gravity" : [ 0.130612 ],
+						"reflections" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u012006562"
+					"varname" : "u798005970"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoncolor" : [ 0.0, 0.501961, 0.25098, 0.35 ],
+					"bgoncolor" : [ 1.0, 0.8, 0.4, 0.7 ],
 					"bgovercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoveroncolor" : [ 0.0, 0.501961, 0.25098, 0.34 ],
-					"border" : 0,
-					"bordercolor" : [ 0.6, 0.6, 0.6, 0.0 ],
+					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 0.7 ],
+					"border" : 1,
+					"borderoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-26",
@@ -397,7 +397,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 596.0, 101.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 487.0, 33.0, 100.0, 18.0 ],
+					"presentation_rect" : [ 487.0, 36.0, 100.0, 15.0 ],
 					"rounded" : 0.0,
 					"text" : "reflections",
 					"texton" : "reflections",
@@ -463,9 +463,9 @@
 				"box" : 				{
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
-					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"bordercolor" : [ 1.0, 1.0, 1.0, 0.75 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.6 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.4 ],
 					"id" : "obj-1",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -499,7 +499,7 @@
 					"presentation_rect" : [ 342.0, 54.0, 245.0, 18.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
 					"signed" : 1,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "friction"
 				}
@@ -526,9 +526,9 @@
 				"box" : 				{
 					"angle" : 90.0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.85 ],
-					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
-					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
+					"bordercolor" : [ 1.0, 1.0, 1.0, 0.75 ],
+					"grad1" : [ 1.0, 1.0, 1.0, 0.6 ],
+					"grad2" : [ 1.0, 1.0, 1.0, 0.4 ],
 					"id" : "obj-13",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -562,7 +562,7 @@
 					"presentation_rect" : [ 90.0, 54.0, 245.0, 18.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
 					"signed" : 1,
-					"slidercolor" : [ 0.0, 0.501961, 0.25098, 1.0 ],
+					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"thickness" : 1,
 					"varname" : "gravity"
 				}
