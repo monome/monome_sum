@@ -96,7 +96,10 @@ function bounds(xb, yb) { // /sys/size message, (x,y)
     steps = yb;
     cols = xb;
 
-    them.length = cols*steps; // update size of output array for full size
+post(yb,xb);
+post();
+
+    //them.length = cols*steps; // update size of output array for full size
 }
 
 function varibright(vari) {
