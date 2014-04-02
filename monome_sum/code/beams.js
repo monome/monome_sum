@@ -3,7 +3,7 @@ outlets = 3; // current value, col states, ramp flag, led out
 
 // define global variables and set defaults
 var tsk = new Task(mytask, this); // our main task
-var tgrain = 50; // set time grain for calculations at 50ms
+var tgrain = 100; // set time grain for calculations at 50ms
 var focus = 0; // is the monome device in focus
 
 var tx = 0;

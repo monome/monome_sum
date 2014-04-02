@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 5,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 48.0, 44.0, 1191.0, 690.0 ],
+		"rect" : [ 343.0, 44.0, 1191.0, 690.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -57,8 +58,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 5,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 488.0, 266.0, 381.0, 443.0 ],
@@ -323,22 +325,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 54.0, 486.0, 111.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
-						"digest" : "",
 						"default_fontname" : "Andale Mono",
-						"fontname" : "Andale Mono",
-						"tags" : "",
 						"default_fontsize" : 12.0,
 						"description" : "",
-						"globalpatchername" : "",
+						"digest" : "",
 						"fontface" : 0,
-						"fontsize" : 12.0
+						"fontname" : "Andale Mono",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p panel-colour"
@@ -373,16 +374,16 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u892016485"
+					"varname" : "u856008396"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoncolor" : [ 0.0, 0.501961, 0.25098, 0.5 ],
+					"bgoncolor" : [ 0.0, 0.501961, 0.25098, 0.35 ],
 					"bgovercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoveroncolor" : [ 0.0, 0.501961, 0.25098, 0.5 ],
+					"bgoveroncolor" : [ 0.0, 0.501961, 0.25098, 0.34 ],
 					"border" : 0,
 					"bordercolor" : [ 0.6, 0.6, 0.6, 0.0 ],
 					"fontname" : "Andale Mono",
@@ -411,6 +412,7 @@
 					"fontface" : 2,
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
+					"frgb" : 0.0,
 					"id" : "obj-94",
 					"linecount" : 3,
 					"maxclass" : "comment",
@@ -427,6 +429,7 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 16.0,
+					"frgb" : 0.0,
 					"id" : "obj-93",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -443,6 +446,7 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-11",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -463,7 +467,6 @@
 					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
 					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
 					"id" : "obj-1",
-					"ignoreclick" : 1,
 					"maxclass" : "panel",
 					"mode" : 1,
 					"numinlets" : 1,
@@ -506,6 +509,7 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-70",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -526,7 +530,6 @@
 					"grad1" : [ 1.0, 1.0, 1.0, 0.7 ],
 					"grad2" : [ 1.0, 1.0, 1.0, 0.55 ],
 					"id" : "obj-13",
-					"ignoreclick" : 1,
 					"maxclass" : "panel",
 					"mode" : 1,
 					"numinlets" : 1,
@@ -579,8 +582,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 5,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -851,22 +855,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 216.0, 544.0, 83.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
-						"digest" : "",
 						"default_fontname" : "Andale Mono",
-						"fontname" : "Andale Mono",
-						"tags" : "",
 						"default_fontsize" : 12.0,
 						"description" : "",
-						"globalpatchername" : "",
+						"digest" : "",
 						"fontface" : 0,
-						"fontsize" : 12.0
+						"fontname" : "Andale Mono",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p gridsize"
@@ -887,8 +890,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 5,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
@@ -1052,22 +1056,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 216.0, 472.0, 75.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
-						"digest" : "",
 						"default_fontname" : "Andale Mono",
-						"fontname" : "Andale Mono",
-						"tags" : "",
 						"default_fontsize" : 12.0,
 						"description" : "",
-						"globalpatchername" : "",
+						"digest" : "",
 						"fontface" : 0,
-						"fontsize" : 12.0
+						"fontname" : "Andale Mono",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p refresh"
@@ -1220,6 +1223,7 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 36.0,
+					"frgb" : 0.0,
 					"id" : "obj-206",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1233,6 +1237,7 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-172",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1253,6 +1258,7 @@
 					"outlettype" : [ "", "", "", "", "", "", "" ],
 					"patching_rect" : [ 184.0, 144.5, 142.0, 20.0 ],
 					"saved_object_attributes" : 					{
+						"filename" : "corners.js",
 						"parameter_enable" : 0
 					}
 ,
@@ -2104,15 +2110,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "corners.js",
-				"bootpath" : "/Users/tehn/Work/llllllll/monome_sum/code",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "serialosc.maxpat",
-				"bootpath" : "/Users/tehn/Work/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
