@@ -160,8 +160,8 @@ function ledSet(x,y,s) {
 }
 
 function flashStep(x) {
-	previousStep = currentStep; // remember last step
-	currentStep = x; //grab new step
+	previousStep = currentStep%localx; // remember last step wrapped
+	currentStep = x%localx; //grab new step wrapped to physical available size
 	
 	// draw
 	if(vb==1) {
