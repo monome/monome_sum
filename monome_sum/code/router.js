@@ -547,9 +547,9 @@ function mapping(x) {
 
 function setMapping(x,y,z,n) {
 	// here we set a mapping key from a preset
-	if(glob.g1x<x && glob.rDevice==0) glob.rWidth = x-8;
-	else if(g2x<x && glob.rDevice==1) glob.rWidth = x-8;
-	else glob.rWidth = x;
+	//if(glob.g1x<x && z==0) glob.rWidth = x-8; >> these are nice but have issues if devices not yet attached
+	//else if(g2x<x && z==1) glob.rWidth = x-8;
+	glob.rWidth = x;
 	glob.rHeight = y;
 	glob.rDevice = z; // set which device is the router
 	glob.rQuad = n;

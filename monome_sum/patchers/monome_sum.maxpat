@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 398.0, 244.0, 769.0, 240.0 ],
+		"rect" : [ 396.0, 126.0, 769.0, 240.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -613,7 +613,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -650,7 +650,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
@@ -670,8 +670,7 @@
 					"text" : "map",
 					"texton" : "map",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"varname" : "routehorizontal[1]"
+					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -691,7 +690,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
@@ -1405,8 +1404,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 54.0, 294.0, 90.0, 19.0 ],
-									"text" : "∆master.maxpat",
+									"patching_rect" : [ 54.0, 294.0, 77.0, 19.0 ],
+									"text" : "_sum.maxpat",
 									"varname" : "∆batch"
 								}
 
@@ -1792,7 +1791,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -1857,12 +1856,11 @@
 					"patching_rect" : [ 684.0, 18.0, 59.5, 19.0 ],
 					"restore" : 					{
 						"advanced" : [ 0 ],
-						"routehorizontal[1]" : [ 0 ],
 						"tile-orientation" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u402005983"
+					"varname" : "u008005982"
 				}
 
 			}
@@ -2836,9 +2834,9 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 198.0, 180.0, 107.0, 19.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1563, 542, 2238, 876 ],
+						"client_rect" : [ 947, 435, 1622, 769 ],
 						"parameter_enable" : 0,
-						"storage_rect" : [ 409, 44, 1655, 1046 ]
+						"storage_rect" : [ 1009, 44, 2255, 1046 ]
 					}
 ,
 					"text" : "pattrstorage sbatch",
@@ -2874,7 +2872,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -2898,7 +2896,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -2966,7 +2964,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -2989,7 +2987,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
@@ -4047,7 +4045,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 499.0, 44.0, 906.0, 468.0 ],
+						"rect" : [ 28.0, 513.0, 906.0, 468.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4091,7 +4089,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 378.0, 186.0, 169.0, 20.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 0, 3, 0, 0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
@@ -4578,7 +4576,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "int" ],
 													"patching_rect" : [ 126.0, 192.0, 32.5, 20.0 ],
-													"presentation_rect" : [ 146.0, 192.0, 0.0, 0.0 ],
 													"text" : "i"
 												}
 
@@ -4593,7 +4590,6 @@
 													"numoutlets" : 3,
 													"outlettype" : [ "int", "bang", "int" ],
 													"patching_rect" : [ 54.0, 168.0, 61.0, 20.0 ],
-													"presentation_rect" : [ 74.0, 168.0, 0.0, 0.0 ],
 													"text" : "t 0 b i"
 												}
 
@@ -4693,7 +4689,6 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "bang" ],
 													"patching_rect" : [ 342.0, 228.0, 32.0, 20.0 ],
-													"presentation_rect" : [ 250.0, 221.0, 0.0, 0.0 ],
 													"text" : "t b"
 												}
 
@@ -4722,7 +4717,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "bang", "" ],
 													"patching_rect" : [ 306.0, 198.0, 32.5, 20.0 ],
-													"presentation_rect" : [ 252.0, 139.0, 0.0, 0.0 ],
 													"text" : "sel"
 												}
 
@@ -4737,7 +4731,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "bang", "" ],
 													"patching_rect" : [ 270.0, 198.0, 32.5, 20.0 ],
-													"presentation_rect" : [ 216.0, 139.0, 0.0, 0.0 ],
 													"text" : "sel"
 												}
 
@@ -4752,7 +4745,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "bang", "" ],
 													"patching_rect" : [ 306.0, 162.0, 32.5, 20.0 ],
-													"presentation_rect" : [ 247.0, 124.0, 0.0, 0.0 ],
 													"text" : "sel"
 												}
 
@@ -4781,7 +4773,6 @@
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 270.0, 42.0, 53.0, 19.0 ],
-													"presentation_rect" : [ 157.0, 78.0, 0.0, 0.0 ],
 													"text" : "zl slice 1"
 												}
 
@@ -11862,136 +11853,6 @@
 				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "∆master.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "soren_synthitime.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "soren_poly.synthitime~.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "batch_mlr.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mlr_ch.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "batch_mlr_play.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "flin.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "flin_sub.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "step.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "tiltrap.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gome.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "playback.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "corners.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "corners.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "beams.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "beams.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "yafr2.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "master-p.json",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/data",
-				"patcherrelativepath" : "../data",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "xplay~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

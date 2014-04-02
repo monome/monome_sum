@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 553.0, 120.0, 269.0, 373.0 ],
+		"rect" : [ 1039.0, 128.0, 269.0, 373.0 ],
 		"bgcolor" : [ 0.901961, 0.901961, 0.901961, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -717,7 +717,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
+					"source" : [ "obj-1", 1 ]
 				}
 
 			}

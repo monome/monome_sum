@@ -51,7 +51,7 @@ function key(x,y,s) {
 			loopLength = localx; // set the loop length to the full width
 			stepRow1 = 255;
 			stepRow2 = 255;
-			outlet(1, currentStep, loopStart, loopLength-1, localx); // send new playhead details
+			outlet(1, currentStep, loopStart, loopLength-1, localx-1); // send new playhead details
 			drawSteps();
 		}
 
@@ -64,7 +64,7 @@ function key(x,y,s) {
 				if((i%16) < 8) stepRow1 = stepRow1 + (1<<(i%16))
 				else stepRow2 = stepRow2 + (1<<((i-8)%16));
 			}
-			outlet(1, currentStep, loopStart, loopLength-1, localx); // send new playhead details
+			outlet(1, currentStep, loopStart, loopLength-1, localx-1); // send new playhead details
 			drawSteps();
 		}
 		
