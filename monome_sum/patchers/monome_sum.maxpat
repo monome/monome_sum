@@ -32,6 +32,20 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
+					"id" : "obj-47",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 126.0, 210.0, 32.5, 17.0 ],
+					"text" : "1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1873,7 +1887,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u722000164"
+					"varname" : "u339016318"
 				}
 
 			}
@@ -1896,7 +1910,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 310.0, 461.0, 992.0, 503.0 ],
+						"rect" : [ 63.0, 401.0, 992.0, 503.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1919,12 +1933,54 @@
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
+									"id" : "obj-45",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 108.0, 192.0, 32.0, 20.0 ],
+									"text" : "t b"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-46",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 216.0, 210.0, 216.0, 20.0 ],
+									"text" : "temp delay to fix load issue"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 144.0, 210.0, 68.0, 20.0 ],
+									"text" : "del 1000"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
 									"id" : "obj-38",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "int", "int" ],
-									"patching_rect" : [ 234.0, 306.0, 75.0, 20.0 ],
+									"patching_rect" : [ 234.0, 336.0, 75.0, 20.0 ],
 									"text" : "change -1"
 								}
 
@@ -1980,9 +2036,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
-									"outlettype" : [ "bang", "bang", "bang" ],
+									"outlettype" : [ "int", "bang", "bang" ],
 									"patching_rect" : [ 558.0, 360.0, 61.0, 20.0 ],
-									"text" : "t b b b"
+									"text" : "t 1 b b"
 								}
 
 							}
@@ -2248,7 +2304,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 234.0, 336.0, 126.0, 20.0 ],
+									"patching_rect" : [ 234.0, 366.0, 126.0, 20.0 ],
 									"text" : "prepend savemode"
 								}
 
@@ -2262,7 +2318,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "int" ],
-									"patching_rect" : [ 198.0, 246.0, 47.0, 20.0 ],
+									"patching_rect" : [ 198.0, 276.0, 47.0, 20.0 ],
 									"text" : "t b 0"
 								}
 
@@ -2276,7 +2332,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 270.0, 276.0, 150.0, 20.0 ],
+									"patching_rect" : [ 270.0, 306.0, 150.0, 20.0 ],
 									"text" : "dirty flag"
 								}
 
@@ -2290,7 +2346,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 234.0, 276.0, 32.5, 20.0 ],
+									"patching_rect" : [ 234.0, 306.0, 32.5, 20.0 ],
 									"text" : "i"
 								}
 
@@ -2304,7 +2360,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 270.0, 246.0, 32.0, 20.0 ],
+									"patching_rect" : [ 270.0, 276.0, 32.0, 20.0 ],
 									"text" : "t 1"
 								}
 
@@ -2318,7 +2374,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "int" ],
-									"patching_rect" : [ 144.0, 222.0, 47.0, 20.0 ],
+									"patching_rect" : [ 144.0, 240.0, 47.0, 20.0 ],
 									"text" : "t b 1"
 								}
 
@@ -2332,7 +2388,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 144.0, 192.0, 133.0, 20.0 ],
+									"patching_rect" : [ 144.0, 180.0, 133.0, 20.0 ],
 									"text" : "route read recall"
 								}
 
@@ -2416,7 +2472,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 180.0, 222.0, 216.0, 20.0 ],
+									"patching_rect" : [ 180.0, 240.0, 216.0, 20.0 ],
 									"text" : "recalls preset after loading"
 								}
 
@@ -2445,7 +2501,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 144.0, 162.0, 155.0, 20.0 ],
+									"patching_rect" : [ 144.0, 150.0, 155.0, 20.0 ],
 									"text" : "r [manager]ps-output"
 								}
 
@@ -2521,6 +2577,15 @@
 									"hidden" : 0,
 									"midpoints" : [ 84.0, 140.0 ],
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-11", 0 ]
 								}
 
 							}
@@ -2625,7 +2690,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
+									"destination" : [ "obj-45", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-29", 0 ]
@@ -2774,6 +2839,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-44", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-45", 0 ]
 								}
 
 							}
@@ -4115,7 +4189,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 378.0, 186.0, 277.0, 20.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 15, 0, 0, 1 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
@@ -11697,6 +11771,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-58", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-47", 0 ]
 				}
 
 			}
