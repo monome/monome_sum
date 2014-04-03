@@ -155,15 +155,15 @@ function aa_draw() { // draws the x array in the monome /grid/led/level/map form
 		//if(index[j]>steps) index[j]=steps; // clamp column bottom
 		//else if(index[j]<0) index[j]=0; // clamp column top
 
-        for(i=0;i<index[j];i++) them[j+(i*steps)] = b-direction*b; // shades from 0 to level with 'b' colour
+        for(i=0;i<index[j];i++) them[j+(i*cols)] = b-direction*b; // shades from 0 to level with 'b' colour
 
         if(direction==0) {
             them[index[j]*cols+j] = 15-Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
             them[index[j]*cols+j-cols] = Math.max(15-them[index[j]*cols+j],b); // as above but wraps to width
         }
         else {
-            them[index[j]*cols+j-cols] = Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
-            them[index[j]*cols+j] = Math.max(15-them[index[j]*cols+j-cols],b); // as above but wraps to width
+			them[index[j]*cols+j-cols] = Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
+        	them[index[j]*cols+j] = Math.max(15-them[index[j]*cols+j-cols],b); // as above but wraps to width
         }
     }
     them.length = steps*cols; // culls extraneous added cells
