@@ -131,12 +131,6 @@ function mytask() {
     for(i=0;i<cols;i++) {
         xN[i] = (x[i]-(steps/2))/((steps-1)/2)-1/(steps-1);
     }
-
-
-    if(cols==8) {
-        for(i=0;i<8;i++) x[i+8] = x[i];
-    }
-
     
     outlet(0,xN); // sends the full array of current slider levels normalised 0 to 1.
 
@@ -155,28 +149,24 @@ function draw() { // draw with /grid/led/map without aa
 
 function aa_draw() { // draws the x array in the monome /grid/led/level/map format with anti-aliasing
     for(i=0;i<steps*cols;i++) them[i] = direction*b; //set all leds to 0 or background colour depending direction
-
     for(j=0;j<cols;j++) { // iterate for each column (j)
 
         index[j] = steps-Math.floor(x[j]); //index is x (current location) rounded down to int
-		if(index[j]>steps) index[j]=steps; // clamp column bottom
-		else if(index[j]<0) index[j]=0; // clamp column top
+		//if(index[j]>steps) index[j]=steps; // clamp column bottom
+		//else if(index[j]<0) index[j]=0; // clamp column top
 
         for(i=0;i<index[j];i++) them[j+(i*steps)] = b-direction*b; // shades from 0 to level with 'b' colour
 
         if(direction==0) {
-            them[index[j]*steps+j] = 15-Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
-            them[index[j]*steps+j-cols] = Math.max(15-them[index[j]*steps+j],b); // as above but wraps to width
+            them[index[j]*cols+j] = 15-Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
+            them[index[j]*cols+j-cols] = Math.max(15-them[index[j]*cols+j],b); // as above but wraps to width
         }
         else {
-            them[index[j]*steps+j-cols] = Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
-            them[index[j]*steps+j] = Math.max(15-them[index[j]*steps+j-steps],b); // as above but wraps to width
+            them[index[j]*cols+j-cols] = Math.floor(15*(x[j]-(steps-index[j]))); // .01 is to avoid weird overflow edge case
+            them[index[j]*cols+j] = Math.max(15-them[index[j]*cols+j-cols],b); // as above but wraps to width
         }
     }
-
     them.length = steps*cols; // culls extraneous added cells
-    
-    //outlet(1,them); // outputs anti-aliased slider
 
     if(steps==8 && cols==8) outlet(1,0,0,them); // outputs anti-aliased slider
     

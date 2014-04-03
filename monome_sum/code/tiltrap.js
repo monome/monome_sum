@@ -51,8 +51,10 @@ function key(x,y,s) {
 			loopLength = localx; // set the loop length to the full width
 			stepRow1 = 255;
 			stepRow2 = 255;
-			outlet(1, currentStep, loopStart, loopLength-1, localx-1); // send new playhead details
-			drawSteps();
+			flashStep(currentStep);
+			outlet(1, 0, loopStart, loopLength-1); // send new playhead details
+			
+			//drawSteps();
 		}
 
 		else if(c>1 && s==1) { // interpret double-press & loop
@@ -64,8 +66,10 @@ function key(x,y,s) {
 				if((i%16) < 8) stepRow1 = stepRow1 + (1<<(i%16))
 				else stepRow2 = stepRow2 + (1<<((i-8)%16));
 			}
-			outlet(1, currentStep, loopStart, loopLength-1, localx-1); // send new playhead details
-			drawSteps();
+			flashStep(currentStep);
+			outlet(1, 0, loopStart, loopLength-1); // send new playhead details
+
+			//drawSteps();
 		}
 		
 		// if we are started and the count hits zero, then revert to !started
@@ -160,7 +164,6 @@ function ledSet(x,y,s) {
 }
 
 function flashStep(x) {
-	previousStep = currentStep%localx; // remember last step wrapped
 	currentStep = x%localx; //grab new step wrapped to physical available size
 	
 	// draw
@@ -170,13 +173,12 @@ function flashStep(x) {
 		oldcol.length = localy-1;		
 
 		for(i=0;i<localy-1;i++) {
-			//ccol[i] = 5; // makes whole current step at brightness 5
-			ccol[i] = bits[((i*32)+currentStep+1056)%1024]*10+5; // sets on to 15, off to 5
-			oldcol[i] = bits[((i*32)+previousStep+1056)%1024]*15; // reverts to 0/15
+			ccol[i] = bits[((i*32)+currentStep+32)%1024]*10+5; // sets on to 15, off to 5
+			oldcol[i] = bits[((i*32)+previousStep+32)%1024]*15; // reverts to 0/15
 		}
 		
 		outlet(0,"/b_step/grid/led/level/col",currentStep,0,5,ccol);
-		outlet(0,"/b_step/grid/led/level/col",(currentStep+15)%localx,0,5,oldcol);
+		if(currentStep!=previousStep) outlet(0,"/b_step/grid/led/level/col",previousStep,0,5,oldcol);
 		
 		drawSteps(); // overlay top row
 	}
@@ -192,6 +194,8 @@ function flashStep(x) {
 	
 	flashL = 1; // reset counter
 	tflash.repeat(); //start the timer
+	
+	previousStep = currentStep; // remember last step wrapped
 
 }
 

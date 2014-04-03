@@ -18,7 +18,7 @@
 		"gridonopen" : 0,
 		"gridsize" : [ 18.0, 6.0 ],
 		"gridsnaponopen" : 0,
-		"statusbarvisible" : 2,
+		"statusbarvisible" : 0,
 		"toolbarvisible" : 1,
 		"boxanimatetime" : 200,
 		"imprint" : 0,
@@ -95,19 +95,7 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Andale Mono",
-					"fontsize" : 12.0,
-					"id" : "obj-28",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 342.0, 414.0, 68.0, 20.0 ],
-					"text" : "print #1"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"hidden" : 1,
 					"hint" : "click to set the filepath of this application and have it loaded when smallbatch opens.",
 					"id" : "obj-15",
 					"maxclass" : "hint",
@@ -121,6 +109,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "select the prefix of your target patch",
 					"id" : "obj-11",
 					"maxclass" : "hint",
@@ -142,13 +131,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 360.0, 210.0, 155.0, 20.0 ],
-					"restore" : [ "/b_flin" ],
+					"patching_rect" : [ 360.0, 210.0, 263.0, 20.0 ],
+					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "pattr #1prefixselect",
+					"text" : "pattr #1prefixselect @autorestore 0",
 					"varname" : "#1prefixselect"
 				}
 
@@ -170,6 +159,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"hint" : "click to set the filepath of this application and have it loaded when smallbatch opens.",
 					"id" : "obj-14",
 					"maxclass" : "hint",
@@ -197,22 +187,18 @@
 					"color" : [ 1.0, 0.4, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
-					"frozen_object_attributes" : 					{
-						"thru" : 1
-					}
-,
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 306.0, 378.0, 126.0, 20.0 ],
-					"restore" : [ "Stripped:/Users/Trent/Documents/Monome2013/_2013 monome website +patches +jsons/updated for serialosc/parc_0.2.1/parc.maxpat" ],
+					"patching_rect" : [ 306.0, 378.0, 234.0, 20.0 ],
+					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "pattr #1filepath",
+					"text" : "pattr #1filepath @autorestore 0",
 					"varname" : "#1filepath"
 				}
 
@@ -432,7 +418,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u886008419"
+					"varname" : "u406008419"
 				}
 
 			}
@@ -455,7 +441,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 52.0, 46.0, 770.0, 852.0 ],
+						"rect" : [ 52.0, 72.0, 770.0, 826.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1295,7 +1281,7 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-76",
-									"items" : [ 0, ",", 15864, ",", 15873, ",", 28069, ",", 16977, ",", 15203, ",", 24617 ],
+									"items" : [ 0, ",", 28053, ",", 12695, ",", 24387, ",", 22795, ",", 23633, ",", 18732 ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -3178,7 +3164,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 645.0, 400.0, 665.0, 480.0 ],
+						"rect" : [ 645.0, 426.0, 665.0, 454.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3465,8 +3451,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 486.0, 294.0, 97.0, 18.0 ],
-									"text" : "1. 1. 0.6 1."
+									"patching_rect" : [ 486.0, 294.0, 104.0, 18.0 ],
+									"text" : "1. 1. 0.6 0.6"
 								}
 
 							}
@@ -3479,8 +3465,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 486.0, 264.0, 97.0, 18.0 ],
-									"text" : "0.6 1. 1. 1."
+									"patching_rect" : [ 486.0, 264.0, 104.0, 18.0 ],
+									"text" : "0.6 1. 1. 0.6"
 								}
 
 							}
@@ -5135,6 +5121,7 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"framecolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
+					"hidden" : 1,
 					"id" : "obj-7",
 					"items" : [ "---", ",", "/b_beams", ",", "/b_corners", ",", "/b_gome", ",", "/b_step", ",", "/b_flin", ",", "/b_mlr" ],
 					"maxclass" : "umenu",
@@ -5152,9 +5139,10 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"border" : 1,
-					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"bordercolor" : [ 0.4, 0.4, 0.4, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-27",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -5603,12 +5591,14 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"bgoveroncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
+					"bordercolor" : [ 0.4, 0.4, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-23",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -5630,12 +5620,14 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"bgoveroncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
 					"border" : 1,
+					"bordercolor" : [ 0.4, 0.4, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
+					"hidden" : 1,
 					"id" : "obj-20",
 					"maxclass" : "textbutton",
 					"mode" : 1,
@@ -5657,8 +5649,8 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
-					"bgoveroncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 0.6 ],
+					"bgoveroncolor" : [ 0.6, 1.0, 1.0, 0.6 ],
 					"border" : 1,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -5673,9 +5665,9 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 33.0, 34.0, 83.0, 83.0 ],
 					"rounded" : 0.0,
-					"text" : "flin",
+					"text" : "---",
 					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"texton" : "flin",
+					"texton" : "---",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textovercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ]
@@ -5842,15 +5834,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-44", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-28", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-44", 2 ]
 				}
 
 			}
