@@ -13,6 +13,7 @@ var bx =  8;
 var by = 8;
 var f = 0.995;
 var keys = 0;
+var vb = 0;
 var r = new Array(4);
 r[0] = 1;
 r[1] = 1;
@@ -135,8 +136,26 @@ function bang() {
 //	outlet(4,x/bx,1-(y/by),dx/bx,dy/by);
 	outlet(4,Math.pow(16,(x/bx))/4,Math.pow(16,(1-(y/by)))/4,Math.pow(16,(dx/bx))/4,Math.pow(16,(dy/by))/4);
 	//outlet(5,keys);
-    outlet(6,oldx[2],oldy[2],oldx[1],oldy[1],oldx[0],oldy[0],Math.floor(x),Math.floor(y));
 
+
+
+		/////// DRAW LEDS //////
+		
+    if(vb==0) { // draw monochrome
+		outlet(6,"/b_corners/grid/led/all", 0);
+		outlet(6,"/b_corners/grid/led/set",Math.floor(x),Math.floor(y), 1);
+	}
+	else { // draw varibright
+		outlet(6,"/b_corners/grid/led/all", 0);
+		outlet(6,"/b_corners/grid/led/level/set", oldx[2],oldy[2], 1);
+		outlet(6,"/b_corners/grid/led/level/set", oldx[1],oldy[1], 5);
+		outlet(6,"/b_corners/grid/led/level/set", oldx[0],oldy[0], 10);
+		outlet(6,"/b_corners/grid/led/level/set", Math.floor(x),Math.floor(y), 15);
+	}
     //outlet(1,y);
     //outlet(0,x);
+}
+
+function varibright(x) {
+	vb = x;
 }

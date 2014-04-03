@@ -96,9 +96,6 @@ function bounds(xb, yb) { // /sys/size message, (x,y)
     steps = yb;
     cols = xb;
 
-post(yb,xb);
-post();
-
     //them.length = cols*steps; // update size of output array for full size
 }
 
@@ -109,7 +106,7 @@ function varibright(vari) {
 function mytask() {
     // the timed function which occurs repeatedly
 
-    for(i=0;i<cols;i++) {
+    for(i=0;i<16;i++) { // calculate all 16 cols even if an 8x8 grid (so 16wide grids in split mode can still ramp)
         // increment any timer for a currently held column
         if(ton[i]==1) {
             tramp[i] = tramp[i] + 1; // add 1 to current ramp time
@@ -128,7 +125,7 @@ function mytask() {
     }
 
 
-    for(i=0;i<cols;i++) {
+    for(i=0;i<16;i++) { // again process all beams, not just visible
         xN[i] = (x[i]-(steps/2))/((steps-1)/2)-1/(steps-1);
     }
     

@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 105.0, 104.0, 938.0, 682.0 ],
+		"rect" : [ 611.0, 44.0, 938.0, 682.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -593,14 +593,14 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 396.0, 498.0, 75.0, 20.0 ],
 					"restore" : 					{
-						"pitch" : [ 1.0 ],
+						"pitch" : [ 0.093878 ],
 						"space" : [ 0.969831 ],
 						"tone" : [ -0.252362 ],
-						"width" : [ 1.0 ]
+						"width" : [ -0.461224 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u502005958"
+					"varname" : "u646010867"
 				}
 
 			}
@@ -1507,7 +1507,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 310.0, 134.0, 870.0, 710.0 ],
+						"rect" : [ 825.0, 103.0, 870.0, 710.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1535,8 +1535,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 342.0, 228.0, 39.0, 20.0 ],
-									"text" : "* 8."
+									"patching_rect" : [ 342.0, 228.0, 47.0, 20.0 ],
+									"text" : "* 11."
 								}
 
 							}
@@ -1564,7 +1564,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
 									"patching_rect" : [ 342.0, 192.0, 39.0, 20.0 ],
-									"text" : "* 3."
+									"text" : "* 5."
 								}
 
 							}
@@ -4199,6 +4199,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 814.0, 284.0 ],
+					"source" : [ "obj-15", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -4211,6 +4221,16 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-16", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-48", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 693.0, 100.0 ],
 					"source" : [ "obj-16", 1 ]
 				}
 
@@ -4666,6 +4686,21 @@
 					"source" : [ "obj-83", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "flin_sub.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "serialosc.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ]
 	}
