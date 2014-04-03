@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 344.0, 123.0, 898.0, 722.0 ],
+		"rect" : [ 732.0, 49.0, 898.0, 722.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -132,7 +132,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 360.0, 210.0, 263.0, 20.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ "---" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -418,7 +418,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u406008419"
+					"varname" : "u222016304"
 				}
 
 			}
@@ -441,7 +441,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 52.0, 72.0, 770.0, 826.0 ],
+						"rect" : [ 40.0, 45.0, 770.0, 826.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -490,7 +490,7 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-50",
-									"items" : [ "---", ",", "/b_beams", ",", "/b_corners", ",", "/b_gome", ",", "/b_step", ",", "/b_flin", ",", "/b_mlr" ],
+									"items" : [ "---", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -808,8 +808,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 432.0, 216.0, 39.0, 20.0 ],
-									"text" : "gate"
+									"patching_rect" : [ 432.0, 216.0, 68.0, 20.0 ],
+									"text" : "gate 1 1"
 								}
 
 							}
@@ -1141,7 +1141,7 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"items" : [ "---", ",", "/b_beams", ",", "/b_corners", ",", "/b_gome", ",", "/b_step", ",", "/b_flin", ",", "/b_mlr" ],
+									"items" : [ "---", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1281,7 +1281,7 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-76",
-									"items" : [ 0, ",", 28053, ",", 12695, ",", 24387, ",", 22795, ",", 23633, ",", 18732 ],
+									"items" : [ 0, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 20015, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 19495, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 22181, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 20286, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 13445, ",", 15057, ",", 15057, ",", 15057, ",", 15057, ",", 15057, ",", 15057, ",", 15057, ",", 15057, ",", 15057, ",", 15057, ",", 15057, ",", 15057 ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -1673,10 +1673,28 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-2", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-35", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-42", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"midpoints" : [ 144.0, 290.0 ],
+									"source" : [ "obj-35", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-51", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
 									"source" : [ "obj-35", 0 ]
 								}
 
@@ -2021,24 +2039,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-9", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-2", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-90", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-51", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-90", 0 ]
 								}
 
 							}
@@ -5123,7 +5123,7 @@
 					"framecolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 					"hidden" : 1,
 					"id" : "obj-7",
-					"items" : [ "---", ",", "/b_beams", ",", "/b_corners", ",", "/b_gome", ",", "/b_step", ",", "/b_flin", ",", "/b_mlr" ],
+					"items" : [ "---", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_beams", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_corners", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_gome", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_step", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_flin", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr", ",", "/b_mlr" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
