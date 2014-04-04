@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -815670993,
+	"modificationdate" : -815491450,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -21,6 +21,11 @@
 			}
 ,
 			"route-cell.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"_sum.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -89,21 +94,46 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
-,
-			"_sum.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
 
 		}
 ,
 		"media" : 		{
-			"R-soulchicken2.aif" : 			{
+			"SoulChicken.aif" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"V-lists.aif" : 			{
+			"Pianos.aif" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"Counterpoint.aiff" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"Voices.aif" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"Timba.aif" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"TheBends.aif" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"Plucks.aif" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"DrumSolo.aif" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}

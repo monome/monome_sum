@@ -579,13 +579,13 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 396.0, 594.0, 75.0, 20.0 ],
 					"restore" : 					{
-						"friction" : [ -0.746939 ],
-						"gravity" : [ 0.828571 ],
+						"friction" : [ -0.996502 ],
+						"gravity" : [ 0.804081 ],
 						"reflections" : [ 1 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u152000725"
+					"varname" : "u562016331"
 				}
 
 			}
@@ -1977,6 +1977,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
 				}
 
 			}

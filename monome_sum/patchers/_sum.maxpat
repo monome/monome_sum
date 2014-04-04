@@ -29,6 +29,48 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-15",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 234.0, 474.0, 32.5, 18.0 ],
+					"text" : "0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 216.0, 552.0, 32.0, 20.0 ],
+					"text" : "t 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 72.0, 606.0, 83.0, 20.0 ],
+					"text" : "route read"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.407843, 0.407843, 0.407843, 0.0 ],
 					"bordercolor" : [ 0.2, 0.2, 0.2, 0.0 ],
 					"coldcolor" : [ 0.0, 0.0, 0.0, 0.51 ],
@@ -123,8 +165,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 54.0, 558.0, 32.5, 17.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 108.0, 516.0, 34.0, 17.0 ],
 					"text" : "read"
 				}
 
@@ -167,8 +207,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 18.0, 492.0, 47.0, 18.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 90.0, 456.0, 47.0, 18.0 ],
 					"text" : "store"
 				}
 
@@ -184,15 +222,15 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 18.0, 612.0, 278.0, 128.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 7,
-					"presentation_rect" : [ 144.0, 438.0, 558.0, 101.0 ],
 					"text" : "for soren:\n1: click the preset you want to edit (it will recall whatever is stored)\n2: change the parameters\n3: press 'store'\n4: press 'write' to save to disk\n--\n5: press 'read' and select your savefile to load after rebooting"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"border" : 1,
+					"bordercolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"borderoncolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
 					"clicktabcolor" : [ 1.0, 0.8, 0.4, 0.7 ],
 					"clicktextcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"fontname" : "Andale Mono",
@@ -210,6 +248,7 @@
 					"patching_rect" : [ 108.0, 492.0, 90.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 558.0, 360.0, 525.0, 54.0 ],
+					"rounded" : 0.0,
 					"tabcolor" : [ 0.901961, 0.901961, 0.901961, 1.0 ],
 					"tabs" : [ "1", "2", "3", "4", "5", "6", "7", "8" ]
 				}
@@ -447,7 +486,7 @@
 					"patching_rect" : [ 414.0, 594.0, 54.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 829.0, 306.0, 72.0, 19.0 ],
-					"text" : "-9 dB"
+					"text" : "-7 dB"
 				}
 
 			}
@@ -536,8 +575,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 18.0, 546.0, 34.0, 17.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 108.0, 486.0, 34.0, 17.0 ],
 					"text" : "write"
 				}
 
@@ -582,13 +619,13 @@
 					"patching_rect" : [ 180.0, 576.0, 59.5, 19.0 ],
 					"restore" : 					{
 						"m-key" : [ 7 ],
-						"m-scale" : [ 0 ],
-						"m-tempo" : [ 59.836735 ],
-						"m-volume" : [ -9.746939 ]
+						"m-scale" : [ 1 ],
+						"m-tempo" : [ 108.32653 ],
+						"m-volume" : [ -7.689796 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u627005974"
+					"varname" : "u491010925"
 				}
 
 			}
@@ -2853,8 +2890,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 324.0, 546.0, 32.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 789.0, 500.0, 54.0, 20.0 ],
 					"text" : "dac"
 				}
 
@@ -2867,9 +2902,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 306.0, 546.0, 20.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 788.0, 481.0, 37.375, 37.375 ]
+					"patching_rect" : [ 306.0, 546.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -3022,7 +3055,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 0.6, 0.6 ],
+					"bgcolor" : [ 0.8, 0.8, 0.8, 0.8 ],
 					"border" : 1,
 					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
 					"id" : "obj-32",
@@ -3213,6 +3246,15 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-98", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3244,6 +3286,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
@@ -3474,6 +3525,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-76", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3570,6 +3630,146 @@
 					"source" : [ "obj-96", 0 ]
 				}
 
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-98", 0 ]
+				}
+
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "soren_synthitime.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "soren_poly.synthitime~.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "batch_mlr.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mlr_ch.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "batch_mlr_play.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "serialosc.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "flin.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "flin_sub.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "step.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tiltrap.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "gome.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "playback.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "corners.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "corners.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "beams.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "beams.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "yafr2.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "master-p.json",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/data",
+				"patcherrelativepath" : "../data",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "xplay~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}
