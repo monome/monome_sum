@@ -14,6 +14,9 @@ var by = 8;
 var f = 0.995;
 var keys = 0;
 var vb = 0;
+var brake = 0;
+var friction = 1;
+var update = 0;
 var r = new Array(4);
 r[0] = 1;
 r[1] = 1;
@@ -60,8 +63,18 @@ function fric(val) {
     f = ((val * 200) + 800) / 1000;
 }
 
+function braked(state) {
+	brake = state;
+	post(f);
+	friction = Math.min(f,1-(brake*0.2));
+	update = 1; // call led update on next tick
+}
+
 function point(kx, ky, state) {
-    if(state==1) {
+	if(kx==0 && ky==0) {
+		braked(state);
+	}
+    else if(state==1) {
         p[kx+ky*16] = 1;
     } else {
         p[kx+ky*16] = 0;
@@ -81,12 +94,20 @@ function tilt(tiltx, tilty) {
 function bang() {
  //   dx = dy = 0;
 
+		// these ifs note whether the led display has updated and should redraw grid
+
+		if(oldx[2] != oldx[1]) update=1;
     oldx[2] = oldx[1];
+		if(oldx[1] != oldx[0]) update=1;
     oldx[1] = oldx[0];
+		if(Math.floor(x) != oldx[0]) update=1;
     oldx[0] = Math.floor(x);
 
+		if(oldy[2] != oldy[1]) update=1;
     oldy[2] = oldy[1];
+		if(oldy[1] != oldy[0]) update=1;
     oldy[1] = oldy[0];
+		if(Math.floor(y) != oldy[0]) update=1;
     oldy[0] = Math.floor(y);
 
 	keys = 0;
@@ -101,8 +122,8 @@ function bang() {
 		dy = dy + (ty / g);
     } }
     
-    dx = dx * f;
-    dy = dy * f;
+    dx = dx * friction;
+    dy = dy * friction;
 
     x = x + dx;
 
@@ -137,23 +158,26 @@ function bang() {
 	outlet(4,Math.pow(16,(x/bx))/4,Math.pow(16,(1-(y/by)))/4,Math.pow(16,(dx/bx))/4,Math.pow(16,(1-(dy/by)))/4);
 	//outlet(5,keys);
 
-
-
 		/////// DRAW LEDS //////
-		
-    if(vb==0) { // draw monochrome
-		outlet(6,"/b_corners/grid/led/all", 0);
-		outlet(6,"/b_corners/grid/led/set",Math.floor(x),Math.floor(y), 1);
-	}
-	else { // draw varibright
-		outlet(6,"/b_corners/grid/led/all", 0);
-		outlet(6,"/b_corners/grid/led/level/set", oldx[2],oldy[2], 1);
-		outlet(6,"/b_corners/grid/led/level/set", oldx[1],oldy[1], 5);
-		outlet(6,"/b_corners/grid/led/level/set", oldx[0],oldy[0], 10);
-		outlet(6,"/b_corners/grid/led/level/set", Math.floor(x),Math.floor(y), 15);
+	if(update==1) {
+	    if(vb==0) { // draw monochrome
+			outlet(6,"/b_corners/grid/led/all", 0);
+			outlet(6,"/b_corners/grid/led/set",Math.floor(x),Math.floor(y), 1);
+			outlet(6,"/b_corners/grid/led/set",0,0, brake);
+		}
+		else{ // draw varibright if the values have changed
+			outlet(6,"/b_corners/grid/led/all", 0);
+			outlet(6,"/b_corners/grid/led/level/set", 0,0, brake*10+5);
+			outlet(6,"/b_corners/grid/led/level/set", oldx[2],oldy[2], 1);
+			outlet(6,"/b_corners/grid/led/level/set", oldx[1],oldy[1], 5);
+			outlet(6,"/b_corners/grid/led/level/set", oldx[0],oldy[0], 10);
+			outlet(6,"/b_corners/grid/led/level/set", Math.floor(x),Math.floor(y), 15);	
+		}
 	}
     //outlet(1,y);
     //outlet(0,x);
+
+	update = 0;
 }
 
 function varibright(x) {
