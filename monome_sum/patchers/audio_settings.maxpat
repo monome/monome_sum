@@ -8,8 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 1039.0, 128.0, 269.0, 373.0 ],
-		"bgcolor" : [ 0.901961, 0.901961, 0.901961, 1.0 ],
+		"openrect" : [ 769.0, 44.0, 269.0, 373.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -30,12 +29,25 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-4",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 54.0, 108.0, 25.0, 25.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoncolor" : [ 0.0, 0.501961, 0.25098, 0.35 ],
-					"bgovercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoveroncolor" : [ 0.0, 0.501961, 0.25098, 0.34 ],
-					"border" : 0,
-					"bordercolor" : [ 0.6, 0.6, 0.6, 0.0 ],
+					"bgoncolor" : [ 1.0, 0.8, 0.4, 0.75 ],
+					"bgovercolor" : [ 0.901961, 0.901961, 0.901961, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 0.75 ],
+					"border" : 1,
+					"bordercolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"borderoncolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-37",
@@ -66,7 +78,7 @@
 					"framecolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 					"hltcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"id" : "obj-36",
-					"items" : "Built-in Output",
+					"items" : [ "Built-in Output", ",", "Fireface 400 (A7C)" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -140,7 +152,7 @@
 					"framecolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 					"hltcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"id" : "obj-32",
-					"items" : [ "Off", ",", 1, "Output 1", ",", 2, "Output 2" ],
+					"items" : [ "Off", ",", 1, "Output 1", ",", 2, "Output 2", ",", 3, "Output 3", ",", 4, "Output 4", ",", 5, "Output 5", ",", 6, "Output 6", ",", 7, "Output 7", ",", 8, "Output 8", ",", 9, "Output 9", ",", 10, "Output 10", ",", 11, "Output 11", ",", 12, "Output 12", ",", 13, "Output 13", ",", 14, "Output 14", ",", 15, "Output 15", ",", 16, "Output 16", ",", 17, "Output 17", ",", 18, "Output 18" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -163,7 +175,7 @@
 					"framecolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 					"hltcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"id" : "obj-31",
-					"items" : [ "Off", ",", 1, "Output 1", ",", 2, "Output 2" ],
+					"items" : [ "Off", ",", 1, "Output 1", ",", 2, "Output 2", ",", 3, "Output 3", ",", 4, "Output 4", ",", 5, "Output 5", ",", 6, "Output 6", ",", 7, "Output 7", ",", 8, "Output 8", ",", 9, "Output 9", ",", 10, "Output 10", ",", 11, "Output 11", ",", 12, "Output 12", ",", 13, "Output 13", ",", 14, "Output 14", ",", 15, "Output 15", ",", 16, "Output 16", ",", 17, "Output 17", ",", 18, "Output 18" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -215,12 +227,13 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoncolor" : [ 0.0, 0.501961, 0.25098, 0.35 ],
-					"bgovercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
-					"bgoveroncolor" : [ 0.0, 0.501961, 0.25098, 0.34 ],
-					"border" : 0,
-					"bordercolor" : [ 0.6, 0.6, 0.6, 0.0 ],
+					"bgcolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"bgoncolor" : [ 1.0, 0.8, 0.4, 0.75 ],
+					"bgovercolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 0.75 ],
+					"border" : 1,
+					"bordercolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"borderoncolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-26",
@@ -341,15 +354,15 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Andale Mono",
-					"fontsize" : 16.0,
+					"fontsize" : 18.0,
 					"frgb" : 0.0,
 					"id" : "obj-5",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 18.0, 12.0, 196.0, 24.0 ],
+					"patching_rect" : [ 18.0, 12.0, 220.0, 27.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 17.0, 18.0, 145.0, 24.0 ],
+					"presentation_rect" : [ 17.0, 17.0, 163.0, 27.0 ],
 					"text" : "audio settings"
 				}
 
@@ -639,7 +652,7 @@
 					"hint" : "",
 					"hltcolor" : [ 0.827451, 0.827451, 0.827451, 1.0 ],
 					"id" : "obj-41",
-					"items" : [ 44100, ",", 48000, ",", 88200, ",", 96000 ],
+					"items" : [ 32000, ",", 44100, ",", 48000, ",", 88200, ",", 96000 ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -700,7 +713,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.78 ],
+					"bgcolor" : [ 1.0, 0.8, 0.4, 0.2 ],
 					"id" : "obj-6",
 					"maxclass" : "panel",
 					"numinlets" : 1,
@@ -978,8 +991,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ]
+ ]
 	}
 
 }

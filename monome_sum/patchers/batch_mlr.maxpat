@@ -872,6 +872,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-34", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-39", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-35", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1069,7 +1078,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 90.0, 318.0, 97.0, 18.0 ],
-									"presentation_rect" : [ 88.0, 287.0, 0.0, 0.0 ],
 									"text" : "DrumSolo.aif"
 								}
 
@@ -1320,6 +1328,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-100", 0 ]
 								}
 
 							}
@@ -1718,13 +1735,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 450.0, 378.0, 119.0, 20.0 ],
-					"restore" : [ "Macintosh HD:/Users/sorenandreasen/Music/Lydbibliotek/samples/beats u toner/94_KissinMyLove1.aif" ],
+					"patching_rect" : [ 450.0, 378.0, 227.0, 20.0 ],
+					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "pattr 1mlr-file",
+					"text" : "pattr 1mlr-file @autorestore 0",
 					"varname" : "1mlr-file"
 				}
 
@@ -1739,13 +1756,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 126.0, 384.0, 119.0, 20.0 ],
-					"restore" : [ "Macintosh HD:/Users/sorenandreasen/Music/Lydbibliotek/samples/poly-ting/Hm chords scale 120bpm.aif" ],
+					"patching_rect" : [ 126.0, 384.0, 227.0, 20.0 ],
+					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "pattr 0mlr-file",
+					"text" : "pattr 0mlr-file @autorestore 0",
 					"varname" : "0mlr-file"
 				}
 
@@ -2539,14 +2556,14 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 90.0, 702.0, 75.0, 20.0 ],
 					"restore" : 					{
-						"ch1-vol" : [ 0.622222 ],
-						"ch2-vol" : [ 0.622222 ],
+						"ch1-vol" : [ 0.568254 ],
+						"ch2-vol" : [ 0.568254 ],
 						"delay" : [ -1.0 ],
 						"reverb" : [ -1.0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u612006243"
+					"varname" : "u074006780"
 				}
 
 			}
