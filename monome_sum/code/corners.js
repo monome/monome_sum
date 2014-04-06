@@ -65,7 +65,6 @@ function fric(val) {
 
 function braked(state) {
 	brake = state;
-	post(f);
 	friction = Math.min(f,1-(brake*0.2));
 	update = 1; // call led update on next tick
 }
@@ -182,4 +181,9 @@ function bang() {
 
 function varibright(x) {
 	vb = x;
+}
+
+function reDraw() {
+	update = 1;
+	bang();
 }

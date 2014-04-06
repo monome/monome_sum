@@ -731,7 +731,7 @@
 					"patching_rect" : [ 414.0, 594.0, 54.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 829.0, 306.0, 72.0, 19.0 ],
-					"text" : "-7 dB"
+					"text" : "-15 dB"
 				}
 
 			}
@@ -863,14 +863,14 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 180.0, 576.0, 59.5, 19.0 ],
 					"restore" : 					{
-						"m-key" : [ 7 ],
-						"m-scale" : [ 1 ],
-						"m-tempo" : [ 108.32653 ],
-						"m-volume" : [ -7.689796 ]
+						"m-key" : [ 0 ],
+						"m-scale" : [ 0 ],
+						"m-tempo" : [ 91.428574 ],
+						"m-volume" : [ -15.330612 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u343006007"
+					"varname" : "u348015468"
 				}
 
 			}
@@ -3120,7 +3120,7 @@
 					"outlettype" : [ "", "float", "float", "", "" ],
 					"patching_rect" : [ 18.0, 114.0, 265.5, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 126.0, 506.0, 42.0 ],
+					"presentation_rect" : [ 36.0, 128.0, 506.0, 42.0 ],
 					"varname" : "corners"
 				}
 
@@ -3158,11 +3158,11 @@
 					"name" : "gome.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"offset" : [ -67.0, -52.0 ],
+					"offset" : [ -67.0, -51.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 522.0, 102.0, 90.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 222.0, 506.0, 42.0 ],
+					"presentation_rect" : [ 36.0, 221.0, 506.0, 42.0 ],
 					"varname" : "gome"
 				}
 
@@ -3174,11 +3174,11 @@
 					"name" : "step.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"offset" : [ -157.0, -70.0 ],
+					"offset" : [ -157.0, -69.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 468.0, 18.0, 162.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 174.0, 506.0, 42.0 ],
+					"presentation_rect" : [ 36.0, 175.0, 506.0, 42.0 ],
 					"varname" : "step"
 				}
 
@@ -3190,7 +3190,7 @@
 					"name" : "flin.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"offset" : [ -67.0, -28.0 ],
+					"offset" : [ -67.0, -26.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 324.0, 18.0, 144.0, 30.0 ],
 					"presentation" : 1,
@@ -3220,11 +3220,11 @@
 					"name" : "batch_mlr.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"offset" : [ -67.0, -46.0 ],
+					"offset" : [ -67.0, -43.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 324.0, 138.0, 180.0, 90.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 270.0, 506.0, 96.0 ],
+					"presentation_rect" : [ 36.0, 271.0, 506.0, 96.0 ],
 					"varname" : "_mlr"
 				}
 
@@ -3357,7 +3357,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 324.0, 192.0, 36.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 270.0, 507.0, 96.0 ],
+					"presentation_rect" : [ 36.0, 267.0, 507.0, 101.0 ],
 					"rounded" : 0
 				}
 
@@ -3373,7 +3373,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 576.0, 174.0, 36.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 222.0, 507.0, 42.0 ],
+					"presentation_rect" : [ 36.0, 221.0, 507.0, 42.0 ],
 					"rounded" : 0
 				}
 
@@ -3389,7 +3389,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 576.0, 48.0, 36.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 174.0, 507.0, 42.0 ],
+					"presentation_rect" : [ 36.0, 175.0, 507.0, 42.0 ],
 					"rounded" : 0
 				}
 
@@ -3403,9 +3403,9 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 18.0, 240.0, 36.0, 24.0 ],
+					"patching_rect" : [ 18.0, 168.0, 36.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 126.0, 507.0, 42.0 ],
+					"presentation_rect" : [ 36.0, 124.0, 507.0, 47.0 ],
 					"rounded" : 0
 				}
 
@@ -3437,7 +3437,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 522.0, 180.0, 36.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 31.0, 222.0, 11.0, 42.0 ],
+					"presentation_rect" : [ 31.0, 221.0, 11.0, 42.0 ],
 					"rounded" : 0
 				}
 
@@ -3469,7 +3469,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 468.0, 96.0, 36.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 31.0, 174.0, 11.0, 42.0 ],
+					"presentation_rect" : [ 31.0, 175.0, 11.0, 42.0 ],
 					"rounded" : 0
 				}
 
@@ -3902,6 +3902,137 @@
 					"source" : [ "obj-98", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "soren_synthitime.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "soren_poly.synthitime~.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "batch_mlr.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mlr_ch.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "batch_mlr_play.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "serialosc.maxpat",
+				"bootpath" : "/Applications/Max 6.1/patches",
+				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "flin.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "flin_sub.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "step.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tiltrap.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "gome.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "playback.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "corners.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "corners.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "beams.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "beams.js",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "yafr2.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "master-p.json",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/data",
+				"patcherrelativepath" : "../data",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "xplay~.mxo",
+				"type" : "iLaX"
 			}
  ]
 	}

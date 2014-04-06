@@ -103,7 +103,6 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "int", "int" ],
 									"patching_rect" : [ 306.0, 324.0, 75.0, 20.0 ],
-									"presentation_rect" : [ 222.0, 298.0, 0.0, 0.0 ],
 									"text" : "change 0."
 								}
 
@@ -132,7 +131,6 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "int", "int" ],
 									"patching_rect" : [ 378.0, 300.0, 75.0, 20.0 ],
-									"presentation_rect" : [ 223.0, 298.0, 0.0, 0.0 ],
 									"text" : "change 0."
 								}
 
@@ -161,7 +159,6 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "int", "int" ],
 									"patching_rect" : [ 234.0, 348.0, 75.0, 20.0 ],
-									"presentation_rect" : [ 198.0, 350.0, 0.0, 0.0 ],
 									"text" : "change 0."
 								}
 
@@ -190,7 +187,6 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "int", "int" ],
 									"patching_rect" : [ 162.0, 372.0, 75.0, 20.0 ],
-									"presentation_rect" : [ 178.0, 371.0, 0.0, 0.0 ],
 									"text" : "change 0."
 								}
 
@@ -1108,7 +1104,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 120.0, 348.0, 137.0, 44.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 115.0, 80.0, 402.0, 19.0 ],
+					"presentation_rect" : [ 113.0, 79.0, 402.0, 19.0 ],
 					"text" : "modulation sliders with controllable inertia"
 				}
 
@@ -1124,7 +1120,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 120.0, 330.0, 66.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 72.0, 77.0, 88.0, 22.0 ],
+					"presentation_rect" : [ 68.0, 76.0, 88.0, 22.0 ],
 					"text" : "beams"
 				}
 
@@ -1203,7 +1199,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1026.0, 246.0, 61.0, 20.0 ],
-									"presentation_rect" : [ 1012.0, 259.0, 0.0, 0.0 ],
 									"text" : "pak f f"
 								}
 
@@ -2577,21 +2572,6 @@
 					"source" : [ "obj-7", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "beams.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}
