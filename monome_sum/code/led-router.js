@@ -225,49 +225,48 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 
 	else if(a=="/manager/grid/led/row") { // i:<x-offset>, i:<y-row>, i:<bitmask>, i:<bitmask2>
 		if(glob.gMeta==0) { // only one application so use inlet==0 only
-		  if(inlet==0) { // ignore second app
-			if(glob.g1x==8) { // if the 1st device attached is 8wide
-				if(x<8) { // and the /led/row message applies to that grid
-					if(glob.gridtiling == 0) { // horizontal
-						outlet(0,"/manager/grid/led/row",x,y,z); // send 1st bitmask to left grid
-						outlet(1,"/manager/grid/led/row",x,y,n); // send 2nd bitmask to right grid
+			if(inlet==0) { // ignore second app
+				if(glob.g1x==8) { // if the 1st device attached is 8wide
+					if(x<8) { // and the /led/row message applies to that grid
+						if(glob.gridtiling == 0) { // horizontal
+							outlet(0,"/manager/grid/led/row",x,y,z); // send 1st bitmask to left grid
+							outlet(1,"/manager/grid/led/row",x,y,n); // send 2nd bitmask to right grid
+						}
+						else { // vertical
+							if(y < glob.g1y) outlet(0,"/manager/grid/led/row",x,y,z); // send 1st bitmask to left grid
+							else outlet(1,"/manager/grid/led/row",x,y-glob.g1y,z,n);
+						}
 					}
-					else { // vertical
-						if(y < glob.g1y) outlet(0,"/manager/grid/led/row",x,y,z); // send 1st bitmask to left grid
-						else outlet(1,"/manager/grid/led/row",x,y-glob.g1y,z,n);
+					else if(glob.gridtiling == 0) { // there is an offset added to the message & horizontal
+						outlet(1,"/manager/grid/led/row",(x-8),y,z,n); // send double-bitmask to right grid
+					}
+					else if(glob.gridtiling == 1 && y > glob.g1y) { // x-offset & vertical & below 1st device
+						outlet(1,"/manager/grid/led/row",x,y-glob.g1y,z); // send double-bitmask to right grid
 					}
 				}
-				else if(glob.gridtiling == 0) { // there is an offset added to the message & horizontal
-					outlet(1,"/manager/grid/led/row",(x-8),y,z,n); // send double-bitmask to right grid
-				}
-				else if(glob.gridtiling == 1 && y > glob.g1y) { // x-offset & vertical & below 1st device
-					outlet(1,"/manager/grid/led/row",x,y-glob.g1y,z); // send double-bitmask to right grid
+				else if(glob.g1x==16) { // if the 1st device attached is 16 wide
+					if(y<glob.g1y) { // to deal with vertical mode, check if the y-offset pushes it to 2nd device
+						if(x==0) { // and the /led/row applies to the left quad
+							outlet(0,"/manager/grid/led/row",0,y,z,n); // send double bitmask to left grid
+						}
+						else if(x==8) { // and the /led/row applies to the right quad
+							outlet(0,"/manager/grid/led/row",8,y,z); // send 1st bitmask to left grid
+							if(glob.gridtiling == 0) outlet(1,"/manager/grid/led/row",0,y,n); // send 2nd bitmask to right grid
+						}
+						else if(x>8 && glob.gridtiling == 0) { // and the /led/row applies to the right grid
+							outlet(1,"/manager/grid/led/row",(x-16),y,z,n); // send double bitmask to right grid
+						}
+					}
+					else { // y offset is out of range of device 1, so send to device 2 minus offset
+						if(x==0 && glob.gridtiling == 1) { // and the /led/row applies to the left quad
+							outlet(1,"/manager/grid/led/row",0,y-glob.g1y,z,n); // send double bitmask to 2nd grid
+						}
+						else if(x==8 && glob.gridtiling == 1) { // and the /led/row applies to the right quad
+							outlet(1,"/manager/grid/led/row",8,y-glob.g1y,z); // send 1st bitmask only
+						}
+					}
 				}
 			}
-			else if(glob.g1x==16) { // if the 1st device attached is 16 wide
-				if(y<glob.g1y) { // to deal with vertical mode, check if the y-offset pushes it to 2nd device
-					if(x==0) { // and the /led/row applies to the left quad
-						outlet(0,"/manager/grid/led/row",0,y,z,n); // send double bitmask to left grid
-					}
-					else if(x==8) { // and the /led/row applies to the right quad
-						outlet(0,"/manager/grid/led/row",8,y,z); // send 1st bitmask to left grid
-						if(glob.gridtiling == 0) outlet(1,"/manager/grid/led/row",0,y,n); // send 2nd bitmask to right grid
-					}
-					else if(x>8 && glob.gridtiling == 0) { // and the /led/row applies to the right grid
-						outlet(1,"/manager/grid/led/row",(x-16),y,z,n); // send double bitmask to right grid
-					}
-				}
-				else { // y offset is out of range of device 1, so send to device 2 minus offset
-					if(x==0 && glob.gridtiling == 1) { // and the /led/row applies to the left quad
-						outlet(1,"/manager/grid/led/row",0,y-glob.g1y,z,n); // send double bitmask to 2nd grid
-					}
-					else if(x==8 && glob.gridtiling == 1) { // and the /led/row applies to the right quad
-						outlet(1,"/manager/grid/led/row",8,y-glob.g1y,z); // send 1st bitmask only
-					}
-					
-				}
-			}
-		  }
 		}
 		else if(glob.gMeta==1) { // 2 apps & 2 devices
 			if(inlet==0) outlet(0,"/manager/grid/led/row",x,y,z,n);
@@ -337,9 +336,9 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 		}
 		else if(glob.gMeta==2) { // landcape128 from 2 apps
 			if(inlet==0) {
-				if(x<8) outlet(0,"/manager/grid/led/col",x,y,z,n); // stop 2nd half overflow
+				if(x==0) outlet(0,"/manager/grid/led/col",0,y,z,n); // stop 2nd half overflow
 			}
-			else outlet(0,"/manager/grid/led/col",(x+8),y,z,n); //move 2nd app 8 to the right
+			else if(x==0) outlet(0,"/manager/grid/led/col",8,y,z,n); //move 2nd app 8 to the right
 		}
 		else if(glob.gMeta == 3) { // portrait128/256 from 2 apps
 			if(y==0) { // only allowed if no y-offset (as it would be out of range)
