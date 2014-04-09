@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 732.0, 49.0, 898.0, 722.0 ],
+		"rect" : [ 589.0, 49.0, 1038.0, 824.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +29,24 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-22",
+					"linecount" : 54,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 864.0, 18.0, 150.0, 735.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 21,
+					"presentation_rect" : [ 234.0, 42.0, 465.0, 290.0 ],
+					"text" : "this patch holds information about which app is currently assigned to each application slot.\n\nUI:\nin basic mode it is simply a button that selects the given app and connects via UDP.\n\nadvanced mode allows you to change which app is designated to that slot.\n\nauto-load is in experimental form right now. using this will allow you to automatically load the file associated with the selected /prefix if that app is not currently open. this is specifically designed to handle a larger performance setup where you load smallbatch and let it boot up all the relevant software\n\nauto-preset is currently unimplemented. it will allow the router to send a user-defined path of a preset file to an app after it has alerted the router it is loaded. thus allowing apps to be opened, then configured, all automatically."
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 1.0, 0.4, 0.4, 1.0 ],
 					"fontname" : "Andale Mono",
@@ -132,7 +150,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 360.0, 210.0, 263.0, 20.0 ],
-					"restore" : [ "---" ],
+					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -301,6 +319,21 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-2",
+									"linecount" : 9,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 288.0, 108.0, 184.0, 128.0 ],
+									"text" : "this is probably unnecessary now that presets are implemented via pattr globally??\n\nneed to confirm whether the 'selected' state is stored in the pattr savefile?"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"color" : [ 0.8, 0.4, 1.0, 1.0 ],
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -418,7 +451,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u222016304"
+					"varname" : "u976006184"
 				}
 
 			}
@@ -441,7 +474,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 40.0, 45.0, 770.0, 826.0 ],
+						"rect" : [ 40.0, 45.0, 1178.0, 883.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -462,6 +495,36 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-56",
+									"linecount" : 12,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 954.0, 582.0, 150.0, 168.0 ],
+									"text" : "finally, the [router]has-app section in the middle checks whether the allocated app is a real app (not '---') and if so lets the router know there is an app at this location (#1)."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-54",
+									"linecount" : 22,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 972.0, 246.0, 177.0, 303.0 ],
+									"text" : "this patcher updates the router of the prefix & port number for a newly selected app. (right side)\n\nthe left side allows for a checking mechanism to determine whether the allocated app is in fact open & accessible. if not it will display in a grey colour.\n\nmost switching is done such that adding / removing apps doesn't cause values to be reset (eg. when the umenus are being rebuilt)"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"comment" : "",
 									"id" : "obj-53",
 									"maxclass" : "outlet",
@@ -480,7 +543,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 288.0, 354.0, 111.0, 20.0 ],
+									"patching_rect" : [ 414.0, 354.0, 111.0, 20.0 ],
 									"text" : "prepend symbol"
 								}
 
@@ -496,7 +559,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 288.0, 384.0, 100.0, 20.0 ]
+									"patching_rect" : [ 414.0, 384.0, 100.0, 20.0 ]
 								}
 
 							}
@@ -509,7 +572,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 342.0, 450.0, 83.0, 20.0 ],
+									"patching_rect" : [ 468.0, 450.0, 83.0, 20.0 ],
 									"text" : "prepend #1"
 								}
 
@@ -523,7 +586,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 342.0, 426.0, 39.0, 20.0 ],
+									"patching_rect" : [ 468.0, 426.0, 39.0, 20.0 ],
 									"text" : "!= 0"
 								}
 
@@ -537,7 +600,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 342.0, 480.0, 133.0, 20.0 ],
+									"patching_rect" : [ 468.0, 480.0, 133.0, 20.0 ],
 									"text" : "s [router]has-app"
 								}
 
@@ -879,8 +942,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 432.0, 696.0, 170.0, 60.0 ],
-									"text" : "instead of 'greying' could also attempt to load patch if 'load file' is selected",
+									"patching_rect" : [ 432.0, 696.0, 228.0, 60.0 ],
+									"text" : "future: \ninstead of 'greying' could also attempt to load patch if 'load file' is selected",
 									"textcolor" : [ 0.8, 0.4, 1.0, 1.0 ]
 								}
 
@@ -1186,7 +1249,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 522.0, 426.0, 54.0, 20.0 ],
+									"patching_rect" : [ 666.0, 426.0, 54.0, 20.0 ],
 									"text" : "gate 2"
 								}
 
@@ -1200,7 +1263,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 594.0, 372.0, 54.0, 20.0 ],
+									"patching_rect" : [ 738.0, 372.0, 54.0, 20.0 ],
 									"text" : "gate 2"
 								}
 
@@ -1214,7 +1277,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 630.0, 402.0, 140.0, 20.0 ],
+									"patching_rect" : [ 774.0, 402.0, 140.0, 20.0 ],
 									"text" : "s [router]prefix-2"
 								}
 
@@ -1228,7 +1291,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 594.0, 426.0, 140.0, 20.0 ],
+									"patching_rect" : [ 738.0, 426.0, 140.0, 20.0 ],
 									"text" : "s [router]prefix-1"
 								}
 
@@ -1242,7 +1305,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 558.0, 462.0, 176.0, 20.0 ],
+									"patching_rect" : [ 702.0, 462.0, 176.0, 20.0 ],
 									"text" : "s [router]port-update-2"
 								}
 
@@ -1256,7 +1319,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 522.0, 486.0, 176.0, 20.0 ],
+									"patching_rect" : [ 666.0, 486.0, 176.0, 20.0 ],
 									"text" : "s [router]port-update-1"
 								}
 
@@ -1271,7 +1334,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 450.0, 336.0, 176.0, 20.0 ],
+									"patching_rect" : [ 594.0, 336.0, 176.0, 20.0 ],
 									"text" : "r [router]current-ports"
 								}
 
@@ -1287,7 +1350,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 468.0, 372.0, 100.0, 20.0 ]
+									"patching_rect" : [ 612.0, 372.0, 100.0, 20.0 ]
 								}
 
 							}
@@ -1299,7 +1362,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 342.0, 318.0, 25.0, 25.0 ]
+									"patching_rect" : [ 342.0, 312.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -1311,7 +1374,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 522.0, 300.0, 25.0, 25.0 ]
+									"patching_rect" : [ 666.0, 300.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -2980,6 +3043,21 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
+									"id" : "obj-2",
+									"linecount" : 9,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 234.0, 216.0, 150.0, 128.0 ],
+									"text" : "updates the UI to display the currently selected app name with \"/\" or \"/b_\" removed\n\n/b_ is the pre-prefix for all smallbatch apps"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
 									"id" : "obj-21",
 									"linecount" : 4,
 									"maxclass" : "comment",
@@ -3164,7 +3242,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 645.0, 426.0, 665.0, 454.0 ],
+						"rect" : [ 573.0, 302.0, 791.0, 565.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3188,12 +3266,27 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
+									"id" : "obj-16",
+									"linecount" : 7,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 18.0, 420.0, 192.0, 101.0 ],
+									"text" : "this patch tests whether the newly selected app matches to this current instance. if it does it lights the UI with the appropriate colour for main / secondary app."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
 									"id" : "obj-17",
 									"linecount" : 6,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 468.0, 18.0, 150.0, 87.0 ],
+									"patching_rect" : [ 576.0, 18.0, 150.0, 87.0 ],
 									"text" : "this is triggered when the app list is updated to make sure the currently accessed cells are lit up"
 								}
 
@@ -3234,7 +3327,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 432.0, 78.0, 25.0, 25.0 ]
+									"patching_rect" : [ 540.0, 78.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -3247,7 +3340,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 450.0, 156.0, 90.0, 20.0 ],
+									"patching_rect" : [ 558.0, 156.0, 90.0, 20.0 ],
 									"text" : "prepend set"
 								}
 
@@ -3261,7 +3354,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 468.0, 180.0, 90.0, 20.0 ],
+									"patching_rect" : [ 576.0, 180.0, 90.0, 20.0 ],
 									"text" : "prepend set"
 								}
 
@@ -3275,7 +3368,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "bang", "bang", "int", "int" ],
-									"patching_rect" : [ 432.0, 120.0, 75.0, 20.0 ],
+									"patching_rect" : [ 540.0, 120.0, 75.0, 20.0 ],
 									"text" : "t b b 0 1"
 								}
 
@@ -3575,7 +3668,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 180.0, 414.0, 25.0, 25.0 ]
+									"patching_rect" : [ 180.0, 366.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -4057,6 +4150,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.4, 0.8, 1.0, 1.0 ],
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-46",
@@ -5476,6 +5570,21 @@
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-3",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 198.0, 150.0, 150.0, 60.0 ],
+									"text" : "hides the dropdown / auto load/preset objects when in basic mode"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
@@ -5803,7 +5912,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-91", 2 ],
+					"destination" : [ "obj-91", 3 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 1 ]
@@ -5974,7 +6083,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-91", 3 ],
+					"destination" : [ "obj-91", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 0 ]
@@ -5992,7 +6101,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-91", 2 ],
+					"destination" : [ "obj-91", 3 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-85", 1 ]

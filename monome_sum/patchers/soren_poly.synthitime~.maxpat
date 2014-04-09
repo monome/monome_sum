@@ -31,12 +31,31 @@
 				"box" : 				{
 					"fontname" : "Helvetica Neue",
 					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-11",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 198.0, 66.0, 150.0, 32.0 ],
+					"text" : "in1/2 receive the full list of params per voice"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Helvetica Neue",
+					"fontsize" : 11.0,
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 504.0, 66.0, 28.0, 19.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "in 3"
 				}
 
@@ -136,6 +155,21 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-7",
+									"linecount" : 9,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 270.0, 90.0, 177.0, 128.0 ],
+									"text" : "the tanh~ object is used as a waveshaper / distortion.\n\nwhen increasing the drive into the object the output level is reduced to keep the volume level the same"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -432,6 +466,21 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-2",
+									"linecount" : 10,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 162.0, 192.0, 150.0, 141.0 ],
+									"text" : "0 - 127 scales to around 0.6-1.2 or something\n\ndrum sounds often use values well outside of this range for much louder/softer sounds."
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Helvetica Neue",
 									"fontsize" : 11.0,
 									"id" : "obj-24",
@@ -630,6 +679,21 @@
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-8",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 216.0, 108.0, 150.0, 33.0 ],
+									"text" : "receives an expo input"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
 									"id" : "obj-1",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -702,12 +766,12 @@
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
 									"id" : "obj-35",
-									"linecount" : 2,
+									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 180.0, 246.0, 150.0, 33.0 ],
-									"text" : "smooth the output signal"
+									"patching_rect" : [ 198.0, 246.0, 156.0, 47.0 ],
+									"text" : "make sure the Q doesn't blow up the input."
 								}
 
 							}
@@ -936,6 +1000,21 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-4",
+									"linecount" : 6,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 288.0, 108.0, 156.0, 87.0 ],
+									"text" : "this is the current tone&space values for the relevant instrument.\n\nupdated every 100ms"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"comment" : "dist-makeup",
 									"id" : "obj-12",
 									"maxclass" : "outlet",
@@ -1062,7 +1141,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 144.0, 78.0, 25.0, 25.0 ]
 								}
 
@@ -1200,6 +1279,51 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-29",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 270.0, 408.0, 156.0, 60.0 ],
+									"text" : "this stuff turns on/off the DSP re: whether currently playing"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-27",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 252.0, 318.0, 150.0, 47.0 ],
+									"text" : "< this object creates the actual envelope"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-18",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 36.0, 66.0, 163.0, 33.0 ],
+									"text" : "logic for modulating envelope params"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -1811,10 +1935,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 414.0, 66.0, 28.0, 19.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "in 2"
 				}
 
@@ -1864,8 +1984,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 648.0, 378.0, 25.0, 25.0 ],
-									"presentation_rect" : [ 643.0, 379.0, 0.0, 0.0 ]
+									"patching_rect" : [ 648.0, 378.0, 25.0, 25.0 ]
 								}
 
 							}
@@ -2506,10 +2625,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 396.0, 648.0, 42.0, 19.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out~ 3"
 				}
 
@@ -2775,6 +2890,21 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
+									"id" : "obj-9",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 180.0, 90.0, 150.0, 33.0 ],
+									"text" : "receives an expo input"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
 									"id" : "obj-2",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -2837,7 +2967,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 180.0, 366.0, 150.0, 33.0 ],
-									"text" : "limit CF to samprate/4"
+									"text" : "limit CF to samprate/4 for svf~"
 								}
 
 							}
@@ -3357,6 +3487,21 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"frgb" : 0.0,
+									"id" : "obj-5",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 414.0, 168.0, 150.0, 74.0 ],
+									"text" : "receives the main envelope and sends a refactored version to the 3 mod destinations"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
 									"id" : "obj-4",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -3657,10 +3802,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 540.0, 648.0, 42.0, 19.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out~ 2"
 				}
 
@@ -3704,6 +3845,21 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-2",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 180.0, 192.0, 271.0, 33.0 ],
+									"text" : "non-bandlimited noise ramps in a db fashion between -60 and 0db"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -3888,6 +4044,21 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Andale Mono",
+									"fontsize" : 12.0,
+									"frgb" : 0.0,
+									"id" : "obj-20",
+									"linecount" : 16,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 504.0, 468.0, 386.0, 222.0 ],
+									"text" : "this patch takes 4 audio inputs and crossfades between them in series. it is essentially an interpolating scanner.\n\nthe logic in top-right determines which 2 responses are currently playing & sets the rest to volume=0.\n\nthe logic on right\n-converts the control input to 0-1 / 1-0 range.\n-divides by 4 to address 1/4 cycle of a sine wave (ie. from zero to max)\n-each section adds a second inverted value to ramp up while the other ramps down\n\nthese positions in a trig function are then sent to the *~ to change the volume of the appropriate input"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -4978,6 +5149,21 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"frgb" : 0.0,
+									"id" : "obj-7",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 198.0, 174.0, 150.0, 45.0 ],
+									"text" : "takes UI & note input and determines fundamental frequency for oscillator"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"comment" : "",
 									"id" : "obj-5",
 									"maxclass" : "outlet",
@@ -5265,6 +5451,21 @@
 						"digest" : "",
 						"tags" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"frgb" : 0.0,
+									"id" : "obj-31",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 108.0, 792.0, 324.0, 71.0 ],
+									"text" : "this patch implements the FM (really amplitude modulation) for the principal oscillator. it all boils down to this final *~ object.\n\nthere's currently an issue where high levels of FM can blow up the filter - probably the pow~ object getting too hot."
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Helvetica Neue",
 									"fontsize" : 11.0,
@@ -6181,6 +6382,21 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 11.0,
+									"frgb" : 0.0,
+									"id" : "obj-3",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 126.0, 198.0, 270.0, 45.0 ],
+									"text" : "input sets all 4 waveshapes to the appropriate pitch\neach oscillator is scaled to have equal RMS energy\nfilt-mixer patch xfades between different waveforms"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"color" : [ 1.0, 0.8, 0.4, 1.0 ],
 									"fontname" : "Helvetica Neue",
 									"fontsize" : 11.0,
@@ -6218,6 +6434,21 @@
 										"digest" : "",
 										"tags" : "",
 										"boxes" : [ 											{
+												"box" : 												{
+													"fontname" : "Andale Mono",
+													"fontsize" : 12.0,
+													"frgb" : 0.0,
+													"id" : "obj-20",
+													"linecount" : 16,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 504.0, 414.0, 386.0, 222.0 ],
+													"text" : "this patch takes 4 audio inputs and crossfades between them in series. it is essentially an interpolating scanner.\n\nthe logic in top-right determines which 2 responses are currently playing & sets the rest to volume=0.\n\nthe logic on right\n-converts the control input to 0-1 / 1-0 range.\n-divides by 4 to address 1/4 cycle of a sine wave (ie. from zero to max)\n-each section adds a second inverted value to ramp up while the other ramps down\n\nthese positions in a trig function are then sent to the *~ to change the volume of the appropriate input"
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"fontname" : "Andale Mono",
 													"fontsize" : 12.0,
@@ -7629,6 +7860,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 234.0, 648.0, 42.0, 19.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "out~ 1"
 				}
 
@@ -7643,6 +7878,10 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 162.0, 66.0, 28.0, 19.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "in 1"
 				}
 
