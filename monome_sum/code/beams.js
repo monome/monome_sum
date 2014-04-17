@@ -7,7 +7,7 @@ var tgrain = 100; // set time grain for calculations at 50ms
 var focus = 0; // is the monome device in focus
 
 var tx = 0;
-var g = 35; // 35 is perfect level for slider interpolation!
+var g = 20; // 35 is perfect level for slider interpolation!
 var bx =  16;
 var f = 0.995;
 var dx = new Array(16); // change since last output
