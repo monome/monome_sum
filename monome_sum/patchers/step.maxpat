@@ -630,7 +630,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 486.0, 312.0, 183.0, 20.0 ],
-									"text" : "expr ((($f1+1)/2)*60)-60"
+									"text" : "expr ((($f1+1)/2)*70)-70"
 								}
 
 							}
@@ -658,7 +658,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 432.0, 288.0, 191.0, 20.0 ],
-									"text" : "expr (((-$f1+1)/2)*60)-60"
+									"text" : "expr (((-$f1+1)/2)*90)-90"
 								}
 
 							}
@@ -2776,7 +2776,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u867003511"
+					"varname" : "u374008864"
 				}
 
 			}
