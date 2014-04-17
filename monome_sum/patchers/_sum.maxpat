@@ -80,7 +80,7 @@
 					"bordercolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
 					"borderoncolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
 					"fontname" : "Andale Mono",
-					"fontsize" : 11.0,
+					"fontsize" : 12.0,
 					"id" : "obj-74",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -89,9 +89,9 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 288.0, 192.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 993.0, 32.0, 88.0, 18.0 ],
+					"presentation_rect" : [ 944.0, 32.0, 137.0, 18.0 ],
 					"rounded" : 0.0,
-					"text" : "step sounds",
+					"text" : "step sound editor",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
@@ -1360,8 +1360,8 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 734.0, 306.0, 88.0, 18.0 ],
 					"rounded" : 0.0,
-					"text" : "record!",
-					"texton" : "stop",
+					"text" : "2. record!",
+					"texton" : "3. stop",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
@@ -1387,7 +1387,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 642.0, 306.0, 88.0, 18.0 ],
 					"rounded" : 0.0,
-					"text" : "filename",
+					"text" : "1. filename",
 					"texton" : "reflections",
 					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ]
@@ -1696,7 +1696,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u156016208"
+					"varname" : "u231016257"
 				}
 
 			}
