@@ -437,15 +437,7 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 	 						if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,0,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // in d0 range
 							else outlet(1,"/manager/grid/led/level/col",x-glob.g1x,0,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // in d1 range
 						}
-						else { // vertical tiling
-	 							outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
-								//outlet(0,"/manager/grid/led/level/col",x,y,u,v,w,aa,bb,cc,dd,ee);
-							}
-							else { // first grid is 
-								outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
-								outlet(1,"/manager/grid/led/level/col",x,y,u,v,w,aa,bb,cc,dd,ee);	
-							}
-	 					}
+						else outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // vertical tiling
 					}
 					else if(y==8) {
 						if(glob.gridtiling == 0) { // horizontal
@@ -486,9 +478,6 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 
 
 
-
-
-	
 
 	else if(a=="/manager/grid/led/intensity") { // i:<intensity>
 		if(glob.gMeta==1) {
