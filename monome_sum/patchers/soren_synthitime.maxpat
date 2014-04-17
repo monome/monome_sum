@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 45.0, 460.0, 1423.0, 796.0 ],
+		"rect" : [ 125.0, 149.0, 1423.0, 796.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -91,7 +91,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 52.0, 659.0, 1429.0, 743.0 ],
+						"rect" : [ 101.0, 167.0, 1429.0, 743.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -110,20 +110,8 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
-								"box" : 								{
-									"fontname" : "Andale Mono",
-									"fontsize" : 12.0,
-									"id" : "obj-17",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 127.0, 258.0, 97.0, 20.0 ],
-									"text" : "print stepin"
-								}
-
-							}
-, 							{
 								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -1265,15 +1253,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-14", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-17", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-156", 0 ]
 								}
 
 							}
@@ -2841,7 +2820,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u579008264"
+					"varname" : "u807002351"
 				}
 
 			}
@@ -3335,7 +3314,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-shape @invisible 1",
-									"varname" : "u046006686"
+									"varname" : "u991001590"
 								}
 
 							}
@@ -3355,7 +3334,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-slope @invisible 1",
-									"varname" : "u433006688"
+									"varname" : "u226001592"
 								}
 
 							}
@@ -3375,7 +3354,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-length @invisible 1",
-									"varname" : "u520006690"
+									"varname" : "u747001594"
 								}
 
 							}
@@ -3420,7 +3399,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u892006693"
+									"varname" : "u773001597"
 								}
 
 							}
@@ -3492,7 +3471,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u969006697"
+									"varname" : "u225001601"
 								}
 
 							}
@@ -3512,7 +3491,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u606006699"
+									"varname" : "u332001603"
 								}
 
 							}
@@ -3532,7 +3511,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u298006701"
+									"varname" : "u226001605"
 								}
 
 							}
@@ -3552,7 +3531,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u156006703"
+									"varname" : "u541001607"
 								}
 
 							}
@@ -3572,7 +3551,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u127006705"
+									"varname" : "u482001609"
 								}
 
 							}
@@ -3592,7 +3571,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u965006707"
+									"varname" : "u441001611"
 								}
 
 							}
@@ -3612,7 +3591,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u549006709"
+									"varname" : "u100001613"
 								}
 
 							}
@@ -3632,7 +3611,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u858006711"
+									"varname" : "u392001615"
 								}
 
 							}
@@ -3652,7 +3631,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::finetune @invisible 1",
-									"varname" : "u581006713"
+									"varname" : "u790001617"
 								}
 
 							}
@@ -3672,7 +3651,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u057006715"
+									"varname" : "u510001619"
 								}
 
 							}
@@ -5534,6 +5513,14 @@
 					"source" : [ "obj-95", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "soren_poly.synthitime~.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ]
 	}
