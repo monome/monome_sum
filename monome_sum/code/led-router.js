@@ -418,44 +418,53 @@ function sOSC(a,x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm
 
 	else if(a=="/manager/grid/led/level/col") { // i:<x-col>, i:<y-offset>, i:<bitmask>, i:<bitmask2>
 		if(glob.gMeta==0) { // only one application so will be inlet==0 only
-		  if(inlet==0) { // ignore 2nd app
-			if(glob.g1y==8) { // d0 is 8 high
-				if(y==0 && glob.gridtiling == 0) { // no offset & horizontal
-					if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
-					else outlet(1,"/manager/grid/led/level/col",x-glob.g1x,y,z,n,o,p,q,r,s,t);
-				}
-				else if(y==0 && glob.gridtiling == 0) { // no offset & vertical
-					outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
-					outlet(1,"/manager/grid/led/level/col",x,y,u,v,w,aa,bb,cc,dd,ee);
-				}
-				else if(y==8 && glob.gridtiling == 0 && x>glob.g1x) outlet(1,"/manager/grid/led/level/col",x-glob.g1x,y,z,n,o,p,q,r,s,t);
-				else if(y==8 && glob.gridtiling == 1) outlet(1,"/manager/grid/led/level/col",x,(y-8),z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
-			}
-			if(glob.g1y==16) { // device is 16 high
-				if(y==0) { // from the top
- 					if(glob.gridtiling == 0) { // horizontal (vertical is out of range here)
- 						if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,0,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // in d0 range
-						else outlet(1,"/manager/grid/led/level/col",x-glob.g1x,0,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // in d1 range
+			if(inlet==0) { // ignore 2nd app
+				if(glob.g1y==8) { // d0 is 8 high
+					if(y==0 && glob.gridtiling == 0) { // no offset & horizontal
+						if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
+						else outlet(1,"/manager/grid/led/level/col",x-glob.g1x,y,z,n,o,p,q,r,s,t);
 					}
-				}
-				else if(y==8) {
-					if(glob.gridtiling == 0) { // horizontal
-						if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
-						else outlet(1,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
+					else if(y==0 && glob.gridtiling == 1) { // no offset & vertical
+						outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
+						outlet(1,"/manager/grid/led/level/col",x,y,u,v,w,aa,bb,cc,dd,ee);
 					}
-					else { // vertical
-						if(x<glob.g1x) {
-							outlet(0,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
-							outlet(1,"/manager/grid/led/level/col",x,0,u,v,w,aa,bb,cc,dd,ee);
+					else if(y==8 && glob.gridtiling == 0 && x>glob.g1x) outlet(1,"/manager/grid/led/level/col",x-glob.g1x,y,z,n,o,p,q,r,s,t);
+					else if(y==8 && glob.gridtiling == 1) outlet(1,"/manager/grid/led/level/col",x,(y-8),z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
+				}
+				if(glob.g1y==16) { // device is 16 high
+					if(y==0) { // from the top
+	 					if(glob.gridtiling == 0) { // horizontal
+	 						if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,0,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // in d0 range
+							else outlet(1,"/manager/grid/led/level/col",x-glob.g1x,0,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee); // in d1 range
 						}
-						else outlet(1,"/manager/grid/led/level/col",x,0,u,v,w,aa,bb,cc,dd,ee);
+						else { // vertical tiling
+	 							outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
+								//outlet(0,"/manager/grid/led/level/col",x,y,u,v,w,aa,bb,cc,dd,ee);
+							}
+							else { // first grid is 
+								outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t);
+								outlet(1,"/manager/grid/led/level/col",x,y,u,v,w,aa,bb,cc,dd,ee);	
+							}
+	 					}
+					}
+					else if(y==8) {
+						if(glob.gridtiling == 0) { // horizontal
+							if(x<glob.g1x) outlet(0,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
+							else outlet(1,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
+						}
+						else { // vertical
+							if(x<glob.g1x) {
+								outlet(0,"/manager/grid/led/level/col",x,8,z,n,o,p,q,r,s,t);
+								outlet(1,"/manager/grid/led/level/col",x,0,u,v,w,aa,bb,cc,dd,ee);
+							}
+							else outlet(1,"/manager/grid/led/level/col",x,0,u,v,w,aa,bb,cc,dd,ee);
+						}
+					}
+					else if(y>8) { // bigger than 16 >> always on 2nd device
+						if(glob.gridtiling == 1) outlet(1,"/manager/grid/led/level/col",x,(y-16),z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
 					}
 				}
-				else if(y>8) { // bigger than 16 >> always on 2nd device
-					if(glob.gridtiling == 1) outlet(1,"/manager/grid/led/level/col",x,(y-16),z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
-				}
 			}
-		  }
 		}
 		else if(glob.gMeta==1) { // 2 apps & 2 devices
 			if(inlet==0) outlet(0,"/manager/grid/led/level/col",x,y,z,n,o,p,q,r,s,t,u,v,w,aa,bb,cc,dd,ee);
