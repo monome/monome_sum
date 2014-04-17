@@ -114,6 +114,12 @@ function key(x,y,s) {
 			else if((y-1)<7 && playR[1]==(y-1)) {
 				sLoop(y-1,x);
 			}
+			else if((y-1)>6 && playR[0]==(y-1)) {
+				sLoop(y-1,x);
+			}
+			else if((y-1)>10 && playR[1]==(y-1)){
+				sLoop(y-1,x);
+			}
 			// add more else ifs for 15rows
 			else {
 				// otherwise just treat it as a normal sTrig as it's a different row
@@ -163,9 +169,11 @@ function stoprow(ch) {
 
 	if(ch==0) {
 		for(i=0;i<3;i++) outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+		for(i=7;i<10;i++) outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
 	}
 	else { // ch ==1
 		for(i=3;i<7;i++) outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+		for(i=10;i<16;i++) outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
 	}
 }
 
@@ -199,7 +207,7 @@ function pLength(index,length) {
 }
 
 function sTrig(row, step) { // sample trigger. called when physically pressing a key
-	if(row<3) {
+	if(row<3 || row>6 && row<10) {
 		// top 3 rows - outlet0
 		outlet(0, "play", step/boundX, sSpeed[0], 0, 1, row);
 		playR[0] = row;
@@ -208,7 +216,7 @@ function sTrig(row, step) { // sample trigger. called when physically pressing a
 		lastch = 0; // set flag for second group
 		playG[0] = 1;
 	}
-	else {
+	else if(row>2 && row <7 || row>9) {
 		// bottom 4 rows - outlet1
 		outlet(1, "play", step/boundX, sSpeed[1], 0, 1, row);
 		playR[1] = row;
@@ -217,6 +225,7 @@ function sTrig(row, step) { // sample trigger. called when physically pressing a
 		lastch = 1; // set the flag for 2nd group
 		playG[1] = 1;
 	}
+	else
 		
 		// below is data sent to pattern recorders
 	for(i=0;i<2;i++) { // iterate over both pattern recorders
@@ -281,24 +290,33 @@ function pPos(group, row, pos) {
 	// updates the current playback position of each group
 	// use to draw led response
 	
-	if(playG[group]==1) { // only allow output if the group is active (protects against timing edge case)
+	if(playG[group]==1) 
+	{
+	 // only allow output if the group is active (protects against timing edge case)
 
-		if(vb==0) {
+		if(vb==0) 
+		{
 			outBM = Math.floor(1<<(pos*boundX)); // make a bitmask of the currently playing step
 		
 			outlet(4,"/b_mlr/grid/led/row", 0, row+1, 255&outBM, (65280&outBM)>>8); // light the just updated row
-			if(group==0) {
-				for(i=0;i<3;i++) {
-					if(i!=row) {
+			if(group==0) 
+			{
+				for(i=0;i<3;i++) 
+				{
+					if(i!=row) 
+					{
 						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
 					}
 				}
 				sampleR[0] = row;
 				sampleP[0] = pos;
 			}
-			else { // group ==1
-				for(i=3;i<7;i++) { // iterate through 4 rows
-					if(i!=row) {
+			else 
+			{ // group ==1
+				for(i=3;i<7;i++) 
+				{ // iterate through 4 rows
+					if(i!=row) 
+					{
 						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
 					}
 				}
@@ -306,16 +324,24 @@ function pPos(group, row, pos) {
 				sampleP[1] = pos;
 			}
 		}
-		else { // varibright
-			if(group==0) {
+		else 
+		{ // varibright
+			if(group==0) 
+			{
 				for(i=0;i<16;i++) inner0[i] = 0; // set array to all zeroes
 				inner0.length = boundX; // resize array
-				if(loopMode[0] == 1) { // if there's an inner loop draw a low bright brace
+				if(loopMode[0] == 1) 
+				{ // if there's an inner loop draw a low bright brace
 					for(i=playS[0];i<(playL[0]);i++) inner0[i] = 5;
 				}
 				inner0[Math.floor(pos*boundX)] = 15;
 				outlet(4,"/b_mlr/grid/led/level/row",0,row+1,inner0);
 				for(i=0;i<3;i++) { // clean up other rows
+					if(i!=row) {
+						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+					}
+				}
+				for(i=7;i<10;i++) { // clean up other rows
 					if(i!=row) {
 						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
 					}
@@ -332,6 +358,11 @@ function pPos(group, row, pos) {
 				inner1[Math.floor(pos*boundX)] = 15;
 				outlet(4,"/b_mlr/grid/led/level/row",0,row+1,inner1);
 				for(i=3;i<7;i++) { // clean up other rows
+					if(i!=row) {
+						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
+					}
+				}
+				for(i=10;i<15;i++) { // clean up other rows
 					if(i!=row) {
 						outlet(4,"/b_mlr/grid/led/row", 0, i+1, 0, 0);
 					}

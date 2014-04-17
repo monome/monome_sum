@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 63.0, 95.0, 706.0, 584.0 ],
+		"rect" : [ 131.0, 237.0, 706.0, 584.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,21 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-6",
+					"linecount" : 3,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 282.0, 67.0, 52.0, 45.0 ],
+					"text" : "speed 1.17756"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
@@ -53,7 +68,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -170,7 +185,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -305,7 +320,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -589,7 +604,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -791,7 +806,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -945,7 +960,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "signal" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 104.0, 40.0, 25.0, 25.0 ]
 								}
 
@@ -1082,8 +1097,8 @@
 					"id" : "obj-39",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
-					"numoutlets" : 7,
-					"outlettype" : [ "signal", "signal", "signal", "float", "float", "symbol", "" ],
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 144.0, 444.0, 133.0, 20.0 ],
 					"text" : "xgroove~ 2 #1file"
 				}
@@ -1118,7 +1133,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1358,7 +1373,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1619,7 +1634,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2037,35 +2052,35 @@
 							}
 , 							{
 								"key" : 7,
-								"value" : [ 0.0, 0.0, 1.0, 1 ]
+								"value" : [ 0.0, 0.0, 1.25, 1 ]
 							}
 , 							{
 								"key" : 8,
-								"value" : [ 0.0, 0.0, 1.0, 1 ]
+								"value" : [ 0.0, 0.0, 1.5, 1 ]
 							}
 , 							{
 								"key" : 9,
-								"value" : [ 0.0, 0.0, 1.0, 1 ]
+								"value" : [ 0.0, 0.0, 1.75, 1 ]
 							}
 , 							{
 								"key" : 10,
-								"value" : [ 0.0, 0.0, 1.0, 1 ]
+								"value" : [ 0.0, 0.0, 1.25, 1 ]
 							}
 , 							{
 								"key" : 11,
-								"value" : [ 0.0, 0.0, 1.0, 1 ]
+								"value" : [ 0.0, 0.0, 1.5, 1 ]
 							}
 , 							{
 								"key" : 12,
-								"value" : [ 0.0, 0.0, 1.0, 1 ]
+								"value" : [ 0.0, 0.0, 1.75, 1 ]
 							}
 , 							{
 								"key" : 13,
-								"value" : [ 0.0, 0.0, 1.0, 1 ]
+								"value" : [ 1.0, 0.0, -0.75, 1 ]
 							}
 , 							{
 								"key" : 14,
-								"value" : [ 0.0, 0.0, 1.0, 1 ]
+								"value" : [ 1.0, 0.0, -1.25, 1 ]
 							}
  ]
 					}
@@ -2264,6 +2279,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-19", 0 ]
@@ -2504,7 +2528,8 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ]
 	}
 
 }
