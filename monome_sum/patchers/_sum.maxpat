@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
@@ -85,7 +85,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 986.0, 32.0, 88.0, 15.0 ],
 					"rounded" : 0.0,
-					"text" : "drum editor"
+					"text" : "step sounds"
 				}
 
 			}
@@ -130,7 +130,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1259,7 +1259,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1475,7 +1475,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2078,7 +2078,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2135,12 +2135,13 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 54.0, 114.0, 363.0, 18.0 ],
-									"text" : "window flags grow, window flags zoom, window exec"
+									"patching_rect" : [ 54.0, 114.0, 378.0, 31.0 ],
+									"text" : "window flags grow, window flags zoom, window flags close, window exec"
 								}
 
 							}
@@ -2163,12 +2164,13 @@
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 54.0, 174.0, 392.0, 18.0 ],
-									"text" : "window flags nogrow, window flags nozoom, window exec"
+									"patching_rect" : [ 54.0, 174.0, 407.0, 31.0 ],
+									"text" : "window flags nogrow, window flags nozoom, window flags noclose, window exec"
 								}
 
 							}
@@ -2734,7 +2736,7 @@
 					"patching_rect" : [ 738.0, 372.0, 54.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 829.0, 306.0, 72.0, 19.0 ],
-					"text" : "-15 dB"
+					"text" : "-7 dB"
 				}
 
 			}
@@ -2867,14 +2869,14 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1008.0, 384.0, 59.5, 19.0 ],
 					"restore" : 					{
-						"m-key" : [ 0 ],
-						"m-scale" : [ 0 ],
-						"m-tempo" : [ 91.428574 ],
-						"m-volume" : [ -15.330612 ]
+						"m-key" : [ 7 ],
+						"m-scale" : [ 1 ],
+						"m-tempo" : [ 108.32653 ],
+						"m-volume" : [ -7.689796 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u764008426"
+					"varname" : "u783008523"
 				}
 
 			}
@@ -2916,7 +2918,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2968,7 +2970,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -3386,7 +3388,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -3597,7 +3599,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -4132,7 +4134,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4340,7 +4342,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4548,7 +4550,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4781,7 +4783,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
