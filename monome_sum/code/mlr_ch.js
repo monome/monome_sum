@@ -225,7 +225,6 @@ function sTrig(row, step) { // sample trigger. called when physically pressing a
 		lastch = 1; // set the flag for 2nd group
 		playG[1] = 1;
 	}
-	else
 		
 		// below is data sent to pattern recorders
 	for(i=0;i<2;i++) { // iterate over both pattern recorders
@@ -239,6 +238,7 @@ function sTrig(row, step) { // sample trigger. called when physically pressing a
 		if(rpGate[i]>1) {
 			// the recording gate is open, so send input to the pattern recorder
 			outlet(i+2, "press", row, step);
+			post("rec gate active");
 		}
 	}
 		// lastly send led commands for stop buttons

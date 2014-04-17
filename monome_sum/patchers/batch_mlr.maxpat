@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 227.0, 186.0, 1207.0, 788.0 ],
+		"rect" : [ 349.0, 121.0, 1207.0, 788.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -43,7 +43,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -474,7 +474,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1223,7 +1223,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -1984,7 +1984,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 450.0, 378.0, 227.0, 20.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 1 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -2005,7 +2005,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 126.0, 384.0, 227.0, 20.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 1 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -2030,7 +2030,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2254,7 +2254,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2495,7 +2495,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -2804,15 +2804,15 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 90.0, 702.0, 75.0, 20.0 ],
 					"restore" : 					{
-						"ch1-vol" : [ 0.714286 ],
+						"ch1-vol" : [ 0.142857 ],
 						"ch2-vol" : [ 0.428571 ],
-						"delay" : [ -1.0 ],
-						"level" : [ -0.538344 ],
-						"reverb" : [ -1.0 ]
+						"delay" : [ -0.714286 ],
+						"level" : [ 0.428571 ],
+						"reverb" : [ 0.714286 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u568016517"
+					"varname" : "u554007232"
 				}
 
 			}
@@ -2860,10 +2860,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.0, 498.0, 40.0, 44.0 ],
+					"patching_rect" : [ 252.0, 498.0, 42.0, 44.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.0, 105.0, 234.0, 19.0 ],
-					"text" : "Plucks.aif"
+					"text" : "SoulChicken.aif"
 				}
 
 			}
@@ -3027,10 +3027,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 504.0, 480.0, 40.0, 44.0 ],
+					"patching_rect" : [ 504.0, 480.0, 42.0, 44.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 324.0, 105.0, 235.0, 19.0 ],
-					"text" : "Timba.aif"
+					"text" : "SoulChicken.aif"
 				}
 
 			}
@@ -3149,7 +3149,7 @@
 					"patching_rect" : [ 900.0, 313.0, 54.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.0, 66.0, 72.0, 19.0 ],
-					"text" : "3 dB"
+					"text" : "-10 dB"
 				}
 
 			}
@@ -3410,7 +3410,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -3838,7 +3838,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -3944,7 +3944,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -4336,7 +4336,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x86"
 						}
 ,
@@ -4456,7 +4456,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 6,
 											"architecture" : "x86"
 										}
 ,
@@ -4974,7 +4974,7 @@
 					"maxclass" : "panel",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 684.0, 18.0, 90.0, 54.0 ],
+					"patching_rect" : [ 693.5, 18.0, 90.0, 54.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.0, 86.0, 245.0, 38.0 ]
 				}
@@ -5810,32 +5810,6 @@
 					"source" : [ "obj-99", 1 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "mlr_ch.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "batch_mlr_play.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "xplay~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
