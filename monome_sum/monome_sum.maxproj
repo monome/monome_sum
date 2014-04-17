@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -814516930,
+	"modificationdate" : -814374840,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -91,6 +91,16 @@
 			}
 ,
 			"audio_settings.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"drumeditor.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"drumeditorswitcher.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
