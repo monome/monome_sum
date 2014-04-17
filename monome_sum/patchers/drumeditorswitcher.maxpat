@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 413.0, 90.0, 563.0, 234.0 ],
+		"rect" : [ 413.0, 90.0, 562.0, 237.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,22 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"args" : [ 15 ],
+					"hidden" : 1,
+					"id" : "obj-3",
+					"maxclass" : "bpatcher",
+					"name" : "drumeditor.maxpat",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"varname" : "drumeditor[14]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -215,7 +231,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
 					"patching_rect" : [ 888.0, 75.0, 46.0, 20.0 ],
-					"text" : "uzi 14"
+					"text" : "uzi 15"
 				}
 
 			}
@@ -443,6 +459,7 @@
 , 			{
 				"box" : 				{
 					"args" : [ 1 ],
+					"hidden" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
 					"name" : "drumeditor.maxpat",
@@ -457,7 +474,6 @@
 			}
 , 			{
 				"box" : 				{
-					"hidden" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
 					"name" : "drumeditor.maxpat",
@@ -478,7 +494,7 @@
 					"clicktabcolor" : [ 1.0, 0.8, 0.4, 0.7 ],
 					"clicktextcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"fontname" : "Andale Mono",
-					"fontsize" : 12.0,
+					"fontsize" : 9.0,
 					"hovertabcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"htabcolor" : [ 1.0, 0.8, 0.4, 0.7 ],
 					"htextcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
@@ -492,12 +508,12 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 15.0, 63.75, 534.0, 28.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 7.5, 534.0, 29.0 ],
+					"presentation_rect" : [ 19.0, 5.5, 520.0, 29.0 ],
 					"rounded" : 0.0,
 					"spacing_x" : 2.0,
 					"spacing_y" : 2.0,
 					"tabcolor" : [ 0.901961, 0.901961, 0.901961, 1.0 ],
-					"tabs" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" ],
+					"tabs" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" ],
 					"truncate" : 2
 				}
 
@@ -664,6 +680,14 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "drumeditor.maxpat",
+				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
 			}
  ]
 	}
