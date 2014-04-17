@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 769.0, 240.0 ],
+		"rect" : [ 81.0, 69.0, 769.0, 240.0 ],
 		"openrect" : [ 0.0, 0.0, 769.0, 240.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
@@ -31,6 +31,35 @@
 		"tags" : "",
 		"title" : "monome_smallbatch",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-53",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 497.0, 180.0, 68.0, 20.0 ],
+					"text" : "freebang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-56",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 497.0, 216.0, 68.0, 33.0 ],
+					"text" : ";\rmax quit"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
@@ -880,8 +909,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 54.0, 114.0, 507.0, 18.0 ],
-									"text" : "window flags grow, window flags zoom, window flags close, window exec"
+									"patching_rect" : [ 54.0, 114.0, 363.0, 18.0 ],
+									"text" : "window flags grow, window flags zoom, window exec"
 								}
 
 							}
@@ -908,8 +937,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 54.0, 174.0, 551.0, 18.0 ],
-									"text" : "window flags nogrow, window flags nozoom, window flags noclose, window exec"
+									"patching_rect" : [ 54.0, 174.0, 392.0, 18.0 ],
+									"text" : "window flags nogrow, window flags nozoom, window exec"
 								}
 
 							}
@@ -2769,7 +2798,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u013008533"
+					"varname" : "u546008533"
 				}
 
 			}
@@ -12721,6 +12750,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-52", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-56", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-53", 0 ]
 				}
 
 			}
