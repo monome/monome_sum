@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 413.0, 90.0, 562.0, 237.0 ],
+		"rect" : [ 413.0, 90.0, 575.0, 254.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,7 +38,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[14]"
 				}
 
@@ -260,7 +260,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[13]"
 				}
 
@@ -276,7 +276,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[12]"
 				}
 
@@ -292,7 +292,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[11]"
 				}
 
@@ -308,7 +308,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[10]"
 				}
 
@@ -324,7 +324,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[9]"
 				}
 
@@ -340,7 +340,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[8]"
 				}
 
@@ -356,7 +356,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[7]"
 				}
 
@@ -372,7 +372,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[6]"
 				}
 
@@ -388,7 +388,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[5]"
 				}
 
@@ -404,7 +404,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[4]"
 				}
 
@@ -420,7 +420,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[3]"
 				}
 
@@ -436,7 +436,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[2]"
 				}
 
@@ -467,7 +467,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[1]"
 				}
 
@@ -481,7 +481,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 39.5, 534.0, 221.0 ],
+					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[0]"
 				}
 
@@ -508,13 +508,44 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 15.0, 63.75, 534.0, 28.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 19.0, 5.5, 520.0, 29.0 ],
+					"presentation_rect" : [ 14.0, 14.5, 547.0, 29.0 ],
 					"rounded" : 0.0,
 					"spacing_x" : 2.0,
 					"spacing_y" : 2.0,
 					"tabcolor" : [ 0.901961, 0.901961, 0.901961, 1.0 ],
 					"tabs" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" ],
 					"truncate" : 2
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.8, 0.8, 0.8, 0.6 ],
+					"border" : 1,
+					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"id" : "obj-45",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 789.0, 243.0, 36.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 15.0, 47.0, 545.0, 192.0 ],
+					"rounded" : 0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 1.0, 0.8, 0.4, 0.2 ],
+					"bordercolor" : [ 0.6, 0.6, 0.6, 1.0 ],
+					"id" : "obj-9",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 804.0, 258.0, 36.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 9.0, 9.0, 557.0, 236.0 ],
+					"rounded" : 0
 				}
 
 			}
@@ -680,14 +711,6 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "drumeditor.maxpat",
-				"bootpath" : "/Users/sorenandreasen/_monome/llllllll/monome_sum/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
 			}
  ]
 	}
