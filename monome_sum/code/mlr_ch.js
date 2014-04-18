@@ -197,6 +197,18 @@ function pattern(index) {
 	else outlet(4,"/b_mlr/grid/led/level/set", index+4, 0, rGate[index]*10+5);
 }
 
+function reset() {
+	tsk0.cancel();
+	tsk1.cancel();
+	for(i=0;i<2;i++) {
+		stoprow(i);
+		rGate[i] = 0;
+		rpGate[i] = 0;
+		if(vb==0) outlet(4,"/b_mlr/grid/led/set", i+4, 0, 0);
+		else outlet(4,"/b_mlr/grid/led/level/set", i+4, 0, 5);
+	}
+}
+
 function pLed(index, state) {
 	// led feedback for pattern recorders
 	if(vb==0) outlet(4,"/b_mlr/grid/led/set", index+4, 0, state);	

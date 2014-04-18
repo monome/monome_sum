@@ -95,7 +95,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "int", "int", "int", "int", "int" ],
 					"patching_rect" : [ 504.0, 12.0, 73.0, 19.0 ],
-					"save" : [ "#N", "menubar", 5, 0, ";", "#X", "about", "About", "monome_sum", ";", "#X", "open", 1, ";", "#X", "saveas", 3, ";", "#X", "closeitem", ";", "#X", "menutitle", 5, "Preferences", ";", "#X", "item", 5, 1, "Audio", "Settings", ";", "#X", "end", ";" ],
+					"save" : [ "#N", "menubar", 5, 0, ";", "#X", "about", "About", "monome_sum", ";", "#X", "open", 1, ";", "#X", "saveas", 3, ";", "#X", "closeitem", ";", "#X", "menutitle", 5, "Preferences", ";", "#X", "item", 5, 1, "Audio", "Settings", ";", "#X", "item", 5, 2, "Midi", "Clock", ";", "#X", "end", ";" ],
 					"text" : "menubar 5"
 				}
 
@@ -194,6 +194,49 @@
 						"tags" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"id" : "obj-1",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 504.0, 354.0, 40.0, 19.0 ],
+									"presentation_rect" : [ 498.0, 351.0, 0.0, 0.0 ],
+									"text" : "open"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 504.0, 376.0, 58.0, 21.0 ],
+									"presentation_rect" : [ 498.0, 373.0, 0.0, 0.0 ],
+									"text" : "pcontrol"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 504.0, 400.0, 117.0, 21.0 ],
+									"text" : "midi_clock.maxpat"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
 									"id" : "obj-29",
@@ -272,7 +315,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 252.0, 276.0, 90.0, 48.0 ],
+									"patching_rect" : [ 252.0, 276.0, 90.0, 47.0 ],
 									"text" : "1: open\n2: save\n3: save as"
 								}
 
@@ -300,7 +343,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 540.0, 338.0, 40.0, 19.0 ],
+									"patching_rect" : [ 432.0, 392.0, 40.0, 19.0 ],
 									"text" : "open"
 								}
 
@@ -314,7 +357,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 540.0, 360.0, 58.0, 21.0 ],
+									"patching_rect" : [ 432.0, 414.0, 58.0, 21.0 ],
 									"text" : "pcontrol"
 								}
 
@@ -327,7 +370,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 540.0, 384.0, 141.0, 21.0 ],
+									"patching_rect" : [ 432.0, 438.0, 141.0, 21.0 ],
 									"text" : "audio_settings.maxpat"
 								}
 
@@ -338,11 +381,11 @@
 									"fontsize" : 12.0,
 									"id" : "obj-12",
 									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 540.0, 306.0, 47.0, 20.0 ],
-									"text" : "sel 1"
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "bang", "bang", "" ],
+									"patching_rect" : [ 432.0, 306.0, 61.0, 20.0 ],
+									"text" : "sel 1 2"
 								}
 
 							}
@@ -465,7 +508,7 @@
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 672.0, 424.0, 336.0, 202.0 ],
+										"openrect" : [ 672.0, 424.0, 367.0, 172.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 1,
 										"default_fontsize" : 11.595187,
@@ -968,10 +1011,28 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-12", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-12", 1 ]
 								}
 
 							}
@@ -1026,6 +1087,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-16", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -2798,7 +2868,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u517006873"
+					"varname" : "u053020051"
 				}
 
 			}
@@ -13066,6 +13136,20 @@
 			}
 , 			{
 				"name" : "drumeditor.maxpat",
+				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "panic.png",
+				"bootpath" : "/Users/Trent/Desktop",
+				"patcherrelativepath" : "../../../../../Desktop",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "midi_clock.maxpat",
 				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

@@ -215,3 +215,8 @@ function drawSteps() {
 	// draw the top row with a list of all steps
 	outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2); // non-vb
 }
+
+function clearAll() {
+	// for the panic button
+	for(i=0;i<1024;i++) bits[i] = 0;
+}

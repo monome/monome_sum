@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -814292754,
+	"modificationdate" : -814291389,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -130,12 +130,7 @@
 ,
 			"panic.png" : 			{
 				"kind" : "imagefile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "/Users/Trent/Desktop",
-					"projectrelativepath" : "../../../../Desktop"
-				}
-
+				"local" : 1
 			}
 ,
 			"Pianos.aif" : 			{
