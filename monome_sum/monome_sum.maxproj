@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -814374840,
+	"modificationdate" : -814303022,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -14,6 +14,16 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"rings.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "/Users/Trent/Documents/Monome/rule110",
+					"projectrelativepath" : "../../rule110"
+				}
+
 			}
 ,
 			"serialosc.maxpat" : 			{
@@ -95,12 +105,12 @@
 				"local" : 1
 			}
 ,
-			"drumeditor.maxpat" : 			{
+			"drumeditorswitcher.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"drumeditorswitcher.maxpat" : 			{
+			"drumeditor.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -216,6 +226,10 @@
 				}
 
 			}
+
+		}
+,
+		"other" : 		{
 
 		}
 
