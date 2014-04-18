@@ -32,6 +32,34 @@
 		"title" : "monome_smallbatch",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.4, 0.8, 1.0, 1.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-69",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 504.0, 186.0, 90.0, 20.0 ],
+					"text" : "s [sum]save"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"id" : "obj-63",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "writeagain" ],
+					"patching_rect" : [ 486.0, 162.0, 103.0, 19.0 ],
+					"text" : "t b writeagain"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-53",
@@ -39,7 +67,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 497.0, 180.0, 68.0, 20.0 ],
+					"patching_rect" : [ 486.0, 138.0, 68.0, 20.0 ],
 					"text" : "freebang"
 				}
 
@@ -54,7 +82,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 497.0, 216.0, 68.0, 31.0 ],
+					"patching_rect" : [ 486.0, 198.0, 68.0, 31.0 ],
 					"text" : ";\rmax quit"
 				}
 
@@ -137,7 +165,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 486.0, 120.0, 63.0, 19.0 ],
+					"patching_rect" : [ 504.0, 102.0, 63.0, 19.0 ],
 					"text" : "loadbang"
 				}
 
@@ -202,7 +230,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 504.0, 354.0, 40.0, 19.0 ],
-									"presentation_rect" : [ 498.0, 351.0, 0.0, 0.0 ],
 									"text" : "open"
 								}
 
@@ -217,7 +244,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 504.0, 376.0, 58.0, 21.0 ],
-									"presentation_rect" : [ 498.0, 373.0, 0.0, 0.0 ],
 									"text" : "pcontrol"
 								}
 
@@ -2475,7 +2501,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 486.0, 150.0, 90.0, 19.0 ],
+					"patching_rect" : [ 504.0, 120.0, 90.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Andale Mono",
@@ -2868,7 +2894,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u053020051"
+					"varname" : "u893018210"
 				}
 
 			}
@@ -2891,7 +2917,7 @@
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 63.0, 401.0, 992.0, 503.0 ],
+						"rect" : [ 46.0, 417.0, 992.0, 503.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3744,15 +3770,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-35", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-38", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-29", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -3900,14 +3917,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 198.0, 180.0, 107.0, 19.0 ],
+					"patching_rect" : [ 198.0, 180.0, 179.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
 						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
 ,
-					"text" : "pattrstorage sbatch",
+					"text" : "pattrstorage sbatch @savemode 0",
 					"varname" : "sbatch"
 				}
 
@@ -12825,6 +12842,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-63", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-53", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-66", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -12865,6 +12891,24 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-61", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-56", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-63", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-63", 1 ]
 				}
 
 			}

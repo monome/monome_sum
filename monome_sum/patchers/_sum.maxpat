@@ -30,6 +30,21 @@
 		"title" : "monome_sum",
 		"boxes" : [ 			{
 				"box" : 				{
+					"color" : [ 0.8, 0.4, 1.0, 1.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-83",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 828.0, 168.0, 90.0, 20.0 ],
+					"text" : "r [sum]save"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 0.4, 0.8, 1.0, 1.0 ],
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
@@ -1737,7 +1752,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u827007520"
+					"varname" : "u892018201"
 				}
 
 			}
@@ -1752,14 +1767,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 900.0, 360.0, 141.0, 19.0 ],
+					"patching_rect" : [ 900.0, 360.0, 213.0, 19.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
 						"storage_rect" : [ 766, 44, 1220, 302 ]
 					}
 ,
-					"text" : "pattrstorage master-p.json",
+					"text" : "pattrstorage master-p.json @savemode 3",
 					"varname" : "master-p.json"
 				}
 
@@ -4786,6 +4801,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-80", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-80", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-83", 0 ]
 				}
 
 			}
