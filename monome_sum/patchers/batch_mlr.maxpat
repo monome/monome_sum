@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 349.0, 121.0, 1207.0, 788.0 ],
+		"rect" : [ 297.0, 98.0, 1207.0, 788.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -2005,7 +2005,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 126.0, 384.0, 227.0, 20.0 ],
-					"restore" : [ 1 ],
+					"restore" : [ "Macintosh HD:/Users/sorenandreasen/Desktop/test192khz.aif" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -2802,7 +2802,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 90.0, 702.0, 75.0, 20.0 ],
+					"patching_rect" : [ 72.0, 678.0, 75.0, 20.0 ],
 					"restore" : 					{
 						"ch1-vol" : [ 0.142857 ],
 						"ch2-vol" : [ 0.428571 ],
@@ -2812,7 +2812,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u554007232"
+					"varname" : "u258007360"
 				}
 
 			}
@@ -2863,7 +2863,7 @@
 					"patching_rect" : [ 252.0, 498.0, 42.0, 44.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.0, 105.0, 234.0, 19.0 ],
-					"text" : "SoulChicken.aif"
+					"text" : "test192khz.aif"
 				}
 
 			}

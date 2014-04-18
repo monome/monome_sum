@@ -137,17 +137,17 @@ function key(x,y,s) {
 	}
 }
 
-function file(index, length, srRatio) {
+function file(index, length) {
 	// collect information about currently loaded audio files
 	fLength[index] = length; // dumps new file length into array
-	fsrRatio[index] = srRatio; // difference between dsp and file samplerate
+	//fsrRatio[index] = srRatio; // difference between dsp and file samplerate
 	speedCalc(); // call a new speed calculation
 }
 
 function speedCalc() {
 	// recalculates playback speed for all rows
 	for(i=0;i<2;i++) { // calculate every row whenever the function is called
-		sSpeed[i] = tempo/(60000/((fLength[i] / boundX))) * fsrRatio[i] ;
+		sSpeed[i] = tempo/(60000/((fLength[i] / boundX)));
 	
 		if(sSpeed[i]) { // multiply by 0.5 or 2 if the resultant speed is outside of 0.7 to 1.41
 			while(sSpeed[i]<0.70) sSpeed[i] = sSpeed[i]*2;
