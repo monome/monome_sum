@@ -52,6 +52,7 @@ var playR = new Array(2);
 var playS = new Array(2);
 var sSpeed = new Array(2);
 var fLength = new Array(2);
+var fsrRatio = new Array(2);
 var rGate = new Array(2);
 var rpGate = new Array(2);
 var pLength = new Array(2);
@@ -79,6 +80,7 @@ for(i=0;i<2;i++) {
 	loopMode[i] = 0;
 	sampleR[i] = 0;
 	sampleP[i] = 0;
+	fsrRatio[i] = 0;
 }
 for(i=0;i<15;i++) {
 	count[i] = 0;
@@ -135,17 +137,18 @@ function key(x,y,s) {
 	}
 }
 
-function file(index, length) {
+function file(index, length, srRatio) {
 	// collect information about currently loaded audio files
 	fLength[index] = length; // dumps new file length into array
+	fsrRatio[index] = srRatio; // difference between dsp and file samplerate
 	speedCalc(); // call a new speed calculation
 }
 
 function speedCalc() {
 	// recalculates playback speed for all rows
 	for(i=0;i<2;i++) { // calculate every row whenever the function is called
-		sSpeed[i] = tempo/(60000/((fLength[i] / boundX)));
-		
+		sSpeed[i] = tempo/(60000/((fLength[i] / boundX))) * fsrRatio[i] ;
+	
 		if(sSpeed[i]) { // multiply by 0.5 or 2 if the resultant speed is outside of 0.7 to 1.41
 			while(sSpeed[i]<0.70) sSpeed[i] = sSpeed[i]*2;
 			while(sSpeed[i]>1.41) sSpeed[i] = sSpeed[i]/2;
