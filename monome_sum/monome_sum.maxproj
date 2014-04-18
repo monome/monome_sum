@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -814303022,
+	"modificationdate" : -814292754,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -14,6 +14,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"midi_clock.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 ,
 			"rings.maxpat" : 			{
@@ -123,6 +128,16 @@
 				"local" : 1
 			}
 ,
+			"panic.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "/Users/Trent/Desktop",
+					"projectrelativepath" : "../../../../Desktop"
+				}
+
+			}
+,
 			"Pianos.aif" : 			{
 				"kind" : "audiofile",
 				"local" : 1
@@ -226,10 +241,6 @@
 				}
 
 			}
-
-		}
-,
-		"other" : 		{
 
 		}
 
