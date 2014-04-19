@@ -1334,7 +1334,7 @@
 						"cantclosetoplevelpatchers" : 1,
 						"database" : 0,
 						"extensions" : 0,
-						"midisupport" : 0,
+						"midisupport" : 1,
 						"noloadbangdefeating" : 0,
 						"overdrive" : 1,
 						"preffilename" : "monome_sum preferences",
@@ -2926,7 +2926,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u110006399"
+					"varname" : "u321006400"
 				}
 
 			}
