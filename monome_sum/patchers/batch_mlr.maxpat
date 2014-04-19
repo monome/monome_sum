@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 297.0, 98.0, 1207.0, 788.0 ],
+		"rect" : [ 39.0, 109.0, 1207.0, 788.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -2248,7 +2248,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "reset" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -2285,9 +2285,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 198.0, 360.0, 104.0, 20.0 ],
-									"text" : "prepend reset"
+									"outlettype" : [ "reset" ],
+									"patching_rect" : [ 198.0, 360.0, 61.0, 20.0 ],
+									"text" : "t reset"
 								}
 
 							}
@@ -2859,7 +2859,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u377009362"
+					"varname" : "u309006686"
 				}
 
 			}

@@ -219,4 +219,6 @@ function drawSteps() {
 function clearAll() {
 	// for the panic button
 	for(i=0;i<1024;i++) bits[i] = 0;
+	for(i=1;i<33;i++)
+		outlet(2,i,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 }

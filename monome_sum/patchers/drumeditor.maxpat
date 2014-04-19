@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86"
 		}
 ,
@@ -30,6 +30,51 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Helvetica Neue",
+					"fontsize" : 11.0,
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 108.0, 138.0, 33.0, 19.0 ],
+					"text" : "mtof"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Andale Mono",
+					"fontsize" : 11.0,
+					"frgb" : 0.0,
+					"id" : "obj-4",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 144.0, 186.0, 70.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 18.0, 533.0, 82.0, 19.0 ],
+					"text" : "727.17 ms"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Helvetica Neue",
+					"fontsize" : 11.0,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 144.0, 162.0, 95.0, 19.0 ],
+					"presentation_rect" : [ 18.0, 509.0, 0.0, 0.0 ],
+					"text" : "sprintf set %f ms"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"fontname" : "Helvetica Neue",
 					"fontsize" : 11.0,
@@ -42,7 +87,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -81,7 +126,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::volume @invisible 1",
-									"varname" : "u175000123"
+									"varname" : "u574006553"
 								}
 
 							}
@@ -207,7 +252,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-shape @invisible 1",
-									"varname" : "u447000125"
+									"varname" : "u653006555"
 								}
 
 							}
@@ -227,7 +272,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-slope @invisible 1",
-									"varname" : "u332000127"
+									"varname" : "u711006557"
 								}
 
 							}
@@ -247,7 +292,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env-length @invisible 1",
-									"varname" : "u025000129"
+									"varname" : "u897006559"
 								}
 
 							}
@@ -281,7 +326,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::resonance @invisible 1",
-									"varname" : "u022000131"
+									"varname" : "u026006561"
 								}
 
 							}
@@ -301,7 +346,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::env2mod @invisible 1",
-									"varname" : "u544000133"
+									"varname" : "u202006563"
 								}
 
 							}
@@ -321,7 +366,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtofilt @invisible 1",
-									"varname" : "u887000135"
+									"varname" : "u444006565"
 								}
 
 							}
@@ -341,7 +386,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::envtopitch @invisible 1",
-									"varname" : "u458000137"
+									"varname" : "u979006567"
 								}
 
 							}
@@ -361,7 +406,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fm-index @invisible 1",
-									"varname" : "u610000139"
+									"varname" : "u858006569"
 								}
 
 							}
@@ -381,7 +426,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::fmtimes @invisible 1",
-									"varname" : "u264000141"
+									"varname" : "u660006571"
 								}
 
 							}
@@ -401,7 +446,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::svf-morph @invisible 1",
-									"varname" : "u950000143"
+									"varname" : "u660006573"
 								}
 
 							}
@@ -421,7 +466,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::cutoffhz @invisible 1",
-									"varname" : "u912000145"
+									"varname" : "u094006575"
 								}
 
 							}
@@ -441,7 +486,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::waveshape @invisible 1",
-									"varname" : "u794000147"
+									"varname" : "u852006577"
 								}
 
 							}
@@ -455,13 +500,13 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 540.0, 78.0, 199.0, 19.0 ],
-									"restore" : [ 0 ],
+									"restore" : [ 5 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0
 									}
 ,
 									"text" : "pattr @bindto parent::note @invisible 1",
-									"varname" : "u220000149"
+									"varname" : "u295006579"
 								}
 
 							}
@@ -481,7 +526,7 @@
 									}
 ,
 									"text" : "pattr @bindto parent::noise @invisible 1",
-									"varname" : "u219000151"
+									"varname" : "u497006581"
 								}
 
 							}
@@ -713,7 +758,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86"
 						}
 ,
@@ -870,7 +915,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 228.0, 280.0, 66.0, 19.0 ],
+					"patching_rect" : [ 774.0, 360.0, 66.0, 19.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -884,7 +929,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 226.0, 222.0, 25.0, 25.0 ]
+					"patching_rect" : [ 772.0, 302.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -1404,7 +1449,7 @@
 					"patching_rect" : [ 18.0, 162.0, 116.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 9.0, 28.0, 102.0, 19.0 ],
-					"text" : "0"
+					"text" : "10 Hz"
 				}
 
 			}
@@ -1868,7 +1913,7 @@
 						"fm-mult" : [ 0 ],
 						"fmtimes" : [ 1.0 ],
 						"noise" : [ 0.0 ],
-						"note" : [ 0 ],
+						"note" : [ 5 ],
 						"resonance" : [ 0.19339 ],
 						"svf-filt" : [ 150.0 ],
 						"svf-morph" : [ 0.881633 ],
@@ -1877,7 +1922,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u679000287"
+					"varname" : "u801006639"
 				}
 
 			}
@@ -1916,8 +1961,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 18.0, 138.0, 80.0, 19.0 ],
-					"text" : "sprintf set %d"
+					"patching_rect" : [ 18.0, 138.0, 96.0, 19.0 ],
+					"text" : "sprintf set %d Hz"
 				}
 
 			}
@@ -2305,7 +2350,7 @@
 					"patching_rect" : [ 18.0, 102.0, 90.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 9.0, 28.0, 245.0, 18.0 ],
-					"setminmax" : [ 0.0, 48.0 ],
+					"setminmax" : [ 0.0, 110.0 ],
 					"settype" : 0,
 					"signed" : 1,
 					"slidercolor" : [ 1.0, 0.8, 0.4, 1.0 ],
@@ -2650,6 +2695,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-127", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-124", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2677,7 +2731,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-127", 0 ],
+					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
@@ -2771,6 +2825,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
