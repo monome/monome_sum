@@ -29,6 +29,35 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgcolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"bgoncolor" : [ 1.0, 0.8, 0.4, 0.75 ],
+					"bgovercolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"bgoveroncolor" : [ 1.0, 0.8, 0.4, 0.75 ],
+					"border" : 1,
+					"bordercolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"borderoncolor" : [ 0.701961, 0.701961, 0.701961, 1.0 ],
+					"fontname" : "Andale Mono",
+					"fontsize" : 12.0,
+					"id" : "obj-1",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 72.0, 90.0, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 162.0, 66.0, 72.0, 18.0 ],
+					"rounded" : 0.0,
+					"text" : "refresh",
+					"texton" : "on",
+					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"varname" : "midi-clock[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
@@ -201,7 +230,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 54.0, 108.0, 25.0, 25.0 ]
+					"patching_rect" : [ 180.0, 78.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -266,6 +295,15 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
@@ -367,6 +405,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -374,8 +421,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ]
+ ]
 	}
 
 }

@@ -29,14 +29,14 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ 15 ],
+					"args" : [ 14 ],
 					"hidden" : 1,
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 420.0, 285.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[14]"
@@ -251,14 +251,13 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 14 ],
-					"hidden" : 1,
+					"args" : [ 13 ],
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 405.0, 255.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[13]"
@@ -274,7 +273,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 405.0, 210.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[12]"
@@ -290,7 +289,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 405.0, 180.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[11]"
@@ -306,7 +305,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 285.0, 300.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[10]"
@@ -322,7 +321,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 285.0, 255.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[9]"
@@ -338,7 +337,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 285.0, 210.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[8]"
@@ -354,7 +353,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 285.0, 165.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[7]"
@@ -370,7 +369,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 165.0, 315.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[6]"
@@ -386,7 +385,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 165.0, 270.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[5]"
@@ -402,7 +401,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 150.0, 225.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[4]"
@@ -418,7 +417,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 150.0, 180.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[3]"
@@ -434,7 +433,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 15.0, 240.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[2]"
@@ -465,7 +464,7 @@
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 15.0, 210.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[1]"
@@ -474,12 +473,13 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
 					"name" : "drumeditor.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 115.25, 534.0, 221.0 ],
+					"patching_rect" : [ 15.0, 165.0, 105.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 17.0, 46.5, 550.0, 196.0 ],
 					"varname" : "drumeditor[0]"
