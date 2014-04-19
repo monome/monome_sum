@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -814291389,
+	"modificationdate" : -814261287,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -14,21 +14,6 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
-			}
-,
-			"midi_clock.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"rings.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "/Users/Trent/Documents/Monome/rule110",
-					"projectrelativepath" : "../../rule110"
-				}
-
 			}
 ,
 			"serialosc.maxpat" : 			{
@@ -119,17 +104,32 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"midi_clock.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"rings.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "/Users/Trent/Documents/Monome/rule110",
+					"projectrelativepath" : "../../rule110"
+				}
+
+			}
 
 		}
 ,
 		"media" : 		{
-			"SoulChicken.aif" : 			{
-				"kind" : "audiofile",
+			"panic.png" : 			{
+				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"panic.png" : 			{
-				"kind" : "imagefile",
+			"SoulChicken.aif" : 			{
+				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
