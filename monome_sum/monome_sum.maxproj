@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -814261287,
+	"modificationdate" : -785845664,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -14,10 +14,6 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
-			}
-,
-			"serialosc.maxpat" : 			{
-				"kind" : "patcher"
 			}
 ,
 			"route-cell.maxpat" : 			{
@@ -112,12 +108,11 @@
 ,
 			"rings.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "/Users/Trent/Documents/Monome/rule110",
-					"projectrelativepath" : "../../rule110"
-				}
-
+				"local" : 1
+			}
+,
+			"serialosc.maxpat" : 			{
+				"kind" : "patcher"
 			}
 
 		}
@@ -171,6 +166,15 @@
 		}
 ,
 		"code" : 		{
+			"serialosc.js" : 			{
+				"kind" : "javascript",
+				"singleton" : 				{
+					"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/code",
+					"projectrelativepath" : "./code"
+				}
+
+			}
+,
 			"router.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -219,22 +223,12 @@
 		"externals" : 		{
 			"xsample.mxo" : 			{
 				"kind" : "object",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/_DeletedItems/externals",
-					"projectrelativepath" : "./_DeletedItems/externals"
-				}
-
+				"local" : 1
 			}
 ,
 			"xsample.mxe" : 			{
 				"kind" : "object",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/_DeletedItems/externals",
-					"projectrelativepath" : "./_DeletedItems/externals"
-				}
-
+				"local" : 1
 			}
 
 		}

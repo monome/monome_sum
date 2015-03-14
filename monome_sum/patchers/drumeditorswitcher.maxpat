@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 9,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 413.0, 90.0, 575.0, 254.0 ],
+		"rect" : [ 897.0, 66.0, 577.0, 256.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,21 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-28",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 23.0, 315.0, 59.5, 20.0 ],
+					"text" : "autopattr",
+					"varname" : "u901005662"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"args" : [ 14 ],
 					"hidden" : 1,
@@ -252,6 +267,7 @@
 , 			{
 				"box" : 				{
 					"args" : [ 13 ],
+					"hidden" : 1,
 					"id" : "obj-21",
 					"maxclass" : "bpatcher",
 					"name" : "drumeditor.maxpat",
@@ -473,7 +489,6 @@
 			}
 , 			{
 				"box" : 				{
-					"hidden" : 1,
 					"id" : "obj-1",
 					"maxclass" : "bpatcher",
 					"name" : "drumeditor.maxpat",

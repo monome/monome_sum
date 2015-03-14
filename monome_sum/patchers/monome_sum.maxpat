@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 9,
 			"architecture" : "x86"
 		}
 ,
@@ -82,7 +82,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 486.0, 198.0, 68.0, 31.0 ],
+					"patching_rect" : [ 486.0, 198.0, 68.0, 33.0 ],
 					"text" : ";\rmax quit"
 				}
 
@@ -197,7 +197,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -297,9 +297,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "writeagain" ],
-									"patching_rect" : [ 252.0, 360.0, 97.0, 20.0 ],
-									"text" : "t writeagain"
+									"outlettype" : [ "write" ],
+									"patching_rect" : [ 252.0, 360.0, 61.0, 20.0 ],
+									"text" : "t write"
 								}
 
 							}
@@ -311,9 +311,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "write" ],
-									"patching_rect" : [ 234.0, 384.0, 61.0, 20.0 ],
-									"text" : "t write"
+									"outlettype" : [ "writeagain" ],
+									"patching_rect" : [ 234.0, 384.0, 97.0, 20.0 ],
+									"text" : "t writeagain"
 								}
 
 							}
@@ -355,7 +355,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 252.0, 276.0, 90.0, 47.0 ],
+									"patching_rect" : [ 252.0, 276.0, 90.0, 48.0 ],
 									"text" : "1: open\n2: save\n3: save as"
 								}
 
@@ -544,7 +544,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -1362,7 +1362,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -1795,7 +1795,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -1956,7 +1956,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -1993,7 +1993,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -2409,7 +2409,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -2730,7 +2730,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -2926,7 +2926,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u321006400"
+					"varname" : "u513005666"
 				}
 
 			}
@@ -2945,7 +2945,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -4287,7 +4287,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -5158,7 +5158,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -5231,7 +5231,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -5349,7 +5349,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -5618,7 +5618,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -7238,7 +7238,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -7289,7 +7289,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -8503,7 +8503,6 @@
 					"name" : "serialosc.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 4,
-					"offset" : [ -81.0, -63.0 ],
 					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 108.0, 90.0, 72.0, 30.0 ],
 					"presentation" : 1,
@@ -8527,7 +8526,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -8634,7 +8633,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -9248,7 +9247,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -10520,7 +10519,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -10614,7 +10613,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -10838,7 +10837,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -11341,7 +11340,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -11539,7 +11538,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 5,
+															"revision" : 9,
 															"architecture" : "x86"
 														}
 ,
@@ -12475,7 +12474,6 @@
 					"name" : "serialosc.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 4,
-					"offset" : [ -81.0, -63.0 ],
 					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 18.0, 90.0, 72.0, 30.0 ],
 					"presentation" : 1,
@@ -13037,203 +13035,199 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
+				"bootpath" : "/Applications/Max 6.1/patches/serialoscmaxpat.maxpat",
+				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches/serialoscmaxpat.maxpat",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "serialosc.js",
+				"bootpath" : "/Applications/Max 6.1/patches/serialoscmaxpat.maxpat",
+				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches/serialoscmaxpat.maxpat",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "router.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "led-router.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "route-cell.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sbatch.json",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/data",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/data",
 				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "_sum.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soren_synthitime.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soren_poly.synthitime~.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "batch_mlr.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mlr_ch.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "batch_mlr_play.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "flin.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "flin_sub.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "step.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tiltrap.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gome.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "playback.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "corners.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "corners.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "beams.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "beams.js",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/code",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "yafr2.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "master-p.json",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/data",
-				"patcherrelativepath" : "../data",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "audio_settings.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "drumeditorswitcher.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "drumeditor.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "panic.png",
-				"bootpath" : "/Users/Trent/Desktop",
-				"patcherrelativepath" : "../../../../../Desktop",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/media",
+				"patcherrelativepath" : "../media",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "midi_clock.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "xplay~.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
