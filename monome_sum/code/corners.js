@@ -3,8 +3,8 @@ outlets = 7;
 
 var dx = 0;
 var dy = 0;
-var x = 0;
-var y = 7;
+var x = 7;
+var y = 3;
 var i1, i2;
 var tx = 0;
 var ty = 0;
@@ -17,6 +17,7 @@ var vb = 0;
 var brake = 0;
 var friction = 1;
 var update = 0;
+var display = 0; // this is a flag to set whether to calculate grid-display
 var r = new Array(4);
 r[0] = 1;
 r[1] = 1;
@@ -44,6 +45,7 @@ function describe_it(num)
 }
 //setoutletassist(-1,describe_it);
 
+function focus(i) { display = i; }
 
 function ref(i, state) {
     r[i] = state;
@@ -158,7 +160,7 @@ function bang() {
 	//outlet(5,keys);
 
 		/////// DRAW LEDS //////
-	if(update==1) {
+	if(update==1 && display==1) {
 	    if(vb==0) { // draw monochrome
 			outlet(6,"/b_corners/grid/led/all", 0);
 			outlet(6,"/b_corners/grid/led/set",Math.floor(x),Math.floor(y), 1);

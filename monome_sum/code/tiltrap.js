@@ -20,6 +20,7 @@ var previousStep = 15;
 var stepRow1 = 255;
 var stepRow2 = 255;
 var loopModulo = 0;
+var display = 0; // is the app in focus on the grid
 var stepOut = new Array(7);
 var flashL = 0; // memory bit for flasher
 var vb = 0; // variable brightness defaults to off
@@ -40,7 +41,8 @@ ypos[1] = 0;
 tilt[0] = 0; // initialise tilt at zero (only needed while tilt not hooked up)
 tilt[1] = 0;
 
-
+function focus(x) { display = x; }
+	
 function key(x,y,s) {
 	if (y==0) { // if top row, treat separately
 		c = c + ((s*2)-1); // count number of presses
@@ -165,33 +167,33 @@ function ledSet(x,y,s) {
 
 function flashStep(x) {
 	currentStep = x%localx; //grab new step wrapped to physical available size
+	if(display) {
+		// draw
+		if(vb==1) {
+			// draw the variable brightness step
+			ccol.length = localy-1;
+			oldcol.length = localy-1;		
 	
-	// draw
-	if(vb==1) {
-		// draw the variable brightness step
-		ccol.length = localy-1;
-		oldcol.length = localy-1;		
-
-		for(i=0;i<localy-1;i++) {
-			ccol[i] = bits[((i*32)+currentStep+32)%1024]*10+5; // sets on to 15, off to 5
-			oldcol[i] = bits[((i*32)+previousStep+32)%1024]*15; // reverts to 0/15
+			for(i=0;i<localy-1;i++) {
+				ccol[i] = bits[((i*32)+currentStep+32)%1024]*10+5; // sets on to 15, off to 5
+				oldcol[i] = bits[((i*32)+previousStep+32)%1024]*15; // reverts to 0/15
+			}
+			
+			outlet(0,"/b_step/grid/led/level/col",currentStep,0,5,ccol);
+			if(currentStep!=previousStep) outlet(0,"/b_step/grid/led/level/col",previousStep,0,5,oldcol);
+			
+			drawSteps(); // overlay top row
 		}
-		
-		outlet(0,"/b_step/grid/led/level/col",currentStep,0,5,ccol);
-		if(currentStep!=previousStep) outlet(0,"/b_step/grid/led/level/col",previousStep,0,5,oldcol);
-		
-		drawSteps(); // overlay top row
-	}
-	else { // non-varibright flashes top led instead
-		// turn off the led of the current step
-		if((currentStep %localx)<8) { // if step is in 1st quadrant
-			outlet(0,"/b_step/grid/led/row",0,0,stepRow1-(1<<(currentStep%16)),stepRow2);
-		}
-		else if(localx > 8) { // if step is in 2nd quadrant
-			outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2-(1<<((currentStep-8)%16)));
+		else { // non-varibright flashes top led instead
+			// turn off the led of the current step
+			if((currentStep %localx)<8) { // if step is in 1st quadrant
+				outlet(0,"/b_step/grid/led/row",0,0,stepRow1-(1<<(currentStep%16)),stepRow2);
+			}
+			else if(localx > 8) { // if step is in 2nd quadrant
+				outlet(0,"/b_step/grid/led/row",0,0,stepRow1,stepRow2-(1<<((currentStep-8)%16)));
+			}
 		}
 	}
-	
 	flashL = 1; // reset counter
 	tflash.repeat(); //start the timer
 	

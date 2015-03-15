@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 9,
 			"architecture" : "x86"
 		}
 ,
@@ -426,8 +426,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
-					"patching_rect" : [ 18.0, 204.0, 183.0, 20.0 ],
-					"text" : "serialosc.maxpat /b_flin",
+					"patching_rect" : [ 18.0, 204.0, 227.0, 20.0 ],
+					"text" : "serialosc-quiet.maxpat /b_flin",
 					"varname" : "serialosc[1]"
 				}
 
@@ -447,7 +447,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -756,15 +756,15 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 396.0, 498.0, 75.0, 20.0 ],
 					"restore" : 					{
-						"level" : [ 0.0 ],
-						"pitch" : [ 0.020408 ],
-						"space" : [ 0.346938 ],
-						"tone" : [ 0.67347 ],
+						"level" : [ -0.00013 ],
+						"pitch" : [ 0.020276 ],
+						"space" : [ 0.346773 ],
+						"tone" : [ 0.673263 ],
 						"width" : [ -1.0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u526008881"
+					"varname" : "u682009159"
 				}
 
 			}
@@ -1089,7 +1089,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -1137,7 +1137,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 306.0, 408.0, 32.5, 20.0 ],
-									"presentation_rect" : [ 316.0, 398.0, 0.0, 0.0 ],
 									"text" : "- 1"
 								}
 
@@ -1744,7 +1743,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -1782,7 +1781,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 5,
+											"revision" : 9,
 											"architecture" : "x86"
 										}
 ,
@@ -3594,7 +3593,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 5,
+							"revision" : 9,
 							"architecture" : "x86"
 						}
 ,
@@ -4314,7 +4313,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 471.0, 111.0, 31.0 ],
+					"patching_rect" : [ 27.0, 471.0, 111.0, 32.0 ],
 					"text" : ";\r$1[b_flin]key $2 $3"
 				}
 
@@ -5336,15 +5335,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "flin_sub.maxpat",
-				"bootpath" : "/Users/Trent/Documents/Monome/llllllll/monome_sum/patchers",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches",
-				"patcherrelativepath" : "../../../../../../../Applications/Max 6.1/patches",
+				"name" : "serialosc-quiet.maxpat",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}

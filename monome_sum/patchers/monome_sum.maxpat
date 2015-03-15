@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 81.0, 69.0, 769.0, 240.0 ],
+		"rect" : [ 347.0, 44.0, 769.0, 240.0 ],
 		"openrect" : [ 0.0, 0.0, 769.0, 240.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
@@ -1691,7 +1691,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 288.0, 36.0, 72.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 694.0, 48.0, 27.0, 27.0 ],
+					"presentation_rect" : [ 694.0, 49.0, 27.0, 27.0 ],
 					"rounded" : 0.0,
 					"text" : "+",
 					"texton" : "Basic",
@@ -2698,7 +2698,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 126.0, 78.0, 36.0, 12.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 409.0, 48.0, 312.0, 27.0 ]
+					"presentation_rect" : [ 409.0, 49.0, 312.0, 27.0 ]
 				}
 
 			}
@@ -2711,7 +2711,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 36.0, 78.0, 36.0, 12.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 48.0, 312.0, 27.0 ]
+					"presentation_rect" : [ 36.0, 49.0, 312.0, 27.0 ]
 				}
 
 			}
@@ -2926,7 +2926,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u513005666"
+					"varname" : "u265007582"
 				}
 
 			}
@@ -8506,7 +8506,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 108.0, 90.0, 72.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 409.0, 48.0, 312.0, 27.0 ],
+					"presentation_rect" : [ 409.0, 49.0, 312.0, 27.0 ],
 					"varname" : "serialosc-right"
 				}
 
@@ -12477,7 +12477,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"patching_rect" : [ 18.0, 90.0, 72.0, 30.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 48.0, 312.0, 27.0 ],
+					"presentation_rect" : [ 36.0, 49.0, 312.0, 27.0 ],
 					"varname" : "serialosc-left"
 				}
 
@@ -13035,16 +13035,9 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "serialosc.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/serialoscmaxpat.maxpat",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches/serialoscmaxpat.maxpat",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "serialosc.js",
-				"bootpath" : "/Applications/Max 6.1/patches/serialoscmaxpat.maxpat",
-				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/patches/serialoscmaxpat.maxpat",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -13188,9 +13181,23 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "serialosc-quiet.maxpat",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "yafr2.maxpat",
 				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/patchers",
 				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "master-p.json",
+				"bootpath" : "/Users/workshop/Documents/llllllll/monome_sum/data",
+				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
 			}
