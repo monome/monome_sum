@@ -2,7 +2,7 @@
 	"name" : "monome_sum",
 	"version" : 1,
 	"creationdate" : -815847893,
-	"modificationdate" : -785758974,
+	"modificationdate" : -781794983,
 	"viewrect" : [ 12.0, 44.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 1,
@@ -17,8 +17,7 @@
 			}
 ,
 			"serialosc.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
+				"kind" : "patcher"
 			}
 ,
 			"route-cell.maxpat" : 			{
@@ -244,5 +243,7 @@
 
 	}
 ,
-	"detailsvisible" : 0
+	"detailsvisible" : 0,
+	"amxdtype" : 0,
+	"readonly" : 1
 }
