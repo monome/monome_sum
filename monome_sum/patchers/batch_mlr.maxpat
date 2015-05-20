@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 279.0, 257.0, 1016.0, 788.0 ],
+		"rect" : [ 242.0, 79.0, 758.0, 783.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -1356,7 +1356,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 901.0, 258.0, 640.0, 480.0 ],
+						"rect" : [ 212.0, 163.0, 647.0, 515.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1687,7 +1687,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 90.0, 408.0, 25.0, 25.0 ],
+									"patching_rect" : [ 82.5, 441.0, 25.0, 25.0 ],
 									"style" : ""
 								}
 
@@ -3063,7 +3063,7 @@
 ,
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u521009210"
+					"varname" : "u516007228"
 				}
 
 			}
@@ -3106,15 +3106,15 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
 					"id" : "obj-59",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.0, 498.0, 42.0, 31.0 ],
+					"patching_rect" : [ 252.0, 498.0, 42.0, 44.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.0, 105.0, 234.0, 19.0 ],
 					"style" : "",
-					"text" : "WERKS.wav"
+					"text" : "SoulChicken.aif"
 				}
 
 			}
@@ -3269,15 +3269,15 @@
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
 					"id" : "obj-74",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 504.0, 480.0, 42.0, 44.0 ],
+					"patching_rect" : [ 504.0, 480.0, 42.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 324.0, 105.0, 235.0, 19.0 ],
 					"style" : "",
-					"text" : "SoulChicken.aif"
+					"text" : "Timba.aif"
 				}
 
 			}
@@ -4040,6 +4040,7 @@
 , 			{
 				"box" : 				{
 					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Andale Mono",
 					"fontsize" : 12.0,
 					"id" : "obj-51",
@@ -6228,21 +6229,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "mlr_ch.js",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/code",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "batch_mlr_play.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "serialosc-quiet.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

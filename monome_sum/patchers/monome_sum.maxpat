@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 78.0, 769.0, 240.0 ],
+		"rect" : [ 34.0, 79.0, 769.0, 240.0 ],
 		"openrect" : [ 0.0, 0.0, 769.0, 240.0 ],
 		"bgcolor" : [ 0.972549, 0.972549, 0.972549, 1.0 ],
 		"bglocked" : 0,
@@ -40,6 +40,258 @@
 		"subpatcher_template" : "",
 		"title" : "monome_smallbatch",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-81",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 3,
+							"architecture" : "x86",
+							"modernui" : 1
+						}
+,
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 54.0, 219.0, 131.0, 22.0 ],
+									"style" : "",
+									"text" : "tosymbol @separator /"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 45.0, 184.0, 87.0, 22.0 ],
+									"style" : "",
+									"text" : "append media"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 41.0, 144.0, 145.0, 22.0 ],
+									"style" : "",
+									"text" : "fromsymbol @separator /"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-78",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 54.0, 285.0, 103.0, 22.0 ],
+									"style" : "",
+									"text" : "prepend append"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-79",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-80",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 54.0, 329.0, 30.0, 30.0 ],
+									"style" : ""
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-78", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-80", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-78", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-79", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 594.0, 108.0, 77.0, 21.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p filepath"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-76",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 594.0, 84.0, 63.0, 21.0 ],
+					"style" : "",
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-73",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 594.0, 138.0, 63.0, 21.0 ],
+					"style" : "",
+					"text" : "filepath"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"hint" : "displays whether current grid has variable brightness capability. can override by toggling for older monome kits",
+					"id" : "obj-72",
+					"maxclass" : "hint",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 54.0, 204.0, 36.0, 12.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 122.0, 180.0, 82.0, 17.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.75, 0.75, 0.75, 1.0 ],
+					"bgoncolor" : [ 0.6, 1.0, 1.0, 1.0 ],
+					"fontsize" : 12.0,
+					"hidden" : 1,
+					"id" : "obj-71",
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 45.0, 210.0, 72.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 122.0, 180.0, 83.0, 17.0 ],
+					"style" : "",
+					"text" : "varibright",
+					"textcolor" : [ 0.15, 0.15, 0.15, 1.0 ],
+					"texton" : "varibright",
+					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textovercolor" : [ 0.1, 0.1, 0.1, 1.0 ],
+					"usebgoncolor" : 1,
+					"usetextovercolor" : 1
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 1.0, 0.8, 0.4, 1.0 ],
 					"fontname" : "Helvetica Neue",
@@ -2297,7 +2549,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 318.0, 433.0, 744.0, 547.0 ],
+						"rect" : [ 298.0, 196.0, 744.0, 547.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4883,9 +5135,7 @@
 					"maxclass" : "hint",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 270.0, 120.0, 36.0, 12.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 122.0, 180.0, 83.0, 17.0 ]
+					"patching_rect" : [ 270.0, 120.0, 36.0, 12.0 ]
 				}
 
 			}
@@ -5108,8 +5358,6 @@
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 270.0, 132.0, 72.0, 18.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 122.0, 180.0, 83.0, 17.0 ],
 					"style" : "",
 					"text" : "load apps",
 					"textcolor" : [ 0.15, 0.15, 0.15, 1.0 ],
@@ -5162,7 +5410,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 684.0, 18.0, 59.5, 21.0 ],
+					"patching_rect" : [ 684.0, 12.0, 59.5, 21.0 ],
 					"restore" : 					{
 						"advanced" : [ 0 ],
 						"tile-orientation" : [ 0 ]
@@ -5170,7 +5418,7 @@
 ,
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u283006482"
+					"varname" : "u131017495"
 				}
 
 			}
@@ -9896,9 +10144,9 @@
 					"fontsize" : 11.0,
 					"id" : "obj-32",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "clear" ],
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "clear", "int" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -9909,7 +10157,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 431.0, 557.0, 640.0, 454.0 ],
+						"rect" : [ 320.0, 291.0, 640.0, 454.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -9938,6 +10186,31 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"comment" : "",
+									"id" : "obj-5",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 238.0, 276.0, 25.0, 25.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-3",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 238.0, 232.0, 25.0, 25.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"color" : [ 0.4, 0.8, 1.0, 1.0 ],
 									"fontname" : "Andale Mono",
 									"fontsize" : 12.0,
@@ -9945,7 +10218,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 234.0, 228.0, 162.0, 22.0 ],
+									"patching_rect" : [ 238.0, 310.0, 162.0, 22.0 ],
 									"style" : "",
 									"text" : "s [manager]variable-b"
 								}
@@ -11804,7 +12077,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 90.0, 324.0, 25.0, 25.0 ],
+									"patching_rect" : [ 61.0, 314.0, 25.0, 25.0 ],
 									"style" : ""
 								}
 
@@ -11893,7 +12166,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
+									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-36", 0 ]
@@ -11902,7 +12175,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
+									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-37", 0 ]
@@ -11924,6 +12197,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-4", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-5", 0 ]
 								}
 
 							}
@@ -14309,6 +14591,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-72", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -14340,6 +14640,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-32", 1 ]
 				}
 
 			}
@@ -14597,10 +14906,37 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-32", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-71", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-81", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-76", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-64", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-73", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-81", 0 ]
 				}
 
 			}
@@ -14646,196 +14982,196 @@
 			}
 , 			{
 				"name" : "router.js",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/code",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "led-router.js",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/code",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "route-cell.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sbatch.json",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/data",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/data",
 				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "_sum.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soren_synthitime.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soren_poly.synthitime~.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "batch_mlr.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mlr_ch.js",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/code",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "batch_mlr_play.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "serialosc-quiet.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "flin.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "flin_sub.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "step.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tiltrap.js",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/code",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gome.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "playback.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "corners.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "corners.js",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/code",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "beams.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "beams.js",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/code",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "yafr2.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "master-p.json",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/data",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/data",
 				"patcherrelativepath" : "../data",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "audio_settings.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "drumeditorswitcher.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "drumeditor.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "panic.png",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/media",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/media",
 				"patcherrelativepath" : "../media",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "midi_clock.maxpat",
-				"bootpath" : "~/Documents/monome/monome_sum/monome_sum/patchers",
+				"bootpath" : "~/Documents/monome_sum/monome_sum/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
