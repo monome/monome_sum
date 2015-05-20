@@ -3,7 +3,7 @@
 [![monome sum on Vimeo.com](images/sum_vimeo.png)](https://vimeo.com/91524122)
 
 *monome sum* is a collection of essential monome applications, synchronized together, creating a flexible environment for creating music. The apps are simplified for easy exploration with enhanced visual feedback for vari-bright grids. Expanded versions are available in the monome application repository.
-
+I
 *gome* is based on the original polygome by [stretta](http://www.soundcloud/stretta).
 
 
@@ -188,6 +188,15 @@ In order to synchronize other devices or applications to *sum*, a MIDI clock out
   - Select your MIDI output destination.
   - Press the big toggle button to turn on the clock.
 
+### MIDI Clock In aka Clocksource
+
+Since v1.3 *sum* now supports slaving to an external MIDI clock. This can be a DAW (over Rewire or internal MIDI) or external hardware. 
+
+  - In the menu bar select: `Preferences -> MIDI Clock`.
+  - Under `clocksource` you will see a dropdown with a list of options.
+  - `INTERNAL` is selected by default, and will use Sum's internal clock.
+  - Select an option from the dropdown to sync and deactivate the internal clock.
+
 ### Audio Settings
 
 Upon loading, *sum* will select your default audio interface and be ready to make sound instantly. In the case that you want to select a different output destination or change other audio settings:
@@ -196,6 +205,21 @@ Upon loading, *sum* will select your default audio interface and be ready to mak
   - *Driver* & *Device* select your driver options and physical audio interface.
   - *Buffer Size* can be decreased for faster response, with higher CPU usage.
   - *Left* & *Right* allow you to select alternate outputs on more complex soundcards.
+
+#### Multi Channel
+
+*sum* sends the full mix of instruments out of the channels selected by *Left* and *Right* (as above). Additionally, by arming the *multi channel* button, *sum* will send each of the individual parts out on different channels. Try using this with Rewire into a DAW or out of a multi-channel soundcard into an analog mixer.
+
+The channel assignments are:
+
+  - 1: Main output (left)
+  - 2: Main output (right)
+  - 3: Flin
+  - 4: Gomé
+  - 5: Step
+  - 6: Delay & Reverb (mixed together)
+  - 7: mlr (left channel)
+  - 8: mlr (right channel)
 
 
 ## Presets
